@@ -5,7 +5,8 @@ Daily ACN sweep — finds Australian PE acquisition vehicles the day they are re
 Two windows, both of which matter:
 
   FORWARD    from the last run's high-water mark to today's issuance frontier.
-  TRAILING   re-query slots below that which came back EMPTY on an earlier visit.
+  TRAILING   below that: first any slot never visited at all (a gap left by a run
+             that was cut short), then slots that were visited and came back empty.
 
 The trailing pass is not belt-and-braces. ACNs are allocated ahead of use, so a
 company registered today can carry a number issued days ago, sitting in a slot an
@@ -35,7 +36,8 @@ DATA = ROOT / "data"
 API = "https://businessapi.com.au/api/v2/lookup/acn/"
 # An honest, descriptive UA. Cloudflare rule 1010 rejects urllib's default one.
 # This identifies the client; it is not an attempt to look like a browser.
-UA = "bidco-watch/1.0 (+nik@withbureau.com)"
+_contact = os.environ.get("CONTACT_EMAIL", "").strip()
+UA = f"bidco-watch/1.0 (+{_contact})" if _contact else "bidco-watch/1.0"
 
 # The vendor throttles at roughly 50 requests/minute regardless of plan — ten
 # concurrent requests all return 429. Serial, paced, single-threaded. Do not add
@@ -264,11 +266,35 @@ def main() -> int:
     plan = [acn_for(b) for b in forward[::2]] + [acn_for(b) for b in forward[1::2]]
     plan = [a for a in plan if a not in seen]
 
-    trail_lo = max(FRONTIER_LO, (forward[0] if forward else frontier) - TRAILING_SLOTS)
-    trailing = [a for a in (acn_for(b) for b in range(trail_lo, forward[0] if forward else frontier))
-                if a in seen and seen[a] is None]
-    print(f"forward: {len(plan):,} new slots   trailing re-check: {len(trailing):,} "
-          f"previously-empty slots")
+    # The trailing window has two jobs, and conflating them once let 12,000 slots
+    # fall through silently.
+    #
+    #   GAPS     slots in the window this run has never looked at at all. They
+    #            appear whenever an earlier run was cut short, or the high-water
+    #            mark advanced over ground that was only partly covered. These are
+    #            the highest-value slots in the queue — a company sitting in one
+    #            has never been seen by anything.
+    #   RECHECK  slots that WERE visited and came back empty. ACNs are allocated
+    #            ahead of use, so an empty slot can fill in later. Lower yield, but
+    #            it is what recovers the TRIDENT / DANONE / PULSE class of miss.
+    #
+    # Gaps go first. A run that runs out of time leaves rechecks undone, which is
+    # the right thing to sacrifice.
+    trail_hi = forward[0] if forward else frontier
+    trail_lo = max(FRONTIER_LO, trail_hi - TRAILING_SLOTS)
+    gaps, recheck = [], []
+    for b in range(trail_lo, trail_hi):
+        a = acn_for(b)
+        if a not in seen:
+            gaps.append(a)
+        elif seen[a] is None:
+            recheck.append(a)
+    # Walk gaps every-second-first too, so a truncated run spans the whole hole
+    # rather than covering the bottom of it.
+    gaps = gaps[::2] + gaps[1::2]
+    trailing = gaps + recheck
+    print(f"forward: {len(plan):,} new slots   "
+          f"trailing: {len(gaps):,} never-visited gaps + {len(recheck):,} empty re-checks")
 
     queue = plan + trailing
     deadline = started + BUDGET_MIN * 60
@@ -303,6 +329,7 @@ def main() -> int:
 
     write_run(state, now, started,
               frontier=frontier, swept=done, queued=len(queue), truncated=truncated,
+              gaps=len(gaps), recheck=len(recheck),
               companies=len(rows), stacks=stacks, singles=singles, role_only=role_only,
               rows=rows, error=err, status="failed" if err else "ok",
               window=[acn_for(forward[0]) if forward else "", acn_for(frontier)])
@@ -322,6 +349,8 @@ def write_run(state, now, started, **kw):
         "slots_swept": kw.get("swept", 0),
         "slots_queued": kw.get("queued", 0),
         "slots_left": kw.get("truncated", 0),
+        "gaps_queued": kw.get("gaps", 0),
+        "recheck_queued": kw.get("recheck", 0),
         "companies": kw.get("companies", 0),
         "trailing_slots": TRAILING_SLOTS,
     }
