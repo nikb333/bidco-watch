@@ -1,20 +1,23 @@
 {
  "last_frontier_base": 70225829,
  "last_run": {
-  "finished_utc": "2026-09-10T10:02:17+00:00",
-  "elapsed_min": 0,
+  "finished_utc": "2026-09-10T12:47:47+00:00",
+  "elapsed_min": 335.0,
   "status": "ok",
   "error": "",
-  "frontier_base": 70225829,
+  "frontier_base": 70226415,
   "window": [
-   "702108290",
-   "702258295"
+   "702258302",
+   "702264159"
   ],
-  "slots_swept": 2883,
-  "slots_queued": 15001,
-  "slots_left": 12118,
-  "companies": 914,
-  "trailing_slots": 20000
+  "slots_swept": 9572,
+  "slots_queued": 20572,
+  "slots_left": 11000,
+  "gaps_queued": 19996,
+  "recheck_queued": 0,
+  "companies": 2661,
+  "trailing_slots": 20000,
+  "slots_errored": 0
  },
  "history": [
   {
@@ -32,6 +35,25 @@
    "slots_left": 12118,
    "companies": 914,
    "trailing_slots": 20000
+  },
+  {
+   "finished_utc": "2026-09-10T12:47:47+00:00",
+   "elapsed_min": 335.0,
+   "status": "ok",
+   "error": "",
+   "frontier_base": 70226415,
+   "window": [
+    "702258302",
+    "702264159"
+   ],
+   "slots_swept": 9572,
+   "slots_queued": 20572,
+   "slots_left": 11000,
+   "gaps_queued": 19996,
+   "recheck_queued": 0,
+   "companies": 2661,
+   "trailing_slots": 20000,
+   "slots_errored": 0
   }
  ]
 }

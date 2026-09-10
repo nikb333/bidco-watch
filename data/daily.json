@@ -1,30 +1,88 @@
 {
  "run": {
-  "finished_utc": "2026-09-10T10:02:17+00:00",
-  "elapsed_min": 0,
+  "finished_utc": "2026-09-10T12:47:47+00:00",
+  "elapsed_min": 335.0,
   "status": "ok",
   "error": "",
-  "frontier_base": 70225829,
+  "frontier_base": 70226415,
   "window": [
-   "702108290",
-   "702258295"
+   "702258302",
+   "702264159"
   ],
-  "slots_swept": 2883,
-  "slots_queued": 15001,
-  "slots_left": 12118,
-  "companies": 914,
-  "trailing_slots": 20000
+  "slots_swept": 9572,
+  "slots_queued": 20572,
+  "slots_left": 11000,
+  "gaps_queued": 19996,
+  "recheck_queued": 0,
+  "companies": 2661,
+  "trailing_slots": 20000,
+  "slots_errored": 0
  },
- "stacks": [],
+ "stacks": [
+  {
+   "stem": "HAMILTON",
+   "first": "2026-09-07",
+   "has_bidco": true,
+   "finco": false,
+   "phased": false,
+   "members": [
+    {
+     "acn": "702140449",
+     "name": "HAMILTON HOLDCO PTY LTD",
+     "date": "2026-09-07",
+     "role": "HOLDCO",
+     "suburb": "SYDNEY",
+     "state": "NSW",
+     "via": "API"
+    },
+    {
+     "acn": "702141722",
+     "name": "HAMILTON BIDCO PTY LTD",
+     "date": "2026-09-07",
+     "role": "BIDCO",
+     "suburb": "SYDNEY",
+     "state": "NSW",
+     "via": "API"
+    }
+   ]
+  }
+ ],
  "singles": [],
  "role_only": [
   {
-   "acn": "702113933",
-   "name": "BLOOMJAR HOLDCO. PTY LTD",
-   "date": "2026-09-07",
-   "role": "HOLDCO",
+   "acn": "702199479",
+   "name": "BLOOMJAR MIDCO. PTY LTD",
+   "date": "2026-09-09",
+   "role": "MIDCO",
    "suburb": "BALCATTA",
    "state": "WA",
+   "via": "API"
+  },
+  {
+   "acn": "702208277",
+   "name": "MIDCO ACCOUNTING PTY LTD",
+   "date": "2026-09-09",
+   "role": "MIDCO",
+   "suburb": "TARNEIT",
+   "state": "VIC",
+   "via": "API"
+  },
+  {
+   "acn": "702084160",
+   "name": "A CLASS HOLDCO PTY LTD",
+   "date": "2026-09-07",
+   "role": "HOLDCO",
+   "suburb": "MELBOURNE",
+   "state": "VIC",
+   "via": "API"
+  },
+  {
+   "acn": "702069627",
+   "name": "GROUNDSWELL HOLDCO PTY LTD",
+   "date": "2026-09-04",
+   "role": "HOLDCO",
+   "suburb": "NEWCASTLE WEST",
+   "state": "NSW",
    "via": "API"
   }
  ]
