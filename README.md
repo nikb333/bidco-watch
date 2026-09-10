@@ -18,8 +18,9 @@ Everything runs on GitHub Actions. No server, no Claude in the loop at runtime.
 
    | Name | Value |
    |---|---|
-   | `BAPI_KEY` | your Business API key (`bapi_sk_live_…`) |
-   | `SITE_PASSCODE` | the passcode that unlocks the dashboard |
+   | `BAPI_KEY` | your Business API key |
+   | `SITE_PASSCODE` | the passcode that unlocks the dashboard **and encrypts the data store** |
+   | `CONTACT_EMAIL` | *(optional)* an address to put in the User-Agent |
 
 2. **Pages** — Settings → Pages → Source: *Deploy from a branch*, Branch: `main`,
    folder `/docs`.
@@ -35,11 +36,28 @@ Everything runs on GitHub Actions. No server, no Claude in the loop at runtime.
 
 | Workflow | Schedule | Does |
 |---|---|---|
-| `daily.yml` | 5am Sydney, every day | Sweeps new ACN slots + re-checks the trailing window, rebuilds the site |
+| `daily.yml` | **10pm Sydney, every day** | Sweeps new ACN slots + the trailing window, rebuilds the site. Runs overnight so the morning starts with a finished sweep. |
 | `weekly.yml` | Wednesday ~8am Sydney | Downloads the published register, extracts every role-named vehicle, **reconciles it against what the daily sweep found** |
 
-Cron cannot handle daylight saving, so `daily.yml` fires at both 18:00 and 19:00
-UTC and the first step drops whichever one is not 5am in Sydney.
+Cron cannot handle daylight saving, so `daily.yml` fires at both UTC candidates
+for each Sydney hour and the first step drops the wrong one.
+
+**There is no artificial time cap.** GitHub caps a hosted job at six hours and
+that is not ours to raise. A job also cannot dispatch itself to get around it —
+events raised with the built-in token deliberately do not start new runs. So the
+workflow is scheduled three times a night instead: **10pm, 2am and 5am Sydney**.
+The sweep is resumable by construction, so each start simply continues the last,
+and if the 10pm run finished everything the other two find an empty queue and
+exit in minutes. That is up to sixteen hours of sweeping available per night
+against a typical need of two to five.
+
+While a sweep is running the dashboard shows a live count: how many slots are
+done, how many companies have come back, and roughly how long is left. That comes
+from `docs/progress.json`, which the sweep writes every 50 lookups and pushes
+every ten minutes, cross-checked against the Actions API so a crashed run cannot
+leave a stale bar creeping along. `progress.json` is **not** encrypted — it holds
+counters and nothing else, no names or ACNs, and hiding them would defeat its
+purpose.
 
 "Run now" on the dashboard links to the Actions page — press *Run workflow*
 there. The button deliberately does not carry a token; a page that could start a
@@ -62,8 +80,13 @@ ordering, not a sample: every slot is visited either way, but a run cut short
 still spans the whole range, and you only need one member of a family to notice
 the family.
 
-**Trailing** — the previous 20,000 slots, re-querying only the ones that came
-back *empty* before. This is not belt-and-braces. ACNs are allocated ahead of
+**Trailing** — the previous 20,000 slots, in two priorities. First **gaps**:
+slots never visited at all, which is what a run cut short leaves behind. Then
+**re-checks**: slots that were visited and came back empty. Gaps first, because a
+company in a never-visited slot has been seen by nothing at all, and because a
+run that runs out of time should sacrifice re-checks rather than gaps.
+
+The re-check half is not belt-and-braces. ACNs are allocated ahead of
 use, so a company registered today can carry a number issued days ago, sitting in
 a slot an earlier run already found empty. Measured against the register over
 1 Jul – 6 Sep 2026 this cost **11 of 211 role-named vehicles (5.2%)**, including
@@ -81,7 +104,8 @@ structure with a target behind it. A lone Bidco is kept separately.
   concurrent requests all return 429. The sweep is deliberately serial and paced;
   adding threads produces nothing but errors. Budget ~100 minutes per 5,000 slots.
 - **The User-Agent is mandatory.** Cloudflare rule 1010 rejects urllib's default.
-  `bidco-watch/1.0 (+nik@withbureau.com)` is an honest identifier, not a disguise.
+  `bidco-watch/1.0` is an honest identifier, not a disguise. Set `CONTACT_EMAIL`
+  and it is appended, so the vendor can reach you rather than just blocking you.
   If the vendor ever blocks us, the right response is to stop and ask them.
 - **Never filter on ABN.** Excluding ABN-holders once discarded three real stacks
   (GELATO, CAPRA, VALLEY).
@@ -96,26 +120,33 @@ structure with a target behind it. A lone Bidco is kept separately.
 
 ## The passcode, honestly
 
-`build_site.py` encrypts the whole data payload with AES-256-GCM under a key
-derived from `SITE_PASSCODE` (PBKDF2-SHA256, 600,000 rounds). The page published
-to Pages contains ciphertext and nothing else — no names, no ACNs, no dates. Open
-it without the passcode and there is genuinely nothing to read.
+Two things are encrypted under `SITE_PASSCODE`, both AES-256-GCM with a
+PBKDF2-SHA256 key at 600,000 rounds:
 
-**But a four-digit PIN is 10,000 possibilities.** Anyone who downloads the page
-can grind through all of them offline; the slow key derivation makes that take
-hours rather than seconds, not centuries. It keeps out people who wander past the
-URL, which is what it is for. It is not a lock.
+- **`docs/index.html`** — the whole data payload. The published page carries
+  ciphertext and nothing else: no names, no ACNs, no dates.
+- **`data/store.enc`** — the checkpoint, run state, findings and register
+  extract, bundled and encrypted before every commit. The plaintext versions are
+  gitignored and exist only inside a running job.
+
+That is what lets the repo be **public**, which is what keeps GitHub Pages free.
+Nothing in it is readable without the passcode.
+
+**But a four-digit PIN is 10,000 possibilities.** Anyone who clones the repo can
+grind through all of them offline; the slow key derivation makes that hours
+rather than seconds, not centuries. It reliably keeps out anyone who wanders past
+the URL, which is what it is for. It is not a lock.
 
 Set `SITE_PASSCODE` to a longer passphrase and the same machinery becomes
-genuinely strong — nothing else changes. If you want real access control instead,
-make the repo private and serve `docs/` through Cloudflare Pages with Cloudflare
-Access in front of it; the free tier covers it.
+genuinely strong — no code changes. **If you change it, run the daily workflow
+by hand once straight afterwards**: the store is re-encrypted under the new
+passcode on the next successful run, and until then the old `store.enc` cannot be
+opened. If you ever lose the passcode, delete `data/store.enc` and the next run
+rebuilds from scratch.
 
-Also worth saying plainly: the underlying data is public. It is the ASIC register.
-What the passcode protects is *which vehicles you are watching*, which is the part
-that is actually yours.
-
----
+Worth saying plainly: the underlying data is public — it is the ASIC register.
+What the passcode protects is *which vehicles you are watching*, which is the
+part that is actually yours.
 
 ## Layout
 
@@ -124,12 +155,12 @@ sweep.py          the daily pipeline
 weekly.py         register download + reconciliation
 build_site.py     encrypts the payload, renders docs/index.html
 template.html     the dashboard (Dashboard / Audit / Runs)
+store.py          encrypts/decrypts the data bundle around each run
 data/
-  state.json          frontier, window, run history
-  lookups.jsonl.gz    checkpoint, bounded to the last 80,000 slots
-  daily.json          stacks, lone Bidcos, role matches
-  weekly.json         register extract + reconciliation
-  companies.csv       every company resolved in the current checkpoint
-  weekly_vehicles.csv every role-named vehicle in the register window
+  store.enc         THE ONLY DATA FILE COMMITTED — encrypted bundle of:
+      state.json          frontier, window, run history
+      lookups.jsonl.gz    checkpoint, bounded to the last 80,000 slots
+      daily.json          stacks, lone Bidcos, role matches
+      weekly.json         register extract + reconciliation
 docs/index.html   what Pages serves
 ```

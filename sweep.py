@@ -60,10 +60,47 @@ ORDER = ["TOPCO", "PARENTCO", "HOLDCO", "INTERMEDIATECO", "MIDCO", "MEZZCO", "PI
 FRONTIER_LO, FRONTIER_HI = 70_000_000, 71_000_000
 TRAILING_SLOTS = int(os.environ.get("TRAILING_SLOTS", "20000"))
 MAX_FORWARD_SLOTS = int(os.environ.get("MAX_FORWARD_SLOTS", "12000"))
-# Actions caps a job at 6h; leave room to commit and build the site.
-BUDGET_MIN = int(os.environ.get("BUDGET_MIN", "290"))
+# GitHub caps a hosted Actions job at 6 hours. That is a platform limit, not a
+# choice - so run right up to it, and when the queue is still not empty, ask for
+# a continuation job rather than dropping the remainder.
+BUDGET_MIN = int(os.environ.get("BUDGET_MIN", "335"))
 
 KEY = os.environ.get("BAPI_KEY", "")
+DOCS = ROOT / "docs"
+HEARTBEAT_SECS = int(os.environ.get("HEARTBEAT_SECS", "600"))
+
+
+def heartbeat(phase, done, total, found, started_iso, force=False, _last=[0.0]):
+    """Publish progress so the dashboard can show a live count.
+
+    docs/progress.json is deliberately NOT encrypted: it holds counters and
+    nothing else - no names, no ACNs, no dates. Anyone who finds the URL learns
+    that a sweep is running and how far along it is, which is not worth hiding
+    and is the whole point of the file.
+    """
+    DOCS.mkdir(exist_ok=True)
+    (DOCS / "progress.json").write_text(json.dumps({
+        "phase": phase, "done": done, "total": total, "companies": found,
+        "started_utc": started_iso,
+        "updated_utc": datetime.now(timezone.utc).isoformat(
+            timespec="seconds").replace("+00:00", "Z"),
+        "rate_per_min": RATE_PER_MIN,
+        "run_url": (f"{os.environ.get('GITHUB_SERVER_URL','https://github.com')}/"
+                    f"{os.environ.get('GITHUB_REPOSITORY','')}/actions/runs/"
+                    f"{os.environ.get('GITHUB_RUN_ID','')}")
+                   if os.environ.get("GITHUB_RUN_ID") else "",
+    }, indent=1))
+    now = time.time()
+    if not force and now - _last[0] < HEARTBEAT_SECS:
+        return
+    _last[0] = now
+    if not os.environ.get("GITHUB_ACTIONS"):
+        return
+    # Best effort. A failed heartbeat push must never take the sweep down.
+    os.system("git add docs/progress.json >/dev/null 2>&1 && "
+              "git -c user.name=bidco-watch -c user.email=actions@github.com "
+              "commit -q -m 'progress' >/dev/null 2>&1 && "
+              "git push -q >/dev/null 2>&1")
 
 
 # ----------------------------------------------------------------- ACN arithmetic
@@ -309,6 +346,11 @@ def main() -> int:
             seen[a] = lookup(a)
             done += 1
             d = seen[a]
+            if done % 50 == 0:
+                heartbeat("running", done, len(queue),
+                          sum(1 for v in seen.values()
+                              if v and "Company" in (v.get("type") or "")),
+                          now.isoformat(timespec="seconds"))
             if d and ROLE.search(d.get("name", "") or ""):
                 print(f"  *** {a}  {d['name']}  {d.get('registrationDate','')}")
             if done % 250 == 0:
@@ -319,6 +361,18 @@ def main() -> int:
         print(f"BLOCKED: {e}", file=sys.stderr)
     finally:
         save_checkpoint(seen)
+        heartbeat("idle", done, len(queue),
+                  sum(1 for v in seen.values()
+                      if v and "Company" in (v.get("type") or "")),
+                  now.isoformat(timespec="seconds"), force=True)
+
+    # A hosted Actions job is capped at six hours by GitHub, which is not ours to
+    # raise, and a job cannot dispatch itself to get around it. Instead the
+    # workflow is scheduled three times a night and this run is resumable: the
+    # leftovers below are simply queued again by the next start.
+    if truncated and not err:
+        print(f"::notice::{truncated:,} slots remain - the next scheduled start "
+              f"({'2am or 5am Sydney'}) resumes from the checkpoint")
 
     rows = company_rows(seen)
     stacks, singles, role_only = group(rows)

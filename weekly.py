@@ -26,7 +26,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
-UA = "bidco-watch/1.0 (+nik@withbureau.com)"
+UA = __import__("os").environ.get("CONTACT_EMAIL","").strip()
+UA = f"bidco-watch/1.0 (+{UA})" if UA else "bidco-watch/1.0"
 CKAN = "https://data.gov.au/data/api/3/action/package_search?q=ASIC+company+register&rows=5"
 
 sys.path.insert(0, str(ROOT))

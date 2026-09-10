@@ -64,6 +64,19 @@ p{margin:8px 0}
 .banner.ok .dot{background:var(--ok)}.banner.warn .dot{background:var(--warn)}
 .banner.bad .dot{background:var(--bad)}
 .banner b{font-size:13.5px;display:block}
+.live{margin-top:10px;border-left:3px solid var(--run);background:var(--run-bg);
+  border-radius:0 8px 8px 0;padding:11px 13px;display:none}
+.live.on{display:block}
+.live .row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.live b{font-size:13.5px}
+.live .n{color:var(--dim);font-size:12.5px}
+.bar{height:6px;border-radius:99px;background:var(--chip);overflow:hidden;margin-top:9px}
+.bar i{display:block;height:100%;background:var(--run);width:0;transition:width .6s ease}
+.pulse{width:8px;height:8px;border-radius:50%;background:var(--run);flex:none;
+  animation:pl 1.4s ease-in-out infinite}
+@keyframes pl{0%,100%{opacity:1}50%{opacity:.25}}
+.refresh{appearance:none;border:0;background:none;color:var(--dim);font:inherit;
+  font-size:12px;cursor:pointer;text-decoration:underline;padding:0}
 .banner span.n{color:var(--dim);font-size:12.5px}
 
 section{margin-top:32px}
@@ -130,6 +143,17 @@ table.l td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:to
 
   <div id="banner" class="banner"><span class="dot"></span>
     <div><b id="b-t">—</b><span class="n" id="b-n"></span></div></div>
+
+  <div id="live" class="live">
+    <div class="row"><span class="pulse"></span><b id="lv-t">Sweep running</b>
+      <span class="n" id="lv-n"></span></div>
+    <div class="bar"><i id="lv-bar"></i></div>
+    <div class="row" style="margin-top:8px">
+      <a class="n" id="lv-link" target="_blank" rel="noopener">View the run log</a>
+      <button class="refresh" id="lv-now">Refresh now</button>
+      <span class="n" id="lv-age"></span>
+    </div>
+  </div>
 
   <div id="p-dash">
     <section>
@@ -230,8 +254,16 @@ function fams(list,emptyMsg){
     (f.meta?'<span class="m">'+esc(f.meta)+'</span>':'')+'</div>':'')+
     '<ul class="ent">'+f.items.map(li).join('')+'</ul></div>').join('');
 }
-function when(i){if(!i)return '—';const d=new Date(i.endsWith('Z')||i.includes('+')?i:i+'Z');
-  return isNaN(d)?i:d.toLocaleString('en-AU',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}
+// Timestamps arrive as ISO8601 from Python, which writes "+00:00" rather than
+// "Z". Treat a bare timestamp as UTC and leave an explicit offset alone.
+function toDate(i){if(!i)return null;
+  const s=/[Zz]$|[+-]\d\d:?\d\d$/.test(i)?i:i+'Z';
+  const d=new Date(s); return isNaN(d)?null:d}
+function minsSince(i){const d=toDate(i);return d?(Date.now()-d)/6e4:Infinity}
+function hhmm(mins){const h=Math.floor(mins/60),m=Math.round(mins%60);
+  return h? h+'h '+String(m).padStart(2,'0')+'m' : m+'m'}
+function when(i){const d=toDate(i);
+  return d?d.toLocaleString('en-AU',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):(i||'—')}
 
 function render(D){
   const run=D.run||{}, wk=D.weekly||{}, rc=wk.reconciliation||{};
@@ -239,7 +271,7 @@ function render(D){
   // banner
   (function(){
     const el=$('banner'); let cls='ok',t,n;
-    const h=run.finished_utc?(Date.now()-new Date(run.finished_utc+'Z'))/36e5:1e9;
+    const h=run.finished_utc?minsSince(run.finished_utc)/60:1e9;
     if(run.status==='failed'){cls='bad';t='Last run failed';n=(run.error||'No detail recorded.')}
     else if(!run.finished_utc){cls='warn';t='No run recorded yet';n='The scheduled job has not completed a run.'}
     else{
@@ -267,11 +299,18 @@ function render(D){
     ' → '+((run.window||[])[1]||'—')+', plus a '+fmt(run.trailing_slots||0)+'-slot trailing re-check.';
   $('c-daily').textContent=(D.stacks||[]).length+' stacks · '+(D.singles||[]).length+' lone Bidcos';
 
-  const repo=D.repo||'';
+  // GITHUB_REPOSITORY at build time, but fall back to reading it off the Pages
+  // URL (owner.github.io/repo) so a build that missed the env var still gets
+  // live status instead of silently losing it.
+  const repo=D.repo||(function(){
+    const m=location.hostname.match(/^([^.]+)\.github\.io$/);
+    const seg=location.pathname.split('/').filter(Boolean)[0];
+    return m&&seg?m[1]+'/'+seg:''})();
   const rl=$('run-link');
   rl.href=repo?'https://github.com/'+repo+'/actions/workflows/daily.yml':'#';
-  $('run-note').textContent='Opens the Actions page — press "Run workflow". Takes about '+
-    Math.round((run.slots_queued||5000)/48)+' minutes at the vendor’s 48/min limit.';
+  $('run-note').textContent='Opens the Actions page — press "Run workflow". About '+
+    hhmm((run.slots_queued||5000)/48)+' at the vendor’s 48/min limit; if it outlasts '+
+    'the six-hour job limit it starts a continuation automatically.';
 
   // section 2
   const ents=wk.entities||[];
@@ -359,6 +398,64 @@ function render(D){
     '<td>'+fmt(h.slots_swept)+'</td><td>'+fmt(h.slots_left)+'</td>'+
     '<td>'+fmt(h.companies)+'</td><td>'+esc(h.elapsed_min)+'</td></tr>').join('')
     ||'<tr><td colspan="7" class="empty">No runs recorded yet.</td></tr>';
+
+  // ---------- live status ----------
+  // Two independent sources, because neither alone is enough:
+  //   progress.json  - written by the sweep itself every 50 lookups and pushed
+  //                    every ten minutes, so it carries the real slot count.
+  //   Actions API    - unauthenticated, public repo, tells us whether a job is
+  //                    actually alive right now. Without it a crashed run would
+  //                    leave a stale progress file looking like live progress.
+  const live=$('live');
+  async function poll(){
+    let prog=null, active=null;
+    try{
+      const r=await fetch('progress.json?t='+Date.now(),{cache:'no-store'});
+      if(r.ok) prog=await r.json();
+    }catch(e){}
+    if(repo){
+      try{
+        const r=await fetch('https://api.github.com/repos/'+repo+
+          '/actions/runs?per_page=3',{cache:'no-store'});
+        if(r.ok){
+          const j=await r.json();
+          active=(j.workflow_runs||[]).find(x=>x.status==='in_progress'||x.status==='queued')||null;
+        }
+      }catch(e){}
+    }
+
+    if(!active){ live.classList.remove('on'); return }
+
+    live.classList.add('on');
+    const queued=active.status==='queued';
+    const elapsed=minsSince(active.run_started_at||active.created_at);
+    let done=null,total=null,fresh=false;
+    if(prog&&prog.phase==='running'){
+      done=prog.done; total=prog.total;
+      // A progress file older than 20 minutes is not tracking this run.
+      fresh=minsSince(prog.updated_utc) < 20;
+    }
+
+    $('lv-t').textContent=queued?'Sweep queued':'Sweep running';
+    if(!queued&&fresh&&total){
+      const pct=Math.min(100,100*done/total);
+      $('lv-bar').style.width=pct.toFixed(1)+'%';
+      const left=(total-done)/(prog.rate_per_min||48);
+      $('lv-n').textContent=fmt(done)+' of '+fmt(total)+' slots ('+pct.toFixed(0)+'%) · '+
+        fmt(prog.companies||0)+' companies · about '+hhmm(left)+' to go';
+      $('lv-age').textContent='counted '+Math.round(minsSince(prog.updated_utc))+' min ago';
+    }else{
+      $('lv-bar').style.width='0%';
+      $('lv-n').textContent=queued?'waiting for a runner'
+        :'running for '+hhmm(elapsed)+' — slot count arrives with the first progress push';
+      $('lv-age').textContent='';
+    }
+    $('lv-link').href=active.html_url;
+  }
+  $('lv-now').addEventListener('click',poll);
+  poll(); setInterval(poll,30000);
+  // Catch up immediately when the tab is looked at again rather than waiting.
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)poll()});
 
   // tabs
   const tabs=[...document.querySelectorAll('.tab')];

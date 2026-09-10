@@ -23,7 +23,14 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
 
+      - name: Unlock the data store
+        env:
+          SITE_PASSCODE: ${{ secrets.SITE_PASSCODE }}
+        run: python store.py unlock
+
       - name: Download the register and reconcile
+        env:
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
         run: python weekly.py
 
       - name: Build site
@@ -31,10 +38,15 @@ jobs:
           SITE_PASSCODE: ${{ secrets.SITE_PASSCODE }}
         run: python build_site.py
 
+      - name: Lock the data store
+        env:
+          SITE_PASSCODE: ${{ secrets.SITE_PASSCODE }}
+        run: python store.py lock
+
       - name: Commit
         run: |
           git config user.name  "bidco-watch"
           git config user.email "actions@github.com"
-          git add -A data docs
+          git add -A data/store.enc docs
           git diff --staged --quiet || git commit -m "weekly reconciliation $(date -u +%Y-%m-%d)"
           git push

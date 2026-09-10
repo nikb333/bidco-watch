@@ -2,10 +2,23 @@ name: Daily ACN sweep
 
 on:
   schedule:
-    # 5am Sydney, year round. Cron has no idea about daylight saving, so we fire
-    # at both candidate UTC hours and the guard step below drops the wrong one.
-    - cron: "0 18 * * *"   # 5am AEDT (Oct-Apr)
-    - cron: "0 19 * * *"   # 5am AEST (Apr-Oct)
+    # Three starts a night, Sydney time: 10pm, 2am, 5am.
+    #
+    # The sweep is resumable by construction - it reads the checkpoint and
+    # queues whatever is still outstanding - so a second start simply continues
+    # the first. That is why there are three rather than one: GitHub caps a
+    # hosted job at six hours, and a job cannot lift that by dispatching itself,
+    # because events raised with the built-in GITHUB_TOKEN deliberately do not
+    # start new workflow runs. Extra scheduled starts are the mechanism that
+    # actually works. If the 10pm run finished everything, the later two find an
+    # almost-empty queue and exit in minutes.
+    #
+    # Each Sydney hour needs both UTC candidates, since cron knows nothing about
+    # daylight saving and the guard below drops whichever is wrong:
+    #   22:00 Sydney -> 11:00 UTC (AEDT) / 12:00 UTC (AEST)
+    #   02:00 Sydney -> 15:00 UTC (AEDT) / 16:00 UTC (AEST)
+    #   05:00 Sydney -> 18:00 UTC (AEDT) / 19:00 UTC (AEST)
+    - cron: "0 11,12,15,16,18,19 * * *"
   workflow_dispatch:        # this is the "Run now" button
 
 permissions:
@@ -18,16 +31,20 @@ concurrency:
 jobs:
   sweep:
     runs-on: ubuntu-latest
-    timeout-minutes: 330
+    timeout-minutes: 355    # GitHub's hard ceiling for a hosted job is 360
     steps:
-      - name: Is it actually 5am in Sydney?
+      - name: Is this one of the Sydney start times?
         id: guard
         run: |
           H=$(TZ=Australia/Sydney date +%H)
           echo "sydney hour = $H"
-          if [ "${{ github.event_name }}" = "schedule" ] && [ "$H" != "05" ]; then
+          case "$H" in
+            22|02|05) OK=yes ;;
+            *)        OK=no  ;;
+          esac
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$OK" = "no" ]; then
             echo "skip=true" >> "$GITHUB_OUTPUT"
-            echo "Not 5am in Sydney — this is the daylight-saving twin. Skipping."
+            echo "Not a Sydney start hour - this is the daylight-saving twin. Skipping."
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
           fi
@@ -44,13 +61,26 @@ jobs:
         if: steps.guard.outputs.skip == 'false'
         run: pip install -r requirements.txt
 
+      - name: Let the sweep publish progress as it goes
+        if: steps.guard.outputs.skip == 'false'
+        run: |
+          git config user.name  "bidco-watch"
+          git config user.email "actions@github.com"
+          git config pull.rebase true
+
+      - name: Unlock the data store
+        if: steps.guard.outputs.skip == 'false'
+        env:
+          SITE_PASSCODE: ${{ secrets.SITE_PASSCODE }}
+        run: python store.py unlock
+
       - name: Sweep
         if: steps.guard.outputs.skip == 'false'
         id: sweep
         continue-on-error: true      # a failed sweep must still publish its failure
         env:
           BAPI_KEY: ${{ secrets.BAPI_KEY }}
-          BUDGET_MIN: "270"
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
         run: python sweep.py
 
       - name: Build site
@@ -59,13 +89,18 @@ jobs:
           SITE_PASSCODE: ${{ secrets.SITE_PASSCODE }}
         run: python build_site.py
 
+      - name: Lock the data store
+        if: steps.guard.outputs.skip == 'false'
+        env:
+          SITE_PASSCODE: ${{ secrets.SITE_PASSCODE }}
+        run: python store.py lock
+
       - name: Commit
         if: steps.guard.outputs.skip == 'false'
         run: |
-          git config user.name  "bidco-watch"
-          git config user.email "actions@github.com"
-          git add -A data docs
+          git add -A data/store.enc docs
           git diff --staged --quiet || git commit -m "sweep $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase --autostash || true
           git push
 
       - name: Fail the run if the sweep failed
