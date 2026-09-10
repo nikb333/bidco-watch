@@ -65,6 +65,18 @@ ORDER = ["TOPCO", "PARENTCO", "HOLDCO", "INTERMEDIATECO", "MIDCO", "MEZZCO", "PI
 
 FRONTIER_LO, FRONTIER_HI = 70_000_000, 71_000_000
 TRAILING_SLOTS = int(os.environ.get("TRAILING_SLOTS", "20000"))
+# Re-checking an empty slot is about catching a company that registered late at a
+# number issued earlier. Timing is everything: too soon and it has not happened
+# yet, too late and the weekly register has already told us. Measured over ten
+# weeks, the vehicles that did this sat a median of 15,700 slots behind the
+# frontier, so an empty slot is re-queried once, when it is this far back.
+#
+# Once, not nightly. The frontier moves ~4,000 slots a day, so a slot sitting in
+# a fixed 20,000-slot window got re-queried five times for one useful answer -
+# 14,400 lookups a night to re-ask a question already asked. That was the whole
+# reason a night's work took eleven hours instead of three.
+RECHECK_FROM = int(os.environ.get("RECHECK_FROM", "12000"))
+RECHECK_TO = int(os.environ.get("RECHECK_TO", "20000"))
 SHELF_DAYS = int(os.environ.get("SHELF_DAYS", "120"))
 # Bank the checkpoint this often. A run cut short then loses at most this much
 # work instead of everything since it started.
@@ -233,6 +245,10 @@ def lookup(acn: str, tries: int = 4):
 # ----------------------------------------------------------------- checkpoint
 CKPT = DATA / "lookups.jsonl"
 
+# ACNs whose single re-check has been spent. Persisted alongside the checkpoint
+# so the promise of "once" survives a restart.
+RECHECKED: set[str] = set()
+
 
 def load_checkpoint() -> dict:
     """acn -> record|None. None means the slot resolved to nothing when last seen.
@@ -250,6 +266,8 @@ def load_checkpoint() -> dict:
             try:
                 r = json.loads(line)
                 out[r["acn"]] = r["d"]
+                if r.get("r"):
+                    RECHECKED.add(r["acn"])
             except Exception:
                 pass
     elif (DATA / "lookups.jsonl.gz").exists():          # one-time migration
@@ -284,7 +302,10 @@ def save_checkpoint(seen: dict, frontier: int | None = None,
         for a in sorted(seen):
             b = base_of(a)
             if floor <= b <= ceiling:
-                f.write(json.dumps({"acn": a, "d": seen[a]}) + "\n")
+                rec = {"acn": a, "d": seen[a]}
+                if a in RECHECKED:
+                    rec["r"] = 1
+                f.write(json.dumps(rec) + "\n")
                 kept += 1
     # Never replace a good checkpoint with an empty one.
     if kept == 0 and CKPT.exists():
@@ -532,23 +553,26 @@ def main() -> int:
 
     trail_hi = forward[0] if forward else frontier
     trail_lo = max(FRONTIER_LO, trail_hi - TRAILING_SLOTS)
+    rc_hi, rc_lo = frontier - RECHECK_FROM, frontier - RECHECK_TO
     gaps, recheck = [], []
     for b in range(trail_lo, trail_hi):
         a = acn_for(b)
         if a not in seen:
             gaps.append(a)
-        elif seen[a] is None:
+        elif seen[a] is None and rc_lo <= b <= rc_hi and a not in RECHECKED:
             recheck.append(a)
     # Walk gaps every-second-first too, so a truncated run spans the whole hole
     # rather than covering the bottom of it.
     gaps = gaps[::2] + gaps[1::2]
     trailing = gaps + recheck
     print(f"forward: {len(plan):,} new slots   shelf re-checks: {len(shelf):,}   "
-          f"trailing: {len(gaps):,} never-visited gaps + {len(recheck):,} empty re-checks")
+          f"trailing: {len(gaps):,} never-visited gaps + {len(recheck):,} empty re-checks "
+          f"(band {RECHECK_FROM:,}-{RECHECK_TO:,} slots back, once each)")
 
     # Forward first, then shelf re-checks (cheap and high-yield), then the
     # trailing window. If the clock beats us, trailing re-checks are the right
     # thing to lose.
+    rc_set = set(recheck)
     queue = plan + shelf + trailing
     deadline = started + BUDGET_MIN * 60
     done = truncated = bad = 0
@@ -579,6 +603,8 @@ def main() -> int:
                     print("  !! further per-slot errors suppressed")
                 continue
             done += 1
+            if a in rc_set:
+                RECHECKED.add(a)
             d = seen[a]
             if d and "Company" in (d.get("type") or ""):
                 found_n += 1
@@ -619,6 +645,7 @@ def main() -> int:
 
     if bad:
         print(f"{bad:,} slots errored and were left for a later run")
+    cov = coverage(seen, frontier)
     rows = company_rows(seen)
 
     # Findings accumulate. Grouping runs over the ledger rather than over this
@@ -643,17 +670,66 @@ def main() -> int:
               gaps=len(gaps), recheck=len(recheck),
               companies=len(rows), stacks=stacks, singles=bidcos, role_only=other,
               bad=bad, ledger_new=added, ledger_waiting=len(waiting),
-              ledger_in_register=moved,
+              ledger_in_register=moved, coverage=cov,
               rows=rows, error=err, status="failed" if err else "ok",
               # When the forward pass is empty the window is the trailing one -
               # reporting a blank start made the page read "Window  -> ...".
               window=[acn_for(forward[0]) if forward else acn_for(trail_lo),
                       acn_for(frontier)])
+    print(f"coverage: {cov['checked']:,} of {cov['slots']:,} slots between the "
+          f"register ({cov['from_acn']}) and today ({cov['to_acn']}) - "
+          f"{cov['remaining']:,} still to check, {cov['companies']:,} companies found")
     nb = sum(1 for x in stacks if x["has_bidco"])
     print(f"done: {done:,} slots, {len(rows):,} companies, {len(stacks)} stacks "
           f"({nb} with a Bidco), {len(bidcos)} lone Bidcos, {len(other)} other role "
           f"names, {(time.time()-started)/60:.0f} min")
     return 1 if err else 0
+
+
+def coverage(seen: dict, frontier: int, buckets: int = 12) -> dict:
+    """How much of the gap between the register and today has actually been looked at.
+
+    The register is complete up to some ACN and silent after it; the daily sweep
+    owns everything above. This says, in plain numbers, how far that handover has
+    got: how many slots lie in the gap, how many have been checked, how many
+    companies came back, and - via the buckets - WHERE the unchecked ones are, so
+    a hole in yesterday reads differently from a hole a week back.
+    """
+    lo = 0
+    wp = DATA / "weekly.json"
+    if wp.exists():
+        try:
+            m = json.loads(wp.read_text()).get("max_acn") or ""
+            if m.isdigit():
+                lo = base_of(m)
+        except Exception:
+            pass
+    if not lo:                       # no register yet: fall back to what we know
+        known = [base_of(a) for a in seen] or [frontier]
+        lo = min(known)
+
+    checked_bases = {base_of(a) for a in seen if lo <= base_of(a) <= frontier}
+    companies = sum(1 for a, d in seen.items()
+                    if lo <= base_of(a) <= frontier
+                    and d and "Company" in (d.get("type") or ""))
+    total = max(0, frontier - lo)
+    width = max(1, total // buckets)
+    bs = []
+    for i in range(buckets):
+        b0 = lo + i * width
+        b1 = frontier if i == buckets - 1 else b0 + width
+        n = sum(1 for b in checked_bases if b0 <= b < b1)
+        bs.append({"from": acn_for(b0), "to": acn_for(max(b0, b1 - 1)),
+                   "checked": n, "slots": max(1, b1 - b0)})
+    return {
+        "from_acn": acn_for(lo + 1) if lo else "",
+        "to_acn": acn_for(frontier),
+        "slots": total,
+        "checked": len(checked_bases),
+        "remaining": max(0, total - len(checked_bases)),
+        "companies": companies,
+        "buckets": bs,
+    }
 
 
 def write_run(state, now, started, **kw):
@@ -675,6 +751,7 @@ def write_run(state, now, started, **kw):
         "ledger_new": kw.get("ledger_new", 0),
         "ledger_waiting": kw.get("ledger_waiting", 0),
         "ledger_in_register": kw.get("ledger_in_register", 0),
+        "coverage": kw.get("coverage", {}),
     }
     state.setdefault("history", []).append(run)
     state["history"] = state["history"][-60:]

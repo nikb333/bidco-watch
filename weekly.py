@@ -65,10 +65,18 @@ def main() -> int:
     by_acn: dict[str, dict] = {}
     renamed: list[dict] = []
     scanned = 0
+    # The highest ACN anywhere in the published register. This is the honest
+    # boundary of what the weekly file knows about, and therefore exactly where
+    # the daily sweep has to take over. Tracked across every row, not just the
+    # role-named ones, because a Bidco is not usually the newest company.
+    max_acn = [0]
     with z.open(member) as f:
         rd = csv.DictReader(io.TextIOWrapper(f, encoding="utf-8-sig"), delimiter="\t")
         for r in rd:
             scanned += 1
+            acn_any = (r.get("ACN") or "").strip()
+            if acn_any.isdigit():
+                max_acn[0] = max(max_acn[0], int(acn_any))
             reg = (r.get("Date of Registration") or "").strip()
             if not reg:
                 continue
@@ -154,6 +162,7 @@ def main() -> int:
     out = {
         "generated_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "dataset": fname, "window_days": WINDOW_DAYS,
+        "max_acn": f"{max_acn[0]:09d}" if max_acn[0] else "",
         "entities": entities,
         "bidcos": sum(1 for e in entities if e["is_bidco"]),
         "stacks": len({e["stem"] for e in entities if e["in_stack"]}),
@@ -206,6 +215,7 @@ def main() -> int:
         w.writerows(entities)
 
     print(f"{out['bidcos']} Bidcos · {len(renamed)} renames seen")
+    print(f"register covers companies up to ACN {out['max_acn']}")
     if recall is not None:
         print(f"daily-sweep recall over covered ground: {recall:.1f}% "
               f"({len(missed)} missed of {len(judged)})")
