@@ -1,7 +1,7 @@
 {
- "generated_utc": "2026-09-10T09:35:00+00:00",
+ "generated_utc": "2026-09-10T10:39:27Z",
  "dataset": "company_202609.csv",
- "window_days": 75,
+ "window_days": 180,
  "entities": [
   {
    "acn": "702069627",
@@ -12,7 +12,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "GROUNDSWELL",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "702028331",
@@ -23,7 +25,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "PBSP CARE FOR YOU",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "702026079",
@@ -34,7 +38,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "WALTERS",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "702025241",
@@ -45,7 +51,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "LAM1",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "702023596",
@@ -56,7 +64,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "STELLAR",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
   },
   {
    "acn": "702014622",
@@ -67,7 +77,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "SEEKER AGENCY",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "702014131",
@@ -78,7 +90,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "SOLUTION ENTERTAINMENT SERVICES",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "702014104",
@@ -89,7 +103,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "SOLUTION ENTERTAINMENT",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701991960",
@@ -100,7 +116,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "BUNDEY",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701990132",
@@ -111,7 +129,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "NSW 1",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701924272",
@@ -122,7 +142,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "INA",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701915077",
@@ -133,7 +155,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "CDC SPV",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701914776",
@@ -144,7 +168,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "CDC HORIZON 2",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701914570",
@@ -155,7 +181,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "CDC SPV",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701914123",
@@ -166,7 +194,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "CDC HORIZON 1",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701912816",
@@ -177,7 +207,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "CDC HORIZON",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701908358",
@@ -188,7 +220,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "AIRTRUNK HTR1B",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701908312",
@@ -199,7 +233,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "AIRTRUNK HTR1A",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701850071",
@@ -210,7 +246,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "ISOTOPE 3",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701849845",
@@ -221,7 +259,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "ISOTOPE",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701841456",
@@ -232,7 +272,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "ERIC ALPHA UBP P4",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701841303",
@@ -243,7 +285,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "ERIC ALPHA UBP P3",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701841223",
@@ -254,7 +298,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "ERIC ALPHA UBP P2",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701841205",
@@ -265,7 +311,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "ERIC ALPHA UBP P1",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701840833",
@@ -276,7 +324,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "ANTARES",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701836642",
@@ -287,7 +337,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "FLOREY I",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
   },
   {
    "acn": "701834684",
@@ -298,7 +350,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "FLOREY I",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "701797935",
@@ -309,7 +363,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "HIDDEN HILL BESS",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701778912",
@@ -320,7 +376,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "AVERRA",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
   },
   {
    "acn": "701775957",
@@ -331,7 +389,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "AIRTRUNK HTR1B",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701775948",
@@ -342,7 +402,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "AIRTRUNK HTR1A",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701773328",
@@ -353,7 +415,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "AVERRA",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "701766109",
@@ -364,7 +428,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "AVERRA",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "701760358",
@@ -375,7 +441,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "AVERRA",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "701752347",
@@ -386,7 +454,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "WESTERN DOWNS DIGITAL PARK 1",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701729660",
@@ -397,7 +467,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "AIRTRUNK HTR1",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701727657",
@@ -408,7 +480,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "AVOCA",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
   },
   {
    "acn": "701727479",
@@ -419,7 +493,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "AVOCA",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "701727317",
@@ -430,7 +506,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "AVOCA",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "701722974",
@@ -441,7 +519,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "AVOCA",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "701714614",
@@ -452,7 +532,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "KERANG",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701709579",
@@ -463,7 +545,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "PEGASUS AUSTRALIAN",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701688771",
@@ -474,7 +558,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "DAA",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701547659",
@@ -485,7 +571,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "PULSE",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
   },
   {
    "acn": "701547542",
@@ -496,7 +584,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "PULSE",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "701547373",
@@ -507,7 +597,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "PULSE",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "701701895",
@@ -518,7 +610,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "EAGLEHAWK",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701680597",
@@ -529,7 +623,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "WAMBO",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
   },
   {
    "acn": "701672693",
@@ -540,7 +636,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "WESTERN DOWNS DIGITAL PARK 4",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701671114",
@@ -551,7 +649,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "WESTERN DOWNS DIGITAL PARK 3",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701670635",
@@ -562,7 +662,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "WESTERN DOWNS DIGITAL PARK 2",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701670144",
@@ -573,7 +675,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "WESTERN DOWNS DIGITAL PARK 1",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701622719",
@@ -584,7 +688,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "INNOVATIVE SHEDS TRADE",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701620564",
@@ -595,7 +701,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "APX W",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701619347",
@@ -606,7 +714,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "APX W",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701618395",
@@ -617,7 +727,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "H G CONSTRUCTIONS",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701617352",
@@ -628,7 +740,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "APX N",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701616962",
@@ -639,7 +753,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "APX N",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701594630",
@@ -650,7 +766,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "EUREKA BEVINGTON SHORES",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701594498",
@@ -661,7 +779,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "EUREKA THE GRANGE",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701583039",
@@ -672,7 +792,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "EASTGATE PROPERTY 2",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701557904",
@@ -683,7 +805,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "RP",
-   "in_stack": true
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
   },
   {
    "acn": "701546901",
@@ -694,7 +818,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "RP",
-   "in_stack": true
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701538276",
@@ -705,7 +831,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "APX EAST",
-   "in_stack": false
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700830753",
@@ -716,7 +844,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "DANONE ACQUISITION",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
   },
   {
    "acn": "701506532",
@@ -727,7 +857,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "STARBOARD",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
   },
   {
    "acn": "701506470",
@@ -738,7 +870,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "STARBOARD",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "701506425",
@@ -749,7 +883,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "STARBOARD",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "701506381",
@@ -760,7 +896,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "STARBOARD",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "701506121",
@@ -771,7 +909,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "STARBOARD",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "701502230",
@@ -782,7 +922,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "SALTBUSH",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701501868",
@@ -793,7 +935,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "MILLI WIND FARM",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701501493",
@@ -804,7 +948,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "MERINO WF",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701500736",
@@ -815,7 +961,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "HANWORTH",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701500450",
@@ -826,7 +974,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "DUNMORE SOLAR FARM BESS",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701499998",
@@ -837,7 +987,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "COLEAMBALLY BESS",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701499532",
@@ -848,7 +1000,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "ARDANDRA SF",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700830520",
@@ -859,7 +1013,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "DANONE",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701413603",
@@ -870,7 +1026,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "BLUE IS MID",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701409001",
@@ -881,7 +1039,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "PROVENT ONLINE",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701408915",
@@ -892,7 +1052,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "CLINICAL HUB",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701370621",
@@ -903,7 +1065,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "WESTBURY BIOHUB",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701326954",
@@ -914,7 +1078,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "D S",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701322581",
@@ -925,18 +1091,22 @@
    "abn": true,
    "status": "REGD",
    "stem": "GUNDARY SOLAR",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701314374",
-   "name": "MB NEWCO PTY LTD",
+   "name": "MITCHELL BRANDTMAN PTY LTD",
    "date": "12/08/2026",
-   "role": "NEWCO",
+   "role": "",
    "state": "",
    "abn": true,
    "status": "REGD",
-   "stem": "MB",
-   "in_stack": false
+   "stem": "MITCHELL BRANDTMAN",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701301340",
@@ -947,7 +1117,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "L S PSS",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701298982",
@@ -958,7 +1130,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "L S CARING SUPPORT HOME",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701296200",
@@ -969,7 +1143,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "QUIVER",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
   },
   {
    "acn": "701294475",
@@ -980,7 +1156,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "QUIVER B",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701292828",
@@ -991,7 +1169,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "QUIVER A",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701289849",
@@ -1002,7 +1182,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "QUIVER",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "701287489",
@@ -1013,7 +1195,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "DB GRID 2",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701286348",
@@ -1024,7 +1208,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "DB GRID 1",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701081156",
@@ -1035,7 +1221,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "TRIDENT",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "701254239",
@@ -1046,7 +1234,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "ZERRA WDDP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701081245",
@@ -1057,7 +1247,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "TRIDENT",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
   },
   {
    "acn": "701203910",
@@ -1068,7 +1260,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "OOH 2",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701202931",
@@ -1079,7 +1273,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "OOH 1",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701186932",
@@ -1090,7 +1286,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "PARTNERSHIP CAPITAL JPS",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
   },
   {
    "acn": "701185926",
@@ -1101,7 +1299,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "YC",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701170416",
@@ -1112,7 +1312,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "PARTNERSHIP CAPITAL JPS",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "701169646",
@@ -1123,7 +1325,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "BELLAGIO",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
   },
   {
    "acn": "701169155",
@@ -1134,7 +1338,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "BELLAGIO",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "701167688",
@@ -1145,7 +1351,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "BELLAGIO",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "701150950",
@@ -1156,7 +1364,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "CGP PROPERTY INVESTMENT",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701119208",
@@ -1167,7 +1377,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "GEL",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701082082",
@@ -1178,7 +1390,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "ZERRA OPERATOR",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701044448",
@@ -1189,7 +1403,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "ENVEST 3",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701003321",
@@ -1200,7 +1416,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "FOSTER",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700998732",
@@ -1211,7 +1429,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "NTBESS",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700936018",
@@ -1222,7 +1442,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "PERUN",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
   },
   {
    "acn": "700934078",
@@ -1233,7 +1455,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "PERUN",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700933893",
@@ -1244,7 +1468,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "PERUN",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700933777",
@@ -1255,7 +1481,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "PERUN",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700933697",
@@ -1266,7 +1494,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "PERUN",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700889890",
@@ -1277,7 +1507,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "CI V",
-   "in_stack": false
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700884859",
@@ -1288,7 +1520,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "PHOTON",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
   },
   {
    "acn": "700840099",
@@ -1299,7 +1533,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "PACIFIC GREEN NINE MILE",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700839603",
@@ -1310,7 +1546,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "VALLEY",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
   },
   {
    "acn": "700837752",
@@ -1321,7 +1559,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "VALLEY",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700836979",
@@ -1332,7 +1572,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "VALLEY",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700817312",
@@ -1343,7 +1585,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "OOH",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
   },
   {
    "acn": "700793040",
@@ -1354,7 +1598,9 @@
    "abn": true,
    "status": "SOFF",
    "stem": "CAPRA",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
   },
   {
    "acn": "700792990",
@@ -1365,7 +1611,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "GELATO",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
   },
   {
    "acn": "700790898",
@@ -1376,7 +1624,9 @@
    "abn": true,
    "status": "SOFF",
    "stem": "CAPRA",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700790772",
@@ -1387,7 +1637,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "GELATO",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700789493",
@@ -1398,7 +1650,9 @@
    "abn": true,
    "status": "SOFF",
    "stem": "CAPRA",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700789233",
@@ -1409,7 +1663,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "GELATO",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700766605",
@@ -1420,7 +1676,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "CHAD",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700764978",
@@ -1431,7 +1689,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "STACK INFRASTRUCTURE MEL04",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700761351",
@@ -1442,7 +1702,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "HARBOUR SENIOR",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700741411",
@@ -1453,7 +1715,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "ARROW CADMUS",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700741082",
@@ -1464,7 +1728,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "HELIOS PORTFOLIO",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700738567",
@@ -1475,7 +1741,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "STANBRIDGE OP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700738558",
@@ -1486,7 +1754,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "NARACOORTE OP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700738549",
@@ -1497,7 +1767,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "COOMANDOOK OP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700738254",
@@ -1508,7 +1780,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "BARNAWARTHA NORTH OP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700737122",
@@ -1519,7 +1793,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "MARCOLLAT STAGE 2 OP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700736465",
@@ -1530,7 +1806,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "MOOROOPNA OP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700736456",
@@ -1541,7 +1819,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "CONEYBEER OP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700736152",
@@ -1552,7 +1832,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "SHEFFIELD OP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700736143",
@@ -1563,7 +1845,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "MARCOLLAT STAGE 1 OP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700736134",
@@ -1574,7 +1858,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "ALBURY OP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700735271",
@@ -1585,7 +1871,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "INDIGO OP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700735262",
@@ -1596,7 +1884,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "BAIRNSDALE OP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700735191",
@@ -1607,7 +1897,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "LACEBY OP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700672108",
@@ -1618,7 +1910,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "THE NATIONAL CHAMPIONS",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700649476",
@@ -1629,7 +1923,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "CREERA 5",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700642039",
@@ -1640,7 +1936,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "MOOROOPNA PROP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700642020",
@@ -1651,7 +1949,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "CONEYBEER PROP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700641292",
@@ -1662,7 +1962,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "SHEFFIELD PROP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700641283",
@@ -1673,7 +1975,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "MARCOLLAT 2 PROP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700641274",
@@ -1684,7 +1988,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "MARCOLLAT 1 PROP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700641247",
@@ -1695,7 +2001,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "ALBURY PROP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700640053",
@@ -1706,7 +2014,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "STANBRIDGE PROP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700640044",
@@ -1717,7 +2027,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "NARACOORTE PROP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700639103",
@@ -1728,7 +2040,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "BARNAWARTHA NORTH PROP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700639096",
@@ -1739,7 +2053,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "BAIRNSDALE PROP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700627934",
@@ -1750,7 +2066,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "COOMANDOOK PROP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700626839",
@@ -1761,7 +2079,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "FOREST",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700625029",
@@ -1772,7 +2092,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "INDIGO PROP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700624899",
@@ -1783,7 +2105,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "LACEBY PROP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700621594",
@@ -1794,7 +2118,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "WURDONG",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700602802",
@@ -1805,7 +2131,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "OBX",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700593531",
@@ -1816,7 +2144,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "CFH",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700564816",
@@ -1827,7 +2157,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "AR",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700554454",
@@ -1838,7 +2170,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "HOSTA",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
   },
   {
    "acn": "700550563",
@@ -1849,7 +2183,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "HOSTA",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700535379",
@@ -1860,7 +2196,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "CQI",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700534238",
@@ -1871,7 +2209,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "PARAFIELD",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700526058",
@@ -1882,7 +2222,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "NSSBP",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
   },
   {
    "acn": "700508523",
@@ -1893,7 +2235,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "HOSTA",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700498602",
@@ -1904,7 +2248,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "TARRONE BESS DEVELOPMENT",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "698563076",
@@ -1915,7 +2261,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "BANNABY",
-   "in_stack": false
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700430673",
@@ -1926,7 +2274,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "STEVEMACS",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700427229",
@@ -1937,7 +2287,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "DRAGON BOND",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700425976",
@@ -1948,7 +2300,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "DRAGON BOND",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700424675",
@@ -1959,7 +2313,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "SUMMIT",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
   },
   {
    "acn": "700421950",
@@ -1970,7 +2326,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "DRAGON ALBERT",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700420882",
@@ -1981,7 +2339,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "SUMMIT",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700416799",
@@ -1992,7 +2352,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "DRAGON ALBERT",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700414606",
@@ -2003,7 +2365,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "SUMMIT",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700404039",
@@ -2014,7 +2378,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "TRAILER",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
   },
   {
    "acn": "700401556",
@@ -2025,7 +2391,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "COMMODORE",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700401501",
@@ -2036,7 +2404,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "TRAILER",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700380909",
@@ -2047,7 +2417,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "TRAILER",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700378178",
@@ -2058,7 +2430,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "SUMMIT",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700341420",
@@ -2069,7 +2443,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "VALONT",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700292306",
@@ -2080,7 +2456,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "BOWNING HYBRID",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700234724",
@@ -2091,7 +2469,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "ULEXITE",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700222920",
@@ -2102,7 +2482,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "MCLEOD",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
   },
   {
    "acn": "700216342",
@@ -2113,7 +2495,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "COMMODORE",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
   },
   {
    "acn": "700215336",
@@ -2124,7 +2508,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "COMMODORE",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700214204",
@@ -2135,7 +2521,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "COMMODORE",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700168510",
@@ -2146,7 +2534,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "TRACKER",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700163186",
@@ -2157,7 +2547,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "HIDDEN HILL",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700162214",
@@ -2168,7 +2560,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "MCLEOD",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
   },
   {
    "acn": "700074531",
@@ -2179,7 +2573,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "KERANG",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700048497",
@@ -2190,7 +2586,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "ANZA",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "700023650",
@@ -2201,7 +2599,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "ANZA FIN",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "699976880",
@@ -2212,7 +2612,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "FOREST 2",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "699964308",
@@ -2223,7 +2625,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "KIRRAWEE COMMERCIAL",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "699870123",
@@ -2234,7 +2638,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "CONCERTO 2 0",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "699870114",
@@ -2245,7 +2651,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "CONCERTO",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "699831475",
@@ -2256,7 +2664,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "LANSDOWN SOLAR WEST LAND",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "699828361",
@@ -2267,7 +2677,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "LANSDOWN SOLAR WEST",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "699822832",
@@ -2278,7 +2690,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "YANCO",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "699818418",
@@ -2289,7 +2703,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "YANCO",
-   "in_stack": true
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "699777707",
@@ -2300,7 +2716,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "BELEEF",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "699743989",
@@ -2311,7 +2729,9 @@
    "abn": true,
    "status": "REGD",
    "stem": "MOBILONG",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "699735263",
@@ -2322,15 +2742,2980 @@
    "abn": true,
    "status": "REGD",
    "stem": "TG",
-   "in_stack": false
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699689686",
+   "name": "CHANNEL MIDCO PTY LTD",
+   "date": "30/06/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CHANNEL",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699680281",
+   "name": "ENT HOLDCO PTY LTD",
+   "date": "30/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ENT",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699675002",
+   "name": "GL1 HOLDCO NO 3 PTY LTD",
+   "date": "30/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GL1",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699674274",
+   "name": "ACFS MIDCO PTY LTD",
+   "date": "30/06/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ACFS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699645219",
+   "name": "SURGE AU BIDCO PTY LTD",
+   "date": "29/06/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SURGE",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "699643304",
+   "name": "SURGE AU MIDCO PTY LTD",
+   "date": "29/06/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SURGE",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "699638947",
+   "name": "SURGE AU TOPCO PTY LTD",
+   "date": "29/06/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SURGE",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "699633362",
+   "name": "DJT HOLDCO PTY LTD",
+   "date": "29/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "DJT",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699629902",
+   "name": "APA KPS (HOLDCO) PTY LTD",
+   "date": "29/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "APA KPS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699601520",
+   "name": "AUXO HOLDCO PTY LTD",
+   "date": "29/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "AUXO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699546195",
+   "name": "LM HOLDCO PTY LTD",
+   "date": "26/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "LM",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699535889",
+   "name": "AWF TOPCO PTY LTD",
+   "date": "26/06/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "AWF",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699492478",
+   "name": "NERRIGA HOLDCO PTY LTD",
+   "date": "25/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "NERRIGA",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699492281",
+   "name": "TEMORA HOLDCO PTY LTD",
+   "date": "25/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "TEMORA",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699491757",
+   "name": "UPPER HUNTER HOLDCO PTY LTD",
+   "date": "25/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "UPPER HUNTER",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699487119",
+   "name": "VIRGO BIDCO PTY LTD",
+   "date": "25/06/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "VIRGO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
+  },
+  {
+   "acn": "699417859",
+   "name": "GISI CG AUSTRALIA BIDCO PTY LTD",
+   "date": "24/06/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GISI CG",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
+  },
+  {
+   "acn": "699415533",
+   "name": "L&S HOLDCO PTY LTD",
+   "date": "24/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "L S",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699405868",
+   "name": "FINCO CAPITAL PTY LTD",
+   "date": "24/06/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CAPITAL",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699366017",
+   "name": "BAHM BIDCO PTY LTD",
+   "date": "23/06/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BAHM",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "699363892",
+   "name": "BAHM HOLDCO PTY LTD",
+   "date": "23/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BAHM",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "699356744",
+   "name": "LRA HOLDCO PTY LTD",
+   "date": "23/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "LRA",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699350920",
+   "name": "DANISH DOUGH HOLDCO PTY LTD",
+   "date": "23/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "DANISH DOUGH",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699333250",
+   "name": "SCALE MIDCO 2 PTY LTD",
+   "date": "22/06/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SCALE 2",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699329336",
+   "name": "SCALE MIDCO 1 PTY LTD",
+   "date": "22/06/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SCALE 1",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699259991",
+   "name": "MA FINCO 2026 PTY LTD",
+   "date": "19/06/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "MA 2026",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699256810",
+   "name": "IPF V HOLDCO PTY LTD",
+   "date": "19/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "IPF V",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699241051",
+   "name": "BDMR HOLDCO PTY LTD",
+   "date": "19/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BDMR",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699237619",
+   "name": "ANAXAVRU HOLDCO PTY LIMITED",
+   "date": "19/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ANAXAVRU",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699237324",
+   "name": "TURQUOISE GORTON FINCO PTY LTD",
+   "date": "19/06/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "TURQUOISE GORTON",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699202689",
+   "name": "APX EAST HOLDCO PTY LTD",
+   "date": "18/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "APX EAST",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699195518",
+   "name": "EQUANS HORIZON TOPCO PTY LTD",
+   "date": "18/06/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "EQUANS HORIZON",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699168100",
+   "name": "VERTICAL TRANSPORT BIDCO PTY LTD",
+   "date": "17/06/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "VERTICAL TRANSPORT",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
+  },
+  {
+   "acn": "699129523",
+   "name": "ELEVATE BIDCO PTY LTD",
+   "date": "16/06/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ELEVATE",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "699128786",
+   "name": "ELEVATE MIDCO PTY LTD",
+   "date": "16/06/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ELEVATE",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "699127832",
+   "name": "ELEVATE HOLDCO PTY LTD",
+   "date": "16/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ELEVATE",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "699084467",
+   "name": "VERTIS BIDCO PTY LTD",
+   "date": "15/06/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "VERTIS",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "699080423",
+   "name": "VERTIS FINCO PTY LTD",
+   "date": "15/06/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "VERTIS",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "699069871",
+   "name": "VERTIS TOPCO PTY LTD",
+   "date": "15/06/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "VERTIS",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "699064205",
+   "name": "AGPDC MEL1 FINCO 2 PTY LTD",
+   "date": "15/06/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "AGPDC MEL1 2",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699061151",
+   "name": "UTA SDP FINCO PTY LIMITED",
+   "date": "15/06/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "UTA SDP",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699018061",
+   "name": "EUREKA CONCRETE AND QUARRIES PTY LTD",
+   "date": "12/06/2026",
+   "role": "",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "EUREKA CONCRETE AND QUARRIES",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699010832",
+   "name": "ROCK HOLDCO PTY LTD",
+   "date": "12/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ROCK",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698935018",
+   "name": "CI V BIDCO PTY LTD",
+   "date": "10/06/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CI V",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "698905789",
+   "name": "TL AUS BIDCO PTY LTD",
+   "date": "10/06/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "TL",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
+  },
+  {
+   "acn": "698902804",
+   "name": "TL AUS HOLDCO PTY LTD",
+   "date": "10/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "TL",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698890998",
+   "name": "BRINKWORTH FINCO PTY LTD",
+   "date": "10/06/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BRINKWORTH",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698889217",
+   "name": "OPD CONSTRUCT HOLDCO PTY LTD",
+   "date": "09/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "OPD CONSTRUCT",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698886298",
+   "name": "MYRTLE FINCO PTY LTD",
+   "date": "09/06/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "MYRTLE",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698885764",
+   "name": "MYRTLE HOLDCO PTY LTD",
+   "date": "09/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "MYRTLE",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698773367",
+   "name": "GBCC FINCO PTY LTD",
+   "date": "05/06/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GBCC",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698761312",
+   "name": "GBCC HOLDCO PTY LTD",
+   "date": "04/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GBCC",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698741641",
+   "name": "SOMERSET INTERNATIONAL AUSTRALIA HOLDCO 1 PTY LTD",
+   "date": "04/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SOMERSET INTERNATIONAL 1",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698737718",
+   "name": "KENNEDY HOLDCO PTY LTD",
+   "date": "04/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "KENNEDY",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698725816",
+   "name": "GANZ PARENTCO PTY LTD",
+   "date": "03/06/2026",
+   "role": "PARENTCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GANZ",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698725058",
+   "name": "GANZ MIDCO PTY LTD",
+   "date": "03/06/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GANZ",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698724579",
+   "name": "GANZ TOPCO PTY LTD",
+   "date": "03/06/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GANZ",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698710459",
+   "name": "BARINGS AUSTRALIA MARINA HOLDCO PTY LTD",
+   "date": "03/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BARINGS MARINA",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698681373",
+   "name": "CLIVE HOLDCO PTY LTD",
+   "date": "02/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CLIVE",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698625115",
+   "name": "IH BTM MIDCO PTY LIMITED",
+   "date": "01/06/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "IH BTM",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698618736",
+   "name": "IH BTM HOLDCO PTY LIMITED",
+   "date": "01/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "IH BTM",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698569247",
+   "name": "MUSWELLBROOK MIDCO PTY LTD",
+   "date": "29/05/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "MUSWELLBROOK",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698568919",
+   "name": "GOULD CREEK 2 MIDCO PTY LTD",
+   "date": "29/05/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GOULD CREEK 2",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698568071",
+   "name": "MUSWELLBROOK HOLDCO PTY LTD",
+   "date": "29/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "MUSWELLBROOK",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698566719",
+   "name": "GOULD CREEK 2 HOLDCO PTY LTD",
+   "date": "29/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GOULD CREEK 2",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698558244",
+   "name": "APSLEY MIDCO PTY LTD",
+   "date": "29/05/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "APSLEY",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698554960",
+   "name": "BANNABY HOLDCO PTY LTD",
+   "date": "29/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BANNABY",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698553963",
+   "name": "APSLEY HOLDCO PTY LTD",
+   "date": "29/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "APSLEY",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698547796",
+   "name": "HOPE TOPCO PTY LTD",
+   "date": "29/05/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "HOPE",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698491397",
+   "name": "DHYAN HOLDCO PTY LTD",
+   "date": "27/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "DHYAN",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698490667",
+   "name": "MAC FINCO PTY LTD",
+   "date": "27/05/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "MAC",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698485424",
+   "name": "MOORABBIN AIRPORT CORPORATION HOLDCO PTY LTD",
+   "date": "27/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "MOORABBIN AIRPORT CORPORATION",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698333854",
+   "name": "ZELORA HOLDCO PTY LTD",
+   "date": "22/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ZELORA",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698333229",
+   "name": "ZELORA MEZZCO PTY LTD",
+   "date": "22/05/2026",
+   "role": "MEZZCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ZELORA",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698332240",
+   "name": "ZELORA TOPCO PTY LTD",
+   "date": "22/05/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ZELORA",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698311750",
+   "name": "HAMPTON PARK FINCO PTY LTD",
+   "date": "21/05/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "HAMPTON PARK",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698307881",
+   "name": "UNITY HOLDCO PTY LTD",
+   "date": "21/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "UNITY",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698298118",
+   "name": "RELAY BIDCO PTY LTD",
+   "date": "21/05/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "RELAY",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
+  },
+  {
+   "acn": "698290112",
+   "name": "MARKAKIS HOLDCO PTY LTD",
+   "date": "21/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "MARKAKIS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698289940",
+   "name": "CHAVIARAS HOLDCO PTY LTD",
+   "date": "21/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CHAVIARAS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698274609",
+   "name": "GALILEO BIDCO PTY LTD",
+   "date": "20/05/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GALILEO",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "698270905",
+   "name": "GALILEO HOLDCO PTY LTD",
+   "date": "20/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GALILEO",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "698258516",
+   "name": "NEXTDC S7 HOLDINGS MIDCO PTY LTD",
+   "date": "20/05/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "NEXTDC S7",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698258507",
+   "name": "NEXTDC S4 HOLDINGS MIDCO PTY LTD",
+   "date": "20/05/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "NEXTDC S4",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698256478",
+   "name": "CREERA HOLDCO 4 PTY LTD",
+   "date": "20/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CREERA 4",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698251393",
+   "name": "PEGASUS HOLD FINCO PTY LTD",
+   "date": "20/05/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PEGASUS HOLD",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698226470",
+   "name": "STOCKEDGE KEMPS CREEK OPCO FINCO PTY LTD",
+   "date": "20/05/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "STOCKEDGE KEMPS CREEK OPCO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698224798",
+   "name": "STOCKEDGE KEMPS CREEK HOLDCO PTY LTD",
+   "date": "19/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "STOCKEDGE KEMPS CREEK",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698222481",
+   "name": "FUSION BIDCO PTY LIMITED",
+   "date": "19/05/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "FUSION",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "698213455",
+   "name": "FUSION HOLDCO PTY LIMITED",
+   "date": "19/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "FUSION",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "698205622",
+   "name": "PRAECO DEVCO FINCO PTY LTD",
+   "date": "19/05/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PRAECO DEVCO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698205579",
+   "name": "PRAECO FINCO PTY LTD",
+   "date": "19/05/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PRAECO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698204974",
+   "name": "SUPERNODE BESS 3 HOLDCO PTY LTD",
+   "date": "19/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SUPERNODE BESS 3",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698192639",
+   "name": "TIG PYRMONT HOLDCO PTY LTD",
+   "date": "18/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "TIG PYRMONT",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698184100",
+   "name": "CTC&S HOLDCO PTY LTD",
+   "date": "18/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CTC S",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698164742",
+   "name": "ARROW HOLDCO (VELO-1) PTY LTD",
+   "date": "18/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ARROW VELO 1",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698085906",
+   "name": "ASIA LIVING WATTLE ST AUSTRALIA PTY LTD",
+   "date": "14/05/2026",
+   "role": "",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ASIA LIVING WATTLE ST",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698072918",
+   "name": "ASIA LIVING PROJECTS AUSTRALIA PTY LTD",
+   "date": "14/05/2026",
+   "role": "",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ASIA LIVING PROJECTS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698069564",
+   "name": "ULTIMO UPPER HOLDCO PTY LTD",
+   "date": "14/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ULTIMO UPPER",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698054741",
+   "name": "GREEK ST FINCO PTY LTD",
+   "date": "14/05/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GREEK ST",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698052685",
+   "name": "ULTIMO FINCO PTY LTD",
+   "date": "14/05/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ULTIMO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698030189",
+   "name": "RENEWABLE PROJECT SERVICES HOLDCO PTY LTD",
+   "date": "13/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "RENEWABLE PROJECT SERVICES",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697986477",
+   "name": "NEXTDC M5 HOLDINGS MIDCO PTY LTD",
+   "date": "12/05/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "NEXTDC M5",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697957207",
+   "name": "M BIDCO 2 PTY LTD",
+   "date": "11/05/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "M 2",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
+  },
+  {
+   "acn": "697956791",
+   "name": "GOLDEN M TAHMOOR COAL HOLDINGS PTY LTD",
+   "date": "11/05/2026",
+   "role": "",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GOLDEN M TAHMOOR COAL",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697953487",
+   "name": "WATTLESTONE HOLDCO PTY LTD",
+   "date": "11/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "WATTLESTONE",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697944906",
+   "name": "SLTT TOPCO PTY LTD",
+   "date": "11/05/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SLTT",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697944406",
+   "name": "M BIDCO 2 HOLDINGS PTY LTD",
+   "date": "11/05/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "M 2",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
+  },
+  {
+   "acn": "697944166",
+   "name": "M BIDCO 1 HOLDINGS PTY LTD",
+   "date": "11/05/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "M 1",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
+  },
+  {
+   "acn": "697930948",
+   "name": "RJV BIDCO PTY LTD",
+   "date": "11/05/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "RJV",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
+  },
+  {
+   "acn": "697928055",
+   "name": "RJV HOLDCO PTY LTD",
+   "date": "11/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "RJV",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697888574",
+   "name": "AETERNA SYSTEMS HOLDCO PTY LTD",
+   "date": "08/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "AETERNA SYSTEMS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697842854",
+   "name": "TRE HOLDCO PTY LTD",
+   "date": "07/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "TRE",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697835984",
+   "name": "WALSHS HOLDCO PTY LTD",
+   "date": "07/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "WALSHS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697805360",
+   "name": "TIG WATERLOO HOLDCO PTY LTD",
+   "date": "06/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "TIG WATERLOO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697798360",
+   "name": "WEEKEND HUSTLER HOLDCO PTY LTD",
+   "date": "06/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "WEEKEND HUSTLER",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697792108",
+   "name": "RGC HAWTHORN FINCO PTY LTD",
+   "date": "06/05/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "RGC HAWTHORN",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697776266",
+   "name": "BWP HOLDCO PTY LTD",
+   "date": "05/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BWP",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697775018",
+   "name": "THE REBATE MATES HOLDCO PTY LTD",
+   "date": "05/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "THE REBATE MATES",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697736762",
+   "name": "CURRAWONG HOLDCO LIMITED",
+   "date": "04/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CURRAWONG",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "697723774",
+   "name": "DWS HOLDCO PTY LTD",
+   "date": "04/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "DWS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697684423",
+   "name": "COLLINS FINCO PTY LTD",
+   "date": "04/05/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "COLLINS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697677820",
+   "name": "MCM HOLDCO PTY LTD",
+   "date": "01/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "MCM",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697676707",
+   "name": "RCBC CV HOLDCO PTY LTD",
+   "date": "01/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "RCBC CV",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697670116",
+   "name": "SKYSO HOLDCO PTY LTD",
+   "date": "01/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SKYSO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697668241",
+   "name": "BENDALONG HOLDCO PTY LTD",
+   "date": "01/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BENDALONG",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697086810",
+   "name": "ELEVEN BIDCO AUS PTY LTD",
+   "date": "01/05/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ELEVEN",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
+  },
+  {
+   "acn": "697627231",
+   "name": "HNB MIDCO PTY LTD",
+   "date": "30/04/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "HNB",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697623644",
+   "name": "TOTTENHAM FINCO PTY LTD",
+   "date": "30/04/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "TOTTENHAM",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697623635",
+   "name": "SYMPHONY FINCO PTY LTD",
+   "date": "30/04/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SYMPHONY",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697617486",
+   "name": "ASIA LIVING GREEK ST AUSTRALIA PTY. LIMITED",
+   "date": "30/04/2026",
+   "role": "",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ASIA LIVING GREEK ST",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697616943",
+   "name": "ASIA LIVING ULTIMO AUSTRALIA PTY. LIMITED",
+   "date": "30/04/2026",
+   "role": "",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ASIA LIVING ULTIMO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697525554",
+   "name": "FKA HOLDCO PTY LTD",
+   "date": "27/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "FKA",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697523578",
+   "name": "CURRAWONG BIDCO PTY LTD",
+   "date": "27/04/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CURRAWONG",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "697519896",
+   "name": "VINOMOFO BIDCO PTY LTD",
+   "date": "27/04/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "VINOMOFO",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "697509050",
+   "name": "PACIFIC GREEN QUARTZ FINCO PTY LTD",
+   "date": "27/04/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PACIFIC GREEN QUARTZ",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697468901",
+   "name": "LONGENICS MIDCO PTY LTD",
+   "date": "24/04/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "LONGENICS",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697467100",
+   "name": "FANTASTIC GROUP BIDCO PTY LTD",
+   "date": "24/04/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "FANTASTIC",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "697466032",
+   "name": "FANTASTIC GROUP MIDCO PTY LTD",
+   "date": "24/04/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "FANTASTIC",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "697465544",
+   "name": "FANTASTIC GROUP HOLDCO PTY LTD",
+   "date": "24/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "FANTASTIC",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "697464118",
+   "name": "LONGENICS HOLDCO PTY LTD",
+   "date": "24/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "LONGENICS",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697459626",
+   "name": "EPTEC INFRA HOLDCO PTY LTD",
+   "date": "24/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "EPTEC INFRA",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697459117",
+   "name": "EPTEC INFRA TOPCO PTY LTD",
+   "date": "24/04/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "EPTEC INFRA",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697455566",
+   "name": "VINOMOFO HOLDCO PTY LTD",
+   "date": "24/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "VINOMOFO",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "697447840",
+   "name": "ELLICH HOLDCO PTY LTD",
+   "date": "24/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ELLICH",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697422236",
+   "name": "COSTGRID TECHNOLOGY BIDCO PTY LTD",
+   "date": "23/04/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "COSTGRID TECHNOLOGY",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "697421211",
+   "name": "COSTGRID TECHNOLOGY MIDCO PTY LTD",
+   "date": "23/04/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "COSTGRID TECHNOLOGY",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "697328340",
+   "name": "STOCKEDGE KEMPS CREEK PROPCO FINCO PTY LTD",
+   "date": "21/04/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "STOCKEDGE KEMPS CREEK PROPCO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697307369",
+   "name": "PITT FINCO PTY LTD",
+   "date": "20/04/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PITT",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697303576",
+   "name": "CDC SPV HOLDCO NO 7 PTY LTD",
+   "date": "20/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CDC SPV",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697303567",
+   "name": "CDC SPV HOLDCO NO 6 PTY LTD",
+   "date": "20/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CDC SPV",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697303558",
+   "name": "CDC SPV HOLDCO NO 5 PTY LTD",
+   "date": "20/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CDC SPV",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697245668",
+   "name": "STRATUS HOLDCO PTY LTD",
+   "date": "17/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "STRATUS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697235617",
+   "name": "FLATROCK BESS HOLDCO PTY LTD",
+   "date": "17/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "FLATROCK BESS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697234307",
+   "name": "AUS BESS HOLDCO PTY LTD",
+   "date": "17/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BESS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697233891",
+   "name": "AUS GEN HOLDCO PTY LTD",
+   "date": "17/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GEN",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697230096",
+   "name": "APOLLO AUSTRALIA BIDCO PTY LTD",
+   "date": "17/04/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "APOLLO",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "697223484",
+   "name": "APOLLO AUSTRALIA HOLDCO PTY LTD",
+   "date": "17/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "APOLLO",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "697211224",
+   "name": "PROSPER FINCO SPV 1 PTY LTD",
+   "date": "17/04/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PROSPER SPV 1",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697171725",
+   "name": "1 GOODFELLOWS ROAD KALLANGUR HOLDCO PTY LTD",
+   "date": "15/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "1 GOODFELLOWS ROAD KALLANGUR",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697171636",
+   "name": "15 ARMSTRONG STREET PETRIE HOLDCO PTY LTD",
+   "date": "15/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "15 ARMSTRONG STREET PETRIE",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697170755",
+   "name": "CDC SPV HOLDCO NO 4 PTY LTD",
+   "date": "15/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CDC SPV",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697170657",
+   "name": "CDC SPV HOLDCO NO 3 PTY LTD",
+   "date": "15/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CDC SPV",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697131249",
+   "name": "PRAHRAN HOLDCO PTY LTD",
+   "date": "14/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PRAHRAN",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697118951",
+   "name": "MILTONISE INVESTMENTS HOLDCO PTY LTD",
+   "date": "14/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "MILTONISE INVESTMENTS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697103772",
+   "name": "KEYSTONE EDUCATION BIDCO PTY LTD",
+   "date": "14/04/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "KEYSTONE EDUCATION",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
+  },
+  {
+   "acn": "697086543",
+   "name": "AIRTRUNK SYD2 EXP HOLDCO PTY LIMITED",
+   "date": "13/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "AIRTRUNK SYD2 EXP",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697074445",
+   "name": "PAPILLON FINCO PTY LTD",
+   "date": "13/04/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PAPILLON",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "697070358",
+   "name": "QUARTERDECK HOLDCO PTY LTD",
+   "date": "13/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "QUARTERDECK",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696957132",
+   "name": "HTFS HOLDCO PTY LTD",
+   "date": "08/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "HTFS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696935770",
+   "name": "PROJECT EVE HOLDCO PTY LTD",
+   "date": "08/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PROJECT EVE",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696933347",
+   "name": "BROADMEADOWS FINCO PTY LTD",
+   "date": "08/04/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BROADMEADOWS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696123850",
+   "name": "GP ENERGY (KLG) FINCO PTY LTD",
+   "date": "08/04/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GP ENERGY KLG",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696888730",
+   "name": "WISDOM BIDCO PTY LTD",
+   "date": "07/04/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "WISDOM",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "696888712",
+   "name": "WISDOM MIDCO PTY LTD",
+   "date": "07/04/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "WISDOM",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "696888678",
+   "name": "WISDOM HOLDCO PTY LTD",
+   "date": "07/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "WISDOM",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "696888552",
+   "name": "WISDOM TOPCO PTY LTD",
+   "date": "07/04/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "WISDOM",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "696812192",
+   "name": "ANVIL AU HOLDCO PTY LTD",
+   "date": "02/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ANVIL",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696761341",
+   "name": "STORAGE TECH HOLDCO PTY LTD",
+   "date": "01/04/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "STORAGE TECH",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696741590",
+   "name": "ICOP FINCO PTY LIMITED",
+   "date": "31/03/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ICOP",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696717478",
+   "name": "AXIS HOLDCO PTY LTD",
+   "date": "31/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "AXIS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696716248",
+   "name": "IRIDIUM HOLDCO PTY LTD",
+   "date": "30/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "IRIDIUM",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696694532",
+   "name": "SOF-13 OSCAR FINCO PTY LTD",
+   "date": "30/03/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SOF 13 OSCAR",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696683904",
+   "name": "TRIMARK FINANCIAL HOLDCO PTY LTD",
+   "date": "30/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "TRIMARK FINANCIAL",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696637500",
+   "name": "BEY PROPERTY GROUP FINCO PTY LTD",
+   "date": "27/03/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BEY PROPERTY",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696626883",
+   "name": "BEY PROPERTY GROUP HOLDCO PTY LTD",
+   "date": "27/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BEY PROPERTY",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696615737",
+   "name": "STINGRAY BIDCO PTY LTD",
+   "date": "27/03/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "STINGRAY",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "696614472",
+   "name": "STINGRAY FINCO PTY LTD",
+   "date": "27/03/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "STINGRAY",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "696614187",
+   "name": "STINGRAY HOLDCO PTY LTD",
+   "date": "27/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "STINGRAY",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "696568242",
+   "name": "ARROW HOLDCO (NUTRIVERT) PTY LTD",
+   "date": "26/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ARROW NUTRIVERT",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696537890",
+   "name": "TUGUN BUYER MIDCO PTY LTD",
+   "date": "25/03/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "TUGUN BUYER",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696515287",
+   "name": "TUGUN BUYER HOLDCO PTY LTD",
+   "date": "24/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "TUGUN BUYER",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696447711",
+   "name": "ADVENT MANAGER HOLDCO AP4 PTY LTD",
+   "date": "23/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ADVENT MANAGER AP4",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696372559",
+   "name": "CEN (I&L) INTERLINK FINCO PTY LTD",
+   "date": "19/03/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CEN I L INTERLINK",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696360862",
+   "name": "UIRA AHO TOPCO PTY LTD",
+   "date": "19/03/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "UIRA AHO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696330060",
+   "name": "ATLAS HOLDCO PTY LTD",
+   "date": "18/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ATLAS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696232934",
+   "name": "CLAYMARK TILLING BIDCO PTY LTD",
+   "date": "16/03/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CLAYMARK TILLING",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
+  },
+  {
+   "acn": "696151854",
+   "name": "GONO NEWCO PTY LIMITED",
+   "date": "12/03/2026",
+   "role": "NEWCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GONO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696150713",
+   "name": "NHFA HOLDCO PTY LTD",
+   "date": "12/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "NHFA",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696136777",
+   "name": "ZEUS BIDCO PTY LTD",
+   "date": "12/03/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ZEUS",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "696131585",
+   "name": "ZEUS FINCO PTY LTD",
+   "date": "12/03/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ZEUS",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "696130668",
+   "name": "ZEUS HOLDCO PTY LTD",
+   "date": "12/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ZEUS",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "696122988",
+   "name": "PURCHASEPLUS BIDCO PTY LTD",
+   "date": "12/03/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PURCHASEPLUS",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "696115410",
+   "name": "ANDK HOLDCO PTY LTD",
+   "date": "12/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ANDK",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696117576",
+   "name": "KYANITE FRANKLIN HOLDCO PTY LTD",
+   "date": "11/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "KYANITE FRANKLIN",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696106475",
+   "name": "GCIT FINCO PTY LTD",
+   "date": "11/03/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GCIT",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696098674",
+   "name": "WOODSTOCK HOLDCO PTY LTD",
+   "date": "11/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "WOODSTOCK",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696098361",
+   "name": "GSDA BESS HOLDCO PTY LTD",
+   "date": "11/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GSDA BESS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696098245",
+   "name": "QLD SOLAR HOLDCO PTY LTD",
+   "date": "11/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "QLD SOLAR",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696097391",
+   "name": "QLD BESS HOLDCO PTY LTD",
+   "date": "11/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "QLD BESS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696095539",
+   "name": "SUPERNODE BESS 4 HOLDCO PTY LTD",
+   "date": "11/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SUPERNODE BESS 4",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696095520",
+   "name": "QLD GEN HOLDCO PTY LTD",
+   "date": "11/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "QLD GEN",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696095404",
+   "name": "GSDA GAS HOLDCO PTY LTD",
+   "date": "11/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GSDA GAS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696094747",
+   "name": "BARREL NZ HOLDCO PTY LTD",
+   "date": "11/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BARREL NZ",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696086629",
+   "name": "PURCHASEPLUS AUS HOLDCO PTY LTD",
+   "date": "11/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PURCHASEPLUS",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "696085597",
+   "name": "HMT HOLDCO PTY LTD",
+   "date": "11/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "HMT",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696066878",
+   "name": "A&E HOLDCO PTY LTD",
+   "date": "10/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "A E",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696048834",
+   "name": "CDC SPV HOLDCO NO 2 PTY LTD",
+   "date": "10/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CDC SPV",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "696048192",
+   "name": "CDC SPV HOLDCO NO 1 PTY LTD",
+   "date": "10/03/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CDC SPV",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
   }
  ],
- "bidcos": 25,
+ "bidcos": 53,
+ "stacks": 58,
+ "stacks_without_bidco": 24,
  "renamed": [
+  {
+   "acn": "696106475",
+   "was": "GAPP FINCO PTY LTD",
+   "now": "GCIT FINCO PTY LTD",
+   "since": "21/04/2026"
+  },
+  {
+   "acn": "696123850",
+   "was": "EQUIS ENERGY AUSTRALIA (KOOLUNGA FINCO) PTY LTD",
+   "now": "GP ENERGY (KLG) FINCO PTY LTD",
+   "since": "12/06/2026"
+  },
+  {
+   "acn": "696537890",
+   "was": "TUGUN BUYER PTY LTD",
+   "now": "TUGUN BUYER MIDCO PTY LTD",
+   "since": "21/04/2026"
+  },
+  {
+   "acn": "697464118",
+   "was": "VITA HOLDCO PTY LTD",
+   "now": "LONGENICS HOLDCO PTY LTD",
+   "since": "02/06/2026"
+  },
+  {
+   "acn": "697468901",
+   "was": "VITA MIDCO PTY LTD",
+   "now": "LONGENICS MIDCO PTY LTD",
+   "since": "02/06/2026"
+  },
+  {
+   "acn": "697616943",
+   "was": "GREEK ST MID HOLDCO PTY LTD",
+   "now": "ASIA LIVING ULTIMO AUSTRALIA PTY. LIMITED",
+   "since": "09/06/2026"
+  },
+  {
+   "acn": "697617486",
+   "was": "GREEK ST UPPER HOLDCO PTY LTD",
+   "now": "ASIA LIVING GREEK ST AUSTRALIA PTY. LIMITED",
+   "since": "09/06/2026"
+  },
+  {
+   "acn": "697677820",
+   "was": "MCM COPPER PTY LTD",
+   "now": "MCM HOLDCO PTY LTD",
+   "since": "13/05/2026"
+  },
+  {
+   "acn": "697953487",
+   "was": "STONEHAVEN PRIVATE PTY LTD",
+   "now": "WATTLESTONE HOLDCO PTY LTD",
+   "since": "04/09/2026"
+  },
+  {
+   "acn": "697956791",
+   "was": "M BIDCO 1 PTY LTD",
+   "now": "GOLDEN M TAHMOOR COAL HOLDINGS PTY LTD",
+   "since": "01/07/2026"
+  },
+  {
+   "acn": "698072918",
+   "was": "ULTIMO MID HOLDCO PTY LTD",
+   "now": "ASIA LIVING PROJECTS AUSTRALIA PTY LTD",
+   "since": "13/07/2026"
+  },
+  {
+   "acn": "698085906",
+   "was": "ULTIMO HOLDCO PTY LTD",
+   "now": "ASIA LIVING WATTLE ST AUSTRALIA PTY LTD",
+   "since": "01/07/2026"
+  },
+  {
+   "acn": "698332240",
+   "was": "A.C.N. 698 332 240 PTY LTD",
+   "now": "ZELORA TOPCO PTY LTD",
+   "since": "04/06/2026"
+  },
+  {
+   "acn": "698333229",
+   "was": "A.C.N. 698 333 229 PTY LTD",
+   "now": "ZELORA MEZZCO PTY LTD",
+   "since": "04/06/2026"
+  },
+  {
+   "acn": "698333854",
+   "was": "A.C.N. 698 333 854 PTY LTD",
+   "now": "ZELORA HOLDCO PTY LTD",
+   "since": "04/06/2026"
+  },
+  {
+   "acn": "698724579",
+   "was": "HUPCO TOPCO PTY LTD",
+   "now": "GANZ TOPCO PTY LTD",
+   "since": "18/08/2026"
+  },
+  {
+   "acn": "698725058",
+   "was": "HUPCO MIDCO PTY LTD",
+   "now": "GANZ MIDCO PTY LTD",
+   "since": "18/08/2026"
+  },
+  {
+   "acn": "698725816",
+   "was": "HUPCO PARENTCO PTY LTD",
+   "now": "GANZ PARENTCO PTY LTD",
+   "since": "18/08/2026"
+  },
+  {
+   "acn": "699018061",
+   "was": "EUREKA NEWCO PTY LTD",
+   "now": "EUREKA CONCRETE AND QUARRIES PTY LTD",
+   "since": "31/07/2026"
+  },
   {
    "acn": "701314374",
    "was": "MB NEWCO PTY LTD",
-   "now": "MB NEWCO PTY LTD",
+   "now": "MITCHELL BRANDTMAN PTY LTD",
    "since": "27/08/2026"
   }
  ],

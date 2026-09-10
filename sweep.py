@@ -22,6 +22,8 @@ import gzip
 import json
 import os
 import re
+import signal
+import subprocess
 import sys
 import time
 import urllib.error
@@ -64,6 +66,9 @@ ORDER = ["TOPCO", "PARENTCO", "HOLDCO", "INTERMEDIATECO", "MIDCO", "MEZZCO", "PI
 FRONTIER_LO, FRONTIER_HI = 70_000_000, 71_000_000
 TRAILING_SLOTS = int(os.environ.get("TRAILING_SLOTS", "20000"))
 SHELF_DAYS = int(os.environ.get("SHELF_DAYS", "120"))
+# Bank the checkpoint this often. A run cut short then loses at most this much
+# work instead of everything since it started.
+SAVE_EVERY_MIN = int(os.environ.get("SAVE_EVERY_MIN", "15"))
 MAX_FORWARD_SLOTS = int(os.environ.get("MAX_FORWARD_SLOTS", "12000"))
 # GitHub caps a hosted Actions job at 6 hours. That is a platform limit, not a
 # choice - so run right up to it, and when the queue is still not empty, ask for
@@ -75,6 +80,10 @@ DOCS = ROOT / "docs"
 HEARTBEAT_SECS = int(os.environ.get("HEARTBEAT_SECS", "600"))
 
 
+def _git(*args, **kw):
+    return subprocess.run(("git",) + args, capture_output=True, text=True, timeout=120, **kw)
+
+
 def heartbeat(phase, done, total, found, started_iso, force=False, _last=[0.0]):
     """Publish progress so the dashboard can show a live count.
 
@@ -82,6 +91,11 @@ def heartbeat(phase, done, total, found, started_iso, force=False, _last=[0.0]):
     nothing else - no names, no ACNs, no dates. Anyone who finds the URL learns
     that a sweep is running and how far along it is, which is not worth hiding
     and is the whole point of the file.
+
+    The push is best effort - a heartbeat must never take the sweep down - but it
+    is NOT silent. An earlier version swallowed every failure, so a run could
+    sweep for hours while the dashboard showed nothing and the log said nothing
+    about why.
     """
     DOCS.mkdir(exist_ok=True)
     (DOCS / "progress.json").write_text(json.dumps({
@@ -101,11 +115,31 @@ def heartbeat(phase, done, total, found, started_iso, force=False, _last=[0.0]):
     _last[0] = now
     if not os.environ.get("GITHUB_ACTIONS"):
         return
-    # Best effort. A failed heartbeat push must never take the sweep down.
-    os.system("git add docs/progress.json >/dev/null 2>&1 && "
-              "git -c user.name=bidco-watch -c user.email=actions@github.com "
-              "commit -q -m 'progress' >/dev/null 2>&1 && "
-              "git push -q >/dev/null 2>&1")
+    try:
+        _git("add", "docs/progress.json")
+        c = _git("-c", "user.name=bidco-watch", "-c", "user.email=actions@github.com",
+                 "commit", "-m", f"progress {done}/{total}")
+        if c.returncode and "nothing to commit" not in (c.stdout + c.stderr):
+            print(f"  [heartbeat] commit: {(c.stderr or c.stdout).strip()[:160]}")
+            return
+        pu = _git("push")
+        if pu.returncode:
+            # The branch moved under us. Rebase onto it and try once more; if that
+            # still fails, say so and carry on sweeping.
+            _git("fetch", "origin", "main")
+            rb = _git("rebase", "-X", "ours", "origin/main")
+            if rb.returncode:
+                _git("rebase", "--abort")
+                print(f"  [heartbeat] rebase failed, progress not published: "
+                      f"{(rb.stderr or rb.stdout).strip()[:160]}")
+                return
+            pu = _git("push")
+            if pu.returncode:
+                print(f"  [heartbeat] push failed: {(pu.stderr or pu.stdout).strip()[:160]}")
+                return
+        print(f"  [heartbeat] published {done:,}/{total:,}")
+    except Exception as ex:
+        print(f"  [heartbeat] {type(ex).__name__}: {ex}")
 
 
 # ----------------------------------------------------------------- ACN arithmetic
@@ -125,6 +159,50 @@ def base_of(acn: str) -> int:
 # ----------------------------------------------------------------- HTTP
 class Blocked(RuntimeError):
     """The vendor refused us. Stop and report — never try to route around it."""
+
+
+# Set when GitHub cancels the run, or the runner is being reclaimed. The queue
+# loop checks it and stops cleanly so the work so far can be banked.
+STOPPING = {"flag": False}
+
+
+def _on_signal(signum, _frame):
+    STOPPING["flag"] = True
+    print(f"\n:: signal {signum} - finishing the current slot and banking the "
+          f"checkpoint before exiting", flush=True)
+
+
+def bank(seen, note):
+    """Persist and publish the checkpoint from inside the sweep.
+
+    Normally the workflow does this after the sweep returns. On a cancellation
+    those later steps are skipped entirely, so an interrupted run would throw
+    away everything it had done - which is exactly what made "pause and resume"
+    impossible. Doing it here means a cancelled run still banks its work and the
+    next start carries on from where it stopped.
+    """
+    save_checkpoint(seen)
+    if not os.environ.get("GITHUB_ACTIONS"):
+        print(f"[bank] {note}: checkpoint written ({len(seen):,} slots)")
+        return
+    try:
+        _git("add", "data", "docs/progress.json")
+        c = _git("-c", "user.name=bidco-watch", "-c", "user.email=actions@github.com",
+                 "commit", "-m", f"checkpoint ({note}) - {len(seen):,} slots")
+        if c.returncode and "nothing to commit" not in (c.stdout + c.stderr):
+            print(f"[bank] commit: {(c.stderr or c.stdout).strip()[:200]}")
+            return
+        for _ in range(3):
+            if _git("push").returncode == 0:
+                print(f"[bank] {note}: banked {len(seen):,} slots")
+                return
+            _git("fetch", "origin", "main")
+            if _git("rebase", "-X", "ours", "origin/main").returncode:
+                _git("rebase", "--abort")
+                break
+        print("[bank] could not push the checkpoint")
+    except Exception as ex:
+        print(f"[bank] {type(ex).__name__}: {ex}")
 
 
 def lookup(acn: str, tries: int = 4):
@@ -150,18 +228,36 @@ def lookup(acn: str, tries: int = 4):
 
 
 # ----------------------------------------------------------------- checkpoint
+CKPT = DATA / "lookups.jsonl"
+
+
 def load_checkpoint() -> dict:
-    """acn -> record|None. None means the slot resolved to nothing when last seen."""
+    """acn -> record|None. None means the slot resolved to nothing when last seen.
+
+    Plain JSON lines, not gzip. Gzip looks like the tidier choice and is exactly
+    wrong here: compressed bytes change everywhere when the content changes, so
+    git cannot delta them and every save costs a full copy. A plain file that
+    mostly grows at one end deltas almost perfectly - measured at 0.4 MB for a
+    whole night of fifteen-minute saves, against ~2 MB for a single compressed
+    one. Cheap saves are what make a run resumable.
+    """
     out = {}
-    p = DATA / "lookups.jsonl.gz"
-    if p.exists():
-        with gzip.open(p, "rt", encoding="utf-8") as f:
+    if CKPT.exists():
+        for line in CKPT.open(encoding="utf-8"):
+            try:
+                r = json.loads(line)
+                out[r["acn"]] = r["d"]
+            except Exception:
+                pass
+    elif (DATA / "lookups.jsonl.gz").exists():          # one-time migration
+        with gzip.open(DATA / "lookups.jsonl.gz", "rt", encoding="utf-8") as f:
             for line in f:
                 try:
                     r = json.loads(line)
                     out[r["acn"]] = r["d"]
                 except Exception:
                     pass
+        print(f"migrated {len(out):,} slots from the old compressed checkpoint")
     return out
 
 
@@ -172,7 +268,7 @@ def save_checkpoint(seen: dict, keep_slots: int = 80_000) -> None:
     hi = max(base_of(a) for a in seen)
     floor = hi - keep_slots
     DATA.mkdir(exist_ok=True)
-    with gzip.open(DATA / "lookups.jsonl.gz", "wt", encoding="utf-8") as f:
+    with CKPT.open("w", encoding="utf-8") as f:
         for a in sorted(seen):
             if base_of(a) >= floor:
                 f.write(json.dumps({"acn": a, "d": seen[a]}) + "\n")
@@ -302,6 +398,8 @@ def main() -> int:
         print("BAPI_KEY is not set", file=sys.stderr)
         return 2
     DATA.mkdir(exist_ok=True)
+    signal.signal(signal.SIGTERM, _on_signal)
+    signal.signal(signal.SIGINT, _on_signal)
     started = time.time()
     now = datetime.now(timezone.utc)
     state = load_state()
@@ -353,10 +451,10 @@ def main() -> int:
         if not d or not SHELF.match(d.get("name", "") or ""):
             continue
         try:
-            if datetime.strptime(d.get("registrationDate", ""), "%Y-%m-%d").date() >= cutoff:
+            if datetime.strptime(d.get("registrationDate") or "", "%Y-%m-%d").date() >= cutoff:
                 shelf.append(a)
-        except ValueError:
-            shelf.append(a)      # undated: cheap enough to keep checking
+        except (ValueError, TypeError):
+            shelf.append(a)      # undated or malformed: cheap enough to keep checking
     shelf.sort(reverse=True)
 
     trail_hi = forward[0] if forward else frontier
@@ -380,22 +478,43 @@ def main() -> int:
     # thing to lose.
     queue = plan + shelf + trailing
     deadline = started + BUDGET_MIN * 60
-    done = truncated = 0
+    done = truncated = bad = 0
+    found_n = sum(1 for v in seen.values() if v and "Company" in (v.get("type") or ""))
+    last_save = time.time()
     err = ""
     try:
         for a in queue:
+            if STOPPING["flag"]:
+                truncated = len(queue) - done
+                print(f"stopping early - {truncated:,} slots left for the next start")
+                break
             if time.time() > deadline:
                 truncated = len(queue) - done
                 print(f"time budget reached — {truncated:,} slots left for next run")
                 break
-            seen[a] = lookup(a)
+            try:
+                seen[a] = lookup(a)
+            except Blocked:
+                raise
+            except Exception as ex:
+                # A single odd record is not a reason to lose the rest of the night.
+                # Leave the slot unrecorded so a later run picks it up as a gap.
+                bad += 1
+                if bad <= 5:
+                    print(f"  !! {a}: {type(ex).__name__}: {ex}")
+                elif bad == 6:
+                    print("  !! further per-slot errors suppressed")
+                continue
             done += 1
             d = seen[a]
+            if d and "Company" in (d.get("type") or ""):
+                found_n += 1
             if done % 50 == 0:
-                heartbeat("running", done, len(queue),
-                          sum(1 for v in seen.values()
-                              if v and "Company" in (v.get("type") or "")),
+                heartbeat("running", done, len(queue), found_n,
                           now.isoformat(timespec="seconds"))
+            if time.time() - last_save > SAVE_EVERY_MIN * 60:
+                last_save = time.time()
+                bank(seen, f"{done:,}/{len(queue):,}")
             if d and ROLE.search(d.get("name", "") or ""):
                 print(f"  *** {a}  {d['name']}  {d.get('registrationDate','')}")
             if done % 250 == 0:
@@ -403,13 +522,19 @@ def main() -> int:
             time.sleep(GAP)
     except Blocked as e:
         err = str(e)
-        print(f"BLOCKED: {e}", file=sys.stderr)
+        print(f"::error::BLOCKED: {e}", file=sys.stderr)
+    except Exception as e:
+        import traceback
+        err = f"{type(e).__name__}: {e}"
+        traceback.print_exc()
+        print(f"::error::sweep aborted - {err}", file=sys.stderr)
     finally:
-        save_checkpoint(seen)
-        heartbeat("idle", done, len(queue),
-                  sum(1 for v in seen.values()
-                      if v and "Company" in (v.get("type") or "")),
+        heartbeat("idle", done, len(queue), found_n,
                   now.isoformat(timespec="seconds"), force=True)
+        # On a cancellation the workflow's remaining steps never run, so bank
+        # from here. On a normal finish this is a cheap no-op that the workflow's
+        # own commit step then supersedes.
+        bank(seen, "cancelled" if STOPPING["flag"] else "end of sweep")
 
     # A hosted Actions job is capped at six hours by GitHub, which is not ours to
     # raise, and a job cannot dispatch itself to get around it. Instead the
@@ -419,6 +544,8 @@ def main() -> int:
         print(f"::notice::{truncated:,} slots remain - the next scheduled start "
               f"({'2am or 5am Sydney'}) resumes from the checkpoint")
 
+    if bad:
+        print(f"{bad:,} slots errored and were left for a later run")
     rows = company_rows(seen)
     stacks, bidcos, other = group(rows)
 
@@ -430,6 +557,7 @@ def main() -> int:
               frontier=frontier, swept=done, queued=len(queue), truncated=truncated,
               gaps=len(gaps), recheck=len(recheck),
               companies=len(rows), stacks=stacks, singles=bidcos, role_only=other,
+              bad=bad,
               rows=rows, error=err, status="failed" if err else "ok",
               # When the forward pass is empty the window is the trailing one -
               # reporting a blank start made the page read "Window  -> ...".
@@ -457,6 +585,7 @@ def write_run(state, now, started, **kw):
         "recheck_queued": kw.get("recheck", 0),
         "companies": kw.get("companies", 0),
         "trailing_slots": TRAILING_SLOTS,
+        "slots_errored": kw.get("bad", 0),
     }
     state.setdefault("history", []).append(run)
     state["history"] = state["history"][-60:]

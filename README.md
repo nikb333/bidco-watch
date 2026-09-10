@@ -19,7 +19,7 @@ Everything runs on GitHub Actions. No server, no Claude in the loop at runtime.
    | Name | Value |
    |---|---|
    | `BAPI_KEY` | your Business API key |
-   | `SITE_PASSCODE` | the passcode that unlocks the dashboard **and encrypts the data store** |
+   | `SITE_PASSCODE` | the passcode that unlocks the dashboard |
    | `CONTACT_EMAIL` | *(optional)* an address to put in the User-Agent |
 
 2. **Pages** — Settings → Pages → Source: *Deploy from a branch*, Branch: `main`,
@@ -126,40 +126,36 @@ eight minutes a night.
   `AVOCA AUS MEZZCO` invisible.
 - **The endpoint covers every ASIC register.** Business names are about two
   thirds of what comes back and are filtered out by entity type.
-- **Every lookup is checkpointed as it returns.** Runs get killed. This one
-  resumes; it never restarts.
+- **Every lookup is checkpointed as it returns, and banked every 15 minutes.**
+  Runs get killed. The sweep also traps the cancellation signal, so stopping a
+  run deliberately keeps its work and the next start continues from it.
+- **The checkpoint is plain, not gzipped.** Compressed bytes change everywhere
+  when the content changes, so git cannot delta them: every save costs a full
+  copy. Plain and append-only deltas almost perfectly — a whole night of
+  fifteen-minute saves adds about 0.4 MB.
 
 ---
 
-## The passcode, honestly
+## The passcode, and what it is actually worth
 
-Two things are encrypted under `SITE_PASSCODE`, both AES-256-GCM with a
-PBKDF2-SHA256 key at 600,000 rounds:
+The repo is **public** — that is what keeps GitHub Pages free — and the data in it
+is committed in plain sight: the checkpoint, the run state, the findings, the
+register extract. That is deliberate. It is the ASIC public register; there is
+nothing in it that is not already public, and encrypting it bought complexity
+rather than privacy.
 
-- **`docs/index.html`** — the whole data payload. The published page carries
-  ciphertext and nothing else: no names, no ACNs, no dates.
-- **`data/store.enc`** — the checkpoint, run state, findings and register
-  extract, bundled and encrypted before every commit. The plaintext versions are
-  gitignored and exist only inside a running job.
+What is still encrypted is the **published page**: `docs/index.html` carries its
+payload as AES-256-GCM ciphertext under a PBKDF2 key derived from
+`SITE_PASSCODE`, so someone who wanders onto the Pages URL sees a passcode box
+and nothing else.
 
-That is what lets the repo be **public**, which is what keeps GitHub Pages free.
-Nothing in it is readable without the passcode.
+Be clear about the limit. Anyone who finds the repository can read everything
+without the passcode, and a four-digit PIN would not stop them anyway. The gate
+keeps casual visitors off the page. It is not access control.
 
-**But a four-digit PIN is 10,000 possibilities.** Anyone who clones the repo can
-grind through all of them offline; the slow key derivation makes that hours
-rather than seconds, not centuries. It reliably keeps out anyone who wanders past
-the URL, which is what it is for. It is not a lock.
-
-Set `SITE_PASSCODE` to a longer passphrase and the same machinery becomes
-genuinely strong — no code changes. **If you change it, run the daily workflow
-by hand once straight afterwards**: the store is re-encrypted under the new
-passcode on the next successful run, and until then the old `store.enc` cannot be
-opened. If you ever lose the passcode, delete `data/store.enc` and the next run
-rebuilds from scratch.
-
-Worth saying plainly: the underlying data is public — it is the ASIC register.
-What the passcode protects is *which vehicles you are watching*, which is the
-part that is actually yours.
+If you ever do want real privacy, the answer is not a longer passcode: make the
+repo private and serve `docs/` through Cloudflare Pages with Cloudflare Access in
+front of it, which is free at this scale.
 
 ## Layout
 
@@ -168,12 +164,10 @@ sweep.py          the daily pipeline
 weekly.py         register download + reconciliation
 build_site.py     encrypts the payload, renders docs/index.html
 template.html     the dashboard (Dashboard / Audit / Runs)
-store.py          encrypts/decrypts the data bundle around each run
 data/
-  store.enc         THE ONLY DATA FILE COMMITTED — encrypted bundle of:
-      state.json          frontier, window, run history
-      lookups.jsonl.gz    checkpoint, bounded to the last 80,000 slots
-      daily.json          stacks, lone Bidcos, role matches
-      weekly.json         register extract + reconciliation
+  lookups.jsonl     checkpoint, plain and append-only, capped at 80,000 slots
+  state.json        frontier, window, run history
+  daily.json        stacks, lone Bidcos, role matches
+  weekly.json       register extract + reconciliation
 docs/index.html   what Pages serves
 ```

@@ -26,15 +26,6 @@
    "suburb": "BALCATTA",
    "state": "WA",
    "via": "API"
-  },
-  {
-   "acn": "702135591",
-   "name": "NSK HOLDCO PTY LTD",
-   "date": "2026-09-07",
-   "role": "HOLDCO",
-   "suburb": "DERRIMUT",
-   "state": "VIC",
-   "via": "API"
   }
  ]
 }

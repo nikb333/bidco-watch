@@ -1,13 +1,3 @@
 __pycache__/
 *.pyc
 .venv/
-
-# Only the encrypted bundle is committed. These are the plaintext files it
-# contains — they exist inside a running job and must never reach the repo,
-# because the repo is public so that GitHub Pages stays free.
-data/state.json
-data/daily.json
-data/weekly.json
-data/lookups.jsonl.gz
-data/companies.csv
-data/weekly_vehicles.csv
