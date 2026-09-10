@@ -102,6 +102,12 @@ ul.ent .meta{grid-column:1/-1;font-size:12px;color:var(--dim);display:flex;gap:8
 .pill{font-size:10px;font-weight:700;letter-spacing:.05em;padding:2px 7px;border-radius:999px;
   background:var(--accent);color:var(--accent-ink)}
 .pill.soft{background:var(--chip);color:var(--dim);font-weight:600}
+.fam-chip{font-size:10px;font-weight:700;letter-spacing:.04em;padding:1px 7px;border-radius:999px;
+  background:var(--chip);color:var(--dim);border:1px solid var(--line)}
+.fam-chip.key{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.fam-chip.plain{border-style:dashed}
+.new-chip{font-size:10px;font-weight:700;letter-spacing:.04em;padding:1px 7px;border-radius:999px;
+  background:var(--ok-bg);color:var(--ok)}
 details.more{margin-top:20px;border-top:1px solid var(--line);padding-top:12px}
 details.more>summary{cursor:pointer;color:var(--dim);font-size:13px;font-weight:600;
   list-style:none;padding:4px 0}
@@ -257,8 +263,13 @@ function li(e){
   if(e.date)bits.push(esc(e.date));
   if(e.where)bits.push(esc(e.where));
   if(e.via)bits.push('<span class="via">'+esc(e.via)+'</span>');
+  let chips='';
+  if(e.isNew)chips+='<span class="new-chip">NEW</span>';
+  if(e.family)chips+='<span class="fam-chip '+(e.familyKey?'key':'plain')+'">STACK · '+
+    esc(e.family)+'</span>';
   return '<li><span class="nm">'+esc(e.name)+'</span><span class="acn">'+esc(e.acn)+'</span>'+
-    '<span class="meta"><span class="rl '+esc(r)+'">'+esc(r||'—')+'</span>'+bits.join(' · ')+'</span></li>';
+    '<span class="meta"><span class="rl '+esc(r)+'">'+esc(r||'—')+'</span>'+chips+
+    bits.join(' · ')+'</span></li>';
 }
 function fams(list,emptyMsg){
   if(!list.length)return '<div class="empty">'+esc(emptyMsg)+'</div>';
@@ -352,38 +363,35 @@ function render(D){
     'the six-hour job limit, the 2am and 5am Sydney starts resume from the checkpoint.';
 
   // section 2
+  // The register view is scanned often and what matters is what is NEW, so it is
+  // strictly newest-first rather than bundled into families. Membership of a stack
+  // is carried on the row as a chip instead, which keeps chronology intact without
+  // losing the structure - a lone Bidco registered yesterday should not be pushed
+  // below a family from six weeks ago.
   const ents=wk.entities||[];
-  const stackRows=ents.filter(e=>e.in_stack);
-  const loneBid  =ents.filter(e=>!e.in_stack&&e.is_bidco);
-  const rest     =ents.filter(e=>!e.in_stack&&!e.is_bidco);
-  const wf=familiesOf(stackRows).map(g=>({label:g.stem,key:g.hasBidco,
-    pill:g.hasBidco?'STACK · BIDCO':'STACK',
-    meta:g.members.length+' entities · first '+(g.members[g.members.length-1].date||''),
-    items:g.members.map(e=>({name:e.name,acn:e.acn,role:e.role,date:e.date,where:e.state}))}));
-  if(loneBid.length)wf.push({label:'Lone Bidcos',pill:'BIDCO',key:true,
-    meta:loneBid.length+' with no family in the register',
-    items:loneBid.map(e=>({name:e.name,acn:e.acn,role:e.role,date:e.date,where:e.state}))});
+  const dnum=e=>{const p=String(e.date||'').split('/');
+    return p.length===3?+(p[2]+p[1].padStart(2,'0')+p[0].padStart(2,'0')):0};
+  const newest=Math.max(0,...ents.map(dnum));
+  const cutISO=(()=>{const d=toDate(wk.generated_utc)||new Date();
+    d.setDate(d.getDate()-14);
+    return +(''+d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+
+             String(d.getDate()).padStart(2,'0'))})();
+  const row=e=>({name:e.name,acn:e.acn,role:e.role,date:e.date,where:e.state,
+    family:e.in_stack?e.stem:'', familyKey:!!e.stack_has_bidco, isNew:dnum(e)>=cutISO});
+  const bydate=[...ents].sort((a,b)=>dnum(b)-dnum(a));
+  const front=bydate.filter(e=>e.in_stack||e.is_bidco);
+  const rest =bydate.filter(e=>!e.in_stack&&!e.is_bidco);
   $('week-list').innerHTML=(ents.length
-    ? fams(wf,'No stacks or Bidcos in this window.')
-    : '<div class="empty">No register run yet — the weekly job populates this.</div>')+
+      ? (front.length?loose(front.map(row)):'<div class="empty">No stacks or Bidcos in this window.</div>')
+      : '<div class="empty">No register run yet — the weekly job populates this.</div>')+
     tuck('Other role-named companies — not in a family, no Bidco in the name',
-      rest.length, loose(rest.map(e=>({name:e.name,acn:e.acn,role:e.role,date:e.date,where:e.state}))));
+      rest.length, loose(rest.map(row)));
   const nb=wk.stacks_without_bidco||0;
   $('s-week').textContent=(wk.dataset||'—')+' · last '+(wk.window_days||'—')+
-    ' days. Stacks are shown whether or not a Bidco is among them'+
+    ' days, newest first. Stacks are shown whether or not a Bidco is among them'+
     (nb?' — '+nb+' of these have none, and would have been invisible under a Bidco-only rule':'')+'.';
-  $('c-week').textContent=(wk.stacks||familiesOf(stackRows).length)+' stacks · '+
-    (wk.bidcos||0)+' Bidcos · '+ents.length+' vehicles';
-
-  $('dl-week').addEventListener('click',()=>{
-    const rows=[['name','acn','role','registration_date','state','in_stack','abn'].join(',')]
-      .concat(ents.map(e=>[JSON.stringify(e.name),e.acn,e.role,e.date,e.state,
-        e.in_stack?'yes':'no',e.abn?'yes':'no'].join(',')));
-    const b=new Blob([rows.join('\n')],{type:'text/csv'});
-    const a=document.createElement('a');
-    a.href=URL.createObjectURL(b); a.download='weekly_vehicles.csv'; a.click();
-    setTimeout(()=>URL.revokeObjectURL(a.href),2000);
-  });
+  $('c-week').textContent=(wk.stacks||0)+' stacks · '+(wk.bidcos||0)+' Bidcos · '+
+    ents.length+' vehicles';
 
   // audit
   $('recon').innerHTML='<div class="card"><h3>Recall, measured</h3><p>'+

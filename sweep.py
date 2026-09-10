@@ -383,7 +383,6 @@ def main() -> int:
     done = truncated = 0
     err = ""
     try:
-        requeued = set(shelf) | set(recheck)
         for a in queue:
             if time.time() > deadline:
                 truncated = len(queue) - done
@@ -432,7 +431,10 @@ def main() -> int:
               gaps=len(gaps), recheck=len(recheck),
               companies=len(rows), stacks=stacks, singles=bidcos, role_only=other,
               rows=rows, error=err, status="failed" if err else "ok",
-              window=[acn_for(forward[0]) if forward else "", acn_for(frontier)])
+              # When the forward pass is empty the window is the trailing one -
+              # reporting a blank start made the page read "Window  -> ...".
+              window=[acn_for(forward[0]) if forward else acn_for(trail_lo),
+                      acn_for(frontier)])
     nb = sum(1 for x in stacks if x["has_bidco"])
     print(f"done: {done:,} slots, {len(rows):,} companies, {len(stacks)} stacks "
           f"({nb} with a Bidco), {len(bidcos)} lone Bidcos, {len(other)} other role "
