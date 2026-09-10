@@ -57,8 +57,11 @@ BID = re.compile(r"\bBIDCO\b", re.I)
 # being renamed, which is why these get re-queried rather than filed away.
 SHELF = re.compile(r"^A\.?C\.?N\.?[\s\d]{9,}", re.I)
 DEBT = {"FINCO", "MEZZCO", "PIKCO", "BONDCO", "DEBTCO"}
+# Stripped before grouping. ACQUISITION is here because "DANONE AU ACQUISITION
+# BIDCO" and "DANONE AU HOLDCO" are one structure, and without it they reduce to
+# two different stems and never group into a stack.
 SUF = re.compile(r"\b(PTY|LTD|LIMITED|PROPRIETARY|CO|AUSTRALIA|AU|AUS|HOLDINGS?|"
-                 r"HOLDING|GROUP|NO\.?\s*\d+)\b\.?", re.I)
+                 r"HOLDING|GROUP|ACQUISITIONS?|NO\.?\s*\d+)\b\.?", re.I)
 NOISE = re.compile(r"\b(SMSF|SUPER|SUPERFUND|SUPERANNUATION|FAMILY|CUSTODIAN|BARE)\b", re.I)
 ORDER = ["TOPCO", "PARENTCO", "HOLDCO", "INTERMEDIATECO", "MIDCO", "MEZZCO", "PIKCO",
          "FINCO", "BONDCO", "DEBTCO", "NEWCO", "BUYCO", "ACQUISITIONCO", "BIDCO"]
@@ -66,17 +69,29 @@ ORDER = ["TOPCO", "PARENTCO", "HOLDCO", "INTERMEDIATECO", "MIDCO", "MEZZCO", "PI
 FRONTIER_LO, FRONTIER_HI = 70_000_000, 71_000_000
 TRAILING_SLOTS = int(os.environ.get("TRAILING_SLOTS", "20000"))
 # Re-checking an empty slot is about catching a company that registered late at a
-# number issued earlier. Timing is everything: too soon and it has not happened
-# yet, too late and the weekly register has already told us. Measured over ten
-# weeks, the vehicles that did this sat a median of 15,700 slots behind the
-# frontier, so an empty slot is re-queried once, when it is this far back.
+# number issued earlier. Timing is everything, and the lags cluster: measured over
+# ten weeks, the families that did this sat either ~4 business days behind the
+# frontier (TRIDENT, PULSE) or ~17 (DANONE). So each empty slot gets two looks,
+# one aimed at each cluster, and never more.
 #
-# Once, not nightly. The frontier moves ~4,000 slots a day, so a slot sitting in
-# a fixed 20,000-slot window got re-queried five times for one useful answer -
-# 14,400 lookups a night to re-ask a question already asked. That was the whole
-# reason a night's work took eleven hours instead of three.
-RECHECK_FROM = int(os.environ.get("RECHECK_FROM", "12000"))
-RECHECK_TO = int(os.environ.get("RECHECK_TO", "20000"))
+# Twice, not nightly. The frontier moves ~4,000 slots a day, so a slot inside a
+# fixed 20,000-slot window was re-queried five times for one useful answer -
+# 14,400 lookups a night to re-ask a question already asked.
+#
+# There is deliberately no third band. BANNABY sat 191,000 slots back - about 48
+# business days - and by then the weekly register has published it anyway. Past
+# roughly three weeks of lag the register gets there first, so paying for lookups
+# buys nothing but a later duplicate.
+# Each band sits deliberately BEYOND its cluster, not on it. A single look placed
+# on the cluster can land the day before the company registers, and then that
+# band is spent for that slot - simulated, and it lost DANONE entirely and only
+# caught PULSE by accident eleven days late. Looking just after the cluster means
+# the registration has already happened by the time we ask.
+#   cluster 1: TRIDENT/PULSE observed at 15,100-18,800 back -> look at 20k-27k
+#   cluster 2: DANONE observed at 66,300-70,400 back        -> look at 72k-85k
+# No third band: BANNABY sat 191,000 back, about 48 business days, by which time
+# the weekly register has long since published it.
+RECHECK_BANDS = [(20_000, 27_000), (72_000, 85_000)]
 SHELF_DAYS = int(os.environ.get("SHELF_DAYS", "120"))
 # Bank the checkpoint this often. A run cut short then loses at most this much
 # work instead of everything since it started.
@@ -245,9 +260,9 @@ def lookup(acn: str, tries: int = 4):
 # ----------------------------------------------------------------- checkpoint
 CKPT = DATA / "lookups.jsonl"
 
-# ACNs whose single re-check has been spent. Persisted alongside the checkpoint
-# so the promise of "once" survives a restart.
-RECHECKED: set[str] = set()
+# acn -> how many re-checks that slot has had. Persisted alongside the checkpoint
+# so the promise of "twice, at most" survives a restart.
+RECHECKED: dict[str, int] = {}
 
 
 def load_checkpoint() -> dict:
@@ -267,7 +282,7 @@ def load_checkpoint() -> dict:
                 r = json.loads(line)
                 out[r["acn"]] = r["d"]
                 if r.get("r"):
-                    RECHECKED.add(r["acn"])
+                    RECHECKED[r["acn"]] = int(r["r"])
             except Exception:
                 pass
     elif (DATA / "lookups.jsonl.gz").exists():          # one-time migration
@@ -283,7 +298,7 @@ def load_checkpoint() -> dict:
 
 
 def save_checkpoint(seen: dict, frontier: int | None = None,
-                    keep_slots: int = 80_000) -> None:
+                    keep_slots: int = 0) -> None:
     """Keep a bounded tail so the repo does not grow without limit.
 
     Anchored on the issuance frontier, not on max(seen). Anchoring on the maximum
@@ -293,6 +308,11 @@ def save_checkpoint(seen: dict, frontier: int | None = None,
     """
     if not seen:
         return
+    # Retain further back than the furthest re-check band, or the pruner would
+    # delete the very slots the second band is due to revisit - and they would
+    # then reappear as "never visited" gaps and be swept again from scratch,
+    # forever.
+    keep_slots = keep_slots or max(RECHECK_BANDS)[1] + 20_000
     anchor = frontier or max(base_of(a) for a in seen)
     floor, ceiling = anchor - keep_slots, anchor + 1_000
     DATA.mkdir(exist_ok=True)
@@ -303,8 +323,8 @@ def save_checkpoint(seen: dict, frontier: int | None = None,
             b = base_of(a)
             if floor <= b <= ceiling:
                 rec = {"acn": a, "d": seen[a]}
-                if a in RECHECKED:
-                    rec["r"] = 1
+                if RECHECKED.get(a):
+                    rec["r"] = RECHECKED[a]
                 f.write(json.dumps(rec) + "\n")
                 kept += 1
     # Never replace a good checkpoint with an empty one.
@@ -553,21 +573,32 @@ def main() -> int:
 
     trail_hi = forward[0] if forward else frontier
     trail_lo = max(FRONTIER_LO, trail_hi - TRAILING_SLOTS)
-    rc_hi, rc_lo = frontier - RECHECK_FROM, frontier - RECHECK_TO
-    gaps, recheck = [], []
-    for b in range(trail_lo, trail_hi):
-        a = acn_for(b)
-        if a not in seen:
-            gaps.append(a)
-        elif seen[a] is None and rc_lo <= b <= rc_hi and a not in RECHECKED:
-            recheck.append(a)
-    # Walk gaps every-second-first too, so a truncated run spans the whole hole
-    # rather than covering the bottom of it.
+    # Two separate scans, because they cover different ground. Gaps live just
+    # behind the frontier - they are holes a truncated run left. The re-check
+    # bands sit much further back, well outside the gap window, so scanning only
+    # the gap window (as an earlier version did) meant the second band silently
+    # never fired.
+    gaps = [a for a in (acn_for(b) for b in range(trail_lo, trail_hi))
+            if a not in seen]
+    recheck = []
+    for i, (lo, hi) in enumerate(RECHECK_BANDS):
+        for b in range(max(FRONTIER_LO, frontier - hi), frontier - lo + 1):
+            a = acn_for(b)
+            # Band i is only for slots that have had exactly i looks, so the
+            # first band cannot spend the second band's.
+            if seen.get(a, "missing") is None and RECHECKED.get(a, 0) == i:
+                recheck.append(a)
+
+    # Gaps every-second-first as well, so a truncated run spans the whole hole
+    # rather than filling the bottom of it. Gaps before re-checks: a slot nothing
+    # has ever looked at beats one we have already seen empty.
     gaps = gaps[::2] + gaps[1::2]
     trailing = gaps + recheck
+
     print(f"forward: {len(plan):,} new slots   shelf re-checks: {len(shelf):,}   "
           f"trailing: {len(gaps):,} never-visited gaps + {len(recheck):,} empty re-checks "
-          f"(band {RECHECK_FROM:,}-{RECHECK_TO:,} slots back, once each)")
+          f"(bands {', '.join(f'{lo//1000}k-{hi//1000}k' for lo, hi in RECHECK_BANDS)} "
+          f"slots back, once per band)")
 
     # Forward first, then shelf re-checks (cheap and high-yield), then the
     # trailing window. If the clock beats us, trailing re-checks are the right
@@ -604,7 +635,7 @@ def main() -> int:
                 continue
             done += 1
             if a in rc_set:
-                RECHECKED.add(a)
+                RECHECKED[a] = RECHECKED.get(a, 0) + 1
             d = seen[a]
             if d and "Company" in (d.get("type") or ""):
                 found_n += 1
@@ -765,11 +796,37 @@ def write_run(state, now, started, **kw):
             "role_only": kw["role_only"],
         }, indent=1))
         import csv
-        with (DATA / "companies.csv").open("w", newline="", encoding="utf-8") as f:
-            w = csv.DictWriter(f, fieldnames=["acn", "name", "date", "status", "type",
-                                              "suburb", "state", "postcode"])
-            w.writeheader()
-            w.writerows(kw["rows"])
+        # Merge, never replace. This file used to be rewritten from the checkpoint
+        # every run, so when the checkpoint shrank - by pruning, or by the bug that
+        # wiped it - the record of every company ever resolved shrank with it. The
+        # checkpoint is a working set and is allowed to forget; this is the archive
+        # and is not. A row here is only ever added or updated, never dropped.
+        cols = ["acn", "name", "date", "status", "type", "suburb", "state", "postcode"]
+        keep: dict[str, dict] = {}
+        cp = DATA / "companies.csv"
+        if cp.exists():
+            try:
+                with cp.open(newline="", encoding="utf-8") as f:
+                    for row in csv.DictReader(f):
+                        if row.get("acn"):
+                            keep[row["acn"]] = {c: row.get(c, "") for c in cols}
+            except Exception as ex:
+                print(f"[companies.csv] could not read the archive ({ex}); "
+                      f"not overwriting it")
+                keep = None
+        if keep is not None:
+            before = len(keep)
+            for r in kw["rows"]:
+                keep[r["acn"]] = {c: r.get(c, "") for c in cols}
+            tmp = cp.with_suffix(".tmp")
+            with tmp.open("w", newline="", encoding="utf-8") as f:
+                w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
+                w.writeheader()
+                for a in sorted(keep):
+                    w.writerow(keep[a])
+            tmp.replace(cp)
+            print(f"companies.csv: {len(keep):,} total "
+                  f"({len(keep) - before:,} new this run)")
 
 
 if __name__ == "__main__":
