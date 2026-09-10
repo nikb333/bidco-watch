@@ -9,7 +9,10 @@ permissions:
   contents: write
 
 concurrency:
-  group: sweep          # never run alongside the daily sweep
+  # Its own group. Sharing "sweep" meant a register refresh queued behind a
+  # six-hour sweep instead of taking its five minutes. The two touch different
+  # files and both rebase before pushing, so they can overlap safely.
+  group: weekly
   cancel-in-progress: false
 
 jobs:
@@ -49,4 +52,5 @@ jobs:
           git config user.email "actions@github.com"
           git add -A data/store.enc docs
           git diff --staged --quiet || git commit -m "weekly reconciliation $(date -u +%Y-%m-%d)"
+          git pull --rebase --autostash || true
           git push
