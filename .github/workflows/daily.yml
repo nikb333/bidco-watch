@@ -1,0 +1,75 @@
+name: Daily ACN sweep
+
+on:
+  schedule:
+    # 5am Sydney, year round. Cron has no idea about daylight saving, so we fire
+    # at both candidate UTC hours and the guard step below drops the wrong one.
+    - cron: "0 18 * * *"   # 5am AEDT (Oct-Apr)
+    - cron: "0 19 * * *"   # 5am AEST (Apr-Oct)
+  workflow_dispatch:        # this is the "Run now" button
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sweep
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - name: Is it actually 5am in Sydney?
+        id: guard
+        run: |
+          H=$(TZ=Australia/Sydney date +%H)
+          echo "sydney hour = $H"
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$H" != "05" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Not 5am in Sydney — this is the daylight-saving twin. Skipping."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.guard.outputs.skip == 'false'
+
+      - uses: actions/setup-python@v5
+        if: steps.guard.outputs.skip == 'false'
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        if: steps.guard.outputs.skip == 'false'
+        run: pip install -r requirements.txt
+
+      - name: Sweep
+        if: steps.guard.outputs.skip == 'false'
+        id: sweep
+        continue-on-error: true      # a failed sweep must still publish its failure
+        env:
+          BAPI_KEY: ${{ secrets.BAPI_KEY }}
+          BUDGET_MIN: "270"
+        run: python sweep.py
+
+      - name: Build site
+        if: steps.guard.outputs.skip == 'false'
+        env:
+          SITE_PASSCODE: ${{ secrets.SITE_PASSCODE }}
+        run: python build_site.py
+
+      - name: Commit
+        if: steps.guard.outputs.skip == 'false'
+        run: |
+          git config user.name  "bidco-watch"
+          git config user.email "actions@github.com"
+          git add -A data docs
+          git diff --staged --quiet || git commit -m "sweep $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
+
+      - name: Fail the run if the sweep failed
+        if: steps.guard.outputs.skip == 'false' && steps.sweep.outcome == 'failure'
+        run: |
+          echo "The sweep reported a failure. The site has been rebuilt showing it."
+          exit 1

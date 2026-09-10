@@ -1,0 +1,40 @@
+name: Weekly register reconciliation
+
+on:
+  schedule:
+    - cron: "0 22 * * 2"   # Tuesday 22:00 UTC = Wednesday ~8am Sydney
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sweep          # never run alongside the daily sweep
+  cancel-in-progress: false
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+
+      - name: Download the register and reconcile
+        run: python weekly.py
+
+      - name: Build site
+        env:
+          SITE_PASSCODE: ${{ secrets.SITE_PASSCODE }}
+        run: python build_site.py
+
+      - name: Commit
+        run: |
+          git config user.name  "bidco-watch"
+          git config user.email "actions@github.com"
+          git add -A data docs
+          git diff --staged --quiet || git commit -m "weekly reconciliation $(date -u +%Y-%m-%d)"
+          git push

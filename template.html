@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Bidco Watch</title>
+<style>
+:root{
+  --bg:#faf9f6; --card:#fff; --ink:#1a1a18; --dim:#6f6d67; --line:#e5e2da;
+  --accent:#6b4bd6; --accent-ink:#fff; --chip:#f2f0ea;
+  --ok:#1c7a4f; --ok-bg:#e7f4ec; --warn:#8a6000; --warn-bg:#fbf1da;
+  --bad:#a5292c; --bad-bg:#fbe9e9; --run:#1d5f88; --run-bg:#e4f0f8;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#151417; --card:#1d1c21; --ink:#eeecf1; --dim:#9a969f; --line:#333139; --chip:#292830;
+  --accent:#a08cff; --accent-ink:#151417;
+  --ok:#6fdfa4; --ok-bg:#153125; --warn:#efc36a; --warn-bg:#332a16;
+  --bad:#ff9c9c; --bad-bg:#3a1e1e; --run:#8fc9ee; --run-bg:#152a38;
+}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);
+  font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  max-width:880px;margin:0 auto;padding:0 16px 60px}
+h1{font-size:17px;margin:24px 0 3px;letter-spacing:-.01em}
+h2{font-size:15px;margin:0}
+h3{font-size:13.5px;margin:22px 0 6px}
+p{margin:8px 0}
+.sub{color:var(--dim);font-size:13px;margin:0 0 4px}
+
+/* ---------- gate ---------- */
+#gate{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;
+  justify-content:center;padding:24px;z-index:9}
+#gate .box{width:100%;max-width:320px;text-align:center}
+#gate h1{font-size:19px;margin:0 0 6px}
+#gate p{color:var(--dim);font-size:13px;margin:0 0 18px}
+#pin{width:100%;font:inherit;font-size:20px;letter-spacing:.3em;text-align:center;
+  padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--card);
+  color:var(--ink);font-family:var(--mono)}
+#pin:focus{outline:2px solid var(--accent);outline-offset:1px}
+#gate button{margin-top:12px;width:100%;font:inherit;font-size:14px;font-weight:600;
+  padding:11px;border-radius:10px;border:0;background:var(--accent);color:var(--accent-ink);
+  cursor:pointer}
+#gate button:disabled{opacity:.55;cursor:default}
+#gerr{color:var(--bad);font-size:13px;min-height:20px;margin-top:10px}
+#app[hidden]{display:none}
+
+.tabs{display:flex;gap:2px;overflow-x:auto;border-bottom:1px solid var(--line);
+  margin-top:14px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{appearance:none;background:none;border:0;border-bottom:2px solid transparent;
+  color:var(--dim);font:inherit;font-size:13.5px;font-weight:600;padding:10px 14px;
+  cursor:pointer;white-space:nowrap}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+
+.banner{display:flex;gap:11px;align-items:flex-start;border-left:3px solid var(--line);
+  padding:11px 13px;margin-top:12px;background:var(--card);border-radius:0 8px 8px 0}
+.banner.ok{border-left-color:var(--ok);background:var(--ok-bg)}
+.banner.warn{border-left-color:var(--warn);background:var(--warn-bg)}
+.banner.bad{border-left-color:var(--bad);background:var(--bad-bg)}
+.banner .dot{width:8px;height:8px;border-radius:50%;margin-top:6px;flex:none;background:var(--dim)}
+.banner.ok .dot{background:var(--ok)}.banner.warn .dot{background:var(--warn)}
+.banner.bad .dot{background:var(--bad)}
+.banner b{font-size:13.5px;display:block}
+.banner span.n{color:var(--dim);font-size:12.5px}
+
+section{margin-top:32px}
+.shead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:7px;margin-bottom:4px}
+.shead .c{color:var(--dim);font-size:12.5px}
+.fam{margin-top:14px}
+.fam .lbl{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:3px}
+.fam .lbl b{font-size:14px}
+.fam .lbl .m{color:var(--dim);font-size:12px}
+ul.ent{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+ul.ent li{display:grid;grid-template-columns:1fr auto;gap:1px 12px;padding:8px 0;
+  border-bottom:1px solid var(--line);align-items:baseline}
+ul.ent .nm{font-size:13.5px;line-height:1.35;min-width:0;overflow-wrap:anywhere}
+ul.ent .acn{font-family:var(--mono);font-size:12px;color:var(--dim);white-space:nowrap}
+ul.ent .meta{grid-column:1/-1;font-size:12px;color:var(--dim);display:flex;gap:8px;flex-wrap:wrap}
+.rl{font-size:9.5px;font-weight:700;letter-spacing:.06em;padding:1px 5px;border-radius:3px;
+  background:var(--chip);color:var(--dim);border:1px solid var(--line)}
+.rl.BIDCO{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.via{font-size:10px;padding:1px 6px;border-radius:999px;border:1px solid var(--line);color:var(--dim)}
+
+.acts{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+a.b,button.b{appearance:none;font:inherit;font-size:13px;font-weight:600;padding:9px 16px;
+  border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);
+  cursor:pointer;text-decoration:none;display:inline-block}
+a.b.pri{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.note{color:var(--dim);font-size:12.5px}
+.empty{color:var(--dim);font-size:13px;padding:14px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:14px 16px;margin:12px 0}
+.card h3{margin:0 0 5px;font-size:14px}
+.card p{margin:0;font-size:13px;color:var(--dim)}
+table.l{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+table.l th{text-align:left;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--line)}
+table.l td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.scroll{overflow-x:auto}
+.v{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.05em;
+  padding:2px 7px;border-radius:999px}
+.v.closed{background:var(--ok-bg);color:var(--ok)}
+.v.open{background:var(--warn-bg);color:var(--warn)}
+.v.backstop{background:var(--chip);color:var(--dim)}
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <div class="box">
+    <h1>Bidco Watch</h1>
+    <p>Enter the passcode to unlock.</p>
+    <input id="pin" type="password" inputmode="numeric" autocomplete="off"
+           aria-label="Passcode" placeholder="••••">
+    <button id="go">Unlock</button>
+    <div id="gerr" role="status"></div>
+  </div>
+</div>
+
+<div id="app" hidden>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true"  aria-controls="p-dash">Dashboard</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="p-audit">Audit</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="p-runs">Runs</button>
+  </div>
+
+  <div id="banner" class="banner"><span class="dot"></span>
+    <div><b id="b-t">—</b><span class="n" id="b-n"></span></div></div>
+
+  <div id="p-dash">
+    <section>
+      <div class="shead"><h2>Daily stacks sweep</h2><span class="c" id="c-daily"></span></div>
+      <p class="sub" id="s-daily"></p>
+      <div id="daily-list"></div>
+      <div class="acts">
+        <a class="b pri" id="run-link" target="_blank" rel="noopener">Run now</a>
+        <span class="note" id="run-note"></span>
+      </div>
+    </section>
+
+    <section>
+      <div class="shead"><h2>Weekly ASIC register run</h2><span class="c" id="c-week"></span></div>
+      <p class="sub" id="s-week"></p>
+      <div id="week-list"></div>
+      <div class="acts">
+        <button class="b" id="dl-week">Download CSV</button>
+        <span class="note">Every role-named vehicle in the register window.</span>
+      </div>
+    </section>
+  </div>
+
+  <div id="p-audit" hidden>
+    <h1>Audit — what this catches, and what it cannot</h1>
+    <p class="sub">Measured against the ASIC register, not asserted.</p>
+    <div id="recon"></div>
+    <h3>How the two runs fit together</h3>
+    <div id="model"></div>
+    <h3>Leak paths</h3>
+    <div id="leaks"></div>
+    <h3>Coverage guarantees</h3>
+    <div id="inv"></div>
+  </div>
+
+  <div id="p-runs" hidden>
+    <h1>Run history</h1>
+    <p class="sub">Every scheduled and manual run, newest first. A run that ends with slots
+      left over hands them to the next one rather than dropping them.</p>
+    <div class="scroll"><table class="l">
+      <thead><tr><th>Finished (UTC)</th><th>Status</th><th>Window</th><th>Swept</th>
+        <th>Left</th><th>Companies</th><th>Min</th></tr></thead>
+      <tbody id="hist"></tbody></table></div>
+  </div>
+</div>
+
+<script>
+const PAYLOAD="__PAYLOAD__", ITERS=__ITERS__;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt=n=>(n==null?0:n).toLocaleString('en-AU');
+
+async function decrypt(pass){
+  const raw=Uint8Array.from(atob(PAYLOAD),c=>c.charCodeAt(0));
+  const salt=raw.slice(0,16), iv=raw.slice(16,28), ct=raw.slice(28);
+  const base=await crypto.subtle.importKey('raw',new TextEncoder().encode(pass),'PBKDF2',false,['deriveKey']);
+  const key=await crypto.subtle.deriveKey(
+    {name:'PBKDF2',salt,iterations:ITERS,hash:'SHA-256'},base,
+    {name:'AES-GCM',length:256},false,['decrypt']);
+  const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv},key,ct);
+  return JSON.parse(new TextDecoder().decode(pt));
+}
+
+/* ---------------- gate ---------------- */
+(function(){
+  const pin=$('pin'), go=$('go'), err=$('gerr');
+  async function unlock(){
+    const v=pin.value.trim();
+    if(!v){pin.focus();return}
+    go.disabled=true; go.textContent='Unlocking…'; err.textContent='';
+    try{
+      const data=await decrypt(v);
+      try{sessionStorage.setItem('bw_pin',v)}catch(e){}
+      $('gate').remove(); $('app').hidden=false; render(data);
+    }catch(e){
+      err.textContent='Wrong passcode.';
+      go.disabled=false; go.textContent='Unlock'; pin.value=''; pin.focus();
+    }
+  }
+  go.addEventListener('click',unlock);
+  pin.addEventListener('keydown',e=>{if(e.key==='Enter')unlock()});
+  let saved=null; try{saved=sessionStorage.getItem('bw_pin')}catch(e){}
+  if(saved){pin.value=saved;unlock()}else{pin.focus()}
+})();
+
+/* ---------------- render ---------------- */
+function li(e){
+  const r=(e.role||'').toUpperCase(), bits=[];
+  if(e.date)bits.push(esc(e.date));
+  if(e.where)bits.push(esc(e.where));
+  if(e.via)bits.push('<span class="via">'+esc(e.via)+'</span>');
+  return '<li><span class="nm">'+esc(e.name)+'</span><span class="acn">'+esc(e.acn)+'</span>'+
+    '<span class="meta"><span class="rl '+esc(r)+'">'+esc(r||'—')+'</span>'+bits.join(' · ')+'</span></li>';
+}
+function fams(list,emptyMsg){
+  if(!list.length)return '<div class="empty">'+esc(emptyMsg)+'</div>';
+  return list.map(f=>'<div class="fam">'+(f.label?'<div class="lbl"><b>'+esc(f.label)+'</b>'+
+    (f.meta?'<span class="m">'+esc(f.meta)+'</span>':'')+'</div>':'')+
+    '<ul class="ent">'+f.items.map(li).join('')+'</ul></div>').join('');
+}
+function when(i){if(!i)return '—';const d=new Date(i.endsWith('Z')||i.includes('+')?i:i+'Z');
+  return isNaN(d)?i:d.toLocaleString('en-AU',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}
+
+function render(D){
+  const run=D.run||{}, wk=D.weekly||{}, rc=wk.reconciliation||{};
+
+  // banner
+  (function(){
+    const el=$('banner'); let cls='ok',t,n;
+    const h=run.finished_utc?(Date.now()-new Date(run.finished_utc+'Z'))/36e5:1e9;
+    if(run.status==='failed'){cls='bad';t='Last run failed';n=(run.error||'No detail recorded.')}
+    else if(!run.finished_utc){cls='warn';t='No run recorded yet';n='The scheduled job has not completed a run.'}
+    else{
+      t='Last successful run — '+when(run.finished_utc);
+      n=fmt(run.slots_swept)+' slots · '+fmt(run.companies)+' companies · '+
+        (D.stacks||[]).length+' stacks, '+(D.singles||[]).length+' lone Bidcos'+
+        (run.slots_left?' · '+fmt(run.slots_left)+' slots carried to the next run':'')+'.';
+      if(h>30&&h<=54){cls='warn';t='Last run was '+Math.round(h)+' hours ago';n='A daily run looks missed. '+n}
+      else if(h>54){cls='bad';t='Stale — last run '+Math.round(h/24)+' days ago';n='The schedule is not firing. '+n}
+    }
+    el.className='banner '+cls; $('b-t').textContent=t; $('b-n').textContent=n;
+  })();
+
+  // section 1
+  const f=[];
+  (D.stacks||[]).forEach(s=>f.push({label:s.stem,
+    meta:s.members.length+' entities · first '+(s.first||''),
+    items:s.members.map(m=>({name:m.name,acn:m.acn,role:m.role,date:m.date,
+      where:[m.suburb,m.state].filter(Boolean).join(' '),via:m.via}))}));
+  if((D.singles||[]).length)f.push({label:'Lone Bidcos',meta:D.singles.length+' with no sibling',
+    items:D.singles.map(m=>({name:m.name,acn:m.acn,role:'BIDCO',date:m.date,
+      where:[m.suburb,m.state].filter(Boolean).join(' '),via:m.via}))});
+  $('daily-list').innerHTML=fams(f,'Nothing found since the last register. Nationally these appear about three times a week, so an empty period is normal.');
+  $('s-daily').textContent='Since the last ASIC register. Window '+((run.window||[])[0]||'—')+
+    ' → '+((run.window||[])[1]||'—')+', plus a '+fmt(run.trailing_slots||0)+'-slot trailing re-check.';
+  $('c-daily').textContent=(D.stacks||[]).length+' stacks · '+(D.singles||[]).length+' lone Bidcos';
+
+  const repo=D.repo||'';
+  const rl=$('run-link');
+  rl.href=repo?'https://github.com/'+repo+'/actions/workflows/daily.yml':'#';
+  $('run-note').textContent='Opens the Actions page — press "Run workflow". Takes about '+
+    Math.round((run.slots_queued||5000)/48)+' minutes at the vendor’s 48/min limit.';
+
+  // section 2
+  const ents=wk.entities||[];
+  $('week-list').innerHTML=ents.length
+    ? '<ul class="ent">'+ents.map(e=>li({name:e.name,acn:e.acn,role:e.role,date:e.date,
+        where:e.state,via:e.in_stack?'stack':''})).join('')+'</ul>'
+    : '<div class="empty">No register run yet — the weekly job populates this each Tuesday.</div>';
+  $('s-week').textContent=(wk.dataset||'—')+' · last '+(wk.window_days||'—')+
+    ' days · every role-named vehicle, not only the stacked ones.';
+  $('c-week').textContent=ents.length+' vehicles · '+(wk.bidcos||0)+' Bidcos';
+
+  $('dl-week').addEventListener('click',()=>{
+    const rows=[['name','acn','role','registration_date','state','in_stack','abn'].join(',')]
+      .concat(ents.map(e=>[JSON.stringify(e.name),e.acn,e.role,e.date,e.state,
+        e.in_stack?'yes':'no',e.abn?'yes':'no'].join(',')));
+    const b=new Blob([rows.join('\n')],{type:'text/csv'});
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(b); a.download='weekly_vehicles.csv'; a.click();
+    setTimeout(()=>URL.revokeObjectURL(a.href),2000);
+  });
+
+  // audit
+  $('recon').innerHTML='<div class="card"><h3>Recall, measured</h3><p>'+
+    (rc.recall_pct!=null
+      ? 'Over the ground the daily sweep actually covered, it found <b>'+rc.found_by_daily+
+        ' of '+rc.judged+'</b> role-named vehicles the register later confirmed — '+
+        rc.recall_pct+'%. '+(rc.missed_by_daily||[]).length+' missed.'+
+        ((rc.missed_by_daily||[]).length
+          ? ' Missed: '+rc.missed_by_daily.map(m=>esc(m.name)+' ('+m.acn+')').join(', ')+'.'
+          : '')
+      : 'No reconciliation yet. It runs each Tuesday, after the register is published, and '+
+        'compares what the daily sweep already had against the full register.')+'</p></div>';
+
+  $('model').innerHTML=[
+    ['The weekly run is the ground truth',
+     'ASIC publishes the entire company register each week — every company, every name, current and historical. Nothing hides from it. Its only fault is that the cut is six to eight days old when it lands.'],
+    ['The daily sweep buys lead time, not completeness',
+     'It walks the ACN number space and resolves each slot against ASIC, so it sees a vehicle the day it is registered, including the ones with no ABN and no LEI. Fast, but a moving frontier can leave stragglers behind.'],
+    ['Every Tuesday the two are reconciled',
+     'Anything in the register the daily sweep did not already have is recorded as a miss, by name. That is what turns a claim of completeness into a measurement of it — nothing is lost, only occasionally late.']
+  ].map(x=>'<div class="card"><h3>'+esc(x[0])+'</h3><p>'+esc(x[1])+'</p></div>').join('');
+
+  $('leaks').innerHTML='<div class="scroll"><table class="l"><thead><tr><th>Leak path</th>'+
+    '<th>Measured size</th><th>Status</th></tr></thead><tbody>'+[
+    ['ACN below the frontier on registration day',
+     'ACNs are allocated ahead of use, so a company registered today can carry a number issued days earlier — in a slot a forward-only sweep already passed and found empty.',
+     '11 of 211 role vehicles over 10 weeks (5.2%). Median 15,700 slots behind, worst 191,000. Cost TRIDENT, DANONE and PULSE.',
+     'closed','Each run re-walks the trailing 20,000 slots, re-querying only those that came back empty. Recovers 8 of the 11; the Tuesday reconciliation catches the rest.'],
+    ['Renamed into a Bidco name after registration',
+     'A shelf company registered under a numeric name and renamed once the deal firms up would be invisible to a name filter on registration day.',
+     '1 of 211, and that one’s prior name was identical text — an artefact, not a real rename.',
+     'closed','The register carries historical names, so the weekly job reads them and reports any real case.'],
+    ['No role word in the name at all',
+     'A structure named without BIDCO, TOPCO, HOLDCO and so on cannot be found by name matching, in either run.',
+     'Unmeasurable by definition — the filter that would count them is the one that misses them.',
+     'backstop','Not solvable by naming. LEI registrations and the register itself are the only cross-checks.'],
+    ['A run fails or is cut short',
+     'The runner dies, the vendor throttles, the schedule does not fire.',
+     'Happened four times while this was being built on an ephemeral container.',
+     'closed','Every lookup is checkpointed the moment it returns, so a restart resumes. Slots left over are carried into the next run rather than dropped. The banner turns amber at 30 hours and red at 54.'],
+    ['Vendor rate limit',
+     'The lookup API allows roughly 50 requests a minute regardless of plan — ten concurrent requests all returned 429.',
+     'About 100 minutes per 5,000 slots. A full week in one go is seven hours.',
+     'open','Runs are incremental and time-boxed, and record what they could not reach. If the gap outgrows the nightly budget, the weekly register is the safety net.']
+  ].map(l=>'<tr><td><b>'+esc(l[0])+'</b><br><span class="note">'+esc(l[1])+'</span></td>'+
+    '<td>'+esc(l[2])+'</td><td><span class="v '+l[3]+'">'+l[3]+'</span><br>'+
+    '<span class="note">'+esc(l[4])+'</span></td></tr>').join('')+'</tbody></table></div>';
+
+  $('inv').innerHTML=[
+    ['Every slot in a range is visited',
+     'The forward pass walks every second slot and then returns for the gaps. It is an ordering, not a sample — the run is not complete until both passes are done, and the checkpoint records which slots were actually reached.'],
+    ['Ranges are contiguous between runs',
+     'The high-water mark only advances over ground actually covered. A missed night widens the next window instead of leaving a hole.'],
+    ['Only arithmetic decides slot validity',
+     'One integer in ten is a valid ACN, settled by the check digit. Nothing is skipped on the basis of a lookup, an ABN, or the absence of one — that assumption once discarded three real stacks.'],
+    ['A failed run is visible',
+     'The site is rebuilt even when the sweep fails, with the failure on the banner. A stale page never masquerades as a fresh one.']
+  ].map(x=>'<div class="card"><h3>'+esc(x[0])+'</h3><p>'+esc(x[1])+'</p></div>').join('');
+
+  // runs
+  $('hist').innerHTML=(D.history||[]).slice().reverse().map(h=>
+    '<tr><td>'+esc((h.finished_utc||'').replace('T',' ').replace('+00:00',''))+'</td>'+
+    '<td>'+esc(h.status||'')+'</td>'+
+    '<td class="note">'+esc((h.window||[])[0]||'')+' → '+esc((h.window||[])[1]||'')+'</td>'+
+    '<td>'+fmt(h.slots_swept)+'</td><td>'+fmt(h.slots_left)+'</td>'+
+    '<td>'+fmt(h.companies)+'</td><td>'+esc(h.elapsed_min)+'</td></tr>').join('')
+    ||'<tr><td colspan="7" class="empty">No runs recorded yet.</td></tr>';
+
+  // tabs
+  const tabs=[...document.querySelectorAll('.tab')];
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(o=>{const on=o===t;o.setAttribute('aria-selected',on?'true':'false');
+      $(o.getAttribute('aria-controls')).hidden=!on});
+    window.scrollTo(0,0);
+  }));
+}
+</script>
+</body>
+</html>

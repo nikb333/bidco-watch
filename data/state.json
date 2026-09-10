@@ -1,0 +1,37 @@
+{
+ "last_frontier_base": 70225829,
+ "last_run": {
+  "finished_utc": "2026-09-10T10:02:17+00:00",
+  "elapsed_min": 0,
+  "status": "ok",
+  "error": "",
+  "frontier_base": 70225829,
+  "window": [
+   "702108290",
+   "702258295"
+  ],
+  "slots_swept": 2883,
+  "slots_queued": 15001,
+  "slots_left": 12118,
+  "companies": 914,
+  "trailing_slots": 20000
+ },
+ "history": [
+  {
+   "finished_utc": "2026-09-10T10:02:17+00:00",
+   "elapsed_min": 0,
+   "status": "ok",
+   "error": "",
+   "frontier_base": 70225829,
+   "window": [
+    "702108290",
+    "702258295"
+   ],
+   "slots_swept": 2883,
+   "slots_queued": 15001,
+   "slots_left": 12118,
+   "companies": 914,
+   "trailing_slots": 20000
+  }
+ ]
+}
