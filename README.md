@@ -93,8 +93,21 @@ a slot an earlier run already found empty. Measured against the register over
 three complete stacks: TRIDENT, DANONE and PULSE.
 
 Resolved companies are grouped by name stem — role word and legal suffix stripped.
-Two or more sharing a stem with at least one Bidco is a **stack**: a real
-structure with a target behind it. A lone Bidco is kept separately.
+**Two or more role-named companies sharing a stem is a stack**, whether or not a
+Bidco is among them: over six months of the register, 24 of 58 such families had
+no Bidco in any name, including ZELORA (TOPCO/MEZZCO/HOLDCO), GANZ, EPTEC INFRA
+and TUGUN BUYER. Requiring the word discarded 41% of the structures. Stacks that
+do contain a Bidco are flagged, since they remain the strongest single signal.
+
+The dashboard shows stacks and Bidcos only. Lone HOLDCOs and stray FINCOs are
+real but weak on their own, so they sit in a collapsed section rather than on the
+front page.
+
+**Shelf companies** are re-queried for 120 days. A company registered as
+`A.C.N. 698 332 240 PTY LTD` and renamed weeks later is invisible to a sweep that
+only reads the name on registration day — that is exactly how ZELORA was missed.
+About six are registered per business day, so the rolling window costs roughly
+eight minutes a night.
 
 ---
 

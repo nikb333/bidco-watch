@@ -74,6 +74,8 @@ def main() -> int:
             "window_days": weekly.get("window_days"),
             "entities": weekly.get("entities", []),
             "bidcos": weekly.get("bidcos", 0),
+            "stacks": weekly.get("stacks", 0),
+            "stacks_without_bidco": weekly.get("stacks_without_bidco", 0),
             "renamed": weekly.get("renamed", []),
             "reconciliation": weekly.get("reconciliation", {}),
         },

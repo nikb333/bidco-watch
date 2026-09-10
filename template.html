@@ -97,6 +97,18 @@ ul.ent .meta{grid-column:1/-1;font-size:12px;color:var(--dim);display:flex;gap:8
   background:var(--chip);color:var(--dim);border:1px solid var(--line)}
 .rl.BIDCO{background:var(--accent);color:var(--accent-ink);border-color:transparent}
 .via{font-size:10px;padding:1px 6px;border-radius:999px;border:1px solid var(--line);color:var(--dim)}
+.fam.key .lbl b{color:var(--accent)}
+.fam.key{border-left:3px solid var(--accent);padding-left:11px;margin-left:-14px}
+.pill{font-size:10px;font-weight:700;letter-spacing:.05em;padding:2px 7px;border-radius:999px;
+  background:var(--accent);color:var(--accent-ink)}
+.pill.soft{background:var(--chip);color:var(--dim);font-weight:600}
+details.more{margin-top:20px;border-top:1px solid var(--line);padding-top:12px}
+details.more>summary{cursor:pointer;color:var(--dim);font-size:13px;font-weight:600;
+  list-style:none;padding:4px 0}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary::before{content:"▸ ";font-size:11px}
+details.more[open]>summary::before{content:"▾ "}
+details.more>summary:hover{color:var(--ink)}
 
 .acts{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 a.b,button.b{appearance:none;font:inherit;font-size:13px;font-weight:600;padding:9px 16px;
@@ -250,9 +262,27 @@ function li(e){
 }
 function fams(list,emptyMsg){
   if(!list.length)return '<div class="empty">'+esc(emptyMsg)+'</div>';
-  return list.map(f=>'<div class="fam">'+(f.label?'<div class="lbl"><b>'+esc(f.label)+'</b>'+
-    (f.meta?'<span class="m">'+esc(f.meta)+'</span>':'')+'</div>':'')+
+  return list.map(f=>'<div class="fam'+(f.key?' key':'')+'">'+
+    (f.label?'<div class="lbl"><b>'+esc(f.label)+'</b>'+
+      (f.pill?'<span class="pill'+(f.key?'':' soft')+'">'+esc(f.pill)+'</span>':'')+
+      (f.meta?'<span class="m">'+esc(f.meta)+'</span>':'')+'</div>':'')+
     '<ul class="ent">'+f.items.map(li).join('')+'</ul></div>').join('');
+}
+// A family becomes a card; a flat list of loose entities becomes one <ul>.
+function loose(items){return '<ul class="ent">'+items.map(li).join('')+'</ul>'}
+function tuck(label,count,html){
+  if(!count)return '';
+  return '<details class="more"><summary>'+esc(label)+' ('+fmt(count)+')</summary>'+html+'</details>';
+}
+// Turn a flat list of register rows into families, Bidco-bearing ones first.
+function familiesOf(rows){
+  const by={};
+  rows.forEach(e=>{(by[e.stem]=by[e.stem]||[]).push(e)});
+  return Object.keys(by).map(k=>({stem:k,members:by[k],
+      hasBidco:by[k].some(m=>m.is_bidco),
+      first:by[k].map(m=>m.date).sort()[0]||''}))
+    .sort((a,b)=>(b.hasBidco-a.hasBidco)||String(b.members[0].date).split('/').reverse().join('')
+      .localeCompare(String(a.members[0].date).split('/').reverse().join('')));
 }
 // Timestamps arrive as ISO8601 from Python, which writes "+00:00" rather than
 // "Z". Treat a bare timestamp as UTC and leave an explicit offset alone.
@@ -287,17 +317,26 @@ function render(D){
 
   // section 1
   const f=[];
-  (D.stacks||[]).forEach(s=>f.push({label:s.stem,
+  (D.stacks||[]).forEach(s=>f.push({label:s.stem,key:!!s.has_bidco,
+    pill:s.has_bidco?'STACK · BIDCO':'STACK',
     meta:s.members.length+' entities · first '+(s.first||''),
     items:s.members.map(m=>({name:m.name,acn:m.acn,role:m.role,date:m.date,
       where:[m.suburb,m.state].filter(Boolean).join(' '),via:m.via}))}));
-  if((D.singles||[]).length)f.push({label:'Lone Bidcos',meta:D.singles.length+' with no sibling',
+  if((D.singles||[]).length)f.push({label:'Lone Bidcos',pill:'BIDCO',key:true,
+    meta:D.singles.length+' with no family found',
     items:D.singles.map(m=>({name:m.name,acn:m.acn,role:'BIDCO',date:m.date,
       where:[m.suburb,m.state].filter(Boolean).join(' '),via:m.via}))});
-  $('daily-list').innerHTML=fams(f,'Nothing found since the last register. Nationally these appear about three times a week, so an empty period is normal.');
+  $('daily-list').innerHTML=
+    fams(f,'No stacks or Bidcos since the last register. Nationally these appear about three times a week, so an empty period is normal.')+
+    tuck('Other role-named companies — single HOLDCOs, lone FINCOs and the like',
+      (D.role_only||[]).length,
+      loose((D.role_only||[]).map(m=>({name:m.name,acn:m.acn,role:m.role,date:m.date,
+        where:[m.suburb,m.state].filter(Boolean).join(' '),via:m.via}))));
   $('s-daily').textContent='Since the last ASIC register. Window '+((run.window||[])[0]||'—')+
     ' → '+((run.window||[])[1]||'—')+', plus a '+fmt(run.trailing_slots||0)+'-slot trailing re-check.';
-  $('c-daily').textContent=(D.stacks||[]).length+' stacks · '+(D.singles||[]).length+' lone Bidcos';
+  const dsb=(D.stacks||[]).filter(x=>x.has_bidco).length;
+  $('c-daily').textContent=(D.stacks||[]).length+' stacks'+(dsb?' ('+dsb+' with a Bidco)':'')+
+    ' · '+(D.singles||[]).length+' lone Bidcos';
 
   // GITHUB_REPOSITORY at build time, but fall back to reading it off the Pages
   // URL (owner.github.io/repo) so a build that missed the env var still gets
@@ -310,17 +349,31 @@ function render(D){
   rl.href=repo?'https://github.com/'+repo+'/actions/workflows/daily.yml':'#';
   $('run-note').textContent='Opens the Actions page — press "Run workflow". About '+
     hhmm((run.slots_queued||5000)/48)+' at the vendor’s 48/min limit; if it outlasts '+
-    'the six-hour job limit it starts a continuation automatically.';
+    'the six-hour job limit, the 2am and 5am Sydney starts resume from the checkpoint.';
 
   // section 2
   const ents=wk.entities||[];
-  $('week-list').innerHTML=ents.length
-    ? '<ul class="ent">'+ents.map(e=>li({name:e.name,acn:e.acn,role:e.role,date:e.date,
-        where:e.state,via:e.in_stack?'stack':''})).join('')+'</ul>'
-    : '<div class="empty">No register run yet — the weekly job populates this each Tuesday.</div>';
+  const stackRows=ents.filter(e=>e.in_stack);
+  const loneBid  =ents.filter(e=>!e.in_stack&&e.is_bidco);
+  const rest     =ents.filter(e=>!e.in_stack&&!e.is_bidco);
+  const wf=familiesOf(stackRows).map(g=>({label:g.stem,key:g.hasBidco,
+    pill:g.hasBidco?'STACK · BIDCO':'STACK',
+    meta:g.members.length+' entities · first '+(g.members[g.members.length-1].date||''),
+    items:g.members.map(e=>({name:e.name,acn:e.acn,role:e.role,date:e.date,where:e.state}))}));
+  if(loneBid.length)wf.push({label:'Lone Bidcos',pill:'BIDCO',key:true,
+    meta:loneBid.length+' with no family in the register',
+    items:loneBid.map(e=>({name:e.name,acn:e.acn,role:e.role,date:e.date,where:e.state}))});
+  $('week-list').innerHTML=(ents.length
+    ? fams(wf,'No stacks or Bidcos in this window.')
+    : '<div class="empty">No register run yet — the weekly job populates this.</div>')+
+    tuck('Other role-named companies — not in a family, no Bidco in the name',
+      rest.length, loose(rest.map(e=>({name:e.name,acn:e.acn,role:e.role,date:e.date,where:e.state}))));
+  const nb=wk.stacks_without_bidco||0;
   $('s-week').textContent=(wk.dataset||'—')+' · last '+(wk.window_days||'—')+
-    ' days · every role-named vehicle, not only the stacked ones.';
-  $('c-week').textContent=ents.length+' vehicles · '+(wk.bidcos||0)+' Bidcos';
+    ' days. Stacks are shown whether or not a Bidco is among them'+
+    (nb?' — '+nb+' of these have none, and would have been invisible under a Bidco-only rule':'')+'.';
+  $('c-week').textContent=(wk.stacks||familiesOf(stackRows).length)+' stacks · '+
+    (wk.bidcos||0)+' Bidcos · '+ents.length+' vehicles';
 
   $('dl-week').addEventListener('click',()=>{
     const rows=[['name','acn','role','registration_date','state','in_stack','abn'].join(',')]
@@ -341,8 +394,16 @@ function render(D){
         ((rc.missed_by_daily||[]).length
           ? ' Missed: '+rc.missed_by_daily.map(m=>esc(m.name)+' ('+m.acn+')').join(', ')+'.'
           : '')
-      : 'No reconciliation yet. It runs each Tuesday, after the register is published, and '+
-        'compares what the daily sweep already had against the full register.')+'</p></div>';
+      : 'No reconciliation yet. It runs each week, after the register is published, and '+
+        'compares what the daily sweep already had against the full register.')+'</p></div>'+
+    '<div class="card"><h3>What the register says about the last six months</h3><p>'+
+      (wk.entities||[]).length+' role-named vehicles, '+(wk.bidcos||0)+' of them Bidcos, in '+
+      (wk.stacks||0)+' families. <b>'+(wk.stacks_without_bidco||0)+' of those families contain no '+
+      'Bidco at all</b> — they would not have appeared here under a Bidco-only rule, and they '+
+      'include the most leveraged-looking structure in the window. '+
+      ((wk.renamed||[]).length? (wk.renamed||[]).length+' companies changed name inside the window; '+
+        'the ones renamed <i>into</i> a role name are the ones that matter, and they are the reason '+
+        'shelf companies are now re-queried.' : '')+'</p></div>';
 
   $('model').innerHTML=[
     ['The weekly run is the ground truth',
@@ -359,10 +420,14 @@ function render(D){
      'ACNs are allocated ahead of use, so a company registered today can carry a number issued days earlier — in a slot a forward-only sweep already passed and found empty.',
      '11 of 211 role vehicles over 10 weeks (5.2%). Median 15,700 slots behind, worst 191,000. Cost TRIDENT, DANONE and PULSE.',
      'closed','Each run re-walks the trailing 20,000 slots, re-querying only those that came back empty. Recovers 8 of the 11; the Tuesday reconciliation catches the rest.'],
-    ['Renamed into a Bidco name after registration',
-     'A shelf company registered under a numeric name and renamed once the deal firms up would be invisible to a name filter on registration day.',
-     '1 of 211, and that one’s prior name was identical text — an artefact, not a real rename.',
-     'closed','The register carries historical names, so the weekly job reads them and reports any real case.'],
+    ['Renamed into a role name after registration',
+     'A shelf company is registered as "A.C.N. 698 332 240 PTY LTD" and renamed once the deal firms up. The daily sweep sees the placeholder on registration day and, until this was fixed, never looked again.',
+     'Real, and I got it wrong first time. Over ten weeks it looked like 1 of 211 and I called it noise. Over six months it is 6 renames into a role name — including all three of ZELORA (TOPCO / MEZZCO / HOLDCO), which spent thirteen days as numeric placeholders. A mezzanine vehicle means leverage, which means a buyout. It was invisible.',
+     'closed','Shelf companies are now tracked by name pattern and re-queried for 120 days. About six are registered per business day, so the whole rolling window costs roughly eight minutes a night.'],
+    ['A stack with no Bidco anywhere in it',
+     'The original rule required a BIDCO before calling a family a stack. Structures that name their vehicles TOPCO / MIDCO / HOLDCO and stop were filed as noise.',
+     '24 of 58 families over six months — 41% — had no Bidco in any member. ZELORA, GANZ (TOPCO/MIDCO/PARENTCO), EPTEC INFRA and TUGUN BUYER among them.',
+     'closed','A stack is now two or more role-named companies sharing a stem, Bidco or not. Those containing a Bidco are still marked, because they remain the strongest single signal.'],
     ['No role word in the name at all',
      'A structure named without BIDCO, TOPCO, HOLDCO and so on cannot be found by name matching, in either run.',
      'Unmeasurable by definition — the filter that would count them is the one that misses them.',

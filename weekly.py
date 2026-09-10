@@ -33,7 +33,7 @@ CKAN = "https://data.gov.au/data/api/3/action/package_search?q=ASIC+company+regi
 sys.path.insert(0, str(ROOT))
 from sweep import ROLE, BID, NOISE, stem_of, role_of  # noqa: E402
 
-WINDOW_DAYS = int(__import__("os").environ.get("WEEKLY_WINDOW_DAYS", "75"))
+WINDOW_DAYS = int(__import__("os").environ.get("WEEKLY_WINDOW_DAYS", "180"))
 
 
 def get(url, timeout=120):
@@ -104,16 +104,29 @@ def main() -> int:
     print(f"scanned {scanned:,} register rows -> {len(by_acn)} role-named vehicles "
           f"in the last {WINDOW_DAYS} days")
 
+    # Same family rule as the daily sweep: two or more role-named companies sharing
+    # a stem is a stack, with or without a Bidco among them. Over six months of the
+    # register, 24 of 58 families carried no Bidco at all.
     counts = defaultdict(int)
     for e in by_acn.values():
-        counts[stem_of(e["name"])] += 1
+        st = stem_of(e["name"])
+        if st and len(st) > 3 and not NOISE.search(st):
+            counts[st] += 1
+    stack_has_bidco = defaultdict(bool)
+    for e in by_acn.values():
+        st = stem_of(e["name"])
+        if counts.get(st, 0) >= 2 and BID.search(e["name"]):
+            stack_has_bidco[st] = True
+
     entities = []
     for e in sorted(by_acn.values(),
                     key=lambda x: (datetime.strptime(x["date"], "%d/%m/%Y"), x["acn"]),
                     reverse=True):
-        s = stem_of(e["name"])
-        entities.append({**e, "stem": s,
-                         "in_stack": counts[s] >= 2 and not NOISE.search(s)})
+        st = stem_of(e["name"])
+        in_stack = counts.get(st, 0) >= 2
+        entities.append({**e, "stem": st, "in_stack": in_stack,
+                         "stack_has_bidco": bool(stack_has_bidco.get(st)),
+                         "is_bidco": bool(BID.search(e["name"]))})
 
     # ---- reconciliation: what did the daily sweep already have?
     seen_acns: set[str] = set()
@@ -142,7 +155,10 @@ def main() -> int:
         "generated_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "dataset": fname, "window_days": WINDOW_DAYS,
         "entities": entities,
-        "bidcos": sum(1 for e in entities if BID.search(e["name"])),
+        "bidcos": sum(1 for e in entities if e["is_bidco"]),
+        "stacks": len({e["stem"] for e in entities if e["in_stack"]}),
+        "stacks_without_bidco": len({e["stem"] for e in entities
+                                     if e["in_stack"] and not e["stack_has_bidco"]}),
         "renamed": renamed,
         "reconciliation": {
             "covered_from_acn": covered_lo,
@@ -157,7 +173,8 @@ def main() -> int:
     (DATA / "weekly.json").write_text(json.dumps(out, indent=1))
     with (DATA / "weekly_vehicles.csv").open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=["name", "acn", "role", "date", "state",
-                                          "abn", "status", "stem", "in_stack"])
+                                          "abn", "status", "stem", "in_stack",
+                                          "stack_has_bidco", "is_bidco"])
         w.writeheader()
         w.writerows(entities)
 

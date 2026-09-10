@@ -50,6 +50,10 @@ ROLE = re.compile(
     r"\b(BIDCO|TOPCO|MIDCO|HOLDCO|FINCO|MEZZCO|PIKCO|BONDCO|DEBTCO|"
     r"NEWCO|INTERMEDIATECO|BUYCO|PARENTCO|ACQUISITIONCO)\b", re.I)
 BID = re.compile(r"\bBIDCO\b", re.I)
+# "A.C.N. 698 332 240 PTY LTD" - a shelf company registered without a name yet.
+# ZELORA TOPCO/MEZZCO/HOLDCO spent thirteen days looking exactly like this before
+# being renamed, which is why these get re-queried rather than filed away.
+SHELF = re.compile(r"^A\.?C\.?N\.?[\s\d]{9,}", re.I)
 DEBT = {"FINCO", "MEZZCO", "PIKCO", "BONDCO", "DEBTCO"}
 SUF = re.compile(r"\b(PTY|LTD|LIMITED|PROPRIETARY|CO|AUSTRALIA|AU|AUS|HOLDINGS?|"
                  r"HOLDING|GROUP|NO\.?\s*\d+)\b\.?", re.I)
@@ -59,6 +63,7 @@ ORDER = ["TOPCO", "PARENTCO", "HOLDCO", "INTERMEDIATECO", "MIDCO", "MEZZCO", "PI
 
 FRONTIER_LO, FRONTIER_HI = 70_000_000, 71_000_000
 TRAILING_SLOTS = int(os.environ.get("TRAILING_SLOTS", "20000"))
+SHELF_DAYS = int(os.environ.get("SHELF_DAYS", "120"))
 MAX_FORWARD_SLOTS = int(os.environ.get("MAX_FORWARD_SLOTS", "12000"))
 # GitHub caps a hosted Actions job at 6 hours. That is a platform limit, not a
 # choice - so run right up to it, and when the queue is still not empty, ask for
@@ -238,38 +243,57 @@ def company_rows(seen: dict) -> list[dict]:
 
 
 def group(rows: list[dict]) -> tuple[list, list, list]:
+    """Split resolved companies into what matters and what does not.
+
+    A STACK is two or more companies sharing a name stem where at least two carry
+    a vehicle role word. It deliberately does NOT require a Bidco: checked against
+    six months of the register, 24 of 58 such families had no Bidco in any name -
+    ZELORA (TOPCO/MEZZCO/HOLDCO), GANZ (TOPCO/MIDCO/PARENTCO), EPTEC INFRA,
+    TUGUN BUYER among them. Requiring the word threw away 41% of the structures.
+    Stacks that do contain a Bidco are flagged, because they remain the strongest
+    signal.
+
+    A BIDCO is any lone company with BIDCO in its name and no family found yet.
+
+    Everything else - a single HOLDCO, a lone FINCO - is OTHER. Real, kept, but
+    weak on its own and not worth the front page.
+    """
     g = defaultdict(list)
     for r in rows:
         s = stem_of(r["name"])
-        if s and not NOISE.search(s):
+        if s and len(s) > 3 and not NOISE.search(s):
             g[s].append(r)
-    stacks, singles, role_only = [], [], []
+
+    stacks, bidcos, other = [], [], []
     for s, ms in g.items():
-        if any(BID.search(m["name"]) for m in ms) and len(ms) >= 2:
-            ms.sort(key=lambda m: ORDER.index(role_of(m["name"]))
-                    if role_of(m["name"]) in ORDER else 99)
-            roles = [role_of(m["name"]) for m in ms]
-            dts = [m["date"] for m in ms if m["date"]]
+        roled = [m for m in ms if role_of(m["name"])]
+        if len(roled) >= 2:
+            roled.sort(key=lambda m: ORDER.index(role_of(m["name"]))
+                       if role_of(m["name"]) in ORDER else 99)
+            roles = [role_of(m["name"]) for m in roled]
+            dts = [m["date"] for m in roled if m["date"]]
             stacks.append({
                 "stem": s, "first": min(dts) if dts else "",
+                "has_bidco": any(BID.search(m["name"]) for m in roled),
                 "finco": any(r in DEBT for r in roles),
                 "phased": len(set(dts)) > 1,
                 "members": [{"acn": m["acn"], "name": m["name"], "date": m["date"],
                              "role": role_of(m["name"]), "suburb": m["suburb"],
-                             "state": m["state"], "via": "API"} for m in ms]})
-        elif any(BID.search(m["name"]) for m in ms):
-            m = ms[0]
-            singles.append({"acn": m["acn"], "name": m["name"], "date": m["date"],
-                            "role": "BIDCO", "suburb": m["suburb"], "state": m["state"],
-                            "via": "API"})
-        else:
-            for m in ms:
-                if role_of(m["name"]):
-                    role_only.append({"acn": m["acn"], "name": m["name"], "date": m["date"],
-                                      "role": role_of(m["name"]), "suburb": m["suburb"],
-                                      "state": m["state"], "via": "API"})
-    stacks.sort(key=lambda s: s["first"], reverse=True)
-    return stacks, singles, role_only
+                             "state": m["state"], "via": "API"} for m in roled]})
+            continue
+        for m in ms:
+            if not role_of(m["name"]):
+                continue
+            rec = {"acn": m["acn"], "name": m["name"], "date": m["date"],
+                   "role": role_of(m["name"]), "suburb": m["suburb"],
+                   "state": m["state"], "via": "API"}
+            (bidcos if BID.search(m["name"]) else other).append(rec)
+
+    # Bidco-bearing stacks first, then the rest, newest first within each.
+    stacks.sort(key=lambda x: (x["has_bidco"], x["first"]), reverse=True)
+    bidcos.sort(key=lambda m: m["date"], reverse=True)
+    other.sort(key=lambda m: m["date"], reverse=True)
+    return stacks, bidcos, other
 
 
 # ----------------------------------------------------------------- main
@@ -317,6 +341,24 @@ def main() -> int:
     #
     # Gaps go first. A run that runs out of time leaves rechecks undone, which is
     # the right thing to sacrifice.
+    # Shelf companies: registered under a numeric placeholder and renamed days or
+    # weeks later, once the deal firms up. The daily sweep sees the placeholder and
+    # would never look again, so ZELORA - a TOPCO/MEZZCO/HOLDCO family, the most
+    # leveraged-looking structure in six months of the register - was invisible to
+    # it entirely. About six are registered per business day, so re-querying a
+    # rolling window of them costs roughly eight minutes a night.
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=SHELF_DAYS)).date()
+    shelf = []
+    for a, d in seen.items():
+        if not d or not SHELF.match(d.get("name", "") or ""):
+            continue
+        try:
+            if datetime.strptime(d.get("registrationDate", ""), "%Y-%m-%d").date() >= cutoff:
+                shelf.append(a)
+        except ValueError:
+            shelf.append(a)      # undated: cheap enough to keep checking
+    shelf.sort(reverse=True)
+
     trail_hi = forward[0] if forward else frontier
     trail_lo = max(FRONTIER_LO, trail_hi - TRAILING_SLOTS)
     gaps, recheck = [], []
@@ -330,14 +372,18 @@ def main() -> int:
     # rather than covering the bottom of it.
     gaps = gaps[::2] + gaps[1::2]
     trailing = gaps + recheck
-    print(f"forward: {len(plan):,} new slots   "
+    print(f"forward: {len(plan):,} new slots   shelf re-checks: {len(shelf):,}   "
           f"trailing: {len(gaps):,} never-visited gaps + {len(recheck):,} empty re-checks")
 
-    queue = plan + trailing
+    # Forward first, then shelf re-checks (cheap and high-yield), then the
+    # trailing window. If the clock beats us, trailing re-checks are the right
+    # thing to lose.
+    queue = plan + shelf + trailing
     deadline = started + BUDGET_MIN * 60
     done = truncated = 0
     err = ""
     try:
+        requeued = set(shelf) | set(recheck)
         for a in queue:
             if time.time() > deadline:
                 truncated = len(queue) - done
@@ -375,7 +421,7 @@ def main() -> int:
               f"({'2am or 5am Sydney'}) resumes from the checkpoint")
 
     rows = company_rows(seen)
-    stacks, singles, role_only = group(rows)
+    stacks, bidcos, other = group(rows)
 
     # Only advance the high-water mark over ground we actually covered.
     if not truncated and not err and forward:
@@ -384,11 +430,13 @@ def main() -> int:
     write_run(state, now, started,
               frontier=frontier, swept=done, queued=len(queue), truncated=truncated,
               gaps=len(gaps), recheck=len(recheck),
-              companies=len(rows), stacks=stacks, singles=singles, role_only=role_only,
+              companies=len(rows), stacks=stacks, singles=bidcos, role_only=other,
               rows=rows, error=err, status="failed" if err else "ok",
               window=[acn_for(forward[0]) if forward else "", acn_for(frontier)])
-    print(f"done: {done:,} slots, {len(rows):,} companies, {len(stacks)} stacks, "
-          f"{len(singles)} lone Bidcos, {(time.time()-started)/60:.0f} min")
+    nb = sum(1 for x in stacks if x["has_bidco"])
+    print(f"done: {done:,} slots, {len(rows):,} companies, {len(stacks)} stacks "
+          f"({nb} with a Bidco), {len(bidcos)} lone Bidcos, {len(other)} other role "
+          f"names, {(time.time()-started)/60:.0f} min")
     return 1 if err else 0
 
 
