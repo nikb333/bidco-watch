@@ -169,6 +169,33 @@ def main() -> int:
             "recall_pct": round(recall, 1) if recall is not None else None,
         },
     }
+    # ---- retire ledger entries that have now reached the published register.
+    # A vehicle found by the daily sweep stays on the daily list until the weekly
+    # register confirms it. This is the moment it crosses over: it stops being
+    # "something only we have seen" and becomes part of the official record.
+    lp = DATA / "found.json"
+    if lp.exists():
+        try:
+            ledger = json.loads(lp.read_text())
+        except Exception:
+            ledger = {}
+        reg = {e["acn"] for e in entities}
+        crossed = []
+        for acn, v in ledger.items():
+            if acn in reg and not v.get("in_register"):
+                v["in_register"] = True
+                v["register_seen_utc"] = datetime.now(timezone.utc).isoformat(
+                    timespec="seconds").replace("+00:00", "Z")
+                crossed.append(v.get("name", acn))
+        lp.write_text(json.dumps(ledger, indent=1, sort_keys=True))
+        still = sum(1 for v in ledger.values() if not v.get("in_register"))
+        print(f"ledger: {len(crossed)} crossed into the register, {still} still only "
+              f"on the daily list")
+        for n in crossed[:20]:
+            print(f"   -> {n}")
+        out["ledger_crossed"] = crossed
+        out["ledger_waiting"] = still
+
     DATA.mkdir(exist_ok=True)
     (DATA / "weekly.json").write_text(json.dumps(out, indent=1))
     with (DATA / "weekly_vehicles.csv").open("w", newline="", encoding="utf-8") as f:

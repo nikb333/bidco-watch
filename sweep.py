@@ -175,7 +175,7 @@ def _on_signal(signum, _frame):
           f"checkpoint before exiting", flush=True)
 
 
-def bank(seen, note):
+def bank(seen, note, frontier=None):
     """Persist and publish the checkpoint from inside the sweep.
 
     Normally the workflow does this after the sweep returns. On a cancellation
@@ -184,7 +184,7 @@ def bank(seen, note):
     impossible. Doing it here means a cancelled run still banks its work and the
     next start carries on from where it stopped.
     """
-    save_checkpoint(seen)
+    save_checkpoint(seen, frontier)
     if not os.environ.get("GITHUB_ACTIONS"):
         print(f"[bank] {note}: checkpoint written ({len(seen):,} slots)")
         return
@@ -264,17 +264,34 @@ def load_checkpoint() -> dict:
     return out
 
 
-def save_checkpoint(seen: dict, keep_slots: int = 80_000) -> None:
-    """Keep a bounded tail so the repo does not grow without limit."""
+def save_checkpoint(seen: dict, frontier: int | None = None,
+                    keep_slots: int = 80_000) -> None:
+    """Keep a bounded tail so the repo does not grow without limit.
+
+    Anchored on the issuance frontier, not on max(seen). Anchoring on the maximum
+    meant one stray high ACN could carry the floor above every real slot and wipe
+    the lot. Anything well above the frontier cannot be a registered company, so
+    it is dropped rather than allowed to move the window.
+    """
     if not seen:
         return
-    hi = max(base_of(a) for a in seen)
-    floor = hi - keep_slots
+    anchor = frontier or max(base_of(a) for a in seen)
+    floor, ceiling = anchor - keep_slots, anchor + 1_000
     DATA.mkdir(exist_ok=True)
-    with CKPT.open("w", encoding="utf-8") as f:
+    kept = 0
+    tmp = CKPT.with_suffix(".tmp")
+    with tmp.open("w", encoding="utf-8") as f:
         for a in sorted(seen):
-            if base_of(a) >= floor:
+            b = base_of(a)
+            if floor <= b <= ceiling:
                 f.write(json.dumps({"acn": a, "d": seen[a]}) + "\n")
+                kept += 1
+    # Never replace a good checkpoint with an empty one.
+    if kept == 0 and CKPT.exists():
+        tmp.unlink(missing_ok=True)
+        print("[checkpoint] refusing to write an empty checkpoint over an existing one")
+        return
+    tmp.replace(CKPT)
 
 
 def load_state() -> dict:
@@ -285,23 +302,30 @@ def load_state() -> dict:
 
 
 # ----------------------------------------------------------------- frontier
-def find_frontier(seen: dict) -> int:
+def find_frontier() -> int:
     """Binary-search the highest base that resolves to anything.
 
-    A midpoint counts as a HIT if any of six consecutive valid ACNs resolves.
+    Deliberately keeps its own cache instead of writing into the checkpoint.
+    It probes bases anywhere between 70,000,000 and 71,000,000, and those probes
+    are not observations of the register - they are scaffolding. Letting them
+    into `seen` was catastrophic: save_checkpoint prunes relative to the highest
+    base it can see, so a probe at 70.9m set the floor at 70.82m and silently
+    deleted every real slot below it. Every run then started from nothing while
+    appearing to work.
+
     Costs about 120 lookups.
     """
+    probes: dict[str, object] = {}
     lo, hi = FRONTIER_LO, FRONTIER_HI
     while lo < hi - 1:
         mid = (lo + hi) // 2
         hit = False
         for k in range(6):
             a = acn_for(mid + k)
-            d = seen[a] if a in seen else lookup(a)
-            if a not in seen:
-                seen[a] = d
+            if a not in probes:
+                probes[a] = lookup(a)
                 time.sleep(GAP)
-            if d:
+            if probes[a]:
                 hit = True
                 break
         if hit:
@@ -311,7 +335,6 @@ def find_frontier(seen: dict) -> int:
     return lo
 
 
-# ----------------------------------------------------------------- grouping
 def stem_of(name: str) -> str:
     s = SUF.sub(" ", ROLE.sub(" ", (name or "").upper()))
     return re.sub(r"\s+", " ", re.sub(r"[^A-Z0-9 ]", " ", s)).strip()
@@ -320,6 +343,51 @@ def stem_of(name: str) -> str:
 def role_of(name: str) -> str:
     m = ROLE.search(name or "")
     return m.group(1).upper() if m else ""
+
+
+LEDGER = DATA / "found.json"
+
+
+def load_ledger() -> dict:
+    """Every deal vehicle the daily sweep has ever found, keyed by ACN.
+
+    The checkpoint is a rolling window - it holds the last 80,000 slots and
+    prunes below that - so anything found more than a couple of weeks ago would
+    quietly drop off the dashboard. This ledger is the opposite: it only ever
+    grows, and an entry leaves only when the weekly job confirms the company has
+    appeared in the published ASIC register. Found on the daily list, stays on
+    the daily list, until it turns up on the weekly one.
+    """
+    if LEDGER.exists():
+        try:
+            return json.loads(LEDGER.read_text())
+        except Exception:
+            print("[ledger] unreadable, starting a new one")
+    return {}
+
+
+def merge_ledger(ledger: dict, rows: list[dict], now_iso: str) -> int:
+    """Add anything role-named from this run. Returns how many are new."""
+    added = 0
+    for r in rows:
+        role = role_of(r["name"])
+        if not role:
+            continue
+        st = stem_of(r["name"])
+        if not st or len(st) <= 3 or NOISE.search(st):
+            continue
+        if r["acn"] in ledger:
+            ledger[r["acn"]].update({"name": r["name"], "role": role, "stem": st,
+                                     "date": r["date"], "suburb": r["suburb"],
+                                     "state": r["state"]})
+            continue
+        ledger[r["acn"]] = {
+            "acn": r["acn"], "name": r["name"], "role": role, "stem": st,
+            "date": r["date"], "suburb": r["suburb"], "state": r["state"],
+            "first_seen": now_iso, "in_register": False, "via": "API",
+        }
+        added += 1
+    return added
 
 
 def company_rows(seen: dict) -> list[dict]:
@@ -359,7 +427,7 @@ def group(rows: list[dict]) -> tuple[list, list, list]:
     """
     g = defaultdict(list)
     for r in rows:
-        s = stem_of(r["name"])
+        s = r.get("stem") or stem_of(r["name"])
         if s and len(s) > 3 and not NOISE.search(s):
             g[s].append(r)
 
@@ -378,14 +446,16 @@ def group(rows: list[dict]) -> tuple[list, list, list]:
                 "phased": len(set(dts)) > 1,
                 "members": [{"acn": m["acn"], "name": m["name"], "date": m["date"],
                              "role": role_of(m["name"]), "suburb": m["suburb"],
-                             "state": m["state"], "via": "API"} for m in roled]})
+                             "state": m["state"], "via": "API",
+                             "first_seen": m.get("first_seen", "")} for m in roled]})
             continue
         for m in ms:
             if not role_of(m["name"]):
                 continue
             rec = {"acn": m["acn"], "name": m["name"], "date": m["date"],
                    "role": role_of(m["name"]), "suburb": m["suburb"],
-                   "state": m["state"], "via": "API"}
+                   "state": m["state"], "via": "API",
+                   "first_seen": m.get("first_seen", "")}
             (bidcos if BID.search(m["name"]) else other).append(rec)
 
     # Bidco-bearing stacks first, then the rest, newest first within each.
@@ -410,7 +480,7 @@ def main() -> int:
     print(f"checkpoint: {len(seen):,} slots known")
 
     try:
-        frontier = find_frontier(seen)
+        frontier = find_frontier()
     except Blocked as e:
         write_run(state, now, started, error=str(e), status="failed")
         print(f"BLOCKED: {e}", file=sys.stderr)
@@ -517,7 +587,7 @@ def main() -> int:
                           now.isoformat(timespec="seconds"))
             if time.time() - last_save > SAVE_EVERY_MIN * 60:
                 last_save = time.time()
-                bank(seen, f"{done:,}/{len(queue):,}")
+                bank(seen, f"{done:,}/{len(queue):,}", frontier)
             if d and ROLE.search(d.get("name", "") or ""):
                 print(f"  *** {a}  {d['name']}  {d.get('registrationDate','')}")
             if done % 250 == 0:
@@ -537,7 +607,7 @@ def main() -> int:
         # On a cancellation the workflow's remaining steps never run, so bank
         # from here. On a normal finish this is a cheap no-op that the workflow's
         # own commit step then supersedes.
-        bank(seen, "cancelled" if STOPPING["flag"] else "end of sweep")
+        bank(seen, "cancelled" if STOPPING["flag"] else "end of sweep", frontier)
 
     # A hosted Actions job is capped at six hours by GitHub, which is not ours to
     # raise, and a job cannot dispatch itself to get around it. Instead the
@@ -550,7 +620,19 @@ def main() -> int:
     if bad:
         print(f"{bad:,} slots errored and were left for a later run")
     rows = company_rows(seen)
-    stacks, bidcos, other = group(rows)
+
+    # Findings accumulate. Grouping runs over the ledger rather than over this
+    # run's rows, so a family found across several nights - HAMILTON HOLDCO one
+    # night, HAMILTON MIDCO the next - assembles into one stack instead of
+    # appearing as two unrelated singles.
+    ledger = load_ledger()
+    added = merge_ledger(ledger, rows, now.isoformat(timespec="seconds"))
+    LEDGER.write_text(json.dumps(ledger, indent=1, sort_keys=True))
+    waiting = [v for v in ledger.values() if not v.get("in_register")]
+    moved = sum(1 for v in ledger.values() if v.get("in_register"))
+    print(f"ledger: {added} new, {len(waiting)} awaiting the register, "
+          f"{moved} already in it")
+    stacks, bidcos, other = group(waiting)
 
     # Only advance the high-water mark over ground we actually covered.
     if not truncated and not err and forward:
@@ -560,7 +642,8 @@ def main() -> int:
               frontier=frontier, swept=done, queued=len(queue), truncated=truncated,
               gaps=len(gaps), recheck=len(recheck),
               companies=len(rows), stacks=stacks, singles=bidcos, role_only=other,
-              bad=bad,
+              bad=bad, ledger_new=added, ledger_waiting=len(waiting),
+              ledger_in_register=moved,
               rows=rows, error=err, status="failed" if err else "ok",
               # When the forward pass is empty the window is the trailing one -
               # reporting a blank start made the page read "Window  -> ...".
@@ -589,6 +672,9 @@ def write_run(state, now, started, **kw):
         "companies": kw.get("companies", 0),
         "trailing_slots": TRAILING_SLOTS,
         "slots_errored": kw.get("bad", 0),
+        "ledger_new": kw.get("ledger_new", 0),
+        "ledger_waiting": kw.get("ledger_waiting", 0),
+        "ledger_in_register": kw.get("ledger_in_register", 0),
     }
     state.setdefault("history", []).append(run)
     state["history"] = state["history"][-60:]

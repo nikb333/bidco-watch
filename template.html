@@ -180,6 +180,8 @@ table.l td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:to
       <div id="daily-list"></div>
       <div class="acts">
         <a class="b pri" id="run-link" target="_blank" rel="noopener">Run now</a>
+        <button class="b" id="dl-daily">Download findings</button>
+        <a class="b" id="dl-all" target="_blank" rel="noopener">All companies (CSV)</a>
         <span class="note" id="run-note"></span>
       </div>
     </section>
@@ -265,6 +267,7 @@ function li(e){
   if(e.via)bits.push('<span class="via">'+esc(e.via)+'</span>');
   let chips='';
   if(e.isNew)chips+='<span class="new-chip">NEW</span>';
+  if(e.first_seen)chips+='<span class="via">found '+esc(when(e.first_seen))+'</span>';
   if(e.family)chips+='<span class="fam-chip '+(e.familyKey?'key':'plain')+'">STACK · '+
     esc(e.family)+'</span>';
   return '<li><span class="nm">'+esc(e.name)+'</span><span class="acn">'+esc(e.acn)+'</span>'+
@@ -332,19 +335,25 @@ function render(D){
     pill:s.has_bidco?'STACK · BIDCO':'STACK',
     meta:s.members.length+' entities · first '+(s.first||''),
     items:s.members.map(m=>({name:m.name,acn:m.acn,role:m.role,date:m.date,
-      where:[m.suburb,m.state].filter(Boolean).join(' '),via:m.via}))}));
+      where:[m.suburb,m.state].filter(Boolean).join(' '),via:m.via,
+      first_seen:m.first_seen}))}));
   if((D.singles||[]).length)f.push({label:'Lone Bidcos',pill:'BIDCO',key:true,
     meta:D.singles.length+' with no family found',
     items:D.singles.map(m=>({name:m.name,acn:m.acn,role:'BIDCO',date:m.date,
-      where:[m.suburb,m.state].filter(Boolean).join(' '),via:m.via}))});
+      where:[m.suburb,m.state].filter(Boolean).join(' '),via:m.via,
+      first_seen:m.first_seen}))});
   $('daily-list').innerHTML=
     fams(f,'No stacks or Bidcos since the last register. Nationally these appear about three times a week, so an empty period is normal.')+
     tuck('Other role-named companies — single HOLDCOs, lone FINCOs and the like',
       (D.role_only||[]).length,
       loose((D.role_only||[]).map(m=>({name:m.name,acn:m.acn,role:m.role,date:m.date,
         where:[m.suburb,m.state].filter(Boolean).join(' '),via:m.via}))));
-  $('s-daily').textContent='Since the last ASIC register. Window '+((run.window||[])[0]||'—')+
-    ' → '+((run.window||[])[1]||'—')+', plus a '+fmt(run.trailing_slots||0)+'-slot trailing re-check.';
+  $('s-daily').textContent='Everything found since the last ASIC register, kept here '+
+    'until it appears in the register below. Window '+((run.window||[])[0]||'—')+
+    ' → '+((run.window||[])[1]||'—')+', plus a '+fmt(run.trailing_slots||0)+
+    '-slot trailing re-check'+
+    (run.ledger_in_register?'. '+fmt(run.ledger_in_register)+' earlier findings have since '+
+      'crossed into the register and moved to the section below.':'.');
   const dsb=(D.stacks||[]).filter(x=>x.has_bidco).length;
   $('c-daily').textContent=(D.stacks||[]).length+' stacks'+(dsb?' ('+dsb+' with a Bidco)':'')+
     ' · '+(D.singles||[]).length+' lone Bidcos';
@@ -472,6 +481,43 @@ function render(D){
     '<td>'+fmt(h.companies)+'</td><td>'+esc(h.elapsed_min)+'</td></tr>').join('')
     ||'<tr><td colspan="7" class="empty">No runs recorded yet.</td></tr>';
 
+  // ---------- downloads ----------
+  // Both buttons build their CSV in the browser from the data already on the
+  // page. The full list of every company resolved is far too large for that, so
+  // it is a plain link to the file the sweep commits.
+  const csvq = v => { v = String(v==null?'':v);
+    return /[",\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v };
+  function save(name, rows){
+    const b=new Blob([rows.join('\n')],{type:'text/csv'});
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(b); a.download=name; a.click();
+    setTimeout(()=>URL.revokeObjectURL(a.href),2000);
+  }
+
+  $('dl-daily').addEventListener('click',()=>{
+    const rows=[['kind','stem','role','acn','name','registration_date','suburb','state'].join(',')];
+    (D.stacks||[]).forEach(st=>st.members.forEach(m=>rows.push(
+      [st.has_bidco?'STACK_WITH_BIDCO':'STACK',csvq(st.stem),m.role,m.acn,csvq(m.name),
+       m.date,csvq(m.suburb),m.state].join(','))));
+    (D.singles||[]).forEach(m=>rows.push(
+      ['LONE_BIDCO','',m.role||'BIDCO',m.acn,csvq(m.name),m.date,csvq(m.suburb),m.state].join(',')));
+    (D.role_only||[]).forEach(m=>rows.push(
+      ['OTHER','',m.role,m.acn,csvq(m.name),m.date,csvq(m.suburb),m.state].join(',')));
+    save('daily_findings_'+((run.finished_utc||'').slice(0,10)||'run')+'.csv', rows);
+  });
+
+  $('dl-all').href = repo
+    ? 'https://github.com/'+repo+'/raw/main/data/companies.csv' : '#';
+
+  $('dl-week').addEventListener('click',()=>{
+    const rows=[['name','acn','role','registration_date','state','in_stack','stack_has_bidco','abn']
+      .join(',')];
+    (wk.entities||[]).forEach(e=>rows.push(
+      [csvq(e.name),e.acn,e.role,e.date,e.state,e.in_stack?'yes':'no',
+       e.stack_has_bidco?'yes':'no',e.abn?'yes':'no'].join(',')));
+    save('register_vehicles_'+(wk.window_days||'')+'d.csv', rows);
+  });
+
   // ---------- live status ----------
   // Two independent sources, because neither alone is enough:
   //   progress.json  - written by the sweep itself every 50 lookups and pushed
@@ -519,16 +565,20 @@ function render(D){
 
     $('lv-t').textContent='Sweep running';
     if(running && prog.total){
-      // Between publishes, carry the count forward at the known rate. The bar
-      // moves continuously and the figure is honest about which part is measured.
-      const rate=prog.rate_per_min||48;
+      // Carry the count forward between publishes - but at the rate this run is
+      // ACTUALLY achieving, not the configured one. The two differ: the vendor
+      // throttles harder from GitHub's runners than the setting assumes, and an
+      // ETA built on the wrong number is worse than none.
+      const ran=prog.started_utc?minsSince(prog.started_utc):0;
+      const measured=(ran>10 && prog.done>200) ? prog.done/ran : 0;
+      const rate=(measured>2 && measured<200) ? measured : (prog.rate_per_min||48);
       const est=Math.min(prog.total, Math.round(prog.done + age*rate));
       const pct=Math.min(100, 100*est/prog.total);
       $('lv-bar').style.width=pct.toFixed(1)+'%';
       const left=(prog.total-est)/rate;
       $('lv-n').textContent='about '+fmt(est)+' of '+fmt(prog.total)+' slots ('+
-        pct.toFixed(0)+'%) · '+fmt(prog.companies||0)+' companies · roughly '+
-        hhmm(left)+' to go';
+        pct.toFixed(0)+'%) · '+fmt(prog.companies||0)+' companies · '+
+        rate.toFixed(0)+'/min · roughly '+hhmm(left)+' to go';
       $('lv-age').textContent = age<1.5
         ? 'counted just now'
         : 'last exact count '+fmt(prog.done)+' at '+when(prog.updated_utc);
