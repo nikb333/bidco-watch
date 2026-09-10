@@ -1,10 +1,10 @@
 {
  "phase": "running",
- "done": 2600,
+ "done": 2700,
  "total": 20572,
- "companies": 590,
+ "companies": 599,
  "started_utc": "2026-09-10T12:47:47+00:00",
- "updated_utc": "2026-09-10T14:19:02Z",
+ "updated_utc": "2026-09-10T14:23:12Z",
  "rate_per_min": 48,
  "run_url": "https://github.com/nikb333/bidco-watch/actions/runs/34478733340"
 }
