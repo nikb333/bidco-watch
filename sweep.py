@@ -77,7 +77,10 @@ BUDGET_MIN = int(os.environ.get("BUDGET_MIN", "335"))
 
 KEY = os.environ.get("BAPI_KEY", "")
 DOCS = ROOT / "docs"
-HEARTBEAT_SECS = int(os.environ.get("HEARTBEAT_SECS", "600"))
+# Every five minutes. The page extrapolates between publishes from the known
+# rate, so this only has to be often enough to keep the extrapolation honest -
+# not often enough to look live on its own.
+HEARTBEAT_SECS = int(os.environ.get("HEARTBEAT_SECS", "300"))
 
 
 def _git(*args, **kw):

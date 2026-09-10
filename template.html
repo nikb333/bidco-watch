@@ -481,7 +481,7 @@ function render(D){
   //                    leave a stale progress file looking like live progress.
   const live=$('live');
   async function poll(){
-    let prog=null, active=null;
+    let prog=null, active=null, apiKnown=false;
     try{
       const r=await fetch('progress.json?t='+Date.now(),{cache:'no-store'});
       if(r.ok) prog=await r.json();
@@ -491,39 +491,56 @@ function render(D){
         const r=await fetch('https://api.github.com/repos/'+repo+
           '/actions/runs?per_page=3',{cache:'no-store'});
         if(r.ok){
+          apiKnown=true;
           const j=await r.json();
           active=(j.workflow_runs||[]).find(x=>x.status==='in_progress'||x.status==='queued')||null;
         }
       }catch(e){}
     }
 
-    if(!active){ live.classList.remove('on'); return }
-
+    // The progress file is the primary signal. The Actions API is a cross-check
+    // that a job is really alive, but it is unauthenticated and rate-limited to
+    // 60 calls an hour per address, so it goes quiet exactly when someone is
+    // watching closely. Requiring it meant the bar vanished for the person
+    // refreshing most. A fresh progress file is enough on its own.
+    const age = prog ? minsSince(prog.updated_utc) : Infinity;
+    const running = prog && prog.phase==='running' && age < 20;
+    if(!running && !active){ live.classList.remove('on'); return }
     live.classList.add('on');
-    const queued=active.status==='queued';
-    const elapsed=minsSince(active.run_started_at||active.created_at);
-    let done=null,total=null,fresh=false;
-    if(prog&&prog.phase==='running'){
-      done=prog.done; total=prog.total;
-      // A progress file older than 20 minutes is not tracking this run.
-      fresh=minsSince(prog.updated_utc) < 20;
+
+    const queued = active && active.status==='queued';
+    if(queued && !running){
+      $('lv-t').textContent='Sweep queued';
+      $('lv-n').textContent='waiting for a runner';
+      $('lv-bar').style.width='0%'; $('lv-age').textContent='';
+      if(active) $('lv-link').href=active.html_url;
+      return;
     }
 
-    $('lv-t').textContent=queued?'Sweep queued':'Sweep running';
-    if(!queued&&fresh&&total){
-      const pct=Math.min(100,100*done/total);
+    $('lv-t').textContent='Sweep running';
+    if(running && prog.total){
+      // Between publishes, carry the count forward at the known rate. The bar
+      // moves continuously and the figure is honest about which part is measured.
+      const rate=prog.rate_per_min||48;
+      const est=Math.min(prog.total, Math.round(prog.done + age*rate));
+      const pct=Math.min(100, 100*est/prog.total);
       $('lv-bar').style.width=pct.toFixed(1)+'%';
-      const left=(total-done)/(prog.rate_per_min||48);
-      $('lv-n').textContent=fmt(done)+' of '+fmt(total)+' slots ('+pct.toFixed(0)+'%) · '+
-        fmt(prog.companies||0)+' companies · about '+hhmm(left)+' to go';
-      $('lv-age').textContent='counted '+Math.round(minsSince(prog.updated_utc))+' min ago';
+      const left=(prog.total-est)/rate;
+      $('lv-n').textContent='about '+fmt(est)+' of '+fmt(prog.total)+' slots ('+
+        pct.toFixed(0)+'%) · '+fmt(prog.companies||0)+' companies · roughly '+
+        hhmm(left)+' to go';
+      $('lv-age').textContent = age<1.5
+        ? 'counted just now'
+        : 'last exact count '+fmt(prog.done)+' at '+when(prog.updated_utc);
+      $('lv-link').href = prog.run_url || (active?active.html_url:'#');
     }else{
+      const el = active ? minsSince(active.run_started_at||active.created_at) : 0;
       $('lv-bar').style.width='0%';
-      $('lv-n').textContent=queued?'waiting for a runner'
-        :'running for '+hhmm(elapsed)+' — slot count arrives with the first progress push';
-      $('lv-age').textContent='';
+      $('lv-n').textContent='running for '+hhmm(el)+
+        ' — waiting for the first count (published about five minutes in)';
+      $('lv-age').textContent = apiKnown ? '' : 'GitHub API rate-limited; showing what the run reported';
+      if(active) $('lv-link').href=active.html_url;
     }
-    $('lv-link').href=active.html_url;
   }
   $('lv-now').addEventListener('click',poll);
   poll(); setInterval(poll,30000);
