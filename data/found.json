@@ -1,0 +1,74 @@
+{
+ "702069627": {
+  "acn": "702069627",
+  "date": "2026-09-04",
+  "first_seen": "2026-09-10T19:32:40+00:00",
+  "in_register": false,
+  "name": "GROUNDSWELL HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "GROUNDSWELL",
+  "suburb": "NEWCASTLE WEST",
+  "via": "API"
+ },
+ "702084160": {
+  "acn": "702084160",
+  "date": "2026-09-07",
+  "first_seen": "2026-09-10T19:32:40+00:00",
+  "in_register": false,
+  "name": "A CLASS HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "A CLASS",
+  "suburb": "MELBOURNE",
+  "via": "API"
+ },
+ "702140449": {
+  "acn": "702140449",
+  "date": "2026-09-07",
+  "first_seen": "2026-09-10T19:32:40+00:00",
+  "in_register": false,
+  "name": "HAMILTON HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "HAMILTON",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702141722": {
+  "acn": "702141722",
+  "date": "2026-09-07",
+  "first_seen": "2026-09-10T19:32:40+00:00",
+  "in_register": false,
+  "name": "HAMILTON BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "NSW",
+  "stem": "HAMILTON",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702198525": {
+  "acn": "702198525",
+  "date": "2026-09-09",
+  "first_seen": "2026-09-10T19:32:40+00:00",
+  "in_register": false,
+  "name": "RDG ELSTERNWICK HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "RDG ELSTERNWICK",
+  "suburb": "DOCKLANDS",
+  "via": "API"
+ },
+ "702207029": {
+  "acn": "702207029",
+  "date": "2026-09-09",
+  "first_seen": "2026-09-10T19:32:40+00:00",
+  "in_register": false,
+  "name": "BRUSHY CREEK HOLDCO PTY LIMITED",
+  "role": "HOLDCO",
+  "state": "QLD",
+  "stem": "BRUSHY CREEK",
+  "suburb": "BRISBANE CITY",
+  "via": "API"
+ }
+}

@@ -1,23 +1,26 @@
 {
  "last_frontier_base": 70225829,
  "last_run": {
-  "finished_utc": "2026-09-10T12:47:47+00:00",
-  "elapsed_min": 335.0,
+  "finished_utc": "2026-09-10T19:32:40+00:00",
+  "elapsed_min": 335.1,
   "status": "ok",
   "error": "",
-  "frontier_base": 70226415,
+  "frontier_base": 70226594,
   "window": [
    "702258302",
-   "702264159"
+   "702265941"
   ],
-  "slots_swept": 9572,
-  "slots_queued": 20572,
-  "slots_left": 11000,
-  "gaps_queued": 19996,
+  "slots_swept": 9728,
+  "slots_queued": 20765,
+  "slots_left": 11037,
+  "gaps_queued": 20000,
   "recheck_queued": 0,
-  "companies": 2661,
+  "companies": 2697,
   "trailing_slots": 20000,
-  "slots_errored": 0
+  "slots_errored": 0,
+  "ledger_new": 6,
+  "ledger_waiting": 6,
+  "ledger_in_register": 0
  },
  "history": [
   {
@@ -54,6 +57,28 @@
    "companies": 2661,
    "trailing_slots": 20000,
    "slots_errored": 0
+  },
+  {
+   "finished_utc": "2026-09-10T19:32:40+00:00",
+   "elapsed_min": 335.1,
+   "status": "ok",
+   "error": "",
+   "frontier_base": 70226594,
+   "window": [
+    "702258302",
+    "702265941"
+   ],
+   "slots_swept": 9728,
+   "slots_queued": 20765,
+   "slots_left": 11037,
+   "gaps_queued": 20000,
+   "recheck_queued": 0,
+   "companies": 2697,
+   "trailing_slots": 20000,
+   "slots_errored": 0,
+   "ledger_new": 6,
+   "ledger_waiting": 6,
+   "ledger_in_register": 0
   }
  ]
 }

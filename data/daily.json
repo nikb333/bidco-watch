@@ -1,22 +1,25 @@
 {
  "run": {
-  "finished_utc": "2026-09-10T12:47:47+00:00",
-  "elapsed_min": 335.0,
+  "finished_utc": "2026-09-10T19:32:40+00:00",
+  "elapsed_min": 335.1,
   "status": "ok",
   "error": "",
-  "frontier_base": 70226415,
+  "frontier_base": 70226594,
   "window": [
    "702258302",
-   "702264159"
+   "702265941"
   ],
-  "slots_swept": 9572,
-  "slots_queued": 20572,
-  "slots_left": 11000,
-  "gaps_queued": 19996,
+  "slots_swept": 9728,
+  "slots_queued": 20765,
+  "slots_left": 11037,
+  "gaps_queued": 20000,
   "recheck_queued": 0,
-  "companies": 2661,
+  "companies": 2697,
   "trailing_slots": 20000,
-  "slots_errored": 0
+  "slots_errored": 0,
+  "ledger_new": 6,
+  "ledger_waiting": 6,
+  "ledger_in_register": 0
  },
  "stacks": [
   {
@@ -33,7 +36,8 @@
      "role": "HOLDCO",
      "suburb": "SYDNEY",
      "state": "NSW",
-     "via": "API"
+     "via": "API",
+     "first_seen": "2026-09-10T19:32:40+00:00"
     },
     {
      "acn": "702141722",
@@ -42,7 +46,8 @@
      "role": "BIDCO",
      "suburb": "SYDNEY",
      "state": "NSW",
-     "via": "API"
+     "via": "API",
+     "first_seen": "2026-09-10T19:32:40+00:00"
     }
    ]
   }
@@ -50,22 +55,24 @@
  "singles": [],
  "role_only": [
   {
-   "acn": "702199479",
-   "name": "BLOOMJAR MIDCO. PTY LTD",
+   "acn": "702198525",
+   "name": "RDG ELSTERNWICK HOLDCO PTY LTD",
    "date": "2026-09-09",
-   "role": "MIDCO",
-   "suburb": "BALCATTA",
-   "state": "WA",
-   "via": "API"
+   "role": "HOLDCO",
+   "suburb": "DOCKLANDS",
+   "state": "VIC",
+   "via": "API",
+   "first_seen": "2026-09-10T19:32:40+00:00"
   },
   {
-   "acn": "702208277",
-   "name": "MIDCO ACCOUNTING PTY LTD",
+   "acn": "702207029",
+   "name": "BRUSHY CREEK HOLDCO PTY LIMITED",
    "date": "2026-09-09",
-   "role": "MIDCO",
-   "suburb": "TARNEIT",
-   "state": "VIC",
-   "via": "API"
+   "role": "HOLDCO",
+   "suburb": "BRISBANE CITY",
+   "state": "QLD",
+   "via": "API",
+   "first_seen": "2026-09-10T19:32:40+00:00"
   },
   {
    "acn": "702084160",
@@ -74,7 +81,8 @@
    "role": "HOLDCO",
    "suburb": "MELBOURNE",
    "state": "VIC",
-   "via": "API"
+   "via": "API",
+   "first_seen": "2026-09-10T19:32:40+00:00"
   },
   {
    "acn": "702069627",
@@ -83,7 +91,8 @@
    "role": "HOLDCO",
    "suburb": "NEWCASTLE WEST",
    "state": "NSW",
-   "via": "API"
+   "via": "API",
+   "first_seen": "2026-09-10T19:32:40+00:00"
   }
  ]
 }
