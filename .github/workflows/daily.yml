@@ -18,7 +18,16 @@ on:
     #   22:00 Sydney -> 11:00 UTC (AEDT) / 12:00 UTC (AEST)
     #   02:00 Sydney -> 15:00 UTC (AEDT) / 16:00 UTC (AEST)
     #   05:00 Sydney -> 18:00 UTC (AEDT) / 19:00 UTC (AEST)
-    - cron: "0 11,12,15,16,18,19 * * *"
+    # Every two hours at :23, not on the hour. GitHub's scheduler is best effort
+    # and drops jobs under load; the top of the hour is when every cron on the
+    # platform fires at once, so an odd minute is materially more reliable.
+    #
+    # Most of these firings do nothing - the guard below decides. It runs at the
+    # three Sydney start times, AND any time the last successful run is more than
+    # twenty hours old. That second clause is the point: when GitHub drops a
+    # night, the next firing picks the work up instead of waiting for someone to
+    # notice. Three nights went by unswept before this existed.
+    - cron: "23 */2 * * *"
   workflow_dispatch:        # this is the "Run now" button
 
 permissions:
@@ -33,24 +42,30 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 355    # GitHub's hard ceiling for a hosted job is 360
     steps:
-      - name: Is this one of the Sydney start times?
+      - uses: actions/checkout@v4
+
+      - name: Should this firing actually sweep?
         id: guard
         run: |
           H=$(TZ=Australia/Sydney date +%H)
-          echo "sydney hour = $H"
-          case "$H" in
-            22|02|05) OK=yes ;;
-            *)        OK=no  ;;
-          esac
-          if [ "${{ github.event_name }}" = "schedule" ] && [ "$OK" = "no" ]; then
-            echo "skip=true" >> "$GITHUB_OUTPUT"
-            echo "Not a Sydney start hour - this is the daylight-saving twin. Skipping."
-          else
-            echo "skip=false" >> "$GITHUB_OUTPUT"
-          fi
+          case "$H" in 22|02|05) SLOT=yes ;; *) SLOT=no ;; esac
 
-      - uses: actions/checkout@v4
-        if: steps.guard.outputs.skip == 'false'
+          # How long since a run last finished successfully? A heredoc would be
+          # cleaner but an indented terminator does not close one, so this is a
+          # single expression on purpose.
+          AGE=$(python3 -c "import json,datetime as d;t=json.load(open('data/state.json'))['last_run']['finished_utc'];print(int((d.datetime.now(d.timezone.utc)-d.datetime.fromisoformat(t.replace('Z','+00:00'))).total_seconds()//3600))" 2>/dev/null || echo 999)
+          echo "sydney hour $H | scheduled slot: $SLOT | hours since last run: $AGE"
+
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "manual run"; echo "skip=false" >> "$GITHUB_OUTPUT"
+          elif [ "$SLOT" = "yes" ]; then
+            echo "scheduled start"; echo "skip=false" >> "$GITHUB_OUTPUT"
+          elif [ "$AGE" -ge 20 ]; then
+            echo "::warning::Last successful run was $AGE hours ago - catching up."
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "nothing due"; echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
 
       - uses: actions/setup-python@v5
         if: steps.guard.outputs.skip == 'false'

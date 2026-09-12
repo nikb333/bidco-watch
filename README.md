@@ -39,8 +39,16 @@ Everything runs on GitHub Actions. No server, no Claude in the loop at runtime.
 | `daily.yml` | **10pm Sydney, every day** | Sweeps new ACN slots + the trailing window, rebuilds the site. Runs overnight so the morning starts with a finished sweep. |
 | `weekly.yml` | Wednesday ~8am Sydney | Downloads the published register, extracts every role-named vehicle, **reconciles it against what the daily sweep found** |
 
-Cron cannot handle daylight saving, so `daily.yml` fires at both UTC candidates
-for each Sydney hour and the first step drops the wrong one.
+`daily.yml` fires every two hours at **:23** past, and the first step decides
+whether that firing should do anything. It sweeps at the three Sydney start
+times, **and any time the last successful run is more than twenty hours old**.
+
+Both halves matter. The odd minute is because GitHub's scheduler is best effort
+and drops jobs under load — the top of the hour is when every cron on the
+platform fires at once. The twenty-hour clause is because it drops them anyway:
+on 11 September all three scheduled starts vanished and 11,000 slots sat
+unswept for forty hours, with nothing to notice or recover. Now the next firing
+picks the work up on its own.
 
 **There is no artificial time cap.** GitHub caps a hosted job at six hours and
 that is not ours to raise. A job also cannot dispatch itself to get around it —
