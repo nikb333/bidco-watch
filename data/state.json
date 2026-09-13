@@ -1,26 +1,108 @@
 {
  "last_frontier_base": 70225829,
  "last_run": {
-  "finished_utc": "2026-09-10T19:32:40+00:00",
+  "finished_utc": "2026-09-12T19:06:56+00:00",
   "elapsed_min": 335.1,
   "status": "ok",
   "error": "",
-  "frontier_base": 70226594,
+  "frontier_base": 70999999,
   "window": [
-   "702258302",
-   "702265941"
+   "709880008",
+   "709999995"
   ],
-  "slots_swept": 9728,
-  "slots_queued": 20765,
-  "slots_left": 11037,
+  "slots_swept": 10088,
+  "slots_queued": 32007,
+  "slots_left": 21919,
   "gaps_queued": 20000,
   "recheck_queued": 0,
   "companies": 2697,
   "trailing_slots": 20000,
   "slots_errored": 0,
-  "ledger_new": 6,
+  "ledger_new": 0,
   "ledger_waiting": 6,
-  "ledger_in_register": 0
+  "ledger_in_register": 0,
+  "coverage": {
+   "from_acn": "702058311",
+   "to_acn": "709999995",
+   "slots": 794169,
+   "checked": 19816,
+   "remaining": 774353,
+   "companies": 2697,
+   "buckets": [
+    {
+     "from": "702058302",
+     "to": "702720090",
+     "checked": 9728,
+     "slots": 66180
+    },
+    {
+     "from": "702720107",
+     "to": "703381891",
+     "checked": 0,
+     "slots": 66180
+    },
+    {
+     "from": "703381908",
+     "to": "704043694",
+     "checked": 0,
+     "slots": 66180
+    },
+    {
+     "from": "704043701",
+     "to": "704705493",
+     "checked": 0,
+     "slots": 66180
+    },
+    {
+     "from": "704705500",
+     "to": "705367291",
+     "checked": 0,
+     "slots": 66180
+    },
+    {
+     "from": "705367308",
+     "to": "706029094",
+     "checked": 0,
+     "slots": 66180
+    },
+    {
+     "from": "706029101",
+     "to": "706690897",
+     "checked": 0,
+     "slots": 66180
+    },
+    {
+     "from": "706690904",
+     "to": "707352690",
+     "checked": 0,
+     "slots": 66180
+    },
+    {
+     "from": "707352707",
+     "to": "708014493",
+     "checked": 0,
+     "slots": 66180
+    },
+    {
+     "from": "708014500",
+     "to": "708676297",
+     "checked": 0,
+     "slots": 66180
+    },
+    {
+     "from": "708676304",
+     "to": "709338090",
+     "checked": 0,
+     "slots": 66180
+    },
+    {
+     "from": "709338107",
+     "to": "709999986",
+     "checked": 10088,
+     "slots": 66189
+    }
+   ]
+  }
  },
  "history": [
   {
@@ -79,6 +161,110 @@
    "ledger_new": 6,
    "ledger_waiting": 6,
    "ledger_in_register": 0
+  },
+  {
+   "finished_utc": "2026-09-12T19:06:56+00:00",
+   "elapsed_min": 335.1,
+   "status": "ok",
+   "error": "",
+   "frontier_base": 70999999,
+   "window": [
+    "709880008",
+    "709999995"
+   ],
+   "slots_swept": 10088,
+   "slots_queued": 32007,
+   "slots_left": 21919,
+   "gaps_queued": 20000,
+   "recheck_queued": 0,
+   "companies": 2697,
+   "trailing_slots": 20000,
+   "slots_errored": 0,
+   "ledger_new": 0,
+   "ledger_waiting": 6,
+   "ledger_in_register": 0,
+   "coverage": {
+    "from_acn": "702058311",
+    "to_acn": "709999995",
+    "slots": 794169,
+    "checked": 19816,
+    "remaining": 774353,
+    "companies": 2697,
+    "buckets": [
+     {
+      "from": "702058302",
+      "to": "702720090",
+      "checked": 9728,
+      "slots": 66180
+     },
+     {
+      "from": "702720107",
+      "to": "703381891",
+      "checked": 0,
+      "slots": 66180
+     },
+     {
+      "from": "703381908",
+      "to": "704043694",
+      "checked": 0,
+      "slots": 66180
+     },
+     {
+      "from": "704043701",
+      "to": "704705493",
+      "checked": 0,
+      "slots": 66180
+     },
+     {
+      "from": "704705500",
+      "to": "705367291",
+      "checked": 0,
+      "slots": 66180
+     },
+     {
+      "from": "705367308",
+      "to": "706029094",
+      "checked": 0,
+      "slots": 66180
+     },
+     {
+      "from": "706029101",
+      "to": "706690897",
+      "checked": 0,
+      "slots": 66180
+     },
+     {
+      "from": "706690904",
+      "to": "707352690",
+      "checked": 0,
+      "slots": 66180
+     },
+     {
+      "from": "707352707",
+      "to": "708014493",
+      "checked": 0,
+      "slots": 66180
+     },
+     {
+      "from": "708014500",
+      "to": "708676297",
+      "checked": 0,
+      "slots": 66180
+     },
+     {
+      "from": "708676304",
+      "to": "709338090",
+      "checked": 0,
+      "slots": 66180
+     },
+     {
+      "from": "709338107",
+      "to": "709999986",
+      "checked": 10088,
+      "slots": 66189
+     }
+    ]
+   }
   }
  ]
 }
