@@ -1,6 +1,6 @@
 {
  "run": {
-  "finished_utc": "2026-09-12T19:06:56+00:00",
+  "finished_utc": "2026-09-13T00:42:12+00:00",
   "elapsed_min": 335.1,
   "status": "ok",
   "error": "",
@@ -9,96 +9,96 @@
    "709880008",
    "709999995"
   ],
-  "slots_swept": 10088,
-  "slots_queued": 32007,
-  "slots_left": 21919,
+  "slots_swept": 10116,
+  "slots_queued": 26087,
+  "slots_left": 15971,
   "gaps_queued": 20000,
   "recheck_queued": 0,
-  "companies": 2697,
+  "companies": 0,
   "trailing_slots": 20000,
   "slots_errored": 0,
   "ledger_new": 0,
   "ledger_waiting": 6,
   "ledger_in_register": 0,
   "coverage": {
-   "from_acn": "702058311",
+   "from_acn": "709680017",
    "to_acn": "709999995",
-   "slots": 794169,
-   "checked": 19816,
-   "remaining": 774353,
-   "companies": 2697,
+   "slots": 31999,
+   "checked": 16029,
+   "remaining": 15970,
+   "companies": 0,
    "buckets": [
     {
-     "from": "702058302",
-     "to": "702720090",
-     "checked": 9728,
-     "slots": 66180
+     "from": "709680008",
+     "to": "709706650",
+     "checked": 1333,
+     "slots": 2666
     },
     {
-     "from": "702720107",
-     "to": "703381891",
+     "from": "709706669",
+     "to": "709733317",
+     "checked": 1333,
+     "slots": 2666
+    },
+    {
+     "from": "709733326",
+     "to": "709759973",
+     "checked": 1333,
+     "slots": 2666
+    },
+    {
+     "from": "709759982",
+     "to": "709786630",
+     "checked": 30,
+     "slots": 2666
+    },
+    {
+     "from": "709786649",
+     "to": "709813294",
      "checked": 0,
-     "slots": 66180
+     "slots": 2666
     },
     {
-     "from": "703381908",
-     "to": "704043694",
+     "from": "709813301",
+     "to": "709839958",
      "checked": 0,
-     "slots": 66180
+     "slots": 2666
     },
     {
-     "from": "704043701",
-     "to": "704705493",
+     "from": "709839967",
+     "to": "709866615",
      "checked": 0,
-     "slots": 66180
+     "slots": 2666
     },
     {
-     "from": "704705500",
-     "to": "705367291",
-     "checked": 0,
-     "slots": 66180
+     "from": "709866624",
+     "to": "709893274",
+     "checked": 1328,
+     "slots": 2666
     },
     {
-     "from": "705367308",
-     "to": "706029094",
-     "checked": 0,
-     "slots": 66180
+     "from": "709893283",
+     "to": "709919933",
+     "checked": 2666,
+     "slots": 2666
     },
     {
-     "from": "706029101",
-     "to": "706690897",
-     "checked": 0,
-     "slots": 66180
+     "from": "709919942",
+     "to": "709946592",
+     "checked": 2666,
+     "slots": 2666
     },
     {
-     "from": "706690904",
-     "to": "707352690",
-     "checked": 0,
-     "slots": 66180
+     "from": "709946609",
+     "to": "709973259",
+     "checked": 2666,
+     "slots": 2666
     },
     {
-     "from": "707352707",
-     "to": "708014493",
-     "checked": 0,
-     "slots": 66180
-    },
-    {
-     "from": "708014500",
-     "to": "708676297",
-     "checked": 0,
-     "slots": 66180
-    },
-    {
-     "from": "708676304",
-     "to": "709338090",
-     "checked": 0,
-     "slots": 66180
-    },
-    {
-     "from": "709338107",
+     "from": "709973268",
      "to": "709999986",
-     "checked": 10088,
-     "slots": 66189
+     "checked": 2673,
+     "slots": 2673
     }
    ]
   }
