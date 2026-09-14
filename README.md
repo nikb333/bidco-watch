@@ -37,18 +37,46 @@ Everything runs on GitHub Actions. No server, no Claude in the loop at runtime.
 | Workflow | Schedule | Does |
 |---|---|---|
 | `daily.yml` | **10pm Sydney, every day** | Sweeps new ACN slots + the trailing window, rebuilds the site. Runs overnight so the morning starts with a finished sweep. |
-| `weekly.yml` | Wednesday ~8am Sydney | Downloads the published register, extracts every role-named vehicle, **reconciles it against what the daily sweep found** |
+| `weekly.yml` | **within ~2h of ASIC publishing** | Downloads the published register, extracts every role-named vehicle, **reconciles it against what the daily sweep found** |
 
-`daily.yml` fires every two hours at **:23** past, and the first step decides
-whether that firing should do anything. It sweeps at the three Sydney start
-times, **and any time the last successful run is more than twenty hours old**.
+`daily.yml` fires **every hour at :23**, and the first step decides whether that
+firing should do anything. It sweeps at the three Sydney start times, **and any
+time the last successful run is more than twenty hours old**. Twenty-one of the
+twenty-four firings exit in about eight seconds.
 
-Both halves matter. The odd minute is because GitHub's scheduler is best effort
-and drops jobs under load — the top of the hour is when every cron on the
-platform fires at once. The twenty-hour clause is because it drops them anyway:
-on 11 September all three scheduled starts vanished and 11,000 slots sat
-unswept for forty hours, with nothing to notice or recover. Now the next firing
-picks the work up on its own.
+Hourly, not two-hourly, and the reason is worth keeping. Cron knows nothing about
+daylight saving, so each Sydney start has two UTC candidates and the guard drops
+the wrong one. `*/2` only ever fires on **even** UTC hours — so on AEST it could
+never reach 19:00 UTC (5am Sydney), and from 4 October, when Sydney moves to
+AEDT, 11:00 and 15:00 UTC both become unreachable and the schedule would have
+collapsed to a single 5am start without anything going red. Hourly has no parity
+to get wrong.
+
+The odd minute is because GitHub's scheduler is best effort and drops jobs under
+load — the top of the hour is when every cron on the platform fires at once. The
+twenty-hour clause is for when it drops them anyway: the next firing picks the
+work up instead of waiting for someone to notice.
+
+`weekly.yml` fires every two hours at :41, and its guard decides on **content,
+not the clock**: it asks data.gov.au whether the published register is newer than
+the one already processed, and runs only if it is. Eleven of the twelve daily
+firings are one API call and an exit.
+
+That is deliberately not "Tuesday morning Sydney". ASIC publishes shortly after
+midnight Sydney on a Tuesday — the 15 September file landed at **00:53** — but
+that is a habit, not a contract, and pinning the job to a clock means either
+firing before the file exists, which burns the week, or hours after it, which
+burns the lead time this whole project exists to buy. Day-of-week logic is also
+where timezone bugs live: an earlier version of this guard tested the **UTC** day,
+which quietly meant Wednesday morning in Sydney — a full day late, every week.
+Asking "is there a newer file?" has no timezone, no daylight-saving edge, and
+recovers on its own from a dropped firing or a slipped publication. An extract
+more than eight days old, or an API that will not answer, also triggers a run: a
+needless five minutes beats a week of staleness.
+
+The daily sweep does need local time, and reads it properly —
+`TZ=Australia/Sydney` — so its three starts land at 22:00, 02:00 and 05:00 Sydney
+in both AEST and AEDT, verified across the 4 October switch.
 
 **There is no artificial time cap.** GitHub caps a hosted job at six hours and
 that is not ours to raise. A job also cannot dispatch itself to get around it —
@@ -107,6 +135,13 @@ no Bidco in any name, including ZELORA (TOPCO/MEZZCO/HOLDCO), GANZ, EPTEC INFRA
 and TUGUN BUYER. Requiring the word discarded 41% of the structures. Stacks that
 do contain a Bidco are flagged, since they remain the strongest single signal.
 
+The coverage panel splits that work into the passes the sweep actually runs, and
+gives each one its own reason, because a single "slots still to check" number adds
+today's registrations — which matter within hours — to a back-fill queue that is
+allowed to take several nights, and answers neither question. Every slot in the
+range belongs to exactly one pass; nothing is dropped from the queue, so an
+unchecked slot is always explained by the pass it sits in.
+
 The dashboard shows stacks and Bidcos only. Lone HOLDCOs and stray FINCOs are
 real but weak on their own, so they sit in a collapsed section rather than on the
 front page.
@@ -141,6 +176,23 @@ eight minutes a night.
   when the content changes, so git cannot delta them: every save costs a full
   copy. Plain and append-only deltas almost perfectly — a whole night of
   fifteen-minute saves adds about 0.4 MB.
+- **In a rebase, `-X ours` means the *other* side.** During `git rebase -X ours
+  origin/main`, "ours" is the branch being replayed *onto* — the remote — and
+  "theirs" is the commit being replayed, which is this run's results. The flag
+  therefore discarded every fresh file on conflict and kept the stale one. It
+  cost two days: runs finished green, pushed commits, and left `data/state.json`
+  frozen at 10 September, so the guard's twenty-hour catch-up never saw progress
+  either. Both `sweep.py` and the workflow now use `-X theirs`.
+- **"Checked" is not the same as "found".** A slot is checked once, as the frontier
+  passes it. A company registering into a slot an earlier run already saw empty
+  reads as nothing until the re-check pass comes round. The first reconciliation
+  scored 85% recall (17 of 20) and one of the three misses, NXG HOLDCO, sat in a
+  window the dashboard called 100% checked. The coverage panel now says this out
+  loud rather than letting a full green bar imply more than it means.
+- **A green run is not proof the data landed.** The workflow now reads
+  `data/state.json` back off `origin/main` after pushing and fails if the last
+  run did not advance. Everything above was invisible precisely because nothing
+  checked.
 
 ---
 

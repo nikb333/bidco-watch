@@ -157,7 +157,7 @@ def heartbeat(phase, done, total, found, started_iso, force=False, _last=[0.0]):
             # The branch moved under us. Rebase onto it and try once more; if that
             # still fails, say so and carry on sweeping.
             _git("fetch", "origin", "main")
-            rb = _git("rebase", "-X", "ours", "origin/main")
+            rb = _git("rebase", "-X", "theirs", "origin/main")
             if rb.returncode:
                 _git("rebase", "--abort")
                 print(f"  [heartbeat] rebase failed, progress not published: "
@@ -227,7 +227,7 @@ def bank(seen, note, frontier=None):
                 print(f"[bank] {note}: banked {len(seen):,} slots")
                 return
             _git("fetch", "origin", "main")
-            if _git("rebase", "-X", "ours", "origin/main").returncode:
+            if _git("rebase", "-X", "theirs", "origin/main").returncode:
                 _git("rebase", "--abort")
                 break
         print("[bank] could not push the checkpoint")
@@ -676,7 +676,21 @@ def main() -> int:
 
     if bad:
         print(f"{bad:,} slots errored and were left for a later run")
-    cov = coverage(seen, frontier)
+    # How fast ASIC is handing out numbers, measured rather than assumed: the span
+    # of the run history divided by the frontier it moved over. Calendar days, not
+    # business days, so a window's reach reads as a real date range.
+    per_day = 0.0
+    fh = [h for h in (state.get("history") or []) if h.get("frontier_base")]
+    if len(fh) >= 2:
+        try:
+            span = ((datetime.fromisoformat(fh[-1]["finished_utc"])
+                     - datetime.fromisoformat(fh[0]["finished_utc"])).total_seconds() / 86400)
+            if span >= 0.5:
+                per_day = max(0.0, (fh[-1]["frontier_base"] - fh[0]["frontier_base"]) / span)
+        except Exception:
+            per_day = 0.0
+    cov = coverage(seen, frontier,
+                   forward[0] if forward else trail_lo, trail_lo, per_day)
     rows = company_rows(seen)
 
     # Findings accumulate. Grouping runs over the ledger rather than over this
@@ -717,48 +731,113 @@ def main() -> int:
     return 1 if err else 0
 
 
-def coverage(seen: dict, frontier: int, buckets: int = 12) -> dict:
-    """How much of the gap between the register and today has actually been looked at.
+def coverage(seen: dict, frontier: int, fwd_lo: int, trail_lo: int,
+             per_day: float = 0.0, buckets: int = 12) -> dict:
+    """Where the sweep is up to, split by WHY each slot is or is not checked.
 
-    The register is complete up to some ACN and silent after it; the daily sweep
-    owns everything above. This says, in plain numbers, how far that handover has
-    got: how many slots lie in the gap, how many have been checked, how many
-    companies came back, and - via the buckets - WHERE the unchecked ones are, so
-    a hole in yesterday reads differently from a hole a week back.
+    A single "still to check" number is honest and useless at the same time: it
+    adds today's registrations, which matter within hours, to a back-fill queue
+    that is allowed to take a few nights, and the sum answers neither question.
+    So the range is cut at the two boundaries the sweep itself works to, and each
+    zone carries its own reason:
+
+      new      fwd_lo..frontier    registered since the last finished sweep.
+                                   First in the queue every run. Anything
+                                   unchecked here is tonight's work in flight.
+      catchup  trail_lo..fwd_lo-1  the trailing back-fill window: gaps an earlier
+                                   run ran out of clock before reaching, plus
+                                   re-checks of slots that came back empty.
+                                   Queued behind the new slots deliberately.
+      settled  floor..trail_lo-1   below the back-fill window. The daily sweep has
+                                   moved past these; the weekly register confirms
+                                   them.
+
+    Nothing is ever dropped from the queue - a slot left unchecked is always one
+    of these three, and the dashboard says which.
     """
-    lo = 0
+    reg_lo = 0
     wp = DATA / "weekly.json"
     if wp.exists():
         try:
             m = json.loads(wp.read_text()).get("max_acn") or ""
             if m.isdigit():
-                lo = base_of(m)
+                reg_lo = base_of(m)
         except Exception:
             pass
-    if not lo:                       # no register yet: fall back to what we know
-        known = [base_of(a) for a in seen] or [frontier]
-        lo = min(known)
 
-    checked_bases = {base_of(a) for a in seen if lo <= base_of(a) <= frontier}
-    companies = sum(1 for a, d in seen.items()
-                    if lo <= base_of(a) <= frontier
-                    and d and "Company" in (d.get("type") or ""))
-    total = max(0, frontier - lo)
+    known = [base_of(a) for a in seen] or [frontier]
+    # The panel spans everything the sweep is still working on, which can reach
+    # BELOW the register boundary: the back-fill window keeps grinding over ground
+    # the register has since caught up on. Clamping the floor up to the register
+    # would make that work vanish from the page while it was still running, which
+    # is exactly the kind of silent gap this panel exists to prevent.
+    fwd_lo = min(fwd_lo, frontier)
+    trail_lo = min(trail_lo, fwd_lo)
+    floor = min([trail_lo, reg_lo or trail_lo] + ([min(known)] if not reg_lo else []))
+
+    checked = {base_of(a) for a in seen}
+    firms = {base_of(a) for a, d in seen.items()
+             if d and "Company" in (d.get("type") or "")}
+
+    def zone(lo, hi, key, label, why):
+        tot = max(0, hi - lo + 1)
+        ck = sum(1 for b in checked if lo <= b <= hi)
+        # Slots are the unit the sweep works in, but nobody thinks in slots. At
+        # the observed rate of issuance, how many days of registrations is this?
+        return {"key": key, "label": label, "why": why,
+                "from_acn": acn_for(lo), "to_acn": acn_for(hi),
+                "slots": tot, "checked": ck, "remaining": max(0, tot - ck),
+                "days": round(tot / per_day, 1) if per_day > 0 else None,
+                # How much of this window the published register already lists.
+                # A slot below that line being unchecked is not a hole in the
+                # coverage - the weekly list has the company either way.
+                "covered_by_register": max(0, min(hi, reg_lo) - lo + 1) if reg_lo else 0,
+                "companies": sum(1 for b in firms if lo <= b <= hi)}
+
+    zones = [
+        zone(fwd_lo, frontier, "new", "New registrations",
+             "Everything registered since the last finished sweep. These go to the "
+             "front of the queue on every run, so this should sit at or near 100%. "
+             "Note what 'checked' means: the slot has been looked at once. A company "
+             "that registers into a slot an earlier run already found empty is "
+             "caught by the re-check in the next pass, not here."),
+        zone(trail_lo, fwd_lo - 1, "catchup", "Back-fill of older slots",
+             "Slots an earlier run ran out of clock before reaching, plus a second "
+             "look at slots that came back empty - ACNs are handed out ahead of "
+             "use, so an empty slot can fill in later. Deliberately queued behind "
+             "the new slots: if a run runs short, this is the right thing to lose."),
+        zone(floor, trail_lo - 1, "settled", "Handed over to the weekly register",
+             "Older than the rolling back-fill window, so the daily sweep no longer "
+             "queues them - and it does not need to: the weekly ASIC register "
+             "already lists this stretch in full. Unchecked slots here are not a "
+             "gap in coverage."),
+    ]
+    zones = [z for z in zones if z["slots"] > 0]
+
+    total = max(0, frontier - floor + 1)
     width = max(1, total // buckets)
     bs = []
     for i in range(buckets):
-        b0 = lo + i * width
-        b1 = frontier if i == buckets - 1 else b0 + width
-        n = sum(1 for b in checked_bases if b0 <= b < b1)
+        b0 = floor + i * width
+        b1 = frontier + 1 if i == buckets - 1 else b0 + width
         bs.append({"from": acn_for(b0), "to": acn_for(max(b0, b1 - 1)),
-                   "checked": n, "slots": max(1, b1 - b0)})
+                   "checked": sum(1 for b in checked if b0 <= b < b1),
+                   "slots": max(1, b1 - b0),
+                   "zone": "new" if b0 >= fwd_lo else
+                           ("catchup" if b0 >= trail_lo else "settled")})
     return {
-        "from_acn": acn_for(lo + 1) if lo else "",
+        "from_acn": acn_for(floor),
         "to_acn": acn_for(frontier),
         "slots": total,
-        "checked": len(checked_bases),
-        "remaining": max(0, total - len(checked_bases)),
-        "companies": companies,
+        "checked": sum(1 for b in checked if floor <= b <= frontier),
+        "remaining": max(0, total - sum(1 for b in checked if floor <= b <= frontier)),
+        "companies": sum(1 for b in firms if floor <= b <= frontier),
+        "register_known": bool(reg_lo),
+        "register_to_acn": acn_for(reg_lo) if reg_lo else "",
+        "slots_per_day": round(per_day) if per_day > 0 else None,
+        "rate_per_min": RATE_PER_MIN,
+        "run_minutes": BUDGET_MIN,
+        "zones": zones,
         "buckets": bs,
     }
 

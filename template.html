@@ -121,6 +121,25 @@ ul.ent .meta{grid-column:1/-1;font-size:12px;color:var(--dim);display:flex;gap:8
 .covnum .k{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;
   margin-top:2px}
 .covnum.done .v{color:var(--ok)} .covnum.todo .v{color:var(--warn)}
+.zone{border:1px solid var(--line);border-radius:9px;padding:12px 14px;margin:10px 0;
+  background:var(--bg)}
+.zone .zh{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.zone .zt{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.zone .zr{font-family:var(--mono);font-size:11px;color:var(--dim)}
+.zone .zbar{height:9px;border-radius:5px;background:var(--chip);overflow:hidden;margin:9px 0 8px}
+.zone .zbar i{display:block;height:100%;background:var(--ok);border-radius:5px}
+.zone.todo .zbar i{background:var(--warn)}
+.zone .zn{font-size:13.5px;margin:0 0 6px;color:var(--ink)}
+.zone .zn b{font-weight:650}
+.zone .zn .eta{color:var(--warn);font-weight:650}
+.zone .zn .alldone{color:var(--ok);font-weight:650}
+.zone .zwhy{font-size:12px;color:var(--dim);margin:0;line-height:1.55}
+.zone.new .zt{color:var(--ok)}
+.zone.catchup .zt{color:var(--warn)}
+.zone.settled .zt{color:var(--dim)}
+.b.urgent{background:var(--warn);color:#fff;border-color:transparent}
+.covnote{font-size:12.5px;color:var(--dim);margin:12px 0 0;line-height:1.55;
+  border-top:1px solid var(--line);padding-top:10px}
 .buckets{display:flex;gap:3px;margin-top:14px;align-items:flex-end;height:34px}
 .buckets .bk{flex:1;background:var(--chip);border-radius:3px;position:relative;height:100%;
   overflow:hidden}
@@ -213,8 +232,9 @@ table.l td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:to
       <p class="sub" id="s-week"></p>
       <div id="week-list"></div>
       <div class="acts">
+        <a class="b pri" id="week-run-link" target="_blank" rel="noopener">Refresh the register</a>
         <button class="b" id="dl-week">Download CSV</button>
-        <span class="note">Every role-named vehicle in the register window.</span>
+        <span class="note" id="week-run-note"></span>
       </div>
     </section>
   </div>
@@ -379,27 +399,67 @@ function render(D){
     if(!c.slots){ $('cov').innerHTML=
       '<p class="line">No coverage figures yet — they appear after the next sweep.</p>';
       return }
-    const pct=100*c.checked/c.slots;
+    // Observed throughput beats the configured pacing target for an estimate.
+    const rate=(run.elapsed_min&&run.slots_swept)
+      ? run.slots_swept/run.elapsed_min : (c.rate_per_min||29);
+    const hhmm=n=>{const m=Math.round(n);return m<60?m+' min'
+      :Math.floor(m/60)+'h '+String(m%60).padStart(2,'0')+'m'};
+    const zcls={new:'new',catchup:'catchup',settled:'settled'};
+
+    const zones=(c.zones||[]).map((z,i)=>{
+      const f=z.slots?z.checked/z.slots:0, todo=z.remaining>0;
+      const line = todo
+        ? '<b>'+fmt(z.checked)+'</b> of '+fmt(z.slots)+' checked · '+
+          '<span class="eta">'+fmt(z.remaining)+' still to go</span>'+
+          (z.key==='settled'?'':' — about '+hhmm(z.remaining/rate)+' of sweeping')
+        : '<b>'+fmt(z.slots)+'</b> of '+fmt(z.slots)+' checked · '+
+          '<span class="alldone">nothing outstanding</span>';
+      return '<div class="zone '+(zcls[z.key]||'')+(todo?' todo':'')+'">'+
+        '<div class="zh"><span class="zt">Scan '+(i+1)+' — '+esc(z.label)+'</span>'+
+          '<span class="zr">'+esc(z.from_acn)+' → '+esc(z.to_acn)+
+          (z.days?' · about '+(z.days<1.5?'1 day':z.days.toFixed(0)+' days')+
+            ' of registrations':'')+'</span></div>'+
+        '<div class="zbar"><i style="width:'+Math.max(1,f*100).toFixed(1)+'%"></i></div>'+
+        '<p class="zn">'+line+'</p>'+
+        '<p class="zwhy">'+esc(z.why)+
+          (z.covered_by_register>=z.slots
+            ? ' <b>All '+fmt(z.slots)+' of these are below the register boundary, '+
+              'so the weekly list already has every company in them \u2014 anything '+
+              'still unchecked here is not a hole in coverage.</b>'
+            : (z.covered_by_register>0
+              ? ' The register already confirms '+fmt(z.covered_by_register)+
+                ' of these slots.' : ''))+
+        '</p></div>'}).join('');
+
     const bk=(c.buckets||[]).map(b=>{
       const f=b.slots?b.checked/b.slots:0;
       const cls=f>=0.95?'':(f<=0.02?'none':'part');
-      return '<div class="bk '+cls+'" title="'+esc(b.from)+'–'+esc(b.to)+': '+
-        fmt(b.checked)+' of '+fmt(b.slots)+' checked"><i style="height:'+
+      return '<div class="bk '+cls+'" title="'+esc(b.from)+'–'+esc(b.to)+' ('+
+        esc(b.zone||'')+'): '+fmt(b.checked)+' of '+fmt(b.slots)+' checked"><i style="height:'+
         Math.max(3,f*100).toFixed(0)+'%"></i></div>'}).join('');
-    $('cov').innerHTML=
-      '<p class="line">The weekly register already covers every company up to '+
-        '<b>'+esc(wk.max_acn||'—')+'</b>.</p>'+
-      '<p class="line">This daily sweep is responsible for <b>'+esc(c.from_acn)+
-        '</b> through <b>'+esc(c.to_acn)+'</b> — everything registered since.</p>'+
-      '<p class="why">One ACN in ten is a real number, so that range is '+fmt(c.slots)+
-        ' slots to check, at about 30 a minute.</p>'+
+
+    const head = c.register_known
+      ? '<p class="line">The weekly ASIC register is complete up to <b>'+
+          esc(wk.max_acn)+'</b>. Everything after it is this sweep’s job.</p>'
+      : '<p class="line">The weekly ASIC register <b>has not been downloaded yet</b>, '+
+          'so its boundary is unknown. Until it runs, the figures below are measured '+
+          'from the oldest slot on file rather than from the register.</p>';
+
+    $('cov').innerHTML = head +
+      '<p class="line">This sweep covers <b>'+esc(c.from_acn)+'</b> through <b>'+
+        esc(c.to_acn)+'</b>.</p>'+
+      '<p class="why">One ACN in ten is a real number, so that is '+fmt(c.slots)+
+        ' slots, at about '+rate.toFixed(0)+' a minute'+
+        (c.slots_per_day?'. ASIC is currently issuing about '+fmt(c.slots_per_day)+
+          ' a day':'')+'. They are checked in the passes below, and every slot '+
+        'belongs to exactly one of them — nothing is ever dropped from the queue, '+
+        'so if a slot is unchecked, the pass it sits in says why.</p>'+
+      zones +
       '<div class="covgrid">'+
         '<div class="covnum done"><div class="v">'+fmt(c.checked)+'</div>'+
-          '<div class="k">slots checked</div></div>'+
+          '<div class="k">slots checked in all</div></div>'+
         '<div class="covnum todo"><div class="v">'+fmt(c.remaining)+'</div>'+
           '<div class="k">still to check</div></div>'+
-        '<div class="covnum"><div class="v">'+pct.toFixed(0)+'%</div>'+
-          '<div class="k">of the gap done</div></div>'+
         '<div class="covnum"><div class="v">'+fmt(c.companies)+'</div>'+
           '<div class="k">companies found</div></div>'+
         '<div class="covnum"><div class="v">'+((D.stacks||[]).length+(D.singles||[]).length)+
@@ -408,10 +468,13 @@ function render(D){
       '<div class="buckets">'+bk+'</div>'+
       '<div class="bklabel"><span>'+esc(c.from_acn)+' (older)</span>'+
         '<span>'+esc(c.to_acn)+' (today)</span></div>'+
-      '<p class="why" style="margin-top:9px">Each bar is a slice of that range: '+
-        'green is fully checked, amber partly, red not yet. Gaps on the right are '+
-        'today’s registrations still to come; gaps on the left are older days not '+
-        'yet filled in.</p>';
+      '<p class="covnote">Each bar is a slice of the range above: green fully '+
+        'checked, amber partly, red not yet. Bars on the right are new '+
+        'registrations, bars on the left are the back-fill. A run is capped at '+
+        (c.run_minutes?Math.round(c.run_minutes/60):6)+' hours by GitHub, which is '+
+        'about '+fmt(Math.round(rate*(c.run_minutes||335)))+' slots. If more than '+
+        'that is outstanding the remainder is carried to the next run rather than '+
+        'skipped — that carry-over is what an amber or red bar on the left means.</p>';
   })();
 
   $('s-daily').textContent='Everything found since the last ASIC register, kept here '+
@@ -433,6 +496,19 @@ function render(D){
     return m&&seg?m[1]+'/'+seg:''})();
   const rl=$('run-link');
   rl.href=repo?'https://github.com/'+repo+'/actions/workflows/daily.yml':'#';
+  // The weekly is normally content-triggered and needs no pressing, but when the
+  // boundary is blank or stale there has to be an obvious way to force it. Like
+  // the daily button this is a LINK to the Actions page, not a trigger: a button
+  // that started a job would need a token, and this page is served publicly.
+  const wl=$('week-run-link');
+  wl.href=repo?'https://github.com/'+repo+'/actions/workflows/weekly.yml':'#';
+  (function(){
+    const stale=!wk.max_acn;
+    $('week-run-note').textContent = stale
+      ? 'No register boundary on file — open the Actions page and press "Run workflow". Takes about five minutes.'
+      : 'Runs itself within ~2h of ASIC publishing. Opens the Actions page if you want it sooner.';
+    if(stale) wl.classList.add('urgent');
+  })();
   $('run-note').textContent='Opens the Actions page — press "Run workflow". About '+
     hhmm((run.slots_queued||5000)/48)+' at the vendor’s 48/min limit; if it outlasts '+
     'the six-hour job limit, the 2am and 5am Sydney starts resume from the checkpoint.';

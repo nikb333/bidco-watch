@@ -41,20 +41,30 @@ def get(url, timeout=120):
         urllib.request.Request(url, headers={"User-Agent": UA}), timeout=timeout)
 
 
-def find_zip() -> tuple[str, str]:
+def find_zip() -> tuple[str, str, str]:
+    """URL, filename, and the publisher's own last-modified stamp.
+
+    That third value is what makes the schedule self-correcting. ASIC publishes
+    shortly after midnight Sydney on a Tuesday, but "shortly after" is not a
+    contract, and a job pinned to a clock either fires before the file lands or
+    hours after it. Recording the stamp lets the workflow ask the only question
+    that matters - is there a file here newer than the one we processed? - and
+    stop caring what day or timezone it is.
+    """
     d = json.load(get(CKAN, 60))
     for p in d["result"]["results"]:
         if "company" not in p["title"].lower():
             continue
         for r in p.get("resources", []):
             if (r.get("format") or "").upper() == "ZIP" and "company_" in (r.get("url") or ""):
-                return r["url"], r["url"].rsplit("/", 1)[-1]
+                return (r["url"], r["url"].rsplit("/", 1)[-1],
+                        r.get("last_modified") or r.get("metadata_modified") or "")
     raise RuntimeError("could not locate the company register ZIP on data.gov.au")
 
 
 def main() -> int:
-    url, fname = find_zip()
-    print(f"register: {fname}")
+    url, fname, src_modified = find_zip()
+    print(f"register: {fname}  published {src_modified or 'unknown'}")
     blob = get(url, 600).read()
     print(f"downloaded {len(blob)/1e6:.0f} MB")
 
@@ -161,7 +171,8 @@ def main() -> int:
 
     out = {
         "generated_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "dataset": fname, "window_days": WINDOW_DAYS,
+        "dataset": fname, "source_modified": src_modified,
+        "window_days": WINDOW_DAYS,
         "max_acn": f"{max_acn[0]:09d}" if max_acn[0] else "",
         "entities": entities,
         "bidcos": sum(1 for e in entities if e["is_bidco"]),
