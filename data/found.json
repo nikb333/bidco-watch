@@ -59,6 +59,18 @@
   "suburb": "DOCKLANDS",
   "via": "API"
  },
+ "702199479": {
+  "acn": "702199479",
+  "date": "2026-09-09",
+  "first_seen": "2026-09-14T13:02:54+00:00",
+  "in_register": false,
+  "name": "BLOOMJAR MIDCO. PTY LTD",
+  "role": "MIDCO",
+  "state": "WA",
+  "stem": "BLOOMJAR",
+  "suburb": "BALCATTA",
+  "via": "API"
+ },
  "702207029": {
   "acn": "702207029",
   "date": "2026-09-09",
@@ -69,6 +81,18 @@
   "state": "QLD",
   "stem": "BRUSHY CREEK",
   "suburb": "BRISBANE CITY",
+  "via": "API"
+ },
+ "702208277": {
+  "acn": "702208277",
+  "date": "2026-09-09",
+  "first_seen": "2026-09-14T13:02:54+00:00",
+  "in_register": false,
+  "name": "MIDCO ACCOUNTING PTY LTD",
+  "role": "MIDCO",
+  "state": "VIC",
+  "stem": "ACCOUNTING",
+  "suburb": "TARNEIT",
   "via": "API"
  },
  "702277861": {
@@ -201,6 +225,30 @@
   "state": "VIC",
   "stem": "AURUM GP2",
   "suburb": "SOUTH YARRA",
+  "via": "API"
+ },
+ "702328550": {
+  "acn": "702328550",
+  "date": "2026-09-14",
+  "first_seen": "2026-09-14T13:02:54+00:00",
+  "in_register": false,
+  "name": "EKANITE AUS BIDCO PTY LIMITED",
+  "role": "BIDCO",
+  "state": "NSW",
+  "stem": "EKANITE",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702342318": {
+  "acn": "702342318",
+  "date": "2026-09-14",
+  "first_seen": "2026-09-14T13:02:54+00:00",
+  "in_register": false,
+  "name": "TORQUE BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "NSW",
+  "stem": "TORQUE",
+  "suburb": "SYDNEY",
   "via": "API"
  }
 }

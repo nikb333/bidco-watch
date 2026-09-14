@@ -1,105 +1,105 @@
 {
  "last_frontier_base": 70225829,
  "last_run": {
-  "finished_utc": "2026-09-13T12:05:28+00:00",
+  "finished_utc": "2026-09-14T13:02:54+00:00",
   "elapsed_min": 335.1,
   "status": "ok",
   "error": "",
-  "frontier_base": 70231375,
+  "frontier_base": 70235710,
   "window": [
    "702258302",
-   "702313755"
+   "702357104"
   ],
-  "slots_swept": 10021,
-  "slots_queued": 25546,
-  "slots_left": 15525,
-  "gaps_queued": 20000,
-  "recheck_queued": 0,
-  "companies": 2470,
+  "slots_swept": 9845,
+  "slots_queued": 20617,
+  "slots_left": 10772,
+  "gaps_queued": 15525,
+  "recheck_queued": 750,
+  "companies": 5221,
   "trailing_slots": 20000,
   "slots_errored": 0,
-  "ledger_new": 11,
-  "ledger_waiting": 17,
+  "ledger_new": 4,
+  "ledger_waiting": 21,
   "ledger_in_register": 0,
   "coverage": {
    "from_acn": "702058311",
-   "to_acn": "702313755",
-   "slots": 25545,
-   "checked": 10021,
-   "remaining": 15524,
-   "companies": 2470,
+   "to_acn": "702357104",
+   "slots": 29880,
+   "checked": 19859,
+   "remaining": 10021,
+   "companies": 5221,
    "buckets": [
     {
      "from": "702058302",
-     "to": "702079570",
-     "checked": 1064,
-     "slots": 2128
+     "to": "702083190",
+     "checked": 1868,
+     "slots": 2490
     },
     {
-     "from": "702079589",
-     "to": "702100856",
-     "checked": 1064,
-     "slots": 2128
+     "from": "702083207",
+     "to": "702108094",
+     "checked": 1867,
+     "slots": 2490
     },
     {
-     "from": "702100865",
-     "to": "702122138",
-     "checked": 1064,
-     "slots": 2128
+     "from": "702108101",
+     "to": "702132992",
+     "checked": 1868,
+     "slots": 2490
     },
     {
-     "from": "702122147",
-     "to": "702143413",
-     "checked": 1064,
-     "slots": 2128
+     "from": "702133006",
+     "to": "702157891",
+     "checked": 1615,
+     "slots": 2490
     },
     {
-     "from": "702143422",
-     "to": "702164690",
-     "checked": 219,
-     "slots": 2128
+     "from": "702157908",
+     "to": "702182796",
+     "checked": 1245,
+     "slots": 2490
     },
     {
-     "from": "702164707",
-     "to": "702185975",
+     "from": "702182803",
+     "to": "702207690",
+     "checked": 1245,
+     "slots": 2490
+    },
+    {
+     "from": "702207707",
+     "to": "702232595",
+     "checked": 270,
+     "slots": 2490
+    },
+    {
+     "from": "702232602",
+     "to": "702257494",
      "checked": 0,
-     "slots": 2128
+     "slots": 2490
     },
     {
-     "from": "702185984",
-     "to": "702207252",
-     "checked": 0,
-     "slots": 2128
+     "from": "702257501",
+     "to": "702282399",
+     "checked": 2410,
+     "slots": 2490
     },
     {
-     "from": "702207261",
-     "to": "702228537",
-     "checked": 0,
-     "slots": 2128
+     "from": "702282406",
+     "to": "702307293",
+     "checked": 2490,
+     "slots": 2490
     },
     {
-     "from": "702228546",
-     "to": "702249812",
-     "checked": 0,
-     "slots": 2128
+     "from": "702307300",
+     "to": "702332198",
+     "checked": 2490,
+     "slots": 2490
     },
     {
-     "from": "702249821",
-     "to": "702271092",
-     "checked": 1280,
-     "slots": 2128
-    },
-    {
-     "from": "702271109",
-     "to": "702292377",
-     "checked": 2128,
-     "slots": 2128
-    },
-    {
-     "from": "702292386",
-     "to": "702313746",
-     "checked": 2137,
-     "slots": 2137
+     "from": "702332205",
+     "to": "702357097",
+     "checked": 2490,
+     "slots": 2490
     }
    ]
   }
@@ -366,6 +366,110 @@
       "to": "702313746",
       "checked": 2137,
       "slots": 2137
+     }
+    ]
+   }
+  },
+  {
+   "finished_utc": "2026-09-14T13:02:54+00:00",
+   "elapsed_min": 335.1,
+   "status": "ok",
+   "error": "",
+   "frontier_base": 70235710,
+   "window": [
+    "702258302",
+    "702357104"
+   ],
+   "slots_swept": 9845,
+   "slots_queued": 20617,
+   "slots_left": 10772,
+   "gaps_queued": 15525,
+   "recheck_queued": 750,
+   "companies": 5221,
+   "trailing_slots": 20000,
+   "slots_errored": 0,
+   "ledger_new": 4,
+   "ledger_waiting": 21,
+   "ledger_in_register": 0,
+   "coverage": {
+    "from_acn": "702058311",
+    "to_acn": "702357104",
+    "slots": 29880,
+    "checked": 19859,
+    "remaining": 10021,
+    "companies": 5221,
+    "buckets": [
+     {
+      "from": "702058302",
+      "to": "702083190",
+      "checked": 1868,
+      "slots": 2490
+     },
+     {
+      "from": "702083207",
+      "to": "702108094",
+      "checked": 1867,
+      "slots": 2490
+     },
+     {
+      "from": "702108101",
+      "to": "702132992",
+      "checked": 1868,
+      "slots": 2490
+     },
+     {
+      "from": "702133006",
+      "to": "702157891",
+      "checked": 1615,
+      "slots": 2490
+     },
+     {
+      "from": "702157908",
+      "to": "702182796",
+      "checked": 1245,
+      "slots": 2490
+     },
+     {
+      "from": "702182803",
+      "to": "702207690",
+      "checked": 1245,
+      "slots": 2490
+     },
+     {
+      "from": "702207707",
+      "to": "702232595",
+      "checked": 270,
+      "slots": 2490
+     },
+     {
+      "from": "702232602",
+      "to": "702257494",
+      "checked": 0,
+      "slots": 2490
+     },
+     {
+      "from": "702257501",
+      "to": "702282399",
+      "checked": 2410,
+      "slots": 2490
+     },
+     {
+      "from": "702282406",
+      "to": "702307293",
+      "checked": 2490,
+      "slots": 2490
+     },
+     {
+      "from": "702307300",
+      "to": "702332198",
+      "checked": 2490,
+      "slots": 2490
+     },
+     {
+      "from": "702332205",
+      "to": "702357097",
+      "checked": 2490,
+      "slots": 2490
      }
     ]
    }
