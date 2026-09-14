@@ -2,7 +2,24 @@ name: Weekly register reconciliation
 
 on:
   schedule:
-    - cron: "0 22 * * 2"   # Tuesday 22:00 UTC = Wednesday ~8am Sydney
+    # Every two hours at :41. The guard below does the deciding, and it decides on
+    # CONTENT, not on the clock: it asks data.gov.au whether the published register
+    # is newer than the one already processed, and runs only if it is. Twelve
+    # firings a day, eleven of which are one API call and an exit.
+    #
+    # Why not simply "Tuesday morning Sydney"? Because that is two guesses stacked
+    # on each other. ASIC publishes shortly after midnight Sydney on a Tuesday -
+    # the 15 September file landed at 00:53 - but "shortly after" is not a
+    # contract. Pin the job to a clock and it either fires before the file exists,
+    # burning the week, or hours after it, burning the lead time that is the whole
+    # point of this project. Worse, day-of-week reasoning is where timezone bugs
+    # live: an earlier version of this guard tested the UTC day, which quietly
+    # meant Wednesday morning in Sydney - a full day late, every week.
+    #
+    # Asking "is there a newer file?" has no timezone, no daylight-saving edge, no
+    # assumption about ASIC's habits, and recovers on its own if a firing is
+    # dropped or a publication slips.
+    - cron: "41 */2 * * *"
   workflow_dispatch:
 
 permissions:
@@ -21,26 +38,53 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
+
+      - name: Has ASIC published a newer register than the one we have?
+        id: guard
+        run: python3 .github/register_due.py
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
+
       - uses: actions/setup-python@v5
+        if: steps.guard.outputs.skip == 'false'
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
+        if: steps.guard.outputs.skip == 'false'
 
       - name: Download the register and reconcile
+        if: steps.guard.outputs.skip == 'false' 
         env:
           CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
         run: python weekly.py
 
       - name: Build site
+        if: steps.guard.outputs.skip == 'false'
         env:
           SITE_PASSCODE: ${{ secrets.SITE_PASSCODE }}
         run: python build_site.py
 
       - name: Commit
+        if: steps.guard.outputs.skip == 'false'
         run: |
           git config user.name  "bidco-watch"
           git config user.email "actions@github.com"
           git add -A data docs
           git diff --staged --quiet || git commit -m "weekly reconciliation $(date -u +%Y-%m-%d)"
-          git pull --rebase --autostash || true
-          git push
+          # Same rebase-and-retry as the daily sweep, and for the same reason: a
+          # six-hour sweep is very likely to be pushing while this runs. -X theirs,
+          # because in a rebase "theirs" is the commit being replayed - this run's
+          # register extract - and "ours" is the remote. The daily workflow had
+          # that inverted and quietly discarded its own results for two days.
+          for i in 1 2 3 4 5; do
+            git fetch origin main || true
+            git rebase -X theirs origin/main || { git rebase --abort || true; sleep 5; continue; }
+            if git push; then
+              echo "pushed on attempt $i"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::error::could not push after 5 attempts"
+          exit 1

@@ -13,21 +13,30 @@ on:
     # actually works. If the 10pm run finished everything, the later two find an
     # almost-empty queue and exit in minutes.
     #
-    # Each Sydney hour needs both UTC candidates, since cron knows nothing about
-    # daylight saving and the guard below drops whichever is wrong:
-    #   22:00 Sydney -> 11:00 UTC (AEDT) / 12:00 UTC (AEST)
-    #   02:00 Sydney -> 15:00 UTC (AEDT) / 16:00 UTC (AEST)
-    #   05:00 Sydney -> 18:00 UTC (AEDT) / 19:00 UTC (AEST)
-    # Every two hours at :23, not on the hour. GitHub's scheduler is best effort
-    # and drops jobs under load; the top of the hour is when every cron on the
-    # platform fires at once, so an odd minute is materially more reliable.
+    # Fire EVERY hour at :23 and let the guard below decide. Twenty-one of the
+    # twenty-four firings exit in about eight seconds, which costs nothing on a
+    # public repo, and hourly removes a trap that a two-hourly schedule walks
+    # straight into.
     #
-    # Most of these firings do nothing - the guard below decides. It runs at the
-    # three Sydney start times, AND any time the last successful run is more than
-    # twenty hours old. That second clause is the point: when GitHub drops a
-    # night, the next firing picks the work up instead of waiting for someone to
-    # notice. Three nights went by unswept before this existed.
-    - cron: "23 */2 * * *"
+    # The trap: cron knows nothing about daylight saving, so each Sydney start
+    # time has two UTC candidates and the guard drops whichever is wrong -
+    #   22:00 Sydney -> 12:00 UTC (AEST) / 11:00 UTC (AEDT)
+    #   02:00 Sydney -> 16:00 UTC (AEST) / 15:00 UTC (AEDT)
+    #   05:00 Sydney -> 19:00 UTC (AEST) / 18:00 UTC (AEDT)
+    # "*/2" only ever fires on EVEN UTC hours. So on AEST it could never reach
+    # 19:00, and from 4 October, when Sydney goes to AEDT, 11:00 and 15:00 both
+    # become unreachable too and the whole schedule collapses to a single 5am
+    # start. Hourly has no parity to get wrong.
+    #
+    # The odd minute is deliberate: GitHub's scheduler is best effort and drops
+    # jobs under load, and the top of the hour is when every cron on the platform
+    # fires at once.
+    #
+    # The guard runs at the three Sydney start times, AND any time the last
+    # successful run is more than twenty hours old. That second clause is the
+    # point: when GitHub drops a night, the next firing picks the work up instead
+    # of waiting for someone to notice.
+    - cron: "23 * * * *"
   workflow_dispatch:        # this is the "Run now" button
 
 permissions:
@@ -105,11 +114,18 @@ jobs:
           git diff --staged --quiet || git commit -m "sweep $(date -u +%Y-%m-%dT%H:%MZ)"
           # The sweep pushes progress while it runs, and a person may push at the
           # same time, so the branch can have moved underneath us. Rebase and
-          # retry rather than pushing into a rejection. Ours is the newer data,
-          # so on a conflict in the generated files we keep our side.
+          # retry rather than pushing into a rejection.
+          #
+          # -X theirs, not -X ours. During a REBASE the sides are inverted from
+          # what the words suggest: "ours" is the branch being replayed onto
+          # (origin/main) and "theirs" is the commit being replayed (this run's
+          # results). "-X ours" therefore threw away the sweep's own data on every
+          # conflict and kept the stale copy from the remote - which is exactly
+          # why data/state.json sat frozen at 10 September while runs kept
+          # finishing. We want the sweep's side, so: theirs.
           for i in 1 2 3 4 5; do
             git fetch origin main || true
-            git rebase -X ours origin/main || { git rebase --abort || true; sleep 5; continue; }
+            git rebase -X theirs origin/main || { git rebase --abort || true; sleep 5; continue; }
             if git push; then
               echo "pushed on attempt $i"
               exit 0
@@ -118,6 +134,21 @@ jobs:
           done
           echo "::error::could not push after 5 attempts"
           exit 1
+
+      # A run can finish green, push commits, and still have quietly lost its
+      # results - that is precisely what happened between 10 and 12 September.
+      # data/state.json is the one file that proves the run landed, so read it
+      # back from what is actually on origin and check it moved. A silent loss
+      # becomes a red X instead of two days of nothing.
+      - name: Did the run's results actually land?
+        if: steps.guard.outputs.skip == 'false' && steps.sweep.outcome == 'success'
+        run: |
+          git fetch origin main
+          git show origin/main:data/state.json > /tmp/pushed-state.json
+          python3 -c "import json,datetime as d,sys;t=json.load(open('/tmp/pushed-state.json'))['last_run']['finished_utc'];age=(d.datetime.now(d.timezone.utc)-d.datetime.fromisoformat(t.replace('Z','+00:00'))).total_seconds()/60;print(f'state.json on origin says the last run finished {age:.0f} minutes ago ({t})');sys.exit(0 if age < 90 else 1)" || {
+            echo "::error::The sweep finished but its results are not on origin - state.json was not updated. Work has been lost; do not trust the dashboard."
+            exit 1
+          }
 
       - name: Fail the run if the sweep failed
         if: steps.guard.outputs.skip == 'false' && steps.sweep.outcome == 'failure'
