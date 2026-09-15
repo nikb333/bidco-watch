@@ -1,275 +1,109 @@
 {
  "run": {
-  "finished_utc": "2026-09-14T13:02:54+00:00",
+  "finished_utc": "2026-09-14T19:29:32+00:00",
   "elapsed_min": 335.1,
   "status": "ok",
   "error": "",
-  "frontier_base": 70235710,
+  "frontier_base": 70235932,
   "window": [
    "702258302",
-   "702357104"
+   "702359322"
   ],
-  "slots_swept": 9845,
-  "slots_queued": 20617,
-  "slots_left": 10772,
-  "gaps_queued": 15525,
-  "recheck_queued": 750,
-  "companies": 5221,
+  "slots_swept": 10033,
+  "slots_queued": 11489,
+  "slots_left": 1456,
+  "gaps_queued": 10022,
+  "recheck_queued": 1230,
+  "companies": 8188,
   "trailing_slots": 20000,
   "slots_errored": 0,
-  "ledger_new": 4,
-  "ledger_waiting": 21,
-  "ledger_in_register": 0,
+  "ledger_new": 1,
+  "ledger_waiting": 3,
+  "ledger_in_register": 19,
   "coverage": {
-   "from_acn": "702058311",
-   "to_acn": "702357104",
-   "slots": 29880,
-   "checked": 19859,
-   "remaining": 10021,
-   "companies": 5221,
+   "from_acn": "702316005",
+   "to_acn": "702359322",
+   "slots": 4333,
+   "checked": 4334,
+   "remaining": 0,
+   "companies": 1111,
    "buckets": [
     {
-     "from": "702058302",
-     "to": "702083190",
-     "checked": 1868,
-     "slots": 2490
+     "from": "702315991",
+     "to": "702319597",
+     "checked": 361,
+     "slots": 361
     },
     {
-     "from": "702083207",
-     "to": "702108094",
-     "checked": 1867,
-     "slots": 2490
+     "from": "702319604",
+     "to": "702323206",
+     "checked": 361,
+     "slots": 361
     },
     {
-     "from": "702108101",
-     "to": "702132992",
-     "checked": 1868,
-     "slots": 2490
+     "from": "702323215",
+     "to": "702326814",
+     "checked": 361,
+     "slots": 361
     },
     {
-     "from": "702133006",
-     "to": "702157891",
-     "checked": 1615,
-     "slots": 2490
+     "from": "702326823",
+     "to": "702330425",
+     "checked": 361,
+     "slots": 361
     },
     {
-     "from": "702157908",
-     "to": "702182796",
-     "checked": 1245,
-     "slots": 2490
+     "from": "702330434",
+     "to": "702334030",
+     "checked": 361,
+     "slots": 361
     },
     {
-     "from": "702182803",
-     "to": "702207690",
-     "checked": 1245,
-     "slots": 2490
+     "from": "702334049",
+     "to": "702337648",
+     "checked": 361,
+     "slots": 361
     },
     {
-     "from": "702207707",
-     "to": "702232595",
-     "checked": 270,
-     "slots": 2490
+     "from": "702337657",
+     "to": "702341259",
+     "checked": 361,
+     "slots": 361
     },
     {
-     "from": "702232602",
-     "to": "702257494",
-     "checked": 0,
-     "slots": 2490
+     "from": "702341268",
+     "to": "702344867",
+     "checked": 361,
+     "slots": 361
     },
     {
-     "from": "702257501",
-     "to": "702282399",
-     "checked": 2410,
-     "slots": 2490
+     "from": "702344876",
+     "to": "702348472",
+     "checked": 361,
+     "slots": 361
     },
     {
-     "from": "702282406",
-     "to": "702307293",
-     "checked": 2490,
-     "slots": 2490
+     "from": "702348481",
+     "to": "702352083",
+     "checked": 361,
+     "slots": 361
     },
     {
-     "from": "702307300",
-     "to": "702332198",
-     "checked": 2490,
-     "slots": 2490
+     "from": "702352092",
+     "to": "702355691",
+     "checked": 361,
+     "slots": 361
     },
     {
-     "from": "702332205",
-     "to": "702357097",
-     "checked": 2490,
-     "slots": 2490
+     "from": "702355708",
+     "to": "702359313",
+     "checked": 362,
+     "slots": 362
     }
    ]
   }
  },
- "stacks": [
-  {
-   "stem": "OA GP2",
-   "first": "2026-09-11",
-   "has_bidco": true,
-   "finco": false,
-   "phased": false,
-   "members": [
-    {
-     "acn": "702279883",
-     "name": "OA GP2 HOLDCO PTY LTD",
-     "date": "2026-09-11",
-     "role": "HOLDCO",
-     "suburb": "SOUTH YARRA",
-     "state": "VIC",
-     "via": "API",
-     "first_seen": "2026-09-13T12:05:28+00:00"
-    },
-    {
-     "acn": "702284839",
-     "name": "OA GP2 BIDCO PTY LTD",
-     "date": "2026-09-11",
-     "role": "BIDCO",
-     "suburb": "SOUTH YARRA",
-     "state": "VIC",
-     "via": "API",
-     "first_seen": "2026-09-13T12:05:28+00:00"
-    }
-   ]
-  },
-  {
-   "stem": "AURORA",
-   "first": "2026-09-11",
-   "has_bidco": true,
-   "finco": false,
-   "phased": false,
-   "members": [
-    {
-     "acn": "702281445",
-     "name": "AURORA AUS NEWCO PTY LTD",
-     "date": "2026-09-11",
-     "role": "NEWCO",
-     "suburb": "SYDNEY",
-     "state": "NSW",
-     "via": "API",
-     "first_seen": "2026-09-13T12:05:28+00:00"
-    },
-    {
-     "acn": "702282933",
-     "name": "AURORA AUS BIDCO PTY LTD",
-     "date": "2026-09-11",
-     "role": "BIDCO",
-     "suburb": "SYDNEY",
-     "state": "NSW",
-     "via": "API",
-     "first_seen": "2026-09-13T12:05:28+00:00"
-    }
-   ]
-  },
-  {
-   "stem": "AURUM GP2",
-   "first": "2026-09-11",
-   "has_bidco": true,
-   "finco": false,
-   "phased": false,
-   "members": [
-    {
-     "acn": "702291629",
-     "name": "AURUM GP2 HOLDCO PTY LTD",
-     "date": "2026-09-11",
-     "role": "HOLDCO",
-     "suburb": "SOUTH YARRA",
-     "state": "VIC",
-     "via": "API",
-     "first_seen": "2026-09-13T12:05:28+00:00"
-    },
-    {
-     "acn": "702293258",
-     "name": "AURUM GP2 BIDCO PTY LTD",
-     "date": "2026-09-11",
-     "role": "BIDCO",
-     "suburb": "SOUTH YARRA",
-     "state": "VIC",
-     "via": "API",
-     "first_seen": "2026-09-13T12:05:28+00:00"
-    }
-   ]
-  },
-  {
-   "stem": "HAMILTON",
-   "first": "2026-09-07",
-   "has_bidco": true,
-   "finco": false,
-   "phased": false,
-   "members": [
-    {
-     "acn": "702140449",
-     "name": "HAMILTON HOLDCO PTY LTD",
-     "date": "2026-09-07",
-     "role": "HOLDCO",
-     "suburb": "SYDNEY",
-     "state": "NSW",
-     "via": "API",
-     "first_seen": "2026-09-10T19:32:40+00:00"
-    },
-    {
-     "acn": "702141722",
-     "name": "HAMILTON BIDCO PTY LTD",
-     "date": "2026-09-07",
-     "role": "BIDCO",
-     "suburb": "SYDNEY",
-     "state": "NSW",
-     "via": "API",
-     "first_seen": "2026-09-10T19:32:40+00:00"
-    }
-   ]
-  },
-  {
-   "stem": "WATERLOO",
-   "first": "2026-09-11",
-   "has_bidco": false,
-   "finco": true,
-   "phased": false,
-   "members": [
-    {
-     "acn": "702286280",
-     "name": "WATERLOO AUS TOPCO PTY LTD",
-     "date": "2026-09-11",
-     "role": "TOPCO",
-     "suburb": "MELBOURNE",
-     "state": "VIC",
-     "via": "API",
-     "first_seen": "2026-09-13T12:05:28+00:00"
-    },
-    {
-     "acn": "702286762",
-     "name": "WATERLOO AUS HOLDCO PTY LTD",
-     "date": "2026-09-11",
-     "role": "HOLDCO",
-     "suburb": "MELBOURNE",
-     "state": "VIC",
-     "via": "API",
-     "first_seen": "2026-09-13T12:05:28+00:00"
-    },
-    {
-     "acn": "702287090",
-     "name": "WATERLOO AUS MIDCO PTY LTD",
-     "date": "2026-09-11",
-     "role": "MIDCO",
-     "suburb": "MELBOURNE",
-     "state": "VIC",
-     "via": "API",
-     "first_seen": "2026-09-13T12:05:28+00:00"
-    },
-    {
-     "acn": "702287241",
-     "name": "WATERLOO AUS FINCO PTY LTD",
-     "date": "2026-09-11",
-     "role": "FINCO",
-     "suburb": "MELBOURNE",
-     "state": "VIC",
-     "via": "API",
-     "first_seen": "2026-09-13T12:05:28+00:00"
-    }
-   ]
-  }
- ],
+ "stacks": [],
  "singles": [
   {
    "acn": "702328550",
@@ -294,74 +128,14 @@
  ],
  "role_only": [
   {
-   "acn": "702277861",
-   "name": "ARTEMIS ADVISORY HOLDCO PTY LTD",
-   "date": "2026-09-11",
+   "acn": "702113933",
+   "name": "BLOOMJAR HOLDCO. PTY LTD",
+   "date": "2026-09-07",
    "role": "HOLDCO",
-   "suburb": "PRAHRAN",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-09-13T12:05:28+00:00"
-  },
-  {
-   "acn": "702198525",
-   "name": "RDG ELSTERNWICK HOLDCO PTY LTD",
-   "date": "2026-09-09",
-   "role": "HOLDCO",
-   "suburb": "DOCKLANDS",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-09-10T19:32:40+00:00"
-  },
-  {
-   "acn": "702207029",
-   "name": "BRUSHY CREEK HOLDCO PTY LIMITED",
-   "date": "2026-09-09",
-   "role": "HOLDCO",
-   "suburb": "BRISBANE CITY",
-   "state": "QLD",
-   "via": "API",
-   "first_seen": "2026-09-10T19:32:40+00:00"
-  },
-  {
-   "acn": "702199479",
-   "name": "BLOOMJAR MIDCO. PTY LTD",
-   "date": "2026-09-09",
-   "role": "MIDCO",
    "suburb": "BALCATTA",
    "state": "WA",
    "via": "API",
-   "first_seen": "2026-09-14T13:02:54+00:00"
-  },
-  {
-   "acn": "702208277",
-   "name": "MIDCO ACCOUNTING PTY LTD",
-   "date": "2026-09-09",
-   "role": "MIDCO",
-   "suburb": "TARNEIT",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-09-14T13:02:54+00:00"
-  },
-  {
-   "acn": "702084160",
-   "name": "A CLASS HOLDCO PTY LTD",
-   "date": "2026-09-07",
-   "role": "HOLDCO",
-   "suburb": "MELBOURNE",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-09-10T19:32:40+00:00"
-  },
-  {
-   "acn": "702069627",
-   "name": "GROUNDSWELL HOLDCO PTY LTD",
-   "date": "2026-09-04",
-   "role": "HOLDCO",
-   "suburb": "NEWCASTLE WEST",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-09-10T19:32:40+00:00"
+   "first_seen": "2026-09-14T19:29:32+00:00"
   }
  ]
 }

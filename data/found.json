@@ -25,6 +25,18 @@
   "suburb": "MELBOURNE",
   "via": "API"
  },
+ "702113933": {
+  "acn": "702113933",
+  "date": "2026-09-07",
+  "first_seen": "2026-09-14T19:29:32+00:00",
+  "in_register": false,
+  "name": "BLOOMJAR HOLDCO. PTY LTD",
+  "role": "HOLDCO",
+  "state": "WA",
+  "stem": "BLOOMJAR",
+  "suburb": "BALCATTA",
+  "via": "API"
+ },
  "702140449": {
   "acn": "702140449",
   "date": "2026-09-07",
