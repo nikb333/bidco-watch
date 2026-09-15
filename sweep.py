@@ -235,6 +235,29 @@ def bank(seen, note, frontier=None):
         print(f"[bank] {type(ex).__name__}: {ex}")
 
 
+class Unresolved(Exception):
+    """We could not find out what is in this slot. NOT the same as "nothing is".
+
+    This distinction is the whole ballgame. lookup() used to return None both
+    when ASIC said "no such company" and when every retry had failed, so a burst
+    of 429s was indistinguishable from a stretch of genuinely empty numbers. Two
+    things went wrong as a result:
+
+      * the frontier search read a rate-limited region as "past the end of the
+        register" and walked itself down to the floor - the 15 September
+        collapse, whose signature is 24 slots in 49.3 minutes, i.e. four retries
+        and an 80-second backoff on nearly every lookup;
+      * worse and quieter, the sweep wrote those failures into the checkpoint as
+        `None`, which reads back as "confirmed empty". A network blip therefore
+        minted permanent false negatives, and because no exception ever escaped,
+        every run reported slots_errored: 0 and looked perfectly healthy.
+
+    Raising instead means an unanswered slot is simply left unrecorded, and the
+    next run picks it up as a never-looked-at gap - which is what the sweep loop
+    already says it does.
+    """
+
+
 def lookup(acn: str, tries: int = 4):
     for n in range(tries):
         req = urllib.request.Request(
@@ -254,7 +277,7 @@ def lookup(acn: str, tries: int = 4):
                 time.sleep(2 * (n + 1))
         except Exception:
             time.sleep(2 * (n + 1))
-    return None
+    raise Unresolved(f"{acn}: no answer after {tries} attempts")
 
 
 # ----------------------------------------------------------------- checkpoint
@@ -377,14 +400,29 @@ def find_frontier(anchor: int = 0, max_advance: int = 0) -> int:
     probes: dict[str, object] = {}
 
     def occupied(base: int) -> bool:
-        """Does anything live in the 24 slots starting here? Stops at the first hit."""
+        """Does anything live in the 24 slots starting here? Stops at the first hit.
+
+        An unanswered probe is not evidence of emptiness, so it is neither cached
+        nor counted. If most of a window goes unanswered we have learned nothing
+        and must not pretend otherwise - that is what walked the old search off a
+        cliff - so the run stops and says why.
+        """
+        answered = 0
         for k in range(PROBE):
             a = acn_for(base + k)
             if a not in probes:
-                probes[a] = lookup(a)
+                try:
+                    probes[a] = lookup(a)
+                except Unresolved:
+                    time.sleep(GAP)
+                    continue          # unknown: not cached, not counted
                 time.sleep(GAP)
+            answered += 1
             if probes[a]:
                 return True
+        if answered < PROBE // 2:
+            raise Blocked(f"only {answered} of {PROBE} probes answered near "
+                          f"{acn_for(base)} - refusing to guess the frontier")
         return False
 
     floor = max(FRONTIER_LO, anchor or FRONTIER_LO)
