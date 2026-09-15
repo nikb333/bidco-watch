@@ -1,6 +1,7 @@
 {
- "generated_utc": "2026-09-14T22:38:34+00:00",
+ "generated_utc": "2026-09-15T05:20:16+00:00",
  "dataset": "company_202609.zip",
+ "source_modified": "2026-09-14T14:53:47.746850",
  "window_days": 180,
  "max_acn": "702315991",
  "entities": [
@@ -5528,32 +5529,6 @@
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
-  },
-  {
-   "acn": "696372559",
-   "name": "CEN (I&L) INTERLINK FINCO PTY LTD",
-   "date": "19/03/2026",
-   "role": "FINCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "CEN I L INTERLINK",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "696360862",
-   "name": "UIRA AHO TOPCO PTY LTD",
-   "date": "19/03/2026",
-   "role": "TOPCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "UIRA AHO",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
   }
  ],
  "bidcos": 54,
@@ -5684,46 +5659,108 @@
  "reconciliation": {
   "covered_from_acn": "702108290",
   "judged": 20,
-  "found_by_daily": 17,
+  "found_by_daily": 1,
   "missed_by_daily": [
+   {
+    "acn": "702293258",
+    "name": "AURUM GP2 BIDCO PTY LTD",
+    "date": "11/09/2026"
+   },
+   {
+    "acn": "702291629",
+    "name": "AURUM GP2 HOLDCO PTY LTD",
+    "date": "11/09/2026"
+   },
    {
     "acn": "702288300",
     "name": "NXG HOLDCO PTY LTD",
     "date": "11/09/2026"
    },
    {
-    "acn": "702135591",
-    "name": "NSK HOLDCO PTY LTD",
+    "acn": "702287241",
+    "name": "WATERLOO AUS FINCO PTY LTD",
+    "date": "11/09/2026"
+   },
+   {
+    "acn": "702287090",
+    "name": "WATERLOO AUS MIDCO PTY LTD",
+    "date": "11/09/2026"
+   },
+   {
+    "acn": "702286762",
+    "name": "WATERLOO AUS HOLDCO PTY LTD",
+    "date": "11/09/2026"
+   },
+   {
+    "acn": "702286280",
+    "name": "WATERLOO AUS TOPCO PTY LTD",
+    "date": "11/09/2026"
+   },
+   {
+    "acn": "702284839",
+    "name": "OA GP2 BIDCO PTY LTD",
+    "date": "11/09/2026"
+   },
+   {
+    "acn": "702282933",
+    "name": "AURORA AUS BIDCO PTY LTD",
+    "date": "11/09/2026"
+   },
+   {
+    "acn": "702281445",
+    "name": "AURORA AUS NEWCO PTY LTD",
+    "date": "11/09/2026"
+   },
+   {
+    "acn": "702279883",
+    "name": "OA GP2 HOLDCO PTY LTD",
+    "date": "11/09/2026"
+   },
+   {
+    "acn": "702277861",
+    "name": "ARTEMIS ADVISORY HOLDCO PTY LTD",
+    "date": "11/09/2026"
+   },
+   {
+    "acn": "702208277",
+    "name": "MIDCO ACCOUNTING PTY LTD",
+    "date": "09/09/2026"
+   },
+   {
+    "acn": "702207029",
+    "name": "BRUSHY CREEK HOLDCO PTY LIMITED",
+    "date": "09/09/2026"
+   },
+   {
+    "acn": "702199479",
+    "name": "BLOOMJAR MIDCO. PTY LTD",
+    "date": "09/09/2026"
+   },
+   {
+    "acn": "702198525",
+    "name": "RDG ELSTERNWICK HOLDCO PTY LTD",
+    "date": "09/09/2026"
+   },
+   {
+    "acn": "702141722",
+    "name": "HAMILTON BIDCO PTY LTD",
     "date": "07/09/2026"
    },
    {
-    "acn": "702113933",
-    "name": "BLOOMJAR HOLDCO. PTY LTD",
+    "acn": "702140449",
+    "name": "HAMILTON HOLDCO PTY LTD",
+    "date": "07/09/2026"
+   },
+   {
+    "acn": "702135591",
+    "name": "NSK HOLDCO PTY LTD",
     "date": "07/09/2026"
    }
   ],
-  "recall_pct": 85.0
+  "recall_pct": 5.0
  },
  "ledger_crossed": [
-  "GROUNDSWELL HOLDCO PTY LTD",
-  "A CLASS HOLDCO PTY LTD",
-  "HAMILTON HOLDCO PTY LTD",
-  "HAMILTON BIDCO PTY LTD",
-  "RDG ELSTERNWICK HOLDCO PTY LTD",
-  "BLOOMJAR MIDCO. PTY LTD",
-  "BRUSHY CREEK HOLDCO PTY LIMITED",
-  "MIDCO ACCOUNTING PTY LTD",
-  "ARTEMIS ADVISORY HOLDCO PTY LTD",
-  "OA GP2 HOLDCO PTY LTD",
-  "AURORA AUS NEWCO PTY LTD",
-  "AURORA AUS BIDCO PTY LTD",
-  "OA GP2 BIDCO PTY LTD",
-  "WATERLOO AUS TOPCO PTY LTD",
-  "WATERLOO AUS HOLDCO PTY LTD",
-  "WATERLOO AUS MIDCO PTY LTD",
-  "WATERLOO AUS FINCO PTY LTD",
-  "AURUM GP2 HOLDCO PTY LTD",
-  "AURUM GP2 BIDCO PTY LTD"
+  "BLOOMJAR HOLDCO. PTY LTD"
  ],
  "ledger_waiting": 2
 }
