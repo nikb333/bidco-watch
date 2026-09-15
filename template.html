@@ -400,28 +400,47 @@ function render(D){
       '<p class="line">No coverage figures yet — they appear after the next sweep.</p>';
       return }
     // Observed throughput beats the configured pacing target for an estimate.
-    const rate=(run.elapsed_min&&run.slots_swept)
-      ? run.slots_swept/run.elapsed_min : (c.rate_per_min||29);
+    // Throughput from the best recent run, not the last one. A run that died
+    // early - 24 slots in the 15 Sept frontier collapse - made every estimate on
+    // the page nonsense ("about 0 a minute", "60h of sweeping"). Take the fastest
+    // of the recent history, ignore runs too short to measure, and floor it.
+    const rate=(function(){
+      const rs=(D.history||[]).concat([run])
+        .filter(h=>h&&h.elapsed_min>5&&h.slots_swept>200)
+        .map(h=>h.slots_swept/h.elapsed_min);
+      return rs.length?Math.max.apply(null,rs):(c.rate_per_min||29)})();
     const hhmm=n=>{const m=Math.round(n);return m<60?m+' min'
       :Math.floor(m/60)+'h '+String(m%60).padStart(2,'0')+'m'};
-    const zcls={new:'new',catchup:'catchup',settled:'settled'};
+    const zcls={new:'new',catchup:'catchup',settled:'settled',gaps:'catchup',recheck:'settled',shelf:'settled'};
 
-    const zones=(c.zones||[]).map((z,i)=>{
-      const f=z.slots?z.checked/z.slots:0, todo=z.remaining>0;
-      const line = todo
-        ? '<b>'+fmt(z.checked)+'</b> of '+fmt(z.slots)+' checked · '+
-          '<span class="eta">'+fmt(z.remaining)+' still to go</span>'+
-          (z.key==='settled'?'':' — about '+hhmm(z.remaining/rate)+' of sweeping')
-        : '<b>'+fmt(z.slots)+'</b> of '+fmt(z.slots)+' checked · '+
-          '<span class="alldone">nothing outstanding</span>';
+    const zones=(c.passes&&c.passes.length?c.passes:(c.zones||[])).map((z,i)=>{
+      // Passes, not ranges. Each is a separate queue with its own answer to
+      // "is this up to date?", because a sweep can be perfectly current on new
+      // registrations while thousands of never-visited gaps sit behind it.
+      const tot=z.total!=null?z.total:z.slots;
+      const out=z.outstanding!=null?z.outstanding:z.remaining;
+      const done=Math.max(0,tot-out);
+      const f=tot?done/tot:1, todo=out>0 && !z.rolling;
+      const line = z.rolling
+        ? '<b>'+fmt(tot)+'</b> in the rolling window · '+
+          '<span class="alldone">re-asked every run</span>'
+        : (todo
+        ? '<b>'+fmt(done)+'</b> of '+fmt(tot)+' done · '+
+          '<span class="eta">'+fmt(out)+' outstanding</span>'+
+          ' — about '+hhmm(out/rate)+' of sweeping'
+        : '<b>'+fmt(tot)+'</b> of '+fmt(tot)+' done · '+
+          '<span class="alldone">up to date</span>');
       return '<div class="zone '+(zcls[z.key]||'')+(todo?' todo':'')+'">'+
-        '<div class="zh"><span class="zt">Scan '+(i+1)+' — '+esc(z.label)+'</span>'+
-          '<span class="zr">'+esc(z.from_acn)+' → '+esc(z.to_acn)+
+        '<div class="zh"><span class="zt">Pass '+(z.n||i+1)+' — '+esc(z.label)+'</span>'+
+          '<span class="zr">'+(z.from_acn?esc(z.from_acn)+' → '+esc(z.to_acn):'rolling window')+
           (z.days?' · about '+(z.days<1.5?'1 day':z.days.toFixed(0)+' days')+
             ' of registrations':'')+'</span></div>'+
         '<div class="zbar"><i style="width:'+Math.max(1,f*100).toFixed(1)+'%"></i></div>'+
         '<p class="zn">'+line+'</p>'+
         '<p class="zwhy">'+esc(z.why)+
+          ((z.bands||[]).length
+            ? ' Bands: '+z.bands.map(b=>esc(b.band)+' ('+fmt(b.outstanding)+' due)').join(', ')+'.'
+            : '')+
           (z.covered_by_register>=z.slots
             ? ' <b>All '+fmt(z.slots)+' of these are below the register boundary, '+
               'so the weekly list already has every company in them \u2014 anything '+
@@ -453,7 +472,9 @@ function render(D){
         (c.slots_per_day?'. ASIC is currently issuing about '+fmt(c.slots_per_day)+
           ' a day':'')+'. They are checked in the passes below, and every slot '+
         'belongs to exactly one of them — nothing is ever dropped from the queue, '+
-        'so if a slot is unchecked, the pass it sits in says why.</p>'+
+        'so if a slot is unchecked, the pass it sits in says why. <b>Pass 1 at zero '+
+        'outstanding means you are current on everything registered since the last '+
+        'sweep</b>; the later passes are catching up on older ground.</p>'+
       zones +
       '<div class="covgrid">'+
         '<div class="covnum done"><div class="v">'+fmt(c.checked)+'</div>'+

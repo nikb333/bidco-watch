@@ -343,38 +343,77 @@ def load_state() -> dict:
 
 
 # ----------------------------------------------------------------- frontier
-def find_frontier() -> int:
-    """Binary-search the highest base that resolves to anything.
+def find_frontier(anchor: int = 0, max_advance: int = 0) -> int:
+    """Walk UP from ground already verified. Never binary-search.
 
-    Deliberately keeps its own cache instead of writing into the checkpoint.
-    It probes bases anywhere between 70,000,000 and 71,000,000, and those probes
-    are not observations of the register - they are scaffolding. Letting them
-    into `seen` was catastrophic: save_checkpoint prunes relative to the highest
-    base it can see, so a probe at 70.9m set the floor at 70.82m and silently
-    deleted every real slot below it. Every run then started from nothing while
-    appearing to work.
+    The old version binary-searched 70.0m-71.0m, probing six consecutive slots
+    and treating "all six empty" as proof it was above the frontier. That
+    assumed the register is dense below the frontier. It is not. Measured over
+    85,000 slots of our own checkpoint the hit rate is 76% and there are
+    **22 separate runs of six or more consecutive empty slots**. Each one was a
+    chance to conclude "above the frontier" while sitting well below it - and
+    because binary search never revisits a decision, a single false miss caps
+    the frontier permanently and a few in a row collapse it outright.
 
-    Costs about 120 lookups.
+    Both failure modes happened inside a week. On 13 September it returned
+    70,999,999, the ceiling; on 15 September 70,000,000, the floor, which made
+    the queue 24 slots and the dashboard read "covers 700000004 through
+    700000004".
+
+    So this climbs instead. It starts from ground we have already resolved, and
+    it only stops on evidence strong enough not to be luck: in those same 85,000
+    slots there is no run of twelve consecutive empties, so a 24-slot window
+    coming back completely empty is not an accident. Three such windows in a row
+    ends the climb.
+
+    Two hard guards make the catastrophic cases impossible rather than unlikely:
+    the result can never be below the anchor, and never more than `max_advance`
+    above it.
     """
+    PROBE = 24        # longest observed empty run is 11
+    RUNG = 200        # step size while climbing
+    CONFIRM = 3       # consecutive dead windows before we believe it
+
     probes: dict[str, object] = {}
-    lo, hi = FRONTIER_LO, FRONTIER_HI
-    while lo < hi - 1:
-        mid = (lo + hi) // 2
-        hit = False
-        for k in range(6):
-            a = acn_for(mid + k)
+
+    def occupied(base: int) -> bool:
+        """Does anything live in the 24 slots starting here? Stops at the first hit."""
+        for k in range(PROBE):
+            a = acn_for(base + k)
             if a not in probes:
                 probes[a] = lookup(a)
                 time.sleep(GAP)
             if probes[a]:
-                hit = True
-                break
-        if hit:
-            lo = mid
-        else:
-            hi = mid
-    return lo
+                return True
+        return False
 
+    floor = max(FRONTIER_LO, anchor or FRONTIER_LO)
+    ceiling = min(FRONTIER_HI, floor + max_advance) if max_advance else FRONTIER_HI
+
+    highest, cur, dead = floor, floor, 0
+    while cur < ceiling and dead < CONFIRM:
+        cur += RUNG
+        if occupied(cur):
+            highest, dead = cur, 0
+        else:
+            dead += 1
+
+    # Close the last rung at finer resolution so the frontier is not left up to
+    # 200 slots short of the truth.
+    fine = highest
+    b = highest
+    while b + PROBE <= min(highest + RUNG, ceiling):
+        b += PROBE
+        if occupied(b):
+            fine = b
+
+    result = max(fine, floor)
+    print(f"frontier: climbed from {floor:,} to {result:,} "
+          f"(+{result - floor:,}) using {len(probes):,} probes")
+    if max_advance and result >= ceiling - RUNG:
+        print(f"::warning::frontier hit its ceiling of {ceiling:,} - "
+              f"the advance guard may be too tight")
+    return result
 
 def stem_of(name: str) -> str:
     s = SUF.sub(" ", ROLE.sub(" ", (name or "").upper()))
@@ -520,8 +559,25 @@ def main() -> int:
     seen = load_checkpoint()
     print(f"checkpoint: {len(seen):,} slots known")
 
+    # Anchor on the highest slot we have actually resolved, not just on the
+    # stored high-water mark: that mark only advances after an untruncated run,
+    # so it lags the checkpoint by thousands of slots.
+    resolved = [base_of(a) for a, d in seen.items() if d]
+    anchor = max([state.get("last_frontier_base") or 0] + ([max(resolved)] if resolved else []))
+    # ASIC issues roughly 2,400-4,000 a day. Allow 10,000 a day plus a floor of
+    # 60,000 so a long gap between runs still catches up, while a runaway search
+    # cannot wander a million slots up the number space.
+    gap_days = 1.0
     try:
-        frontier = find_frontier()
+        gap_days = max(1.0, (now - datetime.fromisoformat(
+            state["last_run"]["finished_utc"])).total_seconds() / 86400)
+    except Exception:
+        pass
+    max_advance = max(60_000, int(gap_days * 10_000))
+    print(f"anchor: {anchor:,} | allowing up to {max_advance:,} advance "
+          f"({gap_days:.1f} days since the last run)")
+    try:
+        frontier = find_frontier(anchor, max_advance)
     except Blocked as e:
         write_run(state, now, started, error=str(e), status="failed")
         print(f"BLOCKED: {e}", file=sys.stderr)
@@ -814,6 +870,53 @@ def coverage(seen: dict, frontier: int, fwd_lo: int, trail_lo: int,
     ]
     zones = [z for z in zones if z["slots"] > 0]
 
+    # The zones above answer "which stretch of numbers?". The passes below answer
+    # "which queue, and is it empty?" - which is the question that actually tells
+    # you whether the sweep is up to date. They are different cuts of the same
+    # ground and conflating them hid the fact that a run can be 100% current on
+    # new registrations while thousands of never-looked-at gaps sit behind it.
+    never = sum(1 for b in range(trail_lo, fwd_lo) if acn_for(b) not in seen)
+    due = []
+    for i, (blo, bhi) in enumerate(RECHECK_BANDS):
+        elig = sum(1 for b in range(max(FRONTIER_LO, frontier - bhi), frontier - blo + 1)
+                   if seen.get(acn_for(b), "missing") is None and RECHECKED.get(acn_for(b), 0) == i)
+        due.append({"band": f"{blo // 1000}k-{bhi // 1000}k back", "outstanding": elig,
+                    "from_acn": acn_for(max(FRONTIER_LO, frontier - bhi)),
+                    "to_acn": acn_for(frontier - blo)})
+    shelf_open = sum(1 for a, d in seen.items()
+                     if d and SHELF.match(d.get("name", "") or ""))
+    new_zone = next((z for z in zones if z["key"] == "new"), None)
+    passes = [
+        {"key": "new", "n": 1, "label": "New registrations",
+         "from_acn": acn_for(fwd_lo), "to_acn": acn_for(frontier),
+         "total": (new_zone or {}).get("slots", 0),
+         "outstanding": (new_zone or {}).get("remaining", 0),
+         "why": "Everything issued since the last finished sweep. First in the queue "
+                "on every run. This is the number that says whether you are current."},
+        {"key": "gaps", "n": 2, "label": "Never looked at",
+         "from_acn": acn_for(trail_lo), "to_acn": acn_for(fwd_lo - 1),
+         "total": max(0, fwd_lo - trail_lo), "outstanding": never,
+         "why": "Slots inside the trailing window that no run has ever queried - what "
+                "a run that ran out of clock leaves behind. Nothing has seen these, so "
+                "they outrank re-checks."},
+        {"key": "recheck", "n": 3, "label": "Second look at empty slots",
+         # Bands are expressed as "slots back", so the earliest ACN is the one
+         # furthest back. Taking due[0]/due[-1] printed the range reversed.
+         "from_acn": min((d["from_acn"] for d in due), default=""),
+         "to_acn": max((d["to_acn"] for d in due), default=""),
+         "total": sum(d["outstanding"] for d in due), "outstanding": sum(d["outstanding"] for d in due),
+         "bands": due,
+         "why": "Slots already queried that came back empty. ACNs are issued ahead of "
+                "use, so a company can appear in a slot an earlier run found bare. Each "
+                "gets exactly two more looks, timed to the two observed lag clusters."},
+        {"key": "shelf", "n": 4, "label": "Shelf companies, re-queried",
+         "from_acn": "", "to_acn": "", "total": shelf_open, "outstanding": shelf_open,
+         "rolling": True,
+         "why": "Companies registered under a numeric placeholder name and renamed later "
+                f"- re-asked for {SHELF_DAYS} days. This never reaches zero by design; it "
+                "is a rolling window, not a backlog."},
+    ]
+
     total = max(0, frontier - floor + 1)
     width = max(1, total // buckets)
     bs = []
@@ -838,6 +941,7 @@ def coverage(seen: dict, frontier: int, fwd_lo: int, trail_lo: int,
         "rate_per_min": RATE_PER_MIN,
         "run_minutes": BUDGET_MIN,
         "zones": zones,
+        "passes": passes,
         "buckets": bs,
     }
 
