@@ -258,6 +258,16 @@ class Unresolved(Exception):
     """
 
 
+# A vendor outage is not a slow night, and grinding through one is worse than
+# stopping. On 15 September the API returned HTTP 500 to every request; the sweep
+# spent its whole budget retrying (four tries with 2s/4s/6s backoff is ~12s a
+# slot) and, because a failure looked like an empty slot, banked the result as
+# fact. Twenty-five unanswered lookups in a row is not bad luck - it is the
+# service being down - so the run stops and says so.
+_STREAK = [0]
+FAIL_STREAK_LIMIT = int(os.environ.get("FAIL_STREAK_LIMIT", "25"))
+
+
 def lookup(acn: str, tries: int = 4):
     for n in range(tries):
         req = urllib.request.Request(
@@ -267,6 +277,7 @@ def lookup(acn: str, tries: int = 4):
         try:
             with urllib.request.urlopen(req, timeout=30) as r:
                 d = json.loads(r.read().decode("utf-8", "replace"))
+            _STREAK[0] = 0
             return None if "errors" in d else d
         except urllib.error.HTTPError as e:
             if e.code == 429:
@@ -277,6 +288,11 @@ def lookup(acn: str, tries: int = 4):
                 time.sleep(2 * (n + 1))
         except Exception:
             time.sleep(2 * (n + 1))
+    _STREAK[0] += 1
+    if _STREAK[0] >= FAIL_STREAK_LIMIT:
+        raise Blocked(f"{_STREAK[0]} lookups in a row went unanswered - the lookup "
+                      f"API looks down, not slow. Stopping rather than banking "
+                      f"guesses. Last: {acn}")
     raise Unresolved(f"{acn}: no answer after {tries} attempts")
 
 
