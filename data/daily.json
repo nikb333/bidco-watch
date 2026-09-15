@@ -1,104 +1,136 @@
 {
  "run": {
-  "finished_utc": "2026-09-14T19:29:32+00:00",
-  "elapsed_min": 335.1,
+  "finished_utc": "2026-09-15T18:16:40+00:00",
+  "elapsed_min": 49.3,
   "status": "ok",
   "error": "",
-  "frontier_base": 70235932,
+  "frontier_base": 70000000,
   "window": [
-   "702258302",
-   "702359322"
+   "700000004",
+   "700000004"
   ],
-  "slots_swept": 10033,
-  "slots_queued": 11489,
-  "slots_left": 1456,
-  "gaps_queued": 10022,
-  "recheck_queued": 1230,
-  "companies": 8188,
+  "slots_swept": 24,
+  "slots_queued": 24,
+  "slots_left": 0,
+  "gaps_queued": 0,
+  "recheck_queued": 0,
+  "companies": 8164,
   "trailing_slots": 20000,
   "slots_errored": 0,
-  "ledger_new": 1,
-  "ledger_waiting": 3,
-  "ledger_in_register": 19,
+  "ledger_new": 0,
+  "ledger_waiting": 2,
+  "ledger_in_register": 20,
   "coverage": {
-   "from_acn": "702316005",
-   "to_acn": "702359322",
-   "slots": 4333,
-   "checked": 4334,
-   "remaining": 0,
-   "companies": 1111,
+   "from_acn": "700000004",
+   "to_acn": "700000004",
+   "slots": 1,
+   "checked": 0,
+   "remaining": 1,
+   "companies": 0,
+   "register_known": true,
+   "register_to_acn": "702315991",
+   "slots_per_day": 2299,
+   "rate_per_min": 48,
+   "run_minutes": 335,
+   "zones": [
+    {
+     "key": "new",
+     "label": "New registrations",
+     "why": "Everything registered since the last finished sweep. These go to the front of the queue on every run, so this should sit at or near 100%. Note what 'checked' means: the slot has been looked at once. A company that registers into a slot an earlier run already found empty is caught by the re-check in the next pass, not here.",
+     "from_acn": "700000004",
+     "to_acn": "700000004",
+     "slots": 1,
+     "checked": 0,
+     "remaining": 1,
+     "days": 0.0,
+     "covered_by_register": 1,
+     "companies": 0
+    }
+   ],
    "buckets": [
     {
-     "from": "702315991",
-     "to": "702319597",
-     "checked": 361,
-     "slots": 361
+     "from": "700000004",
+     "to": "700000004",
+     "checked": 0,
+     "slots": 1,
+     "zone": "new"
     },
     {
-     "from": "702319604",
-     "to": "702323206",
-     "checked": 361,
-     "slots": 361
+     "from": "700000013",
+     "to": "700000013",
+     "checked": 0,
+     "slots": 1,
+     "zone": "new"
     },
     {
-     "from": "702323215",
-     "to": "702326814",
-     "checked": 361,
-     "slots": 361
+     "from": "700000022",
+     "to": "700000022",
+     "checked": 0,
+     "slots": 1,
+     "zone": "new"
     },
     {
-     "from": "702326823",
-     "to": "702330425",
-     "checked": 361,
-     "slots": 361
+     "from": "700000031",
+     "to": "700000031",
+     "checked": 0,
+     "slots": 1,
+     "zone": "new"
     },
     {
-     "from": "702330434",
-     "to": "702334030",
-     "checked": 361,
-     "slots": 361
+     "from": "700000040",
+     "to": "700000040",
+     "checked": 0,
+     "slots": 1,
+     "zone": "new"
     },
     {
-     "from": "702334049",
-     "to": "702337648",
-     "checked": 361,
-     "slots": 361
+     "from": "700000059",
+     "to": "700000059",
+     "checked": 0,
+     "slots": 1,
+     "zone": "new"
     },
     {
-     "from": "702337657",
-     "to": "702341259",
-     "checked": 361,
-     "slots": 361
+     "from": "700000068",
+     "to": "700000068",
+     "checked": 0,
+     "slots": 1,
+     "zone": "new"
     },
     {
-     "from": "702341268",
-     "to": "702344867",
-     "checked": 361,
-     "slots": 361
+     "from": "700000077",
+     "to": "700000077",
+     "checked": 0,
+     "slots": 1,
+     "zone": "new"
     },
     {
-     "from": "702344876",
-     "to": "702348472",
-     "checked": 361,
-     "slots": 361
+     "from": "700000086",
+     "to": "700000086",
+     "checked": 0,
+     "slots": 1,
+     "zone": "new"
     },
     {
-     "from": "702348481",
-     "to": "702352083",
-     "checked": 361,
-     "slots": 361
+     "from": "700000095",
+     "to": "700000095",
+     "checked": 0,
+     "slots": 1,
+     "zone": "new"
     },
     {
-     "from": "702352092",
-     "to": "702355691",
-     "checked": 361,
-     "slots": 361
+     "from": "700000102",
+     "to": "700000102",
+     "checked": 0,
+     "slots": 1,
+     "zone": "new"
     },
     {
-     "from": "702355708",
-     "to": "702359313",
-     "checked": 362,
-     "slots": 362
+     "from": "700000111",
+     "to": "700000111",
+     "checked": 0,
+     "slots": 1,
+     "zone": "new"
     }
    ]
   }
@@ -126,16 +158,5 @@
    "first_seen": "2026-09-14T13:02:54+00:00"
   }
  ],
- "role_only": [
-  {
-   "acn": "702113933",
-   "name": "BLOOMJAR HOLDCO. PTY LTD",
-   "date": "2026-09-07",
-   "role": "HOLDCO",
-   "suburb": "BALCATTA",
-   "state": "WA",
-   "via": "API",
-   "first_seen": "2026-09-14T19:29:32+00:00"
-  }
- ]
+ "role_only": []
 }
