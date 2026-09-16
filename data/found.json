@@ -282,5 +282,65 @@
   "stem": "TORQUE",
   "suburb": "SYDNEY",
   "via": "API"
+ },
+ "702384192": {
+  "acn": "702384192",
+  "date": "2026-09-15",
+  "first_seen": "2026-09-16T09:23:45+00:00",
+  "in_register": false,
+  "name": "ALBURY HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "ALBURY",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702385260": {
+  "acn": "702385260",
+  "date": "2026-09-15",
+  "first_seen": "2026-09-16T09:23:45+00:00",
+  "in_register": false,
+  "name": "TRS GIRDHAR HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "TRS GIRDHAR",
+  "suburb": "MOONEE PONDS",
+  "via": "API"
+ },
+ "702385279": {
+  "acn": "702385279",
+  "date": "2026-09-15",
+  "first_seen": "2026-09-16T09:23:45+00:00",
+  "in_register": false,
+  "name": "PIERRE SLEIMAN HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "PIERRE SLEIMAN",
+  "suburb": "STRATHFIELD",
+  "via": "API"
+ },
+ "702386829": {
+  "acn": "702386829",
+  "date": "2026-09-15",
+  "first_seen": "2026-09-16T09:23:45+00:00",
+  "in_register": false,
+  "name": "APAVE TOPCO AUSTRALIA PTY LTD",
+  "role": "TOPCO",
+  "state": "NSW",
+  "stem": "APAVE",
+  "suburb": "RANDWICK",
+  "via": "API"
+ },
+ "702424020": {
+  "acn": "702424020",
+  "date": "2026-09-16",
+  "first_seen": "2026-09-16T09:23:45+00:00",
+  "in_register": false,
+  "name": "AIROBEN HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "QLD",
+  "stem": "AIROBEN",
+  "suburb": "NORMAN PARK",
+  "via": "API"
  }
 }
