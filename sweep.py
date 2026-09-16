@@ -452,16 +452,14 @@ def find_frontier(anchor: int = 0, max_advance: int = 0) -> int:
         else:
             dead += 1
 
-    # Close the last rung at finer resolution so the frontier is not left up to
-    # 200 slots short of the truth.
-    fine = highest
-    b = highest
-    while b + PROBE <= min(highest + RUNG, ceiling):
-        b += PROBE
-        if occupied(b):
-            fine = b
-
-    result = max(fine, floor)
+    # Deliberately no fine-grained narrowing of the last rung. Stepping the final
+    # 200 slots in 24-slot windows cost ~190 probes - two thirds of the whole
+    # search, about eight minutes before the first countable lookup - to buy at
+    # most 200 slots of precision. It is not worth it: the high-water mark
+    # advances to whatever we return, so the next run climbs from there, and the
+    # never-looked-at pass sweeps the remainder either way. Being slightly
+    # conservative about where today ends costs nothing; being slow costs a run.
+    result = max(highest, floor)
     print(f"frontier: climbed from {floor:,} to {result:,} "
           f"(+{result - floor:,}) using {len(probes):,} probes")
     if max_advance and result >= ceiling - RUNG:
