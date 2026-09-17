@@ -342,5 +342,101 @@
   "stem": "AIROBEN",
   "suburb": "NORMAN PARK",
   "via": "API"
+ },
+ "702444853": {
+  "acn": "702444853",
+  "date": "2026-09-17",
+  "first_seen": "2026-09-17T13:34:34+00:00",
+  "in_register": false,
+  "name": "TRIMONT ZAUNER HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "QLD",
+  "stem": "TRIMONT ZAUNER",
+  "suburb": "ELANORA",
+  "via": "API"
+ },
+ "702456568": {
+  "acn": "702456568",
+  "date": "2026-09-17",
+  "first_seen": "2026-09-17T13:34:34+00:00",
+  "in_register": false,
+  "name": "SANDROCK I HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "SANDROCK I",
+  "suburb": "MELBOURNE",
+  "via": "API"
+ },
+ "702456906": {
+  "acn": "702456906",
+  "date": "2026-09-17",
+  "first_seen": "2026-09-17T13:34:34+00:00",
+  "in_register": false,
+  "name": "SANDROCK II HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "SANDROCK II",
+  "suburb": "MELBOURNE",
+  "via": "API"
+ },
+ "702459390": {
+  "acn": "702459390",
+  "date": "2026-09-17",
+  "first_seen": "2026-09-17T13:34:34+00:00",
+  "in_register": false,
+  "name": "SANDROCK I BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "VIC",
+  "stem": "SANDROCK I",
+  "suburb": "MELBOURNE",
+  "via": "API"
+ },
+ "702459514": {
+  "acn": "702459514",
+  "date": "2026-09-17",
+  "first_seen": "2026-09-17T13:34:34+00:00",
+  "in_register": false,
+  "name": "SANDROCK II BIDCO A PTY LTD",
+  "role": "BIDCO",
+  "state": "VIC",
+  "stem": "SANDROCK II A",
+  "suburb": "MELBOURNE",
+  "via": "API"
+ },
+ "702459765": {
+  "acn": "702459765",
+  "date": "2026-09-17",
+  "first_seen": "2026-09-17T13:34:34+00:00",
+  "in_register": false,
+  "name": "SANDROCK II BIDCO B PTY LTD",
+  "role": "BIDCO",
+  "state": "VIC",
+  "stem": "SANDROCK II B",
+  "suburb": "MELBOURNE",
+  "via": "API"
+ },
+ "702461452": {
+  "acn": "702461452",
+  "date": "2026-09-17",
+  "first_seen": "2026-09-17T13:34:34+00:00",
+  "in_register": false,
+  "name": "BORAMBOLA HYBRID HOLDCO PTY LIMITED",
+  "role": "HOLDCO",
+  "state": "QLD",
+  "stem": "BORAMBOLA HYBRID",
+  "suburb": "BRISBANE CITY",
+  "via": "API"
+ },
+ "702468559": {
+  "acn": "702468559",
+  "date": "2026-09-17",
+  "first_seen": "2026-09-17T13:34:34+00:00",
+  "in_register": false,
+  "name": "GOYDER NORTH WIND FARM 2 HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "GOYDER NORTH WIND FARM 2",
+  "suburb": "SYDNEY",
+  "via": "API"
  }
 }
