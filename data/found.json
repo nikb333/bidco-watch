@@ -438,5 +438,41 @@
   "stem": "GOYDER NORTH WIND FARM 2",
   "suburb": "SYDNEY",
   "via": "API"
+ },
+ "702486673": {
+  "acn": "702486673",
+  "date": "2026-09-18",
+  "first_seen": "2026-09-18T11:26:24+00:00",
+  "in_register": false,
+  "name": "MAESTRO HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "MAESTRO",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702498495": {
+  "acn": "702498495",
+  "date": "2026-09-18",
+  "first_seen": "2026-09-18T11:26:24+00:00",
+  "in_register": false,
+  "name": "TIDE BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "QLD",
+  "stem": "TIDE",
+  "suburb": "ELANORA",
+  "via": "API"
+ },
+ "702505235": {
+  "acn": "702505235",
+  "date": "2026-09-18",
+  "first_seen": "2026-09-18T11:26:24+00:00",
+  "in_register": false,
+  "name": "WEST MOKOAN HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "WEST MOKOAN",
+  "suburb": "SYDNEY",
+  "via": "API"
  }
 }
