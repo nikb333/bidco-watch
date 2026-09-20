@@ -8555,6 +8555,7 @@
 {"acn": "703109504", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
 {"acn": "703109522", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
 {"acn": "703109540", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703589548", "d": null}
 {"acn": "703589557", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
 {"acn": "703589566", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
 {"acn": "703589575", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
@@ -16168,498 +16169,991 @@
 {"acn": "703665650", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
 {"acn": "703665669", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
 {"acn": "703665678", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703665687", "d": null}
 {"acn": "703665696", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703665703", "d": null}
 {"acn": "703665712", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703665721", "d": null}
 {"acn": "703665730", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703665749", "d": null}
 {"acn": "703665758", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703665767", "d": null}
 {"acn": "703665776", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703665785", "d": null}
 {"acn": "703665794", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703665801", "d": null}
 {"acn": "703665810", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703665829", "d": null}
 {"acn": "703665838", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703665847", "d": null}
 {"acn": "703665856", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703665865", "d": null}
 {"acn": "703665874", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703665883", "d": null}
 {"acn": "703665892", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703665909", "d": null}
 {"acn": "703665918", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703665927", "d": null}
 {"acn": "703665936", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703665945", "d": null}
 {"acn": "703665954", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703665963", "d": null}
 {"acn": "703665972", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703665981", "d": null}
 {"acn": "703665990", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666004", "d": null}
 {"acn": "703666013", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666022", "d": null}
 {"acn": "703666031", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666040", "d": null}
 {"acn": "703666059", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666068", "d": null}
 {"acn": "703666077", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666086", "d": null}
 {"acn": "703666095", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666102", "d": null}
 {"acn": "703666111", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666120", "d": null}
 {"acn": "703666139", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666148", "d": null}
 {"acn": "703666157", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666166", "d": null}
 {"acn": "703666175", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666184", "d": null}
 {"acn": "703666193", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666200", "d": null}
 {"acn": "703666219", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666228", "d": null}
 {"acn": "703666237", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666246", "d": null}
 {"acn": "703666255", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666264", "d": null}
 {"acn": "703666273", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666282", "d": null}
 {"acn": "703666291", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666308", "d": null}
 {"acn": "703666317", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666326", "d": null}
 {"acn": "703666335", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666344", "d": null}
 {"acn": "703666353", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666362", "d": null}
 {"acn": "703666371", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666380", "d": null}
 {"acn": "703666399", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666406", "d": null}
 {"acn": "703666415", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666424", "d": null}
 {"acn": "703666433", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666442", "d": null}
 {"acn": "703666451", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666460", "d": null}
 {"acn": "703666479", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666488", "d": null}
 {"acn": "703666497", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666504", "d": null}
 {"acn": "703666513", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666522", "d": null}
 {"acn": "703666531", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666540", "d": null}
 {"acn": "703666559", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666568", "d": null}
 {"acn": "703666577", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666586", "d": null}
 {"acn": "703666595", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666602", "d": null}
 {"acn": "703666611", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666620", "d": null}
 {"acn": "703666639", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666648", "d": null}
 {"acn": "703666657", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666666", "d": null}
 {"acn": "703666675", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666684", "d": null}
 {"acn": "703666693", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666700", "d": null}
 {"acn": "703666719", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666728", "d": null}
 {"acn": "703666737", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666746", "d": null}
 {"acn": "703666755", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666764", "d": null}
 {"acn": "703666773", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666782", "d": null}
 {"acn": "703666791", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666808", "d": null}
 {"acn": "703666817", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666826", "d": null}
 {"acn": "703666835", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666844", "d": null}
 {"acn": "703666853", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666862", "d": null}
 {"acn": "703666871", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666880", "d": null}
 {"acn": "703666899", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666906", "d": null}
 {"acn": "703666915", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666924", "d": null}
 {"acn": "703666933", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666942", "d": null}
 {"acn": "703666951", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666960", "d": null}
 {"acn": "703666979", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703666988", "d": null}
 {"acn": "703666997", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667001", "d": null}
 {"acn": "703667010", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667029", "d": null}
 {"acn": "703667038", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667047", "d": null}
 {"acn": "703667056", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667065", "d": null}
 {"acn": "703667074", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667083", "d": null}
 {"acn": "703667092", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667109", "d": null}
 {"acn": "703667118", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667127", "d": null}
 {"acn": "703667136", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667145", "d": null}
 {"acn": "703667154", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667163", "d": null}
 {"acn": "703667172", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667181", "d": null}
 {"acn": "703667190", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667207", "d": null}
 {"acn": "703667216", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667225", "d": null}
 {"acn": "703667234", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667243", "d": null}
 {"acn": "703667252", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667261", "d": null}
 {"acn": "703667270", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667289", "d": null}
 {"acn": "703667298", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667305", "d": null}
 {"acn": "703667314", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667323", "d": null}
 {"acn": "703667332", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667341", "d": null}
 {"acn": "703667350", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667369", "d": null}
 {"acn": "703667378", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667387", "d": null}
 {"acn": "703667396", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667403", "d": null}
 {"acn": "703667412", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667421", "d": null}
 {"acn": "703667430", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667449", "d": null}
 {"acn": "703667458", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667467", "d": null}
 {"acn": "703667476", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667485", "d": null}
 {"acn": "703667494", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667501", "d": null}
 {"acn": "703667510", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667529", "d": null}
 {"acn": "703667538", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667547", "d": null}
 {"acn": "703667556", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667565", "d": null}
 {"acn": "703667574", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667583", "d": null}
 {"acn": "703667592", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667609", "d": null}
 {"acn": "703667618", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667627", "d": null}
 {"acn": "703667636", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667645", "d": null}
 {"acn": "703667654", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667663", "d": null}
 {"acn": "703667672", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667681", "d": null}
 {"acn": "703667690", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667707", "d": null}
 {"acn": "703667716", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667725", "d": null}
 {"acn": "703667734", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667743", "d": null}
 {"acn": "703667752", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667761", "d": null}
 {"acn": "703667770", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667789", "d": null}
 {"acn": "703667798", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667805", "d": null}
 {"acn": "703667814", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667823", "d": null}
 {"acn": "703667832", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667841", "d": null}
 {"acn": "703667850", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667869", "d": null}
 {"acn": "703667878", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667887", "d": null}
 {"acn": "703667896", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667903", "d": null}
 {"acn": "703667912", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667921", "d": null}
 {"acn": "703667930", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667949", "d": null}
 {"acn": "703667958", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667967", "d": null}
 {"acn": "703667976", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703667985", "d": null}
 {"acn": "703667994", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668008", "d": null}
 {"acn": "703668017", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668026", "d": null}
 {"acn": "703668035", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668044", "d": null}
 {"acn": "703668053", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668062", "d": null}
 {"acn": "703668071", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668080", "d": null}
 {"acn": "703668099", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668106", "d": null}
 {"acn": "703668115", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668124", "d": null}
 {"acn": "703668133", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668142", "d": null}
 {"acn": "703668151", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668160", "d": null}
 {"acn": "703668179", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668188", "d": null}
 {"acn": "703668197", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668204", "d": null}
 {"acn": "703668213", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668222", "d": null}
 {"acn": "703668231", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668240", "d": null}
 {"acn": "703668259", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668268", "d": null}
 {"acn": "703668277", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668286", "d": null}
 {"acn": "703668295", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668302", "d": null}
 {"acn": "703668311", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668320", "d": null}
 {"acn": "703668339", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668348", "d": null}
 {"acn": "703668357", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668366", "d": null}
 {"acn": "703668375", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668384", "d": null}
 {"acn": "703668393", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668400", "d": null}
 {"acn": "703668419", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668428", "d": null}
 {"acn": "703668437", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668446", "d": null}
 {"acn": "703668455", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668464", "d": null}
 {"acn": "703668473", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668482", "d": null}
 {"acn": "703668491", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668508", "d": null}
 {"acn": "703668517", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668526", "d": null}
 {"acn": "703668535", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668544", "d": null}
 {"acn": "703668553", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668562", "d": null}
 {"acn": "703668571", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668580", "d": null}
 {"acn": "703668599", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668606", "d": null}
 {"acn": "703668615", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668624", "d": null}
 {"acn": "703668633", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668642", "d": null}
 {"acn": "703668651", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668660", "d": null}
 {"acn": "703668679", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668688", "d": null}
 {"acn": "703668697", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668704", "d": null}
 {"acn": "703668713", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668722", "d": null}
 {"acn": "703668731", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668740", "d": null}
 {"acn": "703668759", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668768", "d": null}
 {"acn": "703668777", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668786", "d": null}
 {"acn": "703668795", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668802", "d": null}
 {"acn": "703668811", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668820", "d": null}
 {"acn": "703668839", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668848", "d": null}
 {"acn": "703668857", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668866", "d": null}
 {"acn": "703668875", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668884", "d": null}
 {"acn": "703668893", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668900", "d": null}
 {"acn": "703668919", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668928", "d": null}
 {"acn": "703668937", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668946", "d": null}
 {"acn": "703668955", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668964", "d": null}
 {"acn": "703668973", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703668982", "d": null}
 {"acn": "703668991", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669005", "d": null}
 {"acn": "703669014", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669023", "d": null}
 {"acn": "703669032", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669041", "d": null}
 {"acn": "703669050", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669069", "d": null}
 {"acn": "703669078", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669087", "d": null}
 {"acn": "703669096", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669103", "d": null}
 {"acn": "703669112", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669121", "d": null}
 {"acn": "703669130", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669149", "d": null}
 {"acn": "703669158", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669167", "d": null}
 {"acn": "703669176", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669185", "d": null}
 {"acn": "703669194", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669201", "d": null}
 {"acn": "703669210", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669229", "d": null}
 {"acn": "703669238", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669247", "d": null}
 {"acn": "703669256", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669265", "d": null}
 {"acn": "703669274", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669283", "d": null}
 {"acn": "703669292", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669309", "d": null}
 {"acn": "703669318", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669327", "d": null}
 {"acn": "703669336", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669345", "d": null}
 {"acn": "703669354", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669363", "d": null}
 {"acn": "703669372", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669381", "d": null}
 {"acn": "703669390", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669407", "d": null}
 {"acn": "703669416", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669425", "d": null}
 {"acn": "703669434", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669443", "d": null}
 {"acn": "703669452", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669461", "d": null}
 {"acn": "703669470", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669489", "d": null}
 {"acn": "703669498", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669505", "d": null}
 {"acn": "703669514", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669523", "d": null}
 {"acn": "703669532", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669541", "d": null}
 {"acn": "703669550", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669569", "d": null}
 {"acn": "703669578", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669587", "d": null}
 {"acn": "703669596", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669603", "d": null}
 {"acn": "703669612", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669621", "d": null}
 {"acn": "703669630", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669649", "d": null}
 {"acn": "703669658", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669667", "d": null}
 {"acn": "703669676", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669685", "d": null}
 {"acn": "703669694", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669701", "d": null}
 {"acn": "703669710", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669729", "d": null}
 {"acn": "703669738", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669747", "d": null}
 {"acn": "703669756", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669765", "d": null}
 {"acn": "703669774", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669783", "d": null}
 {"acn": "703669792", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669809", "d": null}
 {"acn": "703669818", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669827", "d": null}
 {"acn": "703669836", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669845", "d": null}
 {"acn": "703669854", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669863", "d": null}
 {"acn": "703669872", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669881", "d": null}
 {"acn": "703669890", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669907", "d": null}
 {"acn": "703669916", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669925", "d": null}
 {"acn": "703669934", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669943", "d": null}
 {"acn": "703669952", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669961", "d": null}
 {"acn": "703669970", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703669989", "d": null}
 {"acn": "703669998", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670008", "d": null}
 {"acn": "703670017", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670026", "d": null}
 {"acn": "703670035", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670044", "d": null}
 {"acn": "703670053", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670062", "d": null}
 {"acn": "703670071", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670080", "d": null}
 {"acn": "703670099", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670106", "d": null}
 {"acn": "703670115", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670124", "d": null}
 {"acn": "703670133", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670142", "d": null}
 {"acn": "703670151", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670160", "d": null}
 {"acn": "703670179", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670188", "d": null}
 {"acn": "703670197", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670204", "d": null}
 {"acn": "703670213", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670222", "d": null}
 {"acn": "703670231", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670240", "d": null}
 {"acn": "703670259", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670268", "d": null}
 {"acn": "703670277", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670286", "d": null}
 {"acn": "703670295", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670302", "d": null}
 {"acn": "703670311", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670320", "d": null}
 {"acn": "703670339", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670348", "d": null}
 {"acn": "703670357", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670366", "d": null}
 {"acn": "703670375", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670384", "d": null}
 {"acn": "703670393", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670400", "d": null}
 {"acn": "703670419", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670428", "d": null}
 {"acn": "703670437", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670446", "d": null}
 {"acn": "703670455", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670464", "d": null}
 {"acn": "703670473", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670482", "d": null}
 {"acn": "703670491", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670508", "d": null}
 {"acn": "703670517", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670526", "d": null}
 {"acn": "703670535", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670544", "d": null}
 {"acn": "703670553", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670562", "d": null}
 {"acn": "703670571", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670580", "d": null}
 {"acn": "703670599", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670606", "d": null}
 {"acn": "703670615", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670624", "d": null}
 {"acn": "703670633", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670642", "d": null}
 {"acn": "703670651", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670660", "d": null}
 {"acn": "703670679", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670688", "d": null}
 {"acn": "703670697", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670704", "d": null}
 {"acn": "703670713", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670722", "d": null}
 {"acn": "703670731", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670740", "d": null}
 {"acn": "703670759", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670768", "d": null}
 {"acn": "703670777", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670786", "d": null}
 {"acn": "703670795", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670802", "d": null}
 {"acn": "703670811", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670820", "d": null}
 {"acn": "703670839", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670848", "d": null}
 {"acn": "703670857", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670866", "d": null}
 {"acn": "703670875", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670884", "d": null}
 {"acn": "703670893", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670900", "d": null}
 {"acn": "703670919", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670928", "d": null}
 {"acn": "703670937", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670946", "d": null}
 {"acn": "703670955", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670964", "d": null}
 {"acn": "703670973", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703670982", "d": null}
 {"acn": "703670991", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671005", "d": null}
 {"acn": "703671014", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671023", "d": null}
 {"acn": "703671032", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671041", "d": null}
 {"acn": "703671050", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671069", "d": null}
 {"acn": "703671078", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671087", "d": null}
 {"acn": "703671096", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671103", "d": null}
 {"acn": "703671112", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671121", "d": null}
 {"acn": "703671130", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671149", "d": null}
 {"acn": "703671158", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671167", "d": null}
 {"acn": "703671176", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671185", "d": null}
 {"acn": "703671194", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671201", "d": null}
 {"acn": "703671210", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671229", "d": null}
 {"acn": "703671238", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671247", "d": null}
 {"acn": "703671256", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671265", "d": null}
 {"acn": "703671274", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671283", "d": null}
 {"acn": "703671292", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671309", "d": null}
 {"acn": "703671318", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671327", "d": null}
 {"acn": "703671336", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671345", "d": null}
 {"acn": "703671354", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671363", "d": null}
 {"acn": "703671372", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671381", "d": null}
 {"acn": "703671390", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671407", "d": null}
 {"acn": "703671416", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671425", "d": null}
 {"acn": "703671434", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671443", "d": null}
 {"acn": "703671452", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671461", "d": null}
 {"acn": "703671470", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671489", "d": null}
 {"acn": "703671498", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671505", "d": null}
 {"acn": "703671514", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671523", "d": null}
 {"acn": "703671532", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671541", "d": null}
 {"acn": "703671550", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671569", "d": null}
 {"acn": "703671578", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671587", "d": null}
 {"acn": "703671596", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671603", "d": null}
 {"acn": "703671612", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671621", "d": null}
 {"acn": "703671630", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671649", "d": null}
 {"acn": "703671658", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671667", "d": null}
 {"acn": "703671676", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671685", "d": null}
 {"acn": "703671694", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671701", "d": null}
 {"acn": "703671710", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671729", "d": null}
 {"acn": "703671738", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671747", "d": null}
 {"acn": "703671756", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671765", "d": null}
 {"acn": "703671774", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671783", "d": null}
 {"acn": "703671792", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671809", "d": null}
 {"acn": "703671818", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671827", "d": null}
 {"acn": "703671836", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671845", "d": null}
 {"acn": "703671854", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671863", "d": null}
 {"acn": "703671872", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671881", "d": null}
 {"acn": "703671890", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671907", "d": null}
 {"acn": "703671916", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671925", "d": null}
 {"acn": "703671934", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671943", "d": null}
 {"acn": "703671952", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671961", "d": null}
 {"acn": "703671970", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703671989", "d": null}
 {"acn": "703671998", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672002", "d": null}
 {"acn": "703672011", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672020", "d": null}
 {"acn": "703672039", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672048", "d": null}
 {"acn": "703672057", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672066", "d": null}
 {"acn": "703672075", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672084", "d": null}
 {"acn": "703672093", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672100", "d": null}
 {"acn": "703672119", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672128", "d": null}
 {"acn": "703672137", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672146", "d": null}
 {"acn": "703672155", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672164", "d": null}
 {"acn": "703672173", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672182", "d": null}
 {"acn": "703672191", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672208", "d": null}
 {"acn": "703672217", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672226", "d": null}
 {"acn": "703672235", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672244", "d": null}
 {"acn": "703672253", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672262", "d": null}
 {"acn": "703672271", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672280", "d": null}
 {"acn": "703672299", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672306", "d": null}
 {"acn": "703672315", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672324", "d": null}
 {"acn": "703672333", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672342", "d": null}
 {"acn": "703672351", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672360", "d": null}
 {"acn": "703672379", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672388", "d": null}
 {"acn": "703672397", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672404", "d": null}
 {"acn": "703672413", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672422", "d": null}
 {"acn": "703672431", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672440", "d": null}
 {"acn": "703672459", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672468", "d": null}
 {"acn": "703672477", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672486", "d": null}
 {"acn": "703672495", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672502", "d": null}
 {"acn": "703672511", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672520", "d": null}
 {"acn": "703672539", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672548", "d": null}
 {"acn": "703672557", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672566", "d": null}
 {"acn": "703672575", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672584", "d": null}
 {"acn": "703672593", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672600", "d": null}
 {"acn": "703672619", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672628", "d": null}
 {"acn": "703672637", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672646", "d": null}
 {"acn": "703672655", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672664", "d": null}
 {"acn": "703672673", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672682", "d": null}
 {"acn": "703672691", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672708", "d": null}
 {"acn": "703672717", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672726", "d": null}
 {"acn": "703672735", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672744", "d": null}
 {"acn": "703672753", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672762", "d": null}
 {"acn": "703672771", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672780", "d": null}
 {"acn": "703672799", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672806", "d": null}
 {"acn": "703672815", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672824", "d": null}
 {"acn": "703672833", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672842", "d": null}
 {"acn": "703672851", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672860", "d": null}
 {"acn": "703672879", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672888", "d": null}
 {"acn": "703672897", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672904", "d": null}
 {"acn": "703672913", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672922", "d": null}
 {"acn": "703672931", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672940", "d": null}
 {"acn": "703672959", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672968", "d": null}
 {"acn": "703672977", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703672986", "d": null}
 {"acn": "703672995", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673009", "d": null}
 {"acn": "703673018", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673027", "d": null}
 {"acn": "703673036", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673045", "d": null}
 {"acn": "703673054", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673063", "d": null}
 {"acn": "703673072", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673081", "d": null}
 {"acn": "703673090", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673107", "d": null}
 {"acn": "703673116", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673125", "d": null}
 {"acn": "703673134", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673143", "d": null}
 {"acn": "703673152", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673161", "d": null}
 {"acn": "703673170", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673189", "d": null}
 {"acn": "703673198", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673205", "d": null}
 {"acn": "703673214", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673223", "d": null}
 {"acn": "703673232", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673241", "d": null}
 {"acn": "703673250", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673269", "d": null}
 {"acn": "703673278", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673287", "d": null}
 {"acn": "703673296", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673303", "d": null}
 {"acn": "703673312", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673321", "d": null}
 {"acn": "703673330", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673349", "d": null}
 {"acn": "703673358", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673367", "d": null}
 {"acn": "703673376", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673385", "d": null}
 {"acn": "703673394", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673401", "d": null}
 {"acn": "703673410", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673429", "d": null}
 {"acn": "703673438", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673447", "d": null}
 {"acn": "703673456", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673465", "d": null}
 {"acn": "703673474", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673483", "d": null}
 {"acn": "703673492", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673509", "d": null}
 {"acn": "703673518", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673527", "d": null}
 {"acn": "703673536", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673545", "d": null}
 {"acn": "703673554", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673563", "d": null}
 {"acn": "703673572", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673581", "d": null}
 {"acn": "703673590", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673607", "d": null}
 {"acn": "703673616", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673625", "d": null}
 {"acn": "703673634", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673643", "d": null}
 {"acn": "703673652", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673661", "d": null}
 {"acn": "703673670", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673689", "d": null}
 {"acn": "703673698", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673705", "d": null}
 {"acn": "703673714", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673723", "d": null}
 {"acn": "703673732", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673741", "d": null}
 {"acn": "703673750", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673769", "d": null}
 {"acn": "703673778", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673787", "d": null}
 {"acn": "703673796", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673803", "d": null}
 {"acn": "703673812", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673821", "d": null}
 {"acn": "703673830", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673849", "d": null}
 {"acn": "703673858", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673867", "d": null}
 {"acn": "703673876", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673885", "d": null}
 {"acn": "703673894", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673901", "d": null}
 {"acn": "703673910", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673929", "d": null}
 {"acn": "703673938", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673947", "d": null}
 {"acn": "703673956", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673965", "d": null}
 {"acn": "703673974", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703673983", "d": null}
 {"acn": "703673992", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674006", "d": null}
 {"acn": "703674015", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674024", "d": null}
 {"acn": "703674033", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674042", "d": null}
 {"acn": "703674051", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674060", "d": null}
 {"acn": "703674079", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674088", "d": null}
 {"acn": "703674097", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674104", "d": null}
 {"acn": "703674113", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674122", "d": null}
 {"acn": "703674131", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674140", "d": null}
 {"acn": "703674159", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674168", "d": null}
 {"acn": "703674177", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674186", "d": null}
 {"acn": "703674195", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674202", "d": null}
 {"acn": "703674211", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674220", "d": null}
 {"acn": "703674239", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674248", "d": null}
 {"acn": "703674257", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674266", "d": null}
 {"acn": "703674275", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674284", "d": null}
 {"acn": "703674293", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674300", "d": null}
 {"acn": "703674319", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674328", "d": null}
 {"acn": "703674337", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674346", "d": null}
 {"acn": "703674355", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674364", "d": null}
 {"acn": "703674373", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674382", "d": null}
 {"acn": "703674391", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674408", "d": null}
 {"acn": "703674417", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674426", "d": null}
 {"acn": "703674435", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674444", "d": null}
 {"acn": "703674453", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674462", "d": null}
 {"acn": "703674471", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674480", "d": null}
 {"acn": "703674499", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674506", "d": null}
 {"acn": "703674515", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674524", "d": null}
 {"acn": "703674533", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674542", "d": null}
 {"acn": "703674551", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674560", "d": null}
 {"acn": "703674579", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674588", "d": null}
 {"acn": "703674597", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674604", "d": null}
 {"acn": "703674613", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674622", "d": null}
 {"acn": "703674631", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674640", "d": null}
 {"acn": "703674659", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674668", "d": null}
 {"acn": "703674677", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674686", "d": null}
 {"acn": "703674695", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674702", "d": null}
 {"acn": "703674711", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674720", "d": null}
 {"acn": "703674739", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674748", "d": null}
 {"acn": "703674757", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674766", "d": null}
 {"acn": "703674775", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674784", "d": null}
 {"acn": "703674793", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674800", "d": null}
 {"acn": "703674819", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674828", "d": null}
 {"acn": "703674837", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674846", "d": null}
 {"acn": "703674855", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674864", "d": null}
 {"acn": "703674873", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674882", "d": null}
 {"acn": "703674891", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674908", "d": null}
 {"acn": "703674917", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674926", "d": null}
 {"acn": "703674935", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674944", "d": null}
 {"acn": "703674953", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674962", "d": null}
 {"acn": "703674971", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703674980", "d": null}
 {"acn": "703674999", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675003", "d": null}
 {"acn": "703675012", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675021", "d": null}
 {"acn": "703675030", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675049", "d": null}
 {"acn": "703675058", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675067", "d": null}
 {"acn": "703675076", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675085", "d": null}
 {"acn": "703675094", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675101", "d": null}
 {"acn": "703675110", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675129", "d": null}
 {"acn": "703675138", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675147", "d": null}
 {"acn": "703675156", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675165", "d": null}
 {"acn": "703675174", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675183", "d": null}
 {"acn": "703675192", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675209", "d": null}
 {"acn": "703675218", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675227", "d": null}
 {"acn": "703675236", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675245", "d": null}
 {"acn": "703675254", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675263", "d": null}
 {"acn": "703675272", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675281", "d": null}
 {"acn": "703675290", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675307", "d": null}
 {"acn": "703675316", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675325", "d": null}
 {"acn": "703675334", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675343", "d": null}
 {"acn": "703675352", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675361", "d": null}
 {"acn": "703675370", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675389", "d": null}
 {"acn": "703675398", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675405", "d": null}
 {"acn": "703675414", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675423", "d": null}
 {"acn": "703675432", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675441", "d": null}
 {"acn": "703675450", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675469", "d": null}
 {"acn": "703675478", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675487", "d": null}
 {"acn": "703675496", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675503", "d": null}
 {"acn": "703675512", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
+{"acn": "703675521", "d": null}
 {"acn": "703675530", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
 {"acn": "703675558", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
 {"acn": "703675576", "d": {"warnings": "ASIC is not responding. Error code 1001."}}
