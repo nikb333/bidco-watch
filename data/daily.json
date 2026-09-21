@@ -1,7 +1,7 @@
 {
  "run": {
-  "finished_utc": "2026-09-20T12:28:28+00:00",
-  "elapsed_min": 335.0,
+  "finished_utc": "2026-09-20T19:31:36+00:00",
+  "elapsed_min": 335.1,
   "status": "ok",
   "error": "",
   "frontier_base": 70370953,
@@ -9,14 +9,14 @@
    "703589548",
    "703709531"
   ],
-  "slots_swept": 9901,
-  "slots_queued": 22194,
-  "slots_left": 12293,
-  "gaps_queued": 20000,
-  "recheck_queued": 0,
+  "slots_swept": 10023,
+  "slots_queued": 15793,
+  "slots_left": 5770,
+  "gaps_queued": 12293,
+  "recheck_queued": 3500,
   "companies": 0,
   "trailing_slots": 20000,
-  "slots_errored": 0,
+  "slots_errored": 3,
   "ledger_new": 0,
   "ledger_waiting": 18,
   "ledger_in_register": 20,
@@ -24,12 +24,12 @@
    "from_acn": "702315991",
    "to_acn": "703709531",
    "slots": 139355,
-   "checked": 28264,
-   "remaining": 111091,
+   "checked": 38287,
+   "remaining": 101068,
    "companies": 0,
    "register_known": true,
    "register_to_acn": "702315991",
-   "slots_per_day": 15166,
+   "slots_per_day": 14367,
    "rate_per_min": 48,
    "run_minutes": 335,
    "zones": [
@@ -53,9 +53,9 @@
      "from_acn": "703389548",
      "to_acn": "703589539",
      "slots": 20000,
-     "checked": 7707,
-     "remaining": 12293,
-     "days": 1.3,
+     "checked": 17730,
+     "remaining": 2270,
+     "days": 1.4,
      "covered_by_register": 0,
      "companies": 0
     },
@@ -68,7 +68,7 @@
      "slots": 107355,
      "checked": 8557,
      "remaining": 98798,
-     "days": 7.1,
+     "days": 7.5,
      "covered_by_register": 1,
      "companies": 0
     }
@@ -91,7 +91,7 @@
      "from_acn": "703389548",
      "to_acn": "703589539",
      "total": 20000,
-     "outstanding": 12293,
+     "outstanding": 2270,
      "why": "Slots inside the trailing window that no run has ever queried - what a run that ran out of clock leaves behind. Nothing has seen these, so they outrank re-checks."
     },
     {
@@ -100,12 +100,12 @@
      "label": "Second look at empty slots",
      "from_acn": "702859532",
      "to_acn": "703509531",
-     "total": 3500,
-     "outstanding": 3500,
+     "total": 7001,
+     "outstanding": 7001,
      "bands": [
       {
        "band": "20k-27k back",
-       "outstanding": 3500,
+       "outstanding": 7001,
        "from_acn": "703439534",
        "to_acn": "703509531"
       },
@@ -197,14 +197,14 @@
     {
      "from": "703361077",
      "to": "703477187",
-     "checked": 4383,
+     "checked": 8765,
      "slots": 11612,
      "zone": "settled"
     },
     {
      "from": "703477196",
      "to": "703593300",
-     "checked": 3701,
+     "checked": 9342,
      "slots": 11612,
      "zone": "catchup"
     },
