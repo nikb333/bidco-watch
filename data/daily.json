@@ -1,7 +1,7 @@
 {
  "run": {
-  "finished_utc": "2026-09-20T19:31:36+00:00",
-  "elapsed_min": 335.1,
+  "finished_utc": "2026-09-21T19:33:27+00:00",
+  "elapsed_min": 309.6,
   "status": "ok",
   "error": "",
   "frontier_base": 70370953,
@@ -9,27 +9,27 @@
    "703589548",
    "703709531"
   ],
-  "slots_swept": 10023,
-  "slots_queued": 15793,
-  "slots_left": 5770,
-  "gaps_queued": 12293,
-  "recheck_queued": 3500,
+  "slots_swept": 9271,
+  "slots_queued": 9271,
+  "slots_left": 0,
+  "gaps_queued": 2270,
+  "recheck_queued": 7001,
   "companies": 0,
   "trailing_slots": 20000,
-  "slots_errored": 3,
+  "slots_errored": 0,
   "ledger_new": 0,
-  "ledger_waiting": 18,
-  "ledger_in_register": 20,
+  "ledger_waiting": 0,
+  "ledger_in_register": 38,
   "coverage": {
-   "from_acn": "702315991",
+   "from_acn": "702528603",
    "to_acn": "703709531",
-   "slots": 139355,
-   "checked": 38287,
-   "remaining": 101068,
+   "slots": 118094,
+   "checked": 40557,
+   "remaining": 77537,
    "companies": 0,
    "register_known": true,
-   "register_to_acn": "702315991",
-   "slots_per_day": 14367,
+   "register_to_acn": "702528603",
+   "slots_per_day": 13960,
    "rate_per_min": 48,
    "run_minutes": 335,
    "zones": [
@@ -42,7 +42,7 @@
      "slots": 12000,
      "checked": 12000,
      "remaining": 0,
-     "days": 0.8,
+     "days": 0.9,
      "covered_by_register": 0,
      "companies": 0
     },
@@ -53,8 +53,8 @@
      "from_acn": "703389548",
      "to_acn": "703589539",
      "slots": 20000,
-     "checked": 17730,
-     "remaining": 2270,
+     "checked": 20000,
+     "remaining": 0,
      "days": 1.4,
      "covered_by_register": 0,
      "companies": 0
@@ -63,12 +63,12 @@
      "key": "settled",
      "label": "Handed over to the weekly register",
      "why": "Older than the rolling back-fill window, so the daily sweep no longer queues them - and it does not need to: the weekly ASIC register already lists this stretch in full. Unchecked slots here are not a gap in coverage.",
-     "from_acn": "702315991",
+     "from_acn": "702528603",
      "to_acn": "703389539",
-     "slots": 107355,
+     "slots": 86094,
      "checked": 8557,
-     "remaining": 98798,
-     "days": 7.5,
+     "remaining": 77537,
+     "days": 6.2,
      "covered_by_register": 1,
      "companies": 0
     }
@@ -91,7 +91,7 @@
      "from_acn": "703389548",
      "to_acn": "703589539",
      "total": 20000,
-     "outstanding": 2270,
+     "outstanding": 0,
      "why": "Slots inside the trailing window that no run has ever queried - what a run that ran out of clock leaves behind. Nothing has seen these, so they outrank re-checks."
     },
     {
@@ -100,12 +100,12 @@
      "label": "Second look at empty slots",
      "from_acn": "702859532",
      "to_acn": "703509531",
-     "total": 7001,
-     "outstanding": 7001,
+     "total": 0,
+     "outstanding": 0,
      "bands": [
       {
        "band": "20k-27k back",
-       "outstanding": 7001,
+       "outstanding": 0,
        "from_acn": "703439534",
        "to_acn": "703509531"
       },
@@ -132,285 +132,93 @@
    ],
    "buckets": [
     {
-     "from": "702315991",
-     "to": "702432102",
+     "from": "702528603",
+     "to": "702627003",
      "checked": 0,
-     "slots": 11612,
+     "slots": 9841,
      "zone": "settled"
     },
     {
-     "from": "702432111",
-     "to": "702548221",
+     "from": "702627012",
+     "to": "702725415",
      "checked": 0,
-     "slots": 11612,
+     "slots": 9841,
      "zone": "settled"
     },
     {
-     "from": "702548230",
-     "to": "702664346",
+     "from": "702725424",
+     "to": "702823827",
      "checked": 0,
-     "slots": 11612,
+     "slots": 9841,
      "zone": "settled"
     },
     {
-     "from": "702664355",
-     "to": "702780461",
+     "from": "702823836",
+     "to": "702922236",
      "checked": 0,
-     "slots": 11612,
+     "slots": 9841,
      "zone": "settled"
     },
     {
-     "from": "702780470",
-     "to": "702896580",
+     "from": "702922245",
+     "to": "703020642",
+     "checked": 3109,
+     "slots": 9841,
+     "zone": "settled"
+    },
+    {
+     "from": "703020651",
+     "to": "703119055",
+     "checked": 5448,
+     "slots": 9841,
+     "zone": "settled"
+    },
+    {
+     "from": "703119064",
+     "to": "703217467",
      "checked": 0,
-     "slots": 11612,
+     "slots": 9841,
      "zone": "settled"
     },
     {
-     "from": "702896599",
-     "to": "703012702",
-     "checked": 2315,
-     "slots": 11612,
-     "zone": "settled"
-    },
-    {
-     "from": "703012711",
-     "to": "703128821",
-     "checked": 6242,
-     "slots": 11612,
-     "zone": "settled"
-    },
-    {
-     "from": "703128830",
-     "to": "703244946",
+     "from": "703217476",
+     "to": "703315879",
      "checked": 0,
-     "slots": 11612,
+     "slots": 9841,
      "zone": "settled"
     },
     {
-     "from": "703244955",
-     "to": "703361068",
-     "checked": 0,
-     "slots": 11612,
+     "from": "703315888",
+     "to": "703414288",
+     "checked": 2475,
+     "slots": 9841,
      "zone": "settled"
     },
     {
-     "from": "703361077",
-     "to": "703477187",
-     "checked": 8765,
-     "slots": 11612,
-     "zone": "settled"
-    },
-    {
-     "from": "703477196",
-     "to": "703593300",
-     "checked": 9342,
-     "slots": 11612,
+     "from": "703414297",
+     "to": "703512690",
+     "checked": 9841,
+     "slots": 9841,
      "zone": "catchup"
     },
     {
-     "from": "703593319",
+     "from": "703512707",
+     "to": "703611107",
+     "checked": 9841,
+     "slots": 9841,
+     "zone": "catchup"
+    },
+    {
+     "from": "703611116",
      "to": "703709531",
-     "checked": 11623,
-     "slots": 11623,
+     "checked": 9843,
+     "slots": 9843,
      "zone": "new"
     }
    ]
   }
  },
- "stacks": [
-  {
-   "stem": "SANDROCK I",
-   "first": "2026-09-17",
-   "has_bidco": true,
-   "finco": false,
-   "phased": false,
-   "members": [
-    {
-     "acn": "702456568",
-     "name": "SANDROCK I HOLDCO PTY LTD",
-     "date": "2026-09-17",
-     "role": "HOLDCO",
-     "suburb": "MELBOURNE",
-     "state": "VIC",
-     "via": "API",
-     "first_seen": "2026-09-17T13:34:34+00:00"
-    },
-    {
-     "acn": "702459390",
-     "name": "SANDROCK I BIDCO PTY LTD",
-     "date": "2026-09-17",
-     "role": "BIDCO",
-     "suburb": "MELBOURNE",
-     "state": "VIC",
-     "via": "API",
-     "first_seen": "2026-09-17T13:34:34+00:00"
-    }
-   ]
-  }
- ],
- "singles": [
-  {
-   "acn": "702498495",
-   "name": "TIDE BIDCO PTY LTD",
-   "date": "2026-09-18",
-   "role": "BIDCO",
-   "suburb": "ELANORA",
-   "state": "QLD",
-   "via": "API",
-   "first_seen": "2026-09-18T11:26:24+00:00"
-  },
-  {
-   "acn": "702459514",
-   "name": "SANDROCK II BIDCO A PTY LTD",
-   "date": "2026-09-17",
-   "role": "BIDCO",
-   "suburb": "MELBOURNE",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-09-17T13:34:34+00:00"
-  },
-  {
-   "acn": "702459765",
-   "name": "SANDROCK II BIDCO B PTY LTD",
-   "date": "2026-09-17",
-   "role": "BIDCO",
-   "suburb": "MELBOURNE",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-09-17T13:34:34+00:00"
-  },
-  {
-   "acn": "702328550",
-   "name": "EKANITE AUS BIDCO PTY LIMITED",
-   "date": "2026-09-14",
-   "role": "BIDCO",
-   "suburb": "SYDNEY",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-09-14T13:02:54+00:00"
-  },
-  {
-   "acn": "702342318",
-   "name": "TORQUE BIDCO PTY LTD",
-   "date": "2026-09-14",
-   "role": "BIDCO",
-   "suburb": "SYDNEY",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-09-14T13:02:54+00:00"
-  }
- ],
- "role_only": [
-  {
-   "acn": "702486673",
-   "name": "MAESTRO HOLDCO PTY LTD",
-   "date": "2026-09-18",
-   "role": "HOLDCO",
-   "suburb": "SYDNEY",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-09-18T11:26:24+00:00"
-  },
-  {
-   "acn": "702505235",
-   "name": "WEST MOKOAN HOLDCO PTY LTD",
-   "date": "2026-09-18",
-   "role": "HOLDCO",
-   "suburb": "SYDNEY",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-09-18T11:26:24+00:00"
-  },
-  {
-   "acn": "702444853",
-   "name": "TRIMONT ZAUNER HOLDCO PTY LTD",
-   "date": "2026-09-17",
-   "role": "HOLDCO",
-   "suburb": "ELANORA",
-   "state": "QLD",
-   "via": "API",
-   "first_seen": "2026-09-17T13:34:34+00:00"
-  },
-  {
-   "acn": "702456906",
-   "name": "SANDROCK II HOLDCO PTY LTD",
-   "date": "2026-09-17",
-   "role": "HOLDCO",
-   "suburb": "MELBOURNE",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-09-17T13:34:34+00:00"
-  },
-  {
-   "acn": "702461452",
-   "name": "BORAMBOLA HYBRID HOLDCO PTY LIMITED",
-   "date": "2026-09-17",
-   "role": "HOLDCO",
-   "suburb": "BRISBANE CITY",
-   "state": "QLD",
-   "via": "API",
-   "first_seen": "2026-09-17T13:34:34+00:00"
-  },
-  {
-   "acn": "702468559",
-   "name": "GOYDER NORTH WIND FARM 2 HOLDCO PTY LTD",
-   "date": "2026-09-17",
-   "role": "HOLDCO",
-   "suburb": "SYDNEY",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-09-17T13:34:34+00:00"
-  },
-  {
-   "acn": "702424020",
-   "name": "AIROBEN HOLDCO PTY LTD",
-   "date": "2026-09-16",
-   "role": "HOLDCO",
-   "suburb": "NORMAN PARK",
-   "state": "QLD",
-   "via": "API",
-   "first_seen": "2026-09-16T09:23:45+00:00"
-  },
-  {
-   "acn": "702384192",
-   "name": "ALBURY HOLDCO PTY LTD",
-   "date": "2026-09-15",
-   "role": "HOLDCO",
-   "suburb": "SYDNEY",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-09-16T09:23:45+00:00"
-  },
-  {
-   "acn": "702385260",
-   "name": "TRS GIRDHAR HOLDCO PTY LTD",
-   "date": "2026-09-15",
-   "role": "HOLDCO",
-   "suburb": "MOONEE PONDS",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-09-16T09:23:45+00:00"
-  },
-  {
-   "acn": "702385279",
-   "name": "PIERRE SLEIMAN HOLDCO PTY LTD",
-   "date": "2026-09-15",
-   "role": "HOLDCO",
-   "suburb": "STRATHFIELD",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-09-16T09:23:45+00:00"
-  },
-  {
-   "acn": "702386829",
-   "name": "APAVE TOPCO AUSTRALIA PTY LTD",
-   "date": "2026-09-15",
-   "role": "TOPCO",
-   "suburb": "RANDWICK",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-09-16T09:23:45+00:00"
-  }
- ]
+ "stacks": [],
+ "singles": [],
+ "role_only": []
 }
