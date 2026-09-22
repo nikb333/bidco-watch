@@ -1,8 +1,8 @@
 {
  "last_frontier_base": 70370953,
  "last_run": {
-  "finished_utc": "2026-09-21T19:33:27+00:00",
-  "elapsed_min": 309.6,
+  "finished_utc": "2026-09-22T00:43:19+00:00",
+  "elapsed_min": 82.5,
   "status": "ok",
   "error": "",
   "frontier_base": 70370953,
@@ -10,11 +10,11 @@
    "703589548",
    "703709531"
   ],
-  "slots_swept": 9271,
-  "slots_queued": 9271,
+  "slots_swept": 2461,
+  "slots_queued": 2461,
   "slots_left": 0,
-  "gaps_queued": 2270,
-  "recheck_queued": 7001,
+  "gaps_queued": 0,
+  "recheck_queued": 2461,
   "companies": 0,
   "trailing_slots": 20000,
   "slots_errored": 0,
@@ -2504,8 +2504,8 @@
    }
   },
   {
-   "finished_utc": "2026-09-21T19:33:27+00:00",
-   "elapsed_min": 309.6,
+   "finished_utc": "2026-09-22T00:43:19+00:00",
+   "elapsed_min": 82.5,
    "status": "ok",
    "error": "",
    "frontier_base": 70370953,
@@ -2513,11 +2513,11 @@
     "703589548",
     "703709531"
    ],
-   "slots_swept": 9271,
-   "slots_queued": 9271,
+   "slots_swept": 2461,
+   "slots_queued": 2461,
    "slots_left": 0,
-   "gaps_queued": 2270,
-   "recheck_queued": 7001,
+   "gaps_queued": 0,
+   "recheck_queued": 2461,
    "companies": 0,
    "trailing_slots": 20000,
    "slots_errored": 0,
