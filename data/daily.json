@@ -1,6 +1,6 @@
 {
  "run": {
-  "finished_utc": "2026-09-22T21:26:11+00:00",
+  "finished_utc": "2026-09-23T20:28:51+00:00",
   "elapsed_min": 2.3,
   "status": "ok",
   "error": "",
@@ -29,7 +29,7 @@
    "companies": 0,
    "register_known": true,
    "register_to_acn": "702528603",
-   "slots_per_day": 12498,
+   "slots_per_day": 11633,
    "rate_per_min": 48,
    "run_minutes": 335,
    "zones": [
@@ -42,7 +42,7 @@
      "slots": 20001,
      "checked": 20001,
      "remaining": 0,
-     "days": 1.6,
+     "days": 1.7,
      "covered_by_register": 0,
      "companies": 0
     },
@@ -55,7 +55,7 @@
      "slots": 98093,
      "checked": 20556,
      "remaining": 77537,
-     "days": 7.8,
+     "days": 8.4,
      "covered_by_register": 1,
      "companies": 0
     }
