@@ -277,8 +277,14 @@ def lookup(acn: str, tries: int = 4):
         try:
             with urllib.request.urlopen(req, timeout=30) as r:
                 d = json.loads(r.read().decode("utf-8", "replace"))
-            _STREAK[0] = 0
-            return None if "errors" in d else d
+                        _STREAK[0] = 0
+            # Whitelist, never blacklist. This endpoint answers HTTP 200 for an
+            # empty slot with {"errors": "... does not exist."} - but that is only
+            # ONE shape a non-company answer can take. Treating "no 'errors' key"
+            # as proof of a company is what let the climb reach its ceiling on
+            # 19 September: every probe above the real frontier read as occupied.
+            # A real record always carries a name, so require one.
+            return d if isinstance(d, dict) and d.get("name") else None
         except urllib.error.HTTPError as e:
             if e.code == 429:
                 time.sleep(20)
@@ -614,8 +620,27 @@ def main() -> int:
     # Anchor on the highest slot we have actually resolved, not just on the
     # stored high-water mark: that mark only advances after an untruncated run,
     # so it lags the checkpoint by thousands of slots.
-    resolved = [base_of(a) for a, d in seen.items() if d]
-    anchor = max([state.get("last_frontier_base") or 0] + ([max(resolved)] if resolved else []))
+        resolved = [base_of(a) for a, d in seen.items() if d]
+    ground = max(resolved) if resolved else 0
+    stored = int(state.get("last_frontier_base") or 0)
+    forced = int(os.environ.get("FRONTIER_ANCHOR") or 0)
+
+    if forced:
+        anchor = forced
+        print(f"anchor: forced to {anchor:,} by FRONTIER_ANCHOR")
+    elif ground and stored - ground > 5_000:
+        # The stored high-water mark is a hint, never ground truth. Taking
+        # max(stored, ground) made an overshoot permanent, because the climb's
+        # floor could then only ever rise. The 19 September leap to 70,370,954 -
+        # about 120,000 slots above real issuance - froze the sweep for six days
+        # while every run finished green. Resolved ground is the only thing we
+        # have actually verified, so when the two disagree badly, believe it.
+        anchor = ground
+        print(f"::warning::stored frontier {stored:,} is {stored - ground:,} above "
+              f"the highest resolved company {ground:,} - treating it as an "
+              f"overshoot and climbing from resolved ground instead")
+    else:
+        anchor = max(stored, ground)
     # ASIC issues roughly 2,400-4,000 a day. Allow 10,000 a day plus a floor of
     # 60,000 so a long gap between runs still catches up, while a runaway search
     # cannot wander a million slots up the number space.
