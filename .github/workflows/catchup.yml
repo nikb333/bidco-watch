@@ -1,0 +1,166 @@
+name: Catch-up sweep (manual)
+
+# A forward-only sweep, for when the scheduled run has fallen behind.
+#
+# The daily sweep deliberately spends most of its budget behind the frontier:
+# gaps first, then re-checks of slots that came back empty. That re-check pass
+# is not optional in normal operation - ACNs are allocated ahead of use, so a
+# company registered today can carry a number sitting in a slot an earlier run
+# already found empty. Measured over 1 Jul - 6 Sep 2026 that pass caught
+# 11 of 211 role-named vehicles (5.2%), including three complete stacks:
+# TRIDENT, DANONE and PULSE. Turning it off permanently means missing about one
+# stack in twenty, forever.
+#
+# But when the sweep has lost days - a frozen frontier, a vendor outage, a run
+# of dropped schedules - the arithmetic inverts. What matters is reaching today
+# before tomorrow's registrations pile on top. This workflow does that and
+# nothing else, then gets out of the way.
+#
+# Nothing here is scheduled. It runs only when a person presses the button, so
+# it can never quietly become the default.
+#
+# Work skipped here is DEFERRED, NOT LOST: the next scheduled run restores the
+# full 20,000-slot trailing window and its re-check pass sweeps the slots these
+# runs passed over. Run this until caught up, then leave it alone.
+
+on:
+  workflow_dispatch:
+    inputs:
+      forward_slots:
+        description: "Max NEW slots to sweep (default 12000; raise when far behind)"
+        required: false
+        default: "25000"
+      trailing_slots:
+        description: "Trailing window. 200 = effectively forward-only. 20000 = normal."
+        required: false
+        default: "200"
+      frontier_anchor:
+        description: "Force the climb's starting base, e.g. 70250955. Blank = derive it."
+        required: false
+        default: ""
+      budget_min:
+        description: "Minutes of sweeping before it stops and banks (max ~340)"
+        required: false
+        default: "335"
+
+permissions:
+  contents: write
+
+# The SAME group as the scheduled sweep, on purpose. Two sweeps writing the
+# checkpoint at once would interleave their appends and corrupt it, and
+# cancel-in-progress would throw away a run that had banked hours of work. So a
+# catch-up queues behind a scheduled run rather than racing it.
+concurrency:
+  group: sweep
+  cancel-in-progress: false
+
+jobs:
+  catchup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355        # GitHub's hard ceiling for a hosted job is 360
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Say what this run is actually doing
+        run: |
+          echo "forward slots   : ${{ inputs.forward_slots }}"
+          echo "trailing window : ${{ inputs.trailing_slots }}  (20000 is the normal value)"
+          echo "frontier anchor : ${{ inputs.frontier_anchor || '(derived from resolved ground)' }}"
+          echo "budget          : ${{ inputs.budget_min }} min"
+          if [ "${{ inputs.trailing_slots }}" -lt 20000 ]; then
+            echo "::warning::Re-check pass reduced for this run. Slots skipped now are \
+          swept by the next scheduled run, which restores the full 20,000 window."
+          fi
+
+      - name: Let the sweep publish progress as it goes
+        run: |
+          git config user.name  "bidco-watch"
+          git config user.email "actions@github.com"
+          git config pull.rebase true
+
+      - name: Unlock the data store
+        env:
+          SITE_PASSCODE: ${{ secrets.SITE_PASSCODE }}
+        run: python store.py unlock
+
+      - name: Sweep
+        id: sweep
+        continue-on-error: true      # a failed sweep must still publish its failure
+        env:
+          BAPI_KEY:          ${{ secrets.BAPI_KEY }}
+          CONTACT_EMAIL:     ${{ secrets.CONTACT_EMAIL }}
+          MAX_FORWARD_SLOTS: ${{ inputs.forward_slots }}
+          TRAILING_SLOTS:    ${{ inputs.trailing_slots }}
+          BUDGET_MIN:        ${{ inputs.budget_min }}
+          FRONTIER_ANCHOR:   ${{ inputs.frontier_anchor }}
+        run: python sweep.py
+
+      # Read the outcome NOW, while state.json is still plaintext - store.py lock
+      # runs later - and never fail here: the commit below has not happened yet,
+      # so anything that exits non-zero at this point throws away the whole run.
+      - name: Read what the sweep did
+        id: result
+        if: always()
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT" || echo "swept=-1" >> "$GITHUB_OUTPUT"
+          import json
+          r = json.load(open("data/state.json"))["last_run"]
+          print(f"swept={r.get('slots_swept', 0)}")
+          print(f"found={r.get('companies', 0)}")
+          print(f"frontier={r.get('frontier_base', 0)}")
+          PY
+          cat "$GITHUB_OUTPUT"
+
+      - name: Build site
+        env:
+          SITE_PASSCODE: ${{ secrets.SITE_PASSCODE }}
+        run: python build_site.py
+
+      - name: Lock the data store
+        env:
+          SITE_PASSCODE: ${{ secrets.SITE_PASSCODE }}
+        run: python store.py lock
+
+      - name: Commit
+        run: |
+          git add -A data/store.enc docs
+          git diff --staged --quiet || git commit -m "catch-up sweep $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase --autostash || true
+          git push
+
+      # Only now, with the results pushed, is it safe to fail. A green run is not
+      # proof the sweep did anything: a frontier parked above real issuance sweeps
+      # thousands of slots, resolves nothing and finishes successfully. That is
+      # exactly what ran from 19 to 25 September - six days of clean green ticks
+      # over empty number space, because nothing ever checked.
+      - name: Did this run actually find anything?
+        if: steps.sweep.outcome == 'success'
+        run: |
+          SWEPT="${{ steps.result.outputs.swept }}"
+          FOUND="${{ steps.result.outputs.found }}"
+          echo "swept $SWEPT slots, found $FOUND companies, frontier ${{ steps.result.outputs.frontier }}"
+          if [ "$SWEPT" = "-1" ]; then
+            echo "::warning::Could not read data/state.json - skipping the sanity check."
+            exit 0
+          fi
+          if [ "$SWEPT" -eq 0 ]; then
+            echo "::error::Queue was empty - nothing to sweep. If the sweep is behind, the frontier is wrong: check the 'anchor:' line in the Sweep log."
+            exit 1
+          fi
+          if [ "$SWEPT" -gt 500 ] && [ "$FOUND" -eq 0 ]; then
+            echo "::error::Swept $SWEPT slots and resolved ZERO companies. The frontier is almost certainly parked above real issuance. Re-run with frontier_anchor set to the last base that held a company."
+            exit 1
+          fi
+
+      - name: Fail the run if the sweep failed
+        if: steps.sweep.outcome == 'failure'
+        run: |
+          echo "The sweep reported a failure. The site has been rebuilt showing it."
+          exit 1
