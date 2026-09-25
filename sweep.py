@@ -661,7 +661,13 @@ def main() -> int:
         return 1
     print(f"frontier: base {frontier:,}  acn {acn_for(frontier)}")
 
-    last = state.get("last_frontier_base") or (frontier - 5000)
+    # Start the forward window from the SAME corrected anchor the climb used,
+    # not from the raw stored mark. The two differ exactly when the stored mark
+    # is an overshoot - and then range(stored + 1, frontier + 1) is EMPTY, so the
+    # run queues nothing forward. That is what run #2 hit on 25 September: the
+    # climb correctly came down to 70,268,955 while `last` was still 70,370,953,
+    # so a healthy frontier produced a zero-slot forward pass.
+    last = min(anchor, frontier) if anchor else (frontier - 5000)
     forward = [b for b in range(last + 1, frontier + 1)]
     if len(forward) > MAX_FORWARD_SLOTS:
         # Too big to finish: take the most recent chunk and leave a note.
@@ -839,8 +845,18 @@ def main() -> int:
           f"{moved} already in it")
     stacks, bidcos, other = group(waiting)
 
-    # Only advance the high-water mark over ground we actually covered.
-    if not truncated and not err and forward:
+    # Advance - or CORRECT - the mark over ground we actually covered.
+    #
+    # This used to also require `forward` to be non-empty, which deadlocked the
+    # sweep: when the mark was too high the forward pass was empty *because* the
+    # mark was wrong, so the lower correct value could never be written back and
+    # every subsequent run repeated the same empty pass. Self-healing in one
+    # direction only is not self-healing. A cleanly established frontier is
+    # authoritative whether it is above or below what we had stored.
+    if not truncated and not err:
+        prev = state.get("last_frontier_base")
+        if prev != frontier:
+            print(f"frontier mark: {prev} -> {frontier:,}")
         state["last_frontier_base"] = frontier
 
     write_run(state, now, started,
