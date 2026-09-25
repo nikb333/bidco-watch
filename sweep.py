@@ -277,7 +277,7 @@ def lookup(acn: str, tries: int = 4):
         try:
             with urllib.request.urlopen(req, timeout=30) as r:
                 d = json.loads(r.read().decode("utf-8", "replace"))
-                        _STREAK[0] = 0
+            _STREAK[0] = 0
             # Whitelist, never blacklist. This endpoint answers HTTP 200 for an
             # empty slot with {"errors": "... does not exist."} - but that is only
             # ONE shape a non-company answer can take. Treating "no 'errors' key"
@@ -620,7 +620,7 @@ def main() -> int:
     # Anchor on the highest slot we have actually resolved, not just on the
     # stored high-water mark: that mark only advances after an untruncated run,
     # so it lags the checkpoint by thousands of slots.
-        resolved = [base_of(a) for a, d in seen.items() if d]
+    resolved = [base_of(a) for a, d in seen.items() if d]
     ground = max(resolved) if resolved else 0
     stored = int(state.get("last_frontier_base") or 0)
     forced = int(os.environ.get("FRONTIER_ANCHOR") or 0)
