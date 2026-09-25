@@ -492,5 +492,89 @@
   "stem": "WEST MOKOAN",
   "suburb": "SYDNEY",
   "via": "API"
+ },
+ "702575148": {
+  "acn": "702575148",
+  "date": "2026-09-22",
+  "first_seen": "2026-09-25T02:37:04+00:00",
+  "in_register": false,
+  "name": "ROCKSTARS HOLDCO A PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "ROCKSTARS A",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702592523": {
+  "acn": "702592523",
+  "date": "2026-09-22",
+  "first_seen": "2026-09-25T02:37:04+00:00",
+  "in_register": false,
+  "name": "AMBERLIGHT TOPCO PTY LTD",
+  "role": "TOPCO",
+  "state": "QLD",
+  "stem": "AMBERLIGHT",
+  "suburb": "ROBINA",
+  "via": "API"
+ },
+ "702630466": {
+  "acn": "702630466",
+  "date": "2026-09-23",
+  "first_seen": "2026-09-25T02:37:04+00:00",
+  "in_register": false,
+  "name": "JEREMY LE HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "JEREMY LE",
+  "suburb": "PARRAMATTA",
+  "via": "API"
+ },
+ "702648664": {
+  "acn": "702648664",
+  "date": "2026-09-24",
+  "first_seen": "2026-09-25T02:37:04+00:00",
+  "in_register": false,
+  "name": "MOORABOOL HOLDCO 2 PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "MOORABOOL 2",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702685121": {
+  "acn": "702685121",
+  "date": "2026-09-25",
+  "first_seen": "2026-09-25T02:37:04+00:00",
+  "in_register": false,
+  "name": "SH & TM TOPCO PTY LTD",
+  "role": "TOPCO",
+  "state": "QLD",
+  "stem": "SH TM",
+  "suburb": "ROBINA",
+  "via": "API"
+ },
+ "702686468": {
+  "acn": "702686468",
+  "date": "2026-09-25",
+  "first_seen": "2026-09-25T02:37:04+00:00",
+  "in_register": false,
+  "name": "CONCESIONES GOSW HOLDCO 1 PTY LIMITED",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "CONCESIONES GOSW 1",
+  "suburb": "SOUTH MELBOURNE",
+  "via": "API"
+ },
+ "702686646": {
+  "acn": "702686646",
+  "date": "2026-09-25",
+  "first_seen": "2026-09-25T02:37:04+00:00",
+  "in_register": false,
+  "name": "CONCESIONES GOSW HOLDCO 2 PTY LIMITED",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "CONCESIONES GOSW 2",
+  "suburb": "SOUTH MELBOURNE",
+  "via": "API"
  }
 }
