@@ -749,6 +749,15 @@ def main() -> int:
     found_n = sum(1 for v in seen.values() if v and "Company" in (v.get("type") or ""))
     last_save = time.time()
     err = ""
+    # Pace against a DEADLINE, not a fixed sleep. `time.sleep(GAP)` after every
+    # lookup ADDED the interval to the request time instead of containing it: at
+    # a measured 0.69s round-trip on the runner that gives 60/(0.69+1.25) = 31
+    # per minute against an intended 48, so the sweep was throttling itself to
+    # two thirds speed. Sleeping only the remainder holds the rate at exactly
+    # RATE_PER_MIN and never above it, so the vendor's measured ~50/min ceiling
+    # is still respected - this recovers our own intended pace, it does not
+    # raise it.
+    next_at = time.time()
     try:
         for a in queue:
             if STOPPING["flag"]:
@@ -788,7 +797,14 @@ def main() -> int:
                 print(f"  *** {a}  {d['name']}  {d.get('registrationDate','')}")
             if done % 250 == 0:
                 print(f"  {done:,}/{len(queue):,}", flush=True)
-            time.sleep(GAP)
+            # Never burst to catch up after a slow call or a skipped slot:
+            # if we are already behind the deadline, just carry on.
+            next_at += GAP
+            _now = time.time()
+            if next_at < _now:
+                next_at = _now
+            else:
+                time.sleep(next_at - _now)
     except Blocked as e:
         err = str(e)
         print(f"::error::BLOCKED: {e}", file=sys.stderr)
