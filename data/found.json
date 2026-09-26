@@ -493,6 +493,42 @@
   "suburb": "SYDNEY",
   "via": "API"
  },
+ "702550650": {
+  "acn": "702550650",
+  "date": "2026-09-21",
+  "first_seen": "2026-09-26T01:39:30+00:00",
+  "in_register": false,
+  "name": "TRIDENT HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "TRIDENT",
+  "suburb": "MELBOURNE",
+  "via": "API"
+ },
+ "702551559": {
+  "acn": "702551559",
+  "date": "2026-09-21",
+  "first_seen": "2026-09-26T01:39:30+00:00",
+  "in_register": false,
+  "name": "TRIDENT MIDCO PTY LTD",
+  "role": "MIDCO",
+  "state": "VIC",
+  "stem": "TRIDENT",
+  "suburb": "MELBOURNE",
+  "via": "API"
+ },
+ "702553491": {
+  "acn": "702553491",
+  "date": "2026-09-21",
+  "first_seen": "2026-09-26T01:39:30+00:00",
+  "in_register": false,
+  "name": "TRIDENT BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "VIC",
+  "stem": "TRIDENT",
+  "suburb": "MELBOURNE",
+  "via": "API"
+ },
  "702575148": {
   "acn": "702575148",
   "date": "2026-09-22",
@@ -502,6 +538,54 @@
   "role": "HOLDCO",
   "state": "NSW",
   "stem": "ROCKSTARS A",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702576832": {
+  "acn": "702576832",
+  "date": "2026-09-22",
+  "first_seen": "2026-09-26T01:39:30+00:00",
+  "in_register": false,
+  "name": "ROCKSTARS HOLDCO B PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "ROCKSTARS B",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702578194": {
+  "acn": "702578194",
+  "date": "2026-09-22",
+  "first_seen": "2026-09-26T01:39:30+00:00",
+  "in_register": false,
+  "name": "ROCKSTARS MIDCO A PTY LTD",
+  "role": "MIDCO",
+  "state": "NSW",
+  "stem": "ROCKSTARS A",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702580014": {
+  "acn": "702580014",
+  "date": "2026-09-22",
+  "first_seen": "2026-09-26T01:39:30+00:00",
+  "in_register": false,
+  "name": "ROCKSTARS MIDCO B PTY LTD",
+  "role": "MIDCO",
+  "state": "NSW",
+  "stem": "ROCKSTARS B",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702581815": {
+  "acn": "702581815",
+  "date": "2026-09-22",
+  "first_seen": "2026-09-26T01:39:30+00:00",
+  "in_register": false,
+  "name": "ROCKSTARS BIDCO 1 PTY LTD",
+  "role": "BIDCO",
+  "state": "NSW",
+  "stem": "ROCKSTARS 1",
   "suburb": "SYDNEY",
   "via": "API"
  },
@@ -541,6 +625,42 @@
   "suburb": "SYDNEY",
   "via": "API"
  },
+ "702648673": {
+  "acn": "702648673",
+  "date": "2026-09-24",
+  "first_seen": "2026-09-26T01:39:30+00:00",
+  "in_register": false,
+  "name": "MOORABOOL HOLDCO 3 PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "MOORABOOL 3",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702650557": {
+  "acn": "702650557",
+  "date": "2026-09-24",
+  "first_seen": "2026-09-26T01:39:30+00:00",
+  "in_register": false,
+  "name": "CTSAS HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "CTSAS",
+  "suburb": "OATLANDS",
+  "via": "API"
+ },
+ "702658151": {
+  "acn": "702658151",
+  "date": "2026-09-24",
+  "first_seen": "2026-09-26T01:39:30+00:00",
+  "in_register": false,
+  "name": "DYLAN MODINO HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "DYLAN MODINO",
+  "suburb": "PARRAMATTA",
+  "via": "API"
+ },
  "702685121": {
   "acn": "702685121",
   "date": "2026-09-25",
@@ -574,6 +694,30 @@
   "role": "HOLDCO",
   "state": "VIC",
   "stem": "CONCESIONES GOSW 2",
+  "suburb": "SOUTH MELBOURNE",
+  "via": "API"
+ },
+ "702694353": {
+  "acn": "702694353",
+  "date": "2026-09-25",
+  "first_seen": "2026-09-26T01:39:30+00:00",
+  "in_register": false,
+  "name": "CONCESIONES GOSW NO HOLDCO 1 PTY LIMITED",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "CONCESIONES GOSW",
+  "suburb": "SOUTH MELBOURNE",
+  "via": "API"
+ },
+ "702694399": {
+  "acn": "702694399",
+  "date": "2026-09-25",
+  "first_seen": "2026-09-26T01:39:30+00:00",
+  "in_register": false,
+  "name": "CONCESIONES GOSW NO HOLDCO 2 PTY LIMITED",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "CONCESIONES GOSW",
   "suburb": "SOUTH MELBOURNE",
   "via": "API"
  }
