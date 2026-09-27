@@ -132,6 +132,9 @@ jobs:
           named=sum(1 for a in common if oa[a][1] and '"name"' in oa[a][1])
           empt =sum(1 for a in common if oa[a][1] and '"errors"' in oa[a][1])
           ma=statistics.median(list(la.values())); mb=statistics.median(list(lb.values()))
+          L=[]
+          def print(*a,**k):
+              import builtins; s=" ".join(str(x) for x in a); L.append(s); builtins.print(s,**k)
           print("="*58)
           print(f"CORRECTNESS  compared {len(common)}  identical {len(common)-len(mis)}  MISMATCH {len(mis)} {mis[:4]}")
           print(f"             {named} named, {empt} empty-slot errors in the sample")
@@ -147,5 +150,8 @@ jobs:
           print(f"  keep-alive {60/max(mb,GAPS):.0f}/min" + ("  (latency-bound)" if mb>GAPS else "  (pacer-bound)"))
           print("="*58)
           print("VERDICT:", "SAFE TO WIRE IN" if (not mis and ok and not (ta+tb)) else "DO NOT WIRE IN")
+          p=os.environ.get("GITHUB_STEP_SUMMARY")
+          if p:
+              with open(p,"a") as f: f.write("```text\n"+"\n".join(L)+"\n```\n")
           sys.exit(0 if (not mis and ok and not (ta+tb)) else 1)
           PY
