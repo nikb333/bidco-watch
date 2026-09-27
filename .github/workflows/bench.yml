@@ -1,0 +1,151 @@
+name: Lookup transport benchmark (throwaway)
+
+# Measures what the ACN lookup actually costs FROM A RUNNER, which is the only
+# place the number matters: the sweep's pacing interval is 1.25s, so connection
+# reuse changes nothing unless per-call latency exceeds that - and whether it
+# does depends on where GitHub happens to place the VM relative to an
+# Australian API. Run #3 implied 0.69s/call, run #4 implied 1.88s, same code.
+#
+# Correctness is checked before speed: a reused connection must return
+# byte-identical JSON, including the HTTP-200 {"errors": ...} body that an empty
+# slot returns, and must recover silently when the socket is closed under it.
+#
+# Deliberately NOT in the `sweep` concurrency group - it must not queue behind a
+# five-hour catch-up run. Instead keep `rate` low enough that this plus the live
+# sweep stays under the vendor's ~50/min ceiling. It measures per-call latency,
+# not throughput, so a slow pace does not distort the result.
+#
+# Delete this workflow once the question is settled.
+
+on:
+  workflow_dispatch:
+    inputs:
+      rate:
+        description: "Calls/min for the benchmark. Keep low while a sweep is running."
+        required: false
+        default: "10"
+      n:
+        description: "ACNs per strategy"
+        required: false
+        default: "24"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bench
+  cancel-in-progress: true
+
+jobs:
+  bench:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Where is this runner?
+        run: |
+          echo "region hint: ${AZURE_REGION:-unset}"
+          python3 - <<'PY'
+          import socket, time
+          h = "businessapi.com.au"
+          for _ in range(3):
+              s = time.time()
+              try:
+                  socket.create_connection((h, 443), timeout=10).close()
+                  print(f"tcp connect to {h}: {time.time()-s:.3f}s")
+              except Exception as e:
+                  print("connect failed:", e)
+          PY
+
+      - name: Benchmark
+        env:
+          BAPI_KEY: ${{ secrets.BAPI_KEY }}
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
+          RATE: ${{ inputs.rate }}
+          N: ${{ inputs.n }}
+        run: |
+          python3 - <<'PY'
+          import http.client, os, ssl, statistics, sys, time, urllib.request
+          KEY=os.environ["BAPI_KEY"]; HOST="businessapi.com.au"; BASE="/api/v2/lookup/acn/"
+          UA="bidco-watch-bench/1.0 (+%s)"%os.environ.get("CONTACT_EMAIL","nik@withbureau.com")
+          H={"Authorization":"Bearer "+KEY,"Accept":"application/json","User-Agent":UA}
+          N=int(os.environ.get("N","24")); GAP=60.0/int(os.environ.get("RATE","10"))
+          W=[8,7,6,5,4,3,2,1]
+          def acn(b):
+              d=[int(c) for c in f"{b:08d}"]
+              return f"{b:08d}{(10-(sum(w*x for w,x in zip(W,d))%10))%10}"
+          acns=[]
+          for b in (70_245_000,70_262_000,70_265_000):
+              acns += [acn(b+k) for k in range(N//4)]
+          for b in (70_300_000,70_340_000):
+              acns += [acn(b+k) for k in range(N//8)]
+          acns += ["702459390","702456568"]
+          seen=set(); acns=[a for a in acns if not (a in seen or seen.add(a))][:N]
+
+          def A(a):
+              r=urllib.request.urlopen(urllib.request.Request("https://"+HOST+BASE+a,headers=H),timeout=30)
+              return r.status, r.read().decode("utf-8","replace")
+          class K:
+              def __init__(self): self.c=None; self.re=0
+              def f(self,a):
+                  for att in (1,2):
+                      try:
+                          if self.c is None:
+                              self.c=http.client.HTTPSConnection(HOST,timeout=30,context=ssl.create_default_context())
+                              if att==2: self.re+=1
+                          self.c.request("GET",BASE+a,headers={**H,"Connection":"keep-alive"})
+                          r=self.c.getresponse(); return r.status, r.read().decode("utf-8","replace")
+                      except Exception:
+                          try: self.c.close()
+                          except Exception: pass
+                          self.c=None
+                          if att==2: raise
+          def run(fn,label):
+              lat={}; out={}; t429=0; nxt=time.time()
+              for a in acns:
+                  s=time.time()
+                  try:
+                      st,body=fn(a); out[a]=(st,body)
+                      if st==429: t429+=1
+                  except Exception as e:
+                      out[a]=(type(e).__name__,None)
+                      if "429" in str(e): t429+=1
+                  lat[a]=time.time()-s
+                  nxt+=GAP; now=time.time()
+                  if nxt<now: nxt=now
+                  else: time.sleep(nxt-now)
+                  if t429:
+                      print(f"  !! {label}: HTTP 429 - stopping"); break
+              return lat,out,t429
+          la,oa,ta = run(A,"A")
+          k=K(); lb,ob,tb = run(k.f,"B")
+          ok=False
+          try:
+              b1=k.f(acns[1]); k.c.close(); b2=k.f(acns[1]); ok=(b1==b2)
+          except Exception as e:
+              print("stale recovery FAILED:",type(e).__name__,e)
+          common=[a for a in acns if a in oa and a in ob]
+          mis=[a for a in common if oa[a]!=ob[a]]
+          named=sum(1 for a in common if oa[a][1] and '"name"' in oa[a][1])
+          empt =sum(1 for a in common if oa[a][1] and '"errors"' in oa[a][1])
+          ma=statistics.median(list(la.values())); mb=statistics.median(list(lb.values()))
+          print("="*58)
+          print(f"CORRECTNESS  compared {len(common)}  identical {len(common)-len(mis)}  MISMATCH {len(mis)} {mis[:4]}")
+          print(f"             {named} named, {empt} empty-slot errors in the sample")
+          print(f"ROBUSTNESS   stale recovery ok={ok}  reconnects={k.re}")
+          print(f"SPEED        A new-conn   median {ma:.3f}s   p90 {sorted(la.values())[int(len(la)*0.9)-1]:.3f}s")
+          print(f"             B keep-alive median {mb:.3f}s   p90 {sorted(lb.values())[int(len(lb)*0.9)-1]:.3f}s")
+          print(f"             handshake removed per call: {ma-mb:.3f}s")
+          print(f"             429s: A={ta} B={tb}")
+          print()
+          GAPS=1.25
+          print(f"WHAT IT MEANS AT THE SWEEP'S 1.25s PACING INTERVAL:")
+          print(f"  today      {60/max(ma,GAPS):.0f}/min" + ("  (latency-bound)" if ma>GAPS else "  (pacer-bound)"))
+          print(f"  keep-alive {60/max(mb,GAPS):.0f}/min" + ("  (latency-bound)" if mb>GAPS else "  (pacer-bound)"))
+          print("="*58)
+          print("VERDICT:", "SAFE TO WIRE IN" if (not mis and ok and not (ta+tb)) else "DO NOT WIRE IN")
+          sys.exit(0 if (not mis and ok and not (ta+tb)) else 1)
+          PY
