@@ -739,5 +739,77 @@
   "stem": "CONCESIONES GOSW",
   "suburb": "SOUTH MELBOURNE",
   "via": "API"
+ },
+ "702747724": {
+  "acn": "702747724",
+  "date": "2026-09-28",
+  "first_seen": "2026-09-28T15:36:45+00:00",
+  "in_register": false,
+  "name": "ALPINE HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "ALPINE",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702747966": {
+  "acn": "702747966",
+  "date": "2026-09-28",
+  "first_seen": "2026-09-28T15:36:45+00:00",
+  "in_register": false,
+  "name": "ALPINE MIDCO PTY LTD",
+  "role": "MIDCO",
+  "state": "NSW",
+  "stem": "ALPINE",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702748356": {
+  "acn": "702748356",
+  "date": "2026-09-28",
+  "first_seen": "2026-09-28T15:36:45+00:00",
+  "in_register": false,
+  "name": "ALPINE BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "NSW",
+  "stem": "ALPINE",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702759706": {
+  "acn": "702759706",
+  "date": "2026-09-28",
+  "first_seen": "2026-09-28T15:36:45+00:00",
+  "in_register": false,
+  "name": "KYANITE ROSEHILL HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "KYANITE ROSEHILL",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702761528": {
+  "acn": "702761528",
+  "date": "2026-09-28",
+  "first_seen": "2026-09-28T15:36:45+00:00",
+  "in_register": false,
+  "name": "KYANITE MARGARET HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "KYANITE MARGARET",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702761537": {
+  "acn": "702761537",
+  "date": "2026-09-28",
+  "first_seen": "2026-09-28T15:36:45+00:00",
+  "in_register": false,
+  "name": "KYANITE NTH TCE HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "KYANITE NTH TCE",
+  "suburb": "SYDNEY",
+  "via": "API"
  }
 }
