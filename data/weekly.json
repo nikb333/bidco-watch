@@ -1,10 +1,257 @@
 {
- "generated_utc": "2026-09-21T19:44:20+00:00",
+ "generated_utc": "2026-09-28T18:16:13+00:00",
  "dataset": "company_202609.zip",
- "source_modified": "2026-09-21T14:56:14.891737",
+ "source_modified": "2026-09-28T14:51:38.654129",
  "window_days": 180,
- "max_acn": "702528603",
+ "max_acn": "702740109",
  "entities": [
+  {
+   "acn": "702694399",
+   "name": "CONCESIONES GOSW NO HOLDCO 2 PTY LIMITED",
+   "date": "25/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CONCESIONES GOSW",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702694353",
+   "name": "CONCESIONES GOSW NO HOLDCO 1 PTY LIMITED",
+   "date": "25/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CONCESIONES GOSW",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702686646",
+   "name": "CONCESIONES GOSW HOLDCO 2 PTY LIMITED",
+   "date": "25/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CONCESIONES GOSW 2",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702686468",
+   "name": "CONCESIONES GOSW HOLDCO 1 PTY LIMITED",
+   "date": "25/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CONCESIONES GOSW 1",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702685121",
+   "name": "SH & TM TOPCO PTY LTD",
+   "date": "25/09/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SH TM",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702658151",
+   "name": "DYLAN MODINO HOLDCO PTY LTD",
+   "date": "24/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "DYLAN MODINO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702650557",
+   "name": "CTSAS HOLDCO PTY LTD",
+   "date": "24/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CTSAS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702648673",
+   "name": "MOORABOOL HOLDCO 3 PTY LTD",
+   "date": "24/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "MOORABOOL 3",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702648664",
+   "name": "MOORABOOL HOLDCO 2 PTY LTD",
+   "date": "24/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "MOORABOOL 2",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702630466",
+   "name": "JEREMY LE HOLDCO PTY LTD",
+   "date": "23/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "JEREMY LE",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702592523",
+   "name": "AMBERLIGHT TOPCO PTY LTD",
+   "date": "22/09/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "AMBERLIGHT",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702581815",
+   "name": "ROCKSTARS BIDCO 1 PTY LTD",
+   "date": "22/09/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ROCKSTARS 1",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
+  },
+  {
+   "acn": "702580014",
+   "name": "ROCKSTARS MIDCO B PTY LTD",
+   "date": "22/09/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ROCKSTARS B",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702578194",
+   "name": "ROCKSTARS MIDCO A PTY LTD",
+   "date": "22/09/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ROCKSTARS A",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702576832",
+   "name": "ROCKSTARS HOLDCO B PTY LTD",
+   "date": "22/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ROCKSTARS B",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702575148",
+   "name": "ROCKSTARS HOLDCO A PTY LTD",
+   "date": "22/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ROCKSTARS A",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702553491",
+   "name": "TRIDENT BIDCO PTY LTD",
+   "date": "21/09/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "TRIDENT",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "702551559",
+   "name": "TRIDENT MIDCO PTY LTD",
+   "date": "21/09/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "TRIDENT",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "702550650",
+   "name": "TRIDENT HOLDCO PTY LTD",
+   "date": "21/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "TRIDENT",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
   {
    "acn": "702505235",
    "name": "WEST MOKOAN HOLDCO PTY LTD",
@@ -865,16 +1112,16 @@
   },
   {
    "acn": "701836642",
-   "name": "FLOREY I BIDCO PTY LTD",
+   "name": "FLOREY I PTY LTD",
    "date": "28/08/2026",
-   "role": "BIDCO",
+   "role": "",
    "state": "",
    "abn": true,
    "status": "REGD",
    "stem": "FLOREY I",
    "in_stack": true,
-   "stack_has_bidco": true,
-   "is_bidco": true
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701834684",
@@ -886,7 +1133,7 @@
    "status": "REGD",
    "stem": "FLOREY I",
    "in_stack": true,
-   "stack_has_bidco": true,
+   "stack_has_bidco": false,
    "is_bidco": false
   },
   {
@@ -5594,167 +5841,11 @@
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
-  },
-  {
-   "acn": "696761341",
-   "name": "STORAGE TECH HOLDCO PTY LTD",
-   "date": "01/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "STORAGE TECH",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "696741590",
-   "name": "ICOP FINCO PTY LIMITED",
-   "date": "31/03/2026",
-   "role": "FINCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "ICOP",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "696717478",
-   "name": "AXIS HOLDCO PTY LTD",
-   "date": "31/03/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "AXIS",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "696716248",
-   "name": "IRIDIUM HOLDCO PTY LTD",
-   "date": "30/03/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "IRIDIUM",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "696694532",
-   "name": "SOF-13 OSCAR FINCO PTY LTD",
-   "date": "30/03/2026",
-   "role": "FINCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "SOF 13 OSCAR",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "696683904",
-   "name": "TRIMARK FINANCIAL HOLDCO PTY LTD",
-   "date": "30/03/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "TRIMARK FINANCIAL",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "696637500",
-   "name": "BEY PROPERTY GROUP FINCO PTY LTD",
-   "date": "27/03/2026",
-   "role": "FINCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "BEY PROPERTY",
-   "in_stack": true,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "696626883",
-   "name": "BEY PROPERTY GROUP HOLDCO PTY LTD",
-   "date": "27/03/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "BEY PROPERTY",
-   "in_stack": true,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "696615737",
-   "name": "STINGRAY BIDCO PTY LTD",
-   "date": "27/03/2026",
-   "role": "BIDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "STINGRAY",
-   "in_stack": true,
-   "stack_has_bidco": true,
-   "is_bidco": true
-  },
-  {
-   "acn": "696614472",
-   "name": "STINGRAY FINCO PTY LTD",
-   "date": "27/03/2026",
-   "role": "FINCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "STINGRAY",
-   "in_stack": true,
-   "stack_has_bidco": true,
-   "is_bidco": false
-  },
-  {
-   "acn": "696614187",
-   "name": "STINGRAY HOLDCO PTY LTD",
-   "date": "27/03/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "STINGRAY",
-   "in_stack": true,
-   "stack_has_bidco": true,
-   "is_bidco": false
-  },
-  {
-   "acn": "696568242",
-   "name": "ARROW HOLDCO (NUTRIVERT) PTY LTD",
-   "date": "26/03/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "ARROW NUTRIVERT",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
   }
  ],
  "bidcos": 60,
- "stacks": 63,
- "stacks_without_bidco": 24,
+ "stacks": 64,
+ "stacks_without_bidco": 27,
  "renamed": [
   {
    "acn": "696123850",
@@ -5871,6 +5962,12 @@
    "since": "27/08/2026"
   },
   {
+   "acn": "701836642",
+   "was": "FLOREY I BIDCO PTY LTD",
+   "now": "FLOREY I PTY LTD",
+   "since": "23/09/2026"
+  },
+  {
    "acn": "702028331",
    "was": "PBSP - CARE FOR YOU HOLDCO PTY LTD",
    "now": "PBSP - CARE FOR ALL HOLDCO PTY LTD",
@@ -5879,18 +5976,108 @@
  ],
  "reconciliation": {
   "covered_from_acn": "700000004",
-  "judged": 240,
-  "found_by_daily": 18,
+  "judged": 259,
+  "found_by_daily": 19,
   "missed_by_daily": [
+   {
+    "acn": "702505235",
+    "name": "WEST MOKOAN HOLDCO PTY LTD",
+    "date": "18/09/2026"
+   },
+   {
+    "acn": "702498495",
+    "name": "TIDE BIDCO PTY LTD",
+    "date": "18/09/2026"
+   },
+   {
+    "acn": "702486673",
+    "name": "MAESTRO HOLDCO PTY LTD",
+    "date": "18/09/2026"
+   },
+   {
+    "acn": "702468559",
+    "name": "GOYDER NORTH WIND FARM 2 HOLDCO PTY LTD",
+    "date": "17/09/2026"
+   },
+   {
+    "acn": "702461452",
+    "name": "BORAMBOLA HYBRID HOLDCO PTY LIMITED",
+    "date": "17/09/2026"
+   },
+   {
+    "acn": "702459765",
+    "name": "SANDROCK II BIDCO B PTY LTD",
+    "date": "17/09/2026"
+   },
+   {
+    "acn": "702459514",
+    "name": "SANDROCK II BIDCO A PTY LTD",
+    "date": "17/09/2026"
+   },
+   {
+    "acn": "702459390",
+    "name": "SANDROCK I BIDCO PTY LTD",
+    "date": "17/09/2026"
+   },
+   {
+    "acn": "702456906",
+    "name": "SANDROCK II HOLDCO PTY LTD",
+    "date": "17/09/2026"
+   },
+   {
+    "acn": "702456568",
+    "name": "SANDROCK I HOLDCO PTY LTD",
+    "date": "17/09/2026"
+   },
+   {
+    "acn": "702444853",
+    "name": "TRIMONT ZAUNER HOLDCO PTY LTD",
+    "date": "17/09/2026"
+   },
+   {
+    "acn": "702424020",
+    "name": "AIROBEN HOLDCO PTY LTD",
+    "date": "16/09/2026"
+   },
    {
     "acn": "702413545",
     "name": "PCP HOLDCO PTY LTD",
     "date": "16/09/2026"
    },
    {
+    "acn": "702386829",
+    "name": "APAVE TOPCO AUSTRALIA PTY LTD",
+    "date": "15/09/2026"
+   },
+   {
+    "acn": "702385279",
+    "name": "PIERRE SLEIMAN HOLDCO PTY LTD",
+    "date": "15/09/2026"
+   },
+   {
+    "acn": "702385260",
+    "name": "TRS GIRDHAR HOLDCO PTY LTD",
+    "date": "15/09/2026"
+   },
+   {
+    "acn": "702384192",
+    "name": "ALBURY HOLDCO PTY LTD",
+    "date": "15/09/2026"
+   },
+   {
     "acn": "702384030",
     "name": "ELEVATE HOLDCO CUSTODIAN PTY LTD",
     "date": "15/09/2026"
+   },
+   {
+    "acn": "702342318",
+    "name": "TORQUE BIDCO PTY LTD",
+    "date": "14/09/2026"
+   },
+   {
+    "acn": "702328550",
+    "name": "EKANITE AUS BIDCO PTY LIMITED",
+    "date": "14/09/2026"
    },
    {
     "acn": "702293258",
@@ -6124,7 +6311,7 @@
    },
    {
     "acn": "701836642",
-    "name": "FLOREY I BIDCO PTY LTD",
+    "name": "FLOREY I PTY LTD",
     "date": "28/08/2026"
    },
    {
@@ -6993,27 +7180,28 @@
     "date": "07/07/2026"
    }
   ],
-  "recall_pct": 7.5
+  "recall_pct": 7.3
  },
  "ledger_crossed": [
-  "EKANITE AUS BIDCO PTY LIMITED",
-  "TORQUE BIDCO PTY LTD",
-  "ALBURY HOLDCO PTY LTD",
-  "TRS GIRDHAR HOLDCO PTY LTD",
-  "PIERRE SLEIMAN HOLDCO PTY LTD",
-  "APAVE TOPCO AUSTRALIA PTY LTD",
-  "AIROBEN HOLDCO PTY LTD",
-  "TRIMONT ZAUNER HOLDCO PTY LTD",
-  "SANDROCK I HOLDCO PTY LTD",
-  "SANDROCK II HOLDCO PTY LTD",
-  "SANDROCK I BIDCO PTY LTD",
-  "SANDROCK II BIDCO A PTY LTD",
-  "SANDROCK II BIDCO B PTY LTD",
-  "BORAMBOLA HYBRID HOLDCO PTY LIMITED",
-  "GOYDER NORTH WIND FARM 2 HOLDCO PTY LTD",
-  "MAESTRO HOLDCO PTY LTD",
-  "TIDE BIDCO PTY LTD",
-  "WEST MOKOAN HOLDCO PTY LTD"
+  "TRIDENT HOLDCO PTY LTD",
+  "TRIDENT MIDCO PTY LTD",
+  "TRIDENT BIDCO PTY LTD",
+  "ROCKSTARS HOLDCO A PTY LTD",
+  "ROCKSTARS HOLDCO B PTY LTD",
+  "ROCKSTARS MIDCO A PTY LTD",
+  "ROCKSTARS MIDCO B PTY LTD",
+  "ROCKSTARS BIDCO 1 PTY LTD",
+  "AMBERLIGHT TOPCO PTY LTD",
+  "JEREMY LE HOLDCO PTY LTD",
+  "MOORABOOL HOLDCO 2 PTY LTD",
+  "MOORABOOL HOLDCO 3 PTY LTD",
+  "CTSAS HOLDCO PTY LTD",
+  "DYLAN MODINO HOLDCO PTY LTD",
+  "SH & TM TOPCO PTY LTD",
+  "CONCESIONES GOSW HOLDCO 1 PTY LIMITED",
+  "CONCESIONES GOSW HOLDCO 2 PTY LIMITED",
+  "CONCESIONES GOSW NO HOLDCO 1 PTY LIMITED",
+  "CONCESIONES GOSW NO HOLDCO 2 PTY LIMITED"
  ],
  "ledger_waiting": 0
 }
