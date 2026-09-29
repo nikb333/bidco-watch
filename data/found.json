@@ -811,5 +811,77 @@
   "stem": "KYANITE NTH TCE",
   "suburb": "SYDNEY",
   "via": "API"
+ },
+ "702788305": {
+  "acn": "702788305",
+  "date": "2026-09-29",
+  "first_seen": "2026-09-29T15:58:33+00:00",
+  "in_register": false,
+  "name": "BCPE HANCOCK TOPCO PTY LTD",
+  "role": "TOPCO",
+  "state": "NSW",
+  "stem": "BCPE HANCOCK",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702790636": {
+  "acn": "702790636",
+  "date": "2026-09-29",
+  "first_seen": "2026-09-29T15:58:33+00:00",
+  "in_register": false,
+  "name": "BCPE HANCOCK MEZZCO PTY LTD",
+  "role": "MEZZCO",
+  "state": "NSW",
+  "stem": "BCPE HANCOCK",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702791688": {
+  "acn": "702791688",
+  "date": "2026-09-29",
+  "first_seen": "2026-09-29T15:58:33+00:00",
+  "in_register": false,
+  "name": "BCPE HANCOCK MIDCO PTY LTD",
+  "role": "MIDCO",
+  "state": "NSW",
+  "stem": "BCPE HANCOCK",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702793128": {
+  "acn": "702793128",
+  "date": "2026-09-29",
+  "first_seen": "2026-09-29T15:58:33+00:00",
+  "in_register": false,
+  "name": "BCPE HANCOCK BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "NSW",
+  "stem": "BCPE HANCOCK",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702798481": {
+  "acn": "702798481",
+  "date": "2026-09-29",
+  "first_seen": "2026-09-29T15:58:33+00:00",
+  "in_register": false,
+  "name": "NILA HOLDCO FINCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "NILA",
+  "suburb": "CARLTON SOUTH",
+  "via": "API"
+ },
+ "702802113": {
+  "acn": "702802113",
+  "date": "2026-09-29",
+  "first_seen": "2026-09-29T15:58:33+00:00",
+  "in_register": false,
+  "name": "NILA SENIOR FINCO PTY LTD",
+  "role": "FINCO",
+  "state": "VIC",
+  "stem": "NILA SENIOR",
+  "suburb": "CARLTON SOUTH",
+  "via": "API"
  }
 }

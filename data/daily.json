@@ -1,35 +1,35 @@
 {
  "run": {
-  "finished_utc": "2026-09-28T15:36:45+00:00",
-  "elapsed_min": 162.3,
+  "finished_utc": "2026-09-29T15:58:33+00:00",
+  "elapsed_min": 158.2,
   "status": "ok",
   "error": "",
-  "frontier_base": 70277751,
+  "frontier_base": 70281551,
   "window": [
-   "702739526",
-   "702777517"
+   "702777526",
+   "702815512"
   ],
-  "slots_swept": 4751,
-  "slots_queued": 4754,
+  "slots_swept": 4688,
+  "slots_queued": 4692,
   "slots_left": 0,
   "gaps_queued": 3,
-  "recheck_queued": 915,
-  "companies": 7429,
+  "recheck_queued": 851,
+  "companies": 8515,
   "trailing_slots": 20000,
-  "slots_errored": 3,
+  "slots_errored": 4,
   "ledger_new": 6,
-  "ledger_waiting": 6,
+  "ledger_waiting": 12,
   "ledger_in_register": 57,
   "coverage": {
-   "from_acn": "702539526",
-   "to_acn": "702777517",
+   "from_acn": "702577526",
+   "to_acn": "702815512",
    "slots": 23800,
-   "checked": 23797,
-   "remaining": 3,
-   "companies": 6279,
+   "checked": 23796,
+   "remaining": 4,
+   "companies": 6302,
    "register_known": true,
    "register_to_acn": "702740109",
-   "slots_per_day": 2773,
+   "slots_per_day": 2848,
    "rate_per_min": 48,
    "run_minutes": 335,
    "zones": [
@@ -37,27 +37,27 @@
      "key": "new",
      "label": "New registrations",
      "why": "Everything registered since the last finished sweep. These go to the front of the queue on every run, so this should sit at or near 100%. Note what 'checked' means: the slot has been looked at once. A company that registers into a slot an earlier run already found empty is caught by the re-check in the next pass, not here.",
-     "from_acn": "702739526",
-     "to_acn": "702777517",
+     "from_acn": "702777526",
+     "to_acn": "702815512",
      "slots": 3800,
-     "checked": 3800,
-     "remaining": 0,
-     "days": 1.4,
-     "covered_by_register": 59,
-     "companies": 1044
+     "checked": 3799,
+     "remaining": 1,
+     "days": 1.3,
+     "covered_by_register": 0,
+     "companies": 1086
     },
     {
      "key": "catchup",
      "label": "Back-fill of older slots",
      "why": "Slots an earlier run ran out of clock before reaching, plus a second look at slots that came back empty - ACNs are handed out ahead of use, so an empty slot can fill in later. Deliberately queued behind the new slots: if a run runs short, this is the right thing to lose.",
-     "from_acn": "702539526",
-     "to_acn": "702739517",
+     "from_acn": "702577526",
+     "to_acn": "702777517",
      "slots": 20000,
      "checked": 19997,
      "remaining": 3,
-     "days": 7.2,
-     "covered_by_register": 20000,
-     "companies": 5235
+     "days": 7.0,
+     "covered_by_register": 16259,
+     "companies": 5216
     }
    ],
    "passes": [
@@ -65,18 +65,18 @@
      "key": "new",
      "n": 1,
      "label": "New registrations",
-     "from_acn": "702739526",
-     "to_acn": "702777517",
+     "from_acn": "702777526",
+     "to_acn": "702815512",
      "total": 3800,
-     "outstanding": 0,
+     "outstanding": 1,
      "why": "Everything issued since the last finished sweep. First in the queue on every run. This is the number that says whether you are current."
     },
     {
      "key": "gaps",
      "n": 2,
      "label": "Never looked at",
-     "from_acn": "702539526",
-     "to_acn": "702739517",
+     "from_acn": "702577526",
+     "to_acn": "702777517",
      "total": 20000,
      "outstanding": 3,
      "why": "Slots inside the trailing window that no run has ever queried - what a run that ran out of clock leaves behind. Nothing has seen these, so they outrank re-checks."
@@ -85,22 +85,22 @@
      "key": "recheck",
      "n": 3,
      "label": "Second look at empty slots",
-     "from_acn": "701927513",
-     "to_acn": "702577517",
+     "from_acn": "701965513",
+     "to_acn": "702615512",
      "total": 0,
      "outstanding": 0,
      "bands": [
       {
        "band": "20k-27k back",
        "outstanding": 0,
-       "from_acn": "702507515",
-       "to_acn": "702577517"
+       "from_acn": "702545515",
+       "to_acn": "702615512"
       },
       {
        "band": "72k-85k back",
        "outstanding": 0,
-       "from_acn": "701927513",
-       "to_acn": "702057510"
+       "from_acn": "701965513",
+       "to_acn": "702095510"
       }
      ],
      "why": "Slots already queried that came back empty. ACNs are issued ahead of use, so a company can appear in a slot an earlier run found bare. Each gets exactly two more looks, timed to the two observed lag clusters."
@@ -111,94 +111,94 @@
      "label": "Shelf companies, re-queried",
      "from_acn": "",
      "to_acn": "",
-     "total": 38,
-     "outstanding": 38,
+     "total": 46,
+     "outstanding": 46,
      "rolling": true,
      "why": "Companies registered under a numeric placeholder name and renamed later - re-asked for 120 days. This never reaches zero by design; it is a rolling window, not a backlog."
     }
    ],
    "buckets": [
     {
-     "from": "702539526",
-     "to": "702559340",
+     "from": "702577526",
+     "to": "702597340",
      "checked": 1983,
      "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702559359",
-     "to": "702579173",
-     "checked": 1983,
-     "slots": 1983,
-     "zone": "catchup"
-    },
-    {
-     "from": "702579182",
-     "to": "702599004",
-     "checked": 1983,
-     "slots": 1983,
-     "zone": "catchup"
-    },
-    {
-     "from": "702599013",
-     "to": "702618835",
+     "from": "702597359",
+     "to": "702617178",
      "checked": 1982,
      "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702618844",
-     "to": "702638668",
+     "from": "702617187",
+     "to": "702637009",
      "checked": 1983,
      "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702638677",
-     "to": "702658491",
+     "from": "702637018",
+     "to": "702656835",
      "checked": 1983,
      "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702658508",
-     "to": "702678322",
+     "from": "702656844",
+     "to": "702676668",
      "checked": 1983,
      "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702678331",
-     "to": "702698155",
+     "from": "702676677",
+     "to": "702696491",
      "checked": 1982,
      "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702698164",
-     "to": "702717986",
+     "from": "702696508",
+     "to": "702716327",
      "checked": 1983,
      "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702717995",
-     "to": "702737817",
+     "from": "702716336",
+     "to": "702736150",
      "checked": 1982,
      "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702737826",
-     "to": "702757640",
+     "from": "702736169",
+     "to": "702755986",
      "checked": 1983,
      "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702757659",
-     "to": "702777517",
-     "checked": 1987,
+     "from": "702755995",
+     "to": "702775817",
+     "checked": 1983,
+     "slots": 1983,
+     "zone": "catchup"
+    },
+    {
+     "from": "702775826",
+     "to": "702795640",
+     "checked": 1983,
+     "slots": 1983,
+     "zone": "catchup"
+    },
+    {
+     "from": "702795659",
+     "to": "702815512",
+     "checked": 1986,
      "slots": 1987,
      "zone": "new"
     }
@@ -206,6 +206,55 @@
   }
  },
  "stacks": [
+  {
+   "stem": "BCPE HANCOCK",
+   "first": "2026-09-29",
+   "has_bidco": true,
+   "finco": true,
+   "phased": false,
+   "members": [
+    {
+     "acn": "702788305",
+     "name": "BCPE HANCOCK TOPCO PTY LTD",
+     "date": "2026-09-29",
+     "role": "TOPCO",
+     "suburb": "SYDNEY",
+     "state": "NSW",
+     "via": "API",
+     "first_seen": "2026-09-29T15:58:33+00:00"
+    },
+    {
+     "acn": "702791688",
+     "name": "BCPE HANCOCK MIDCO PTY LTD",
+     "date": "2026-09-29",
+     "role": "MIDCO",
+     "suburb": "SYDNEY",
+     "state": "NSW",
+     "via": "API",
+     "first_seen": "2026-09-29T15:58:33+00:00"
+    },
+    {
+     "acn": "702790636",
+     "name": "BCPE HANCOCK MEZZCO PTY LTD",
+     "date": "2026-09-29",
+     "role": "MEZZCO",
+     "suburb": "SYDNEY",
+     "state": "NSW",
+     "via": "API",
+     "first_seen": "2026-09-29T15:58:33+00:00"
+    },
+    {
+     "acn": "702793128",
+     "name": "BCPE HANCOCK BIDCO PTY LTD",
+     "date": "2026-09-29",
+     "role": "BIDCO",
+     "suburb": "SYDNEY",
+     "state": "NSW",
+     "via": "API",
+     "first_seen": "2026-09-29T15:58:33+00:00"
+    }
+   ]
+  },
   {
    "stem": "ALPINE",
    "first": "2026-09-28",
@@ -248,6 +297,26 @@
  ],
  "singles": [],
  "role_only": [
+  {
+   "acn": "702798481",
+   "name": "NILA HOLDCO FINCO PTY LTD",
+   "date": "2026-09-29",
+   "role": "HOLDCO",
+   "suburb": "CARLTON SOUTH",
+   "state": "VIC",
+   "via": "API",
+   "first_seen": "2026-09-29T15:58:33+00:00"
+  },
+  {
+   "acn": "702802113",
+   "name": "NILA SENIOR FINCO PTY LTD",
+   "date": "2026-09-29",
+   "role": "FINCO",
+   "suburb": "CARLTON SOUTH",
+   "state": "VIC",
+   "via": "API",
+   "first_seen": "2026-09-29T15:58:33+00:00"
+  },
   {
    "acn": "702759706",
    "name": "KYANITE ROSEHILL HOLDCO PTY LTD",
