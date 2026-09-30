@@ -931,5 +931,17 @@
   "stem": "BUCKLER",
   "suburb": "DARLINGHURST",
   "via": "API"
+ },
+ "702853530": {
+  "acn": "702853530",
+  "date": "2026-09-30",
+  "first_seen": "2026-09-30T19:27:35+00:00",
+  "in_register": false,
+  "name": "BUCKLER BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "NSW",
+  "stem": "BUCKLER",
+  "suburb": "DARLINGHURST",
+  "via": "API"
  }
 }
