@@ -883,5 +883,53 @@
   "stem": "NILA SENIOR",
   "suburb": "CARLTON SOUTH",
   "via": "API"
+ },
+ "702824548": {
+  "acn": "702824548",
+  "date": "2026-09-30",
+  "first_seen": "2026-09-30T13:52:25+00:00",
+  "in_register": false,
+  "name": "HAMMER BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "VIC",
+  "stem": "HAMMER",
+  "suburb": "CARLTON SOUTH",
+  "via": "API"
+ },
+ "702843525": {
+  "acn": "702843525",
+  "date": "2026-09-30",
+  "first_seen": "2026-09-30T13:52:25+00:00",
+  "in_register": false,
+  "name": "ACP MACQUARIE STREET MIDCO 1 PTY LIMITED",
+  "role": "MIDCO",
+  "state": "NSW",
+  "stem": "ACP MACQUARIE STREET 1",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "702853101": {
+  "acn": "702853101",
+  "date": "2026-09-30",
+  "first_seen": "2026-09-30T13:52:25+00:00",
+  "in_register": false,
+  "name": "BUCKLER HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "BUCKLER",
+  "suburb": "DARLINGHURST",
+  "via": "API"
+ },
+ "702853281": {
+  "acn": "702853281",
+  "date": "2026-09-30",
+  "first_seen": "2026-09-30T13:52:25+00:00",
+  "in_register": false,
+  "name": "BUCKLER MIDCO PTY LTD",
+  "role": "MIDCO",
+  "state": "NSW",
+  "stem": "BUCKLER",
+  "suburb": "DARLINGHURST",
+  "via": "API"
  }
 }
