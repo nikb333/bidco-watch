@@ -943,5 +943,17 @@
   "stem": "BUCKLER",
   "suburb": "DARLINGHURST",
   "via": "API"
+ },
+ "702863394": {
+  "acn": "702863394",
+  "date": "2026-10-01",
+  "first_seen": "2026-10-01T19:36:50+00:00",
+  "in_register": false,
+  "name": "ACP MACQUARIE STREET MIDCO 2 PTY LIMITED",
+  "role": "MIDCO",
+  "state": "NSW",
+  "stem": "ACP MACQUARIE STREET 2",
+  "suburb": "SYDNEY",
+  "via": "API"
  }
 }
