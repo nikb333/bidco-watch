@@ -1,35 +1,35 @@
 {
  "run": {
-  "finished_utc": "2026-10-01T19:36:50+00:00",
-  "elapsed_min": 159.8,
+  "finished_utc": "2026-10-02T12:48:42+00:00",
+  "elapsed_min": 131.9,
   "status": "ok",
   "error": "",
-  "frontier_base": 70289351,
+  "frontier_base": 70292351,
   "window": [
-   "702855525",
-   "702893516"
+   "702893525",
+   "702923519"
   ],
-  "slots_swept": 4736,
-  "slots_queued": 4741,
+  "slots_swept": 3908,
+  "slots_queued": 3912,
   "slots_left": 0,
-  "gaps_queued": 5,
-  "recheck_queued": 885,
-  "companies": 10774,
+  "gaps_queued": 4,
+  "recheck_queued": 855,
+  "companies": 11741,
   "trailing_slots": 20000,
-  "slots_errored": 5,
+  "slots_errored": 4,
   "ledger_new": 1,
-  "ledger_waiting": 18,
+  "ledger_waiting": 19,
   "ledger_in_register": 57,
   "coverage": {
-   "from_acn": "702655525",
-   "to_acn": "702893516",
-   "slots": 23800,
-   "checked": 23795,
-   "remaining": 5,
-   "companies": 6229,
+   "from_acn": "702693525",
+   "to_acn": "702923519",
+   "slots": 23000,
+   "checked": 22996,
+   "remaining": 4,
+   "companies": 6105,
    "register_known": true,
    "register_to_acn": "702740109",
-   "slots_per_day": 2929,
+   "slots_per_day": 2968,
    "rate_per_min": 48,
    "run_minutes": 335,
    "zones": [
@@ -37,27 +37,27 @@
      "key": "new",
      "label": "New registrations",
      "why": "Everything registered since the last finished sweep. These go to the front of the queue on every run, so this should sit at or near 100%. Note what 'checked' means: the slot has been looked at once. A company that registers into a slot an earlier run already found empty is caught by the re-check in the next pass, not here.",
-     "from_acn": "702855525",
-     "to_acn": "702893516",
-     "slots": 3800,
-     "checked": 3800,
+     "from_acn": "702893525",
+     "to_acn": "702923519",
+     "slots": 3000,
+     "checked": 3000,
      "remaining": 0,
-     "days": 1.3,
+     "days": 1.0,
      "covered_by_register": 0,
-     "companies": 1106
+     "companies": 905
     },
     {
      "key": "catchup",
      "label": "Back-fill of older slots",
      "why": "Slots an earlier run ran out of clock before reaching, plus a second look at slots that came back empty - ACNs are handed out ahead of use, so an empty slot can fill in later. Deliberately queued behind the new slots: if a run runs short, this is the right thing to lose.",
-     "from_acn": "702655525",
-     "to_acn": "702855516",
+     "from_acn": "702693525",
+     "to_acn": "702893516",
      "slots": 20000,
-     "checked": 19995,
-     "remaining": 5,
-     "days": 6.8,
-     "covered_by_register": 8459,
-     "companies": 5123
+     "checked": 19996,
+     "remaining": 4,
+     "days": 6.7,
+     "covered_by_register": 4659,
+     "companies": 5200
     }
    ],
    "passes": [
@@ -65,9 +65,9 @@
      "key": "new",
      "n": 1,
      "label": "New registrations",
-     "from_acn": "702855525",
-     "to_acn": "702893516",
-     "total": 3800,
+     "from_acn": "702893525",
+     "to_acn": "702923519",
+     "total": 3000,
      "outstanding": 0,
      "why": "Everything issued since the last finished sweep. First in the queue on every run. This is the number that says whether you are current."
     },
@@ -75,32 +75,32 @@
      "key": "gaps",
      "n": 2,
      "label": "Never looked at",
-     "from_acn": "702655525",
-     "to_acn": "702855516",
+     "from_acn": "702693525",
+     "to_acn": "702893516",
      "total": 20000,
-     "outstanding": 5,
+     "outstanding": 4,
      "why": "Slots inside the trailing window that no run has ever queried - what a run that ran out of clock leaves behind. Nothing has seen these, so they outrank re-checks."
     },
     {
      "key": "recheck",
      "n": 3,
      "label": "Second look at empty slots",
-     "from_acn": "702043516",
-     "to_acn": "702693516",
+     "from_acn": "702073514",
+     "to_acn": "702723519",
      "total": 0,
      "outstanding": 0,
      "bands": [
       {
        "band": "20k-27k back",
        "outstanding": 0,
-       "from_acn": "702623514",
-       "to_acn": "702693516"
+       "from_acn": "702653512",
+       "to_acn": "702723519"
       },
       {
        "band": "72k-85k back",
        "outstanding": 0,
-       "from_acn": "702043516",
-       "to_acn": "702173519"
+       "from_acn": "702073514",
+       "to_acn": "702203512"
       }
      ],
      "why": "Slots already queried that came back empty. ACNs are issued ahead of use, so a company can appear in a slot an earlier run found bare. Each gets exactly two more looks, timed to the two observed lag clusters."
@@ -111,95 +111,95 @@
      "label": "Shelf companies, re-queried",
      "from_acn": "",
      "to_acn": "",
-     "total": 53,
-     "outstanding": 53,
+     "total": 60,
+     "outstanding": 60,
      "rolling": true,
      "why": "Companies registered under a numeric placeholder name and renamed later - re-asked for 120 days. This never reaches zero by design; it is a rolling window, not a backlog."
     }
    ],
    "buckets": [
     {
-     "from": "702655525",
-     "to": "702675349",
-     "checked": 1983,
-     "slots": 1983,
+     "from": "702693525",
+     "to": "702712678",
+     "checked": 1916,
+     "slots": 1916,
      "zone": "catchup"
     },
     {
-     "from": "702675358",
-     "to": "702695172",
-     "checked": 1982,
-     "slots": 1983,
+     "from": "702712687",
+     "to": "702731833",
+     "checked": 1915,
+     "slots": 1916,
      "zone": "catchup"
     },
     {
-     "from": "702695181",
-     "to": "702715008",
-     "checked": 1983,
-     "slots": 1983,
+     "from": "702731842",
+     "to": "702750990",
+     "checked": 1916,
+     "slots": 1916,
      "zone": "catchup"
     },
     {
-     "from": "702715017",
-     "to": "702734834",
-     "checked": 1982,
-     "slots": 1983,
+     "from": "702751004",
+     "to": "702770152",
+     "checked": 1916,
+     "slots": 1916,
      "zone": "catchup"
     },
     {
-     "from": "702734843",
-     "to": "702754667",
-     "checked": 1983,
-     "slots": 1983,
+     "from": "702770161",
+     "to": "702789311",
+     "checked": 1916,
+     "slots": 1916,
      "zone": "catchup"
     },
     {
-     "from": "702754676",
-     "to": "702774490",
-     "checked": 1983,
-     "slots": 1983,
+     "from": "702789320",
+     "to": "702808473",
+     "checked": 1916,
+     "slots": 1916,
      "zone": "catchup"
     },
     {
-     "from": "702774507",
-     "to": "702794321",
-     "checked": 1983,
-     "slots": 1983,
+     "from": "702808482",
+     "to": "702827638",
+     "checked": 1915,
+     "slots": 1916,
      "zone": "catchup"
     },
     {
-     "from": "702794330",
-     "to": "702814159",
-     "checked": 1982,
-     "slots": 1983,
+     "from": "702827647",
+     "to": "702846795",
+     "checked": 1915,
+     "slots": 1916,
      "zone": "catchup"
     },
     {
-     "from": "702814168",
-     "to": "702833985",
-     "checked": 1983,
-     "slots": 1983,
+     "from": "702846802",
+     "to": "702865950",
+     "checked": 1915,
+     "slots": 1916,
      "zone": "catchup"
     },
     {
-     "from": "702833994",
-     "to": "702853816",
-     "checked": 1981,
-     "slots": 1983,
+     "from": "702865969",
+     "to": "702885112",
+     "checked": 1916,
+     "slots": 1916,
      "zone": "catchup"
     },
     {
-     "from": "702853825",
-     "to": "702873649",
-     "checked": 1983,
-     "slots": 1983,
+     "from": "702885121",
+     "to": "702904274",
+     "checked": 1916,
+     "slots": 1916,
      "zone": "catchup"
     },
     {
-     "from": "702873658",
-     "to": "702893516",
-     "checked": 1987,
-     "slots": 1987,
+     "from": "702904283",
+     "to": "702923519",
+     "checked": 1924,
+     "slots": 1924,
      "zone": "new"
     }
    ]
@@ -347,6 +347,16 @@
   }
  ],
  "role_only": [
+  {
+   "acn": "702899134",
+   "name": "SHONI HOLDCO PTY LTD",
+   "date": "2026-10-02",
+   "role": "HOLDCO",
+   "suburb": "MOONEE PONDS",
+   "state": "VIC",
+   "via": "API",
+   "first_seen": "2026-10-02T12:48:42+00:00"
+  },
   {
    "acn": "702863394",
    "name": "ACP MACQUARIE STREET MIDCO 2 PTY LIMITED",

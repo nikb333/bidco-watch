@@ -955,5 +955,17 @@
   "stem": "ACP MACQUARIE STREET 2",
   "suburb": "SYDNEY",
   "via": "API"
+ },
+ "702899134": {
+  "acn": "702899134",
+  "date": "2026-10-02",
+  "first_seen": "2026-10-02T12:48:42+00:00",
+  "in_register": false,
+  "name": "SHONI HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "SHONI",
+  "suburb": "MOONEE PONDS",
+  "via": "API"
  }
 }
