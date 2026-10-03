@@ -1,19 +1,19 @@
 {
  "run": {
-  "finished_utc": "2026-10-03T13:29:23+00:00",
-  "elapsed_min": 54.0,
+  "finished_utc": "2026-10-03T18:00:52+00:00",
+  "elapsed_min": 4.6,
   "status": "ok",
   "error": "",
   "frontier_base": 70293551,
   "window": [
-   "702923528",
+   "702735519",
    "702935519"
   ],
-  "slots_swept": 1587,
-  "slots_queued": 1590,
+  "slots_swept": 63,
+  "slots_queued": 66,
   "slots_left": 0,
   "gaps_queued": 3,
-  "recheck_queued": 327,
+  "recheck_queued": 0,
   "companies": 11878,
   "trailing_slots": 20000,
   "slots_errored": 3,
@@ -21,15 +21,15 @@
   "ledger_waiting": 19,
   "ledger_in_register": 57,
   "coverage": {
-   "from_acn": "702723528",
+   "from_acn": "702735519",
    "to_acn": "702935519",
-   "slots": 21200,
-   "checked": 21197,
+   "slots": 20001,
+   "checked": 19998,
    "remaining": 3,
-   "companies": 5572,
+   "companies": 5420,
    "register_known": true,
    "register_to_acn": "702740109",
-   "slots_per_day": 3008,
+   "slots_per_day": 2926,
    "rate_per_min": 48,
    "run_minutes": 335,
    "zones": [
@@ -37,27 +37,14 @@
      "key": "new",
      "label": "New registrations",
      "why": "Everything registered since the last finished sweep. These go to the front of the queue on every run, so this should sit at or near 100%. Note what 'checked' means: the slot has been looked at once. A company that registers into a slot an earlier run already found empty is caught by the re-check in the next pass, not here.",
-     "from_acn": "702923528",
+     "from_acn": "702735519",
      "to_acn": "702935519",
-     "slots": 1200,
-     "checked": 1200,
-     "remaining": 0,
-     "days": 0.4,
-     "covered_by_register": 0,
-     "companies": 107
-    },
-    {
-     "key": "catchup",
-     "label": "Back-fill of older slots",
-     "why": "Slots an earlier run ran out of clock before reaching, plus a second look at slots that came back empty - ACNs are handed out ahead of use, so an empty slot can fill in later. Deliberately queued behind the new slots: if a run runs short, this is the right thing to lose.",
-     "from_acn": "702723528",
-     "to_acn": "702923519",
-     "slots": 20000,
-     "checked": 19997,
+     "slots": 20001,
+     "checked": 19998,
      "remaining": 3,
-     "days": 6.6,
-     "covered_by_register": 1659,
-     "companies": 5465
+     "days": 6.8,
+     "covered_by_register": 460,
+     "companies": 5420
     }
    ],
    "passes": [
@@ -65,20 +52,20 @@
      "key": "new",
      "n": 1,
      "label": "New registrations",
-     "from_acn": "702923528",
+     "from_acn": "702735519",
      "to_acn": "702935519",
-     "total": 1200,
-     "outstanding": 0,
+     "total": 20001,
+     "outstanding": 3,
      "why": "Everything issued since the last finished sweep. First in the queue on every run. This is the number that says whether you are current."
     },
     {
      "key": "gaps",
      "n": 2,
      "label": "Never looked at",
-     "from_acn": "702723528",
-     "to_acn": "702923519",
-     "total": 20000,
-     "outstanding": 3,
+     "from_acn": "702735519",
+     "to_acn": "702735500",
+     "total": 0,
+     "outstanding": 0,
      "why": "Slots inside the trailing window that no run has ever queried - what a run that ran out of clock leaves behind. Nothing has seen these, so they outrank re-checks."
     },
     {
@@ -119,88 +106,88 @@
    ],
    "buckets": [
     {
-     "from": "702723528",
-     "to": "702741179",
-     "checked": 1766,
-     "slots": 1766,
-     "zone": "catchup"
+     "from": "702735519",
+     "to": "702752163",
+     "checked": 1666,
+     "slots": 1666,
+     "zone": "new"
     },
     {
-     "from": "702741188",
-     "to": "702758834",
-     "checked": 1766,
-     "slots": 1766,
-     "zone": "catchup"
+     "from": "702752172",
+     "to": "702768821",
+     "checked": 1666,
+     "slots": 1666,
+     "zone": "new"
     },
     {
-     "from": "702758843",
-     "to": "702776494",
-     "checked": 1766,
-     "slots": 1766,
-     "zone": "catchup"
+     "from": "702768830",
+     "to": "702785484",
+     "checked": 1666,
+     "slots": 1666,
+     "zone": "new"
     },
     {
-     "from": "702776501",
-     "to": "702794152",
-     "checked": 1766,
-     "slots": 1766,
-     "zone": "catchup"
+     "from": "702785493",
+     "to": "702802140",
+     "checked": 1666,
+     "slots": 1666,
+     "zone": "new"
     },
     {
-     "from": "702794161",
-     "to": "702811818",
-     "checked": 1765,
-     "slots": 1766,
-     "zone": "catchup"
+     "from": "702802159",
+     "to": "702818808",
+     "checked": 1665,
+     "slots": 1666,
+     "zone": "new"
     },
     {
-     "from": "702811827",
-     "to": "702829472",
-     "checked": 1766,
-     "slots": 1766,
-     "zone": "catchup"
+     "from": "702818817",
+     "to": "702835461",
+     "checked": 1666,
+     "slots": 1666,
+     "zone": "new"
     },
     {
-     "from": "702829481",
-     "to": "702847130",
-     "checked": 1765,
-     "slots": 1766,
-     "zone": "catchup"
+     "from": "702835470",
+     "to": "702852122",
+     "checked": 1664,
+     "slots": 1666,
+     "zone": "new"
     },
     {
-     "from": "702847149",
-     "to": "702864793",
-     "checked": 1765,
-     "slots": 1766,
-     "zone": "catchup"
+     "from": "702852131",
+     "to": "702868782",
+     "checked": 1666,
+     "slots": 1666,
+     "zone": "new"
     },
     {
-     "from": "702864800",
-     "to": "702882451",
-     "checked": 1766,
-     "slots": 1766,
-     "zone": "catchup"
+     "from": "702868791",
+     "to": "702885443",
+     "checked": 1666,
+     "slots": 1666,
+     "zone": "new"
     },
     {
-     "from": "702882460",
-     "to": "702900114",
-     "checked": 1766,
-     "slots": 1766,
-     "zone": "catchup"
+     "from": "702885452",
+     "to": "702902109",
+     "checked": 1666,
+     "slots": 1666,
+     "zone": "new"
     },
     {
-     "from": "702900123",
-     "to": "702917771",
-     "checked": 1766,
-     "slots": 1766,
-     "zone": "catchup"
+     "from": "702902118",
+     "to": "702918769",
+     "checked": 1666,
+     "slots": 1666,
+     "zone": "new"
     },
     {
-     "from": "702917780",
+     "from": "702918778",
      "to": "702935519",
-     "checked": 1774,
-     "slots": 1774,
-     "zone": "catchup"
+     "checked": 1675,
+     "slots": 1675,
+     "zone": "new"
     }
    ]
   }
