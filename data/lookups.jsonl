@@ -24192,7 +24192,7 @@
 {"acn": "702735519", "d": {"name": "OCEAN TREKKERS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702735528", "d": {"name": "PAU HANA CO.", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702735537", "d": {"name": "VARIYA GOUNDAR PROPRIETARY LIMITED", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "SURRY HILLS 2010 NSW", "suburb": "SURRY HILLS", "postcode": "2010", "state": "NSW"}, {"type": "Principal Place of business", "address": "AIRDS 2560 NSW", "suburb": "AIRDS", "postcode": "2560", "state": "NSW"}], "registrationDate": "2026-09-27"}}
-{"acn": "702735546", "d": null}
+{"acn": "702735546", "d": null, "r": 1}
 {"acn": "702735555", "d": {"name": "ABERDOUNE BUSINESS SERVICES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702735564", "d": {"name": "SG MCLEAN TRENCHING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702735573", "d": {"name": "PEREGRINE EPHEMERA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
@@ -24201,8 +24201,8 @@
 {"acn": "702735608", "d": {"name": "STRATHFIELD CLEANING SERVICES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702735617", "d": {"name": "R3 PROJECTS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702735626", "d": {"name": "CM REWARDS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702735635", "d": null}
-{"acn": "702735644", "d": null}
+{"acn": "702735635", "d": null, "r": 1}
+{"acn": "702735644", "d": null, "r": 1}
 {"acn": "702735653", "d": {"name": "ABC DISTRIBUTORS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "MUDGEE 2850 NSW", "suburb": "MUDGEE", "postcode": "2850", "state": "NSW"}, {"type": "Principal Place of business", "address": "MUDGEE 2850 NSW", "suburb": "MUDGEE", "postcode": "2850", "state": "NSW"}], "registrationDate": "2026-09-27"}}
 {"acn": "702735662", "d": {"name": "MUDGEE GROCERIES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702735671", "d": {"name": "YACA CLEANING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
@@ -24213,11 +24213,11 @@
 {"acn": "702735724", "d": {"name": "AGRICHAIN HOLDINGS LTD.", "type": "Nonc", "class": "-", "subClass": "-", "status": "Not Registered-Organisations Of Type 'Nonc','Nret'", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702735733", "d": {"name": "SOUTHSIDE PRESSURE PRO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702735742", "d": {"name": "JASKIRAT PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "PAKENHAM 3810 VIC", "suburb": "PAKENHAM", "postcode": "3810", "state": "VIC"}, {"type": "Principal Place of business", "address": "PAKENHAM 3810 VIC", "suburb": "PAKENHAM", "postcode": "3810", "state": "VIC"}], "registrationDate": "2026-09-27"}}
-{"acn": "702735751", "d": null}
-{"acn": "702735760", "d": null}
+{"acn": "702735751", "d": null, "r": 1}
+{"acn": "702735760", "d": null, "r": 1}
 {"acn": "702735779", "d": {"name": "ANYTIME ANSWERED", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702735788", "d": null}
-{"acn": "702735797", "d": null}
+{"acn": "702735788", "d": null, "r": 1}
+{"acn": "702735797", "d": null, "r": 1}
 {"acn": "702735804", "d": {"name": "PLATINUM RAINFOREST INVESTMENT COMPANY PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "BERSERKER 4701 QLD", "suburb": "BERSERKER", "postcode": "4701", "state": "QLD"}, {"type": "Principal Place of business", "address": "BERSERKER 4701 QLD", "suburb": "BERSERKER", "postcode": "4701", "state": "QLD"}], "registrationDate": "2026-09-27"}}
 {"acn": "702735813", "d": {"name": "SYONS AUTOMOTIVE PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "DOONSIDE 2767 NSW", "suburb": "DOONSIDE", "postcode": "2767", "state": "NSW"}, {"type": "Principal Place of business", "address": "DOONSIDE 2767 NSW", "suburb": "DOONSIDE", "postcode": "2767", "state": "NSW"}], "registrationDate": "2026-09-27"}}
 {"acn": "702735822", "d": {"name": "SYONS AUTOMOTIVE PTY LTD", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
@@ -24233,16 +24233,16 @@
 {"acn": "702735920", "d": {"name": "TRADIEREVIVE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702735939", "d": {"name": "HELLO GLADYS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702735948", "d": {"name": "LA EARLY LEARNING CONSULTANCY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702735957", "d": null}
-{"acn": "702735966", "d": null}
+{"acn": "702735957", "d": null, "r": 1}
+{"acn": "702735966", "d": null, "r": 1}
 {"acn": "702735975", "d": {"name": "PME GOLF PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "CABARITA 2137 NSW", "suburb": "CABARITA", "postcode": "2137", "state": "NSW"}, {"type": "Principal Place of business", "address": "FIVE DOCK 2046 NSW", "suburb": "FIVE DOCK", "postcode": "2046", "state": "NSW"}], "registrationDate": "2026-09-27"}}
-{"acn": "702735984", "d": null}
-{"acn": "702735993", "d": null}
+{"acn": "702735984", "d": null, "r": 1}
+{"acn": "702735993", "d": null, "r": 1}
 {"acn": "702736007", "d": {"name": "WINTIN", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736016", "d": {"name": "AITRIPS.IO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702736025", "d": {"name": "STREET RELIC CO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702736034", "d": null}
-{"acn": "702736043", "d": null}
+{"acn": "702736034", "d": null, "r": 1}
+{"acn": "702736043", "d": null, "r": 1}
 {"acn": "702736052", "d": {"name": "GUR NANAK DHARAMSAAL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702736061", "d": {"name": "STUDIO NATALIJA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702736070", "d": {"name": "MALLOWAY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
@@ -24260,22 +24260,22 @@
 {"acn": "702736196", "d": {"name": "MEANINGFUL MOMENTS CO.", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736203", "d": {"name": "TRACEY CLARKE COACHING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736212", "d": {"name": "FELSJEN INVESTMENTS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702736221", "d": null}
-{"acn": "702736230", "d": null}
-{"acn": "702736249", "d": null}
+{"acn": "702736221", "d": null, "r": 1}
+{"acn": "702736230", "d": null, "r": 1}
+{"acn": "702736249", "d": null, "r": 1}
 {"acn": "702736258", "d": {"name": "WITCHES THAT WEAVE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736267", "d": {"name": "BUZY BEEZ WERRIBEE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702736276", "d": null}
-{"acn": "702736285", "d": null}
+{"acn": "702736276", "d": null, "r": 1}
+{"acn": "702736285", "d": null, "r": 1}
 {"acn": "702736294", "d": {"name": "VIRK TRANSPORT GROUP PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "AUGUSTINE HEIGHTS 4300 QLD", "suburb": "AUGUSTINE HEIGHTS", "postcode": "4300", "state": "QLD"}, {"type": "Principal Place of business", "address": "AUGUSTINE HEIGHTS 4300 QLD", "suburb": "AUGUSTINE HEIGHTS", "postcode": "4300", "state": "QLD"}], "registrationDate": "2026-09-27"}}
 {"acn": "702736301", "d": {"name": "SKYVIEW", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736310", "d": {"name": "SPENDLESS AI", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736329", "d": {"name": "THE NEAT HIVE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702736338", "d": null}
-{"acn": "702736347", "d": null}
-{"acn": "702736356", "d": null}
+{"acn": "702736338", "d": null, "r": 1}
+{"acn": "702736347", "d": null, "r": 1}
+{"acn": "702736356", "d": null, "r": 1}
 {"acn": "702736365", "d": {"name": "BUZY BEEZ PLASTER FUNHOUSE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702736374", "d": null}
+{"acn": "702736374", "d": null, "r": 1}
 {"acn": "702736383", "d": {"name": "AFGHAN LITERARY MOVEMENT MELBOURNE  INC.", "type": "Associations", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736392", "d": {"name": "KOALA BELLS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702736409", "d": {"name": "MY MORENA PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "KURABY 4112 QLD", "suburb": "KURABY", "postcode": "4112", "state": "QLD"}, {"type": "Principal Place of business", "address": "KURABY 4112 QLD", "suburb": "KURABY", "postcode": "4112", "state": "QLD"}], "registrationDate": "2026-09-27"}}
@@ -24285,9 +24285,9 @@
 {"acn": "702736445", "d": {"name": "RED PEPPER KITCHEN", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702736454", "d": {"name": "FRANKLIN PHYSIO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736463", "d": {"name": "ELAREN HAIR", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702736472", "d": null}
+{"acn": "702736472", "d": null, "r": 1}
 {"acn": "702736481", "d": {"name": "AGELESS WITH COACH JOSIE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702736490", "d": null}
+{"acn": "702736490", "d": null, "r": 1}
 {"acn": "702736507", "d": {"name": "PRIME SURFACE SOLUTIONS PTY LTD.", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "MERRYLANDS WEST 2160 NSW", "suburb": "MERRYLANDS WEST", "postcode": "2160", "state": "NSW"}, {"type": "Principal Place of business", "address": "MERRYLANDS WEST 2160 NSW", "suburb": "MERRYLANDS WEST", "postcode": "2160", "state": "NSW"}], "registrationDate": "2026-09-27"}}
 {"acn": "702736516", "d": {"name": "PRIME SURFACE SOLUTIONS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736525", "d": {"name": "ACREWOOD HOMES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
@@ -24299,19 +24299,19 @@
 {"acn": "702736589", "d": {"name": "TASMAN PRESTIGE DETAILING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736598", "d": {"name": "SENIORS EQUITY SOLUTIONS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "CARLINGFORD 2118 NSW", "suburb": "CARLINGFORD", "postcode": "2118", "state": "NSW"}, {"type": "Principal Place of business", "address": "CARLINGFORD 2118 NSW", "suburb": "CARLINGFORD", "postcode": "2118", "state": "NSW"}], "registrationDate": "2026-09-27"}}
 {"acn": "702736605", "d": {"name": "83 HONEYBEE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702736614", "d": null}
-{"acn": "702736623", "d": null}
-{"acn": "702736632", "d": null}
-{"acn": "702736641", "d": null}
-{"acn": "702736650", "d": null}
-{"acn": "702736669", "d": null}
+{"acn": "702736614", "d": null, "r": 1}
+{"acn": "702736623", "d": null, "r": 1}
+{"acn": "702736632", "d": null, "r": 1}
+{"acn": "702736641", "d": null, "r": 1}
+{"acn": "702736650", "d": null, "r": 1}
+{"acn": "702736669", "d": null, "r": 1}
 {"acn": "702736678", "d": {"name": "WESTGATE CABINETRY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736687", "d": {"name": "DASHBALL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702736696", "d": {"name": "YOUR HOME FIRST PROPERTY MANAGEMENT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736703", "d": {"name": "LOLLY JOY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736712", "d": {"name": "RARA PRESTIGE CLEANING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702736721", "d": null}
-{"acn": "702736730", "d": null}
+{"acn": "702736721", "d": null, "r": 1}
+{"acn": "702736730", "d": null, "r": 1}
 {"acn": "702736749", "d": {"name": "STAYING ALIVE FIRST AID PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "BUNDEENA 2230 NSW", "suburb": "BUNDEENA", "postcode": "2230", "state": "NSW"}, {"type": "Principal Place of business", "address": "BUNDEENA 2230 NSW", "suburb": "BUNDEENA", "postcode": "2230", "state": "NSW"}], "registrationDate": "2026-09-27"}}
 {"acn": "702736758", "d": {"name": "STAYING ALIVE FIRST AID", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702736767", "d": {"name": "SYDNEY NIGHT STARS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
@@ -24319,75 +24319,75 @@
 {"acn": "702736785", "d": {"name": "LIMITLESS LASHES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736794", "d": {"name": "MAARUTI TRADERS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736801", "d": {"name": "DAMN GOOD TOGETHER", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702736810", "d": null}
+{"acn": "702736810", "d": null, "r": 1}
 {"acn": "702736829", "d": {"name": "GANDHI MOVERS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736838", "d": {"name": "C&K AUTOMOTIVE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736847", "d": {"name": "LUXALL BLINDS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702736856", "d": {"name": "HARTLAND HUNTING & OUTDOORS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736865", "d": {"name": "MAKING BOLDLY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736874", "d": {"name": "A SECOND LOOK DRESS HIRE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702736883", "d": null}
+{"acn": "702736883", "d": null, "r": 1}
 {"acn": "702736892", "d": {"name": "BLOKK LABEL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702736909", "d": {"name": "THE GARDEN CLUB STUDIO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702736918", "d": {"name": "SLEEPY SUNDAE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702736927", "d": {"name": "CLUB FIFTEEN", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702736936", "d": {"name": "A.C.N. 702 736 936 PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "TOOWONG 4066 QLD", "suburb": "TOOWONG", "postcode": "4066", "state": "QLD"}, {"type": "Principal Place of business", "address": "TOOWONG 4066 QLD", "suburb": "TOOWONG", "postcode": "4066", "state": "QLD"}], "registrationDate": "2026-09-27"}}
-{"acn": "702736945", "d": null}
-{"acn": "702736954", "d": null}
-{"acn": "702736963", "d": null}
-{"acn": "702736972", "d": null}
-{"acn": "702736981", "d": null}
+{"acn": "702736945", "d": null, "r": 1}
+{"acn": "702736954", "d": null, "r": 1}
+{"acn": "702736963", "d": null, "r": 1}
+{"acn": "702736972", "d": null, "r": 1}
+{"acn": "702736981", "d": null, "r": 1}
 {"acn": "702736990", "d": {"name": "AUZZIE RENTALS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "SA", "addresses": [{"type": "Registered Office", "address": "WINDSOR GARDENS 5087 SA", "suburb": "WINDSOR GARDENS", "postcode": "5087", "state": "SA"}, {"type": "Principal Place of business", "address": "WINDSOR GARDENS 5087 SA", "suburb": "WINDSOR GARDENS", "postcode": "5087", "state": "SA"}], "registrationDate": "2026-09-27"}}
 {"acn": "702737004", "d": {"name": "AUZZIE RENTALS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737013", "d": {"name": "ROCKS CAR WASH", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702737022", "d": {"name": "CARE FOR MOM AND DAD", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702737031", "d": null}
-{"acn": "702737040", "d": null}
-{"acn": "702737059", "d": null}
+{"acn": "702737031", "d": null, "r": 1}
+{"acn": "702737040", "d": null, "r": 1}
+{"acn": "702737059", "d": null, "r": 1}
 {"acn": "702737068", "d": {"name": "LOLOMA ABILITY SUPPORT PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "PETRIE 4502 QLD", "suburb": "PETRIE", "postcode": "4502", "state": "QLD"}, {"type": "Principal Place of business", "address": "PETRIE 4502 QLD", "suburb": "PETRIE", "postcode": "4502", "state": "QLD"}], "registrationDate": "2026-09-27"}}
 {"acn": "702737077", "d": {"name": "SAFESPACE CLEANING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737086", "d": {"name": "U. SKIN & WELLNESS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702737095", "d": null}
-{"acn": "702737102", "d": null}
+{"acn": "702737095", "d": null, "r": 1}
+{"acn": "702737102", "d": null, "r": 1}
 {"acn": "702737111", "d": {"name": "TOOR X LOGISTICS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "TRUGANINA 3029 VIC", "suburb": "TRUGANINA", "postcode": "3029", "state": "VIC"}, {"type": "Principal Place of business", "address": "TRUGANINA 3029 VIC", "suburb": "TRUGANINA", "postcode": "3029", "state": "VIC"}], "registrationDate": "2026-09-27"}}
-{"acn": "702737120", "d": null}
+{"acn": "702737120", "d": null, "r": 1}
 {"acn": "702737139", "d": {"name": "CHATIOR", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702737148", "d": null}
-{"acn": "702737157", "d": null}
+{"acn": "702737148", "d": null, "r": 1}
+{"acn": "702737157", "d": null, "r": 1}
 {"acn": "702737166", "d": {"name": "BALTEX", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737175", "d": {"name": "REDLANDS JUNK REMOVAL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737184", "d": {"name": "BUCKLEY BUILT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737193", "d": {"name": "CAPASCOPE STUDIO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702737200", "d": null}
+{"acn": "702737200", "d": {"name": "THE SKATE SOCIAL PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "TAS", "addresses": [{"type": "Registered Office", "address": "LOWER TURNERS MARSH 7267 TAS", "suburb": "LOWER TURNERS MARSH", "postcode": "7267", "state": "TAS"}, {"type": "Principal Place of business", "address": "LOWER TURNERS MARSH 7267 TAS", "suburb": "LOWER TURNERS MARSH", "postcode": "7267", "state": "TAS"}], "registrationDate": "2026-09-28"}, "r": 1}
 {"acn": "702737219", "d": {"name": "BRISBANE SOUTH COURT SPORTS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737228", "d": {"name": "MY FAMILY JIGSAW", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737237", "d": {"name": "SUPPLY TOWING & RECOVERY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702737246", "d": null}
-{"acn": "702737255", "d": null}
-{"acn": "702737264", "d": null}
+{"acn": "702737246", "d": null, "r": 1}
+{"acn": "702737255", "d": null, "r": 1}
+{"acn": "702737264", "d": null, "r": 1}
 {"acn": "702737273", "d": {"name": "CSIDES CONTRACTING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737282", "d": {"name": "TEA LAB CO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702737291", "d": {"name": "FREESPOOL PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "WA", "addresses": [{"type": "Registered Office", "address": "FLOREAT 6014 WA", "suburb": "FLOREAT", "postcode": "6014", "state": "WA"}, {"type": "Principal Place of business", "address": "FLOREAT 6014 WA", "suburb": "FLOREAT", "postcode": "6014", "state": "WA"}], "registrationDate": "2026-09-27"}}
 {"acn": "702737308", "d": {"name": "TAXTRACKAU", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737317", "d": {"name": "HER TURN", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702737326", "d": null}
-{"acn": "702737335", "d": null}
-{"acn": "702737344", "d": null}
+{"acn": "702737326", "d": null, "r": 1}
+{"acn": "702737335", "d": null, "r": 1}
+{"acn": "702737344", "d": null, "r": 1}
 {"acn": "702737353", "d": {"name": "SEQ ROOFING & CLADDING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702737362", "d": {"name": "GREEN SHIELD SUPPLIES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702737371", "d": {"name": "LATERALIS PSYCHOLOGY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702737380", "d": null}
+{"acn": "702737380", "d": null, "r": 1}
 {"acn": "702737399", "d": {"name": "BEIJING FANGBEI INTERNATIONAL BUSINESS CONSULTING CO. LTD", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702737406", "d": null}
-{"acn": "702737415", "d": null}
-{"acn": "702737424", "d": null}
+{"acn": "702737406", "d": null, "r": 1}
+{"acn": "702737415", "d": null, "r": 1}
+{"acn": "702737424", "d": null, "r": 1}
 {"acn": "702737433", "d": {"name": "IPSY HOLDINGS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702737442", "d": {"name": "CACTUS PRICKS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737451", "d": {"name": "S. YU PHOTO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702737460", "d": {"name": "SHANNANIGANS CLEANING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737479", "d": {"name": "BURNLY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702737488", "d": null}
-{"acn": "702737497", "d": null}
+{"acn": "702737488", "d": null, "r": 1}
+{"acn": "702737497", "d": null, "r": 1}
 {"acn": "702737504", "d": {"name": "GOOD GUTS SODA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702737513", "d": {"name": "OMIT ARCHIVE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702737522", "d": {"name": "CANVIDALE STUDIOS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
@@ -24403,31 +24403,31 @@
 {"acn": "702737620", "d": {"name": "SPOONWISE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737639", "d": {"name": "BODYBUILDING AND FITNESS AUSTRALIA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702737648", "d": {"name": "WHEATBELT MOWING & ODD JOBS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702737657", "d": null}
+{"acn": "702737657", "d": null, "r": 1}
 {"acn": "702737666", "d": {"name": "NATS HATS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702737675", "d": null}
-{"acn": "702737684", "d": null}
-{"acn": "702737693", "d": null}
+{"acn": "702737675", "d": null, "r": 1}
+{"acn": "702737684", "d": null, "r": 1}
+{"acn": "702737693", "d": null, "r": 1}
 {"acn": "702737700", "d": {"name": "BTT ENGINEERING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737719", "d": {"name": "TAO LIVING SYSTEMS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702737728", "d": {"name": "MASON AND GUNN", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737737", "d": {"name": "VELPAS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737746", "d": {"name": "SOLACE CLOTHING AU", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737755", "d": {"name": "CROVUE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702737764", "d": null}
+{"acn": "702737764", "d": {"name": "SGA PARTNERS CERTIFIED ACCOUNTANTS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "JAMISONTOWN 2750 NSW", "suburb": "JAMISONTOWN", "postcode": "2750", "state": "NSW"}, {"type": "Principal Place of business", "address": "JAMISONTOWN 2750 NSW", "suburb": "JAMISONTOWN", "postcode": "2750", "state": "NSW"}], "registrationDate": "2026-09-28"}, "r": 1}
 {"acn": "702737773", "d": {"name": "CARLA BANANA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737782", "d": {"name": "GREEN & GOLD PROPERTY MANAGEMENT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702737791", "d": {"name": "BAIKED", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702737808", "d": null}
+{"acn": "702737808", "d": null, "r": 1}
 {"acn": "702737817", "d": {"name": "BFA ORIGINAL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702737826", "d": null}
+{"acn": "702737826", "d": null, "r": 1}
 {"acn": "702737835", "d": {"name": "LEENEN PERFORMANCE PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "CHELTENHAM 3192 VIC", "suburb": "CHELTENHAM", "postcode": "3192", "state": "VIC"}, {"type": "Principal Place of business", "address": "CHELTENHAM 3192 VIC", "suburb": "CHELTENHAM", "postcode": "3192", "state": "VIC"}], "registrationDate": "2026-09-27"}}
 {"acn": "702737844", "d": {"name": "LEENEN PERFORMANCE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702737853", "d": {"name": "TLC HOLISTIC HEALTH", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737862", "d": {"name": "EVERFORM GARDENS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702737871", "d": null}
+{"acn": "702737871", "d": null, "r": 1}
 {"acn": "702737880", "d": {"name": "LITTLELATTE&CO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702737899", "d": null}
+{"acn": "702737899", "d": null, "r": 1}
 {"acn": "702737906", "d": {"name": "CARGOVISTA PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "BUSBY 2168 NSW", "suburb": "BUSBY", "postcode": "2168", "state": "NSW"}, {"type": "Principal Place of business", "address": "BUSBY 2168 NSW", "suburb": "BUSBY", "postcode": "2168", "state": "NSW"}], "registrationDate": "2026-09-27"}}
 {"acn": "702737915", "d": {"name": "LAVOX LEGAL PTY LTD", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702737924", "d": {"name": "AUSSIE MUNCHKINS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
@@ -24446,18 +24446,18 @@
 {"acn": "702738056", "d": {"name": "STARUNIVERSE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702738065", "d": {"name": "EVERYE ELECTRICAL SOLUTIONS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702738074", "d": {"name": "CARNIVALHQ", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702738083", "d": null}
-{"acn": "702738092", "d": null}
+{"acn": "702738083", "d": null, "r": 1}
+{"acn": "702738092", "d": null, "r": 1}
 {"acn": "702738109", "d": {"name": "MORA FINANCE PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "SA", "addresses": [{"type": "Registered Office", "address": "GILLMAN 5013 SA", "suburb": "GILLMAN", "postcode": "5013", "state": "SA"}, {"type": "Principal Place of business", "address": "GILLMAN 5013 SA", "suburb": "GILLMAN", "postcode": "5013", "state": "SA"}], "registrationDate": "2026-09-27"}}
 {"acn": "702738118", "d": {"name": "BLISSFUL BAKERY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702738127", "d": null}
-{"acn": "702738136", "d": null}
+{"acn": "702738127", "d": null, "r": 1}
+{"acn": "702738136", "d": null, "r": 1}
 {"acn": "702738145", "d": {"name": "VLSP PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "SPRING MOUNTAIN 4300 QLD", "suburb": "SPRING MOUNTAIN", "postcode": "4300", "state": "QLD"}, {"type": "Principal Place of business", "address": "SPRING MOUNTAIN 4300 QLD", "suburb": "SPRING MOUNTAIN", "postcode": "4300", "state": "QLD"}], "registrationDate": "2026-09-27"}}
 {"acn": "702738154", "d": {"name": "STUDIO AA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702738163", "d": {"name": "R.K HANDYMAN AND CLEANING SERVICE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702738172", "d": null}
-{"acn": "702738181", "d": null}
-{"acn": "702738190", "d": null}
+{"acn": "702738172", "d": null, "r": 1}
+{"acn": "702738181", "d": null, "r": 1}
+{"acn": "702738190", "d": {"name": "GEALEOMA TECH PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "ERSKINEVILLE 2043 NSW", "suburb": "ERSKINEVILLE", "postcode": "2043", "state": "NSW"}, {"type": "Principal Place of business", "address": "ERSKINEVILLE 2043 NSW", "suburb": "ERSKINEVILLE", "postcode": "2043", "state": "NSW"}], "registrationDate": "2026-09-28"}, "r": 1}
 {"acn": "702738207", "d": {"name": "COLLABTABS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702738216", "d": {"name": "HYPKNOTZ", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702738225", "d": {"name": "LINEA BOTANICA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
@@ -24472,19 +24472,19 @@
 {"acn": "702738314", "d": {"name": "BANKSIA HORTICULTURE SERVICES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702738323", "d": {"name": "PROPER HOME 6000", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702738332", "d": {"name": "EVERCLEAR INDUSTRIES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702738341", "d": null}
+{"acn": "702738341", "d": null, "r": 1}
 {"acn": "702738350", "d": {"name": "HONEY AND HEN", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702738369", "d": {"name": "GRTA TENNIS DEVELOPMENT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702738378", "d": null}
-{"acn": "702738387", "d": null}
+{"acn": "702738378", "d": null, "r": 1}
+{"acn": "702738387", "d": null, "r": 1}
 {"acn": "702738396", "d": {"name": "VOLT BALL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702738403", "d": null}
-{"acn": "702738412", "d": null}
-{"acn": "702738421", "d": null}
+{"acn": "702738403", "d": null, "r": 1}
+{"acn": "702738412", "d": null, "r": 1}
+{"acn": "702738421", "d": {"name": "OT CYBER DEFENCE PTY LTD.", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "BOX HILL 2765 NSW", "suburb": "BOX HILL", "postcode": "2765", "state": "NSW"}, {"type": "Principal Place of business", "address": "BOX HILL 2765 NSW", "suburb": "BOX HILL", "postcode": "2765", "state": "NSW"}], "registrationDate": "2026-09-28"}, "r": 1}
 {"acn": "702738430", "d": {"name": "IMMERSED CLEANING SOLUTIONS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702738449", "d": null}
-{"acn": "702738458", "d": null}
-{"acn": "702738467", "d": null}
+{"acn": "702738449", "d": null, "r": 1}
+{"acn": "702738458", "d": null, "r": 1}
+{"acn": "702738467", "d": {"name": "DINR PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "BONDI BEACH 2026 NSW", "suburb": "BONDI BEACH", "postcode": "2026", "state": "NSW"}, {"type": "Principal Place of business", "address": "BONDI BEACH 2026 NSW", "suburb": "BONDI BEACH", "postcode": "2026", "state": "NSW"}], "registrationDate": "2026-09-28"}, "r": 1}
 {"acn": "702738476", "d": {"name": "SABIHA LASHES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702738485", "d": {"name": "WA URBAN MINERS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702738494", "d": {"name": "SNOZE BEDDING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
@@ -24520,10 +24520,10 @@
 {"acn": "702738798", "d": {"name": "R&D AUTOS & MORE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702738805", "d": {"name": "WILBERFORCE GLASS AND ALUMINIUM", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702738814", "d": {"name": "ONSITE CUSTOM WORKWEAR", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702738823", "d": null}
+{"acn": "702738823", "d": null, "r": 1}
 {"acn": "702738832", "d": {"name": "YONOBI", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702738841", "d": {"name": "PARENTING IN PRAXIS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702738850", "d": null}
+{"acn": "702738850", "d": null, "r": 1}
 {"acn": "702738869", "d": {"name": "ZERO DELAY PLUMBING PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "LABRADOR 4215 QLD", "suburb": "LABRADOR", "postcode": "4215", "state": "QLD"}, {"type": "Principal Place of business", "address": "LABRADOR 4215 QLD", "suburb": "LABRADOR", "postcode": "4215", "state": "QLD"}], "registrationDate": "2026-09-27"}}
 {"acn": "702738878", "d": {"name": "R.J. HUNTER", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702738887", "d": {"name": "BE CYBER", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
@@ -24531,10 +24531,10 @@
 {"acn": "702738903", "d": {"name": "ISOCOMPLIANCE365", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702738912", "d": {"name": "ROHOBOTH PROVIDENCE PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "PARKINSON 4115 QLD", "suburb": "PARKINSON", "postcode": "4115", "state": "QLD"}, {"type": "Principal Place of business", "address": "ALGESTER 4115 QLD", "suburb": "ALGESTER", "postcode": "4115", "state": "QLD"}], "registrationDate": "2026-09-27"}}
 {"acn": "702738921", "d": {"name": "KESICI BUILT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702738930", "d": null}
-{"acn": "702738949", "d": null}
-{"acn": "702738958", "d": null}
-{"acn": "702738967", "d": null}
+{"acn": "702738930", "d": null, "r": 1}
+{"acn": "702738949", "d": null, "r": 1}
+{"acn": "702738958", "d": null, "r": 1}
+{"acn": "702738967", "d": null, "r": 1}
 {"acn": "702738976", "d": {"name": "AFZAL GROUP PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "MACGREGOR 2615 ACT", "suburb": "MACGREGOR", "postcode": "2615", "state": "ACT"}, {"type": "Principal Place of business", "address": "MACGREGOR 2615 ACT", "suburb": "MACGREGOR", "postcode": "2615", "state": "ACT"}], "registrationDate": "2026-09-27"}}
 {"acn": "702738985", "d": {"name": "VYAS GROUP PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "RIVERSTONE 2765 NSW", "suburb": "RIVERSTONE", "postcode": "2765", "state": "NSW"}, {"type": "Principal Place of business", "address": "RIVERSTONE 2765 NSW", "suburb": "RIVERSTONE", "postcode": "2765", "state": "NSW"}], "registrationDate": "2026-09-27"}}
 {"acn": "702738994", "d": {"name": "MT WELLNESS PARTNERSHIP", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
@@ -24544,28 +24544,28 @@
 {"acn": "702739035", "d": {"name": "KESICI BUILT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702739044", "d": {"name": "THE CANDOUR CO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702739053", "d": {"name": "SENCARD", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702739062", "d": null}
-{"acn": "702739071", "d": null}
+{"acn": "702739062", "d": null, "r": 1}
+{"acn": "702739071", "d": null, "r": 1}
 {"acn": "702739080", "d": {"name": "ASPIRE HEALTH COLLECTIVE PTY LIMITED", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "SA", "addresses": [{"type": "Registered Office", "address": "PLYMPTON PARK 5038 SA", "suburb": "PLYMPTON PARK", "postcode": "5038", "state": "SA"}, {"type": "Principal Place of business", "address": "PLYMPTON PARK 5038 SA", "suburb": "PLYMPTON PARK", "postcode": "5038", "state": "SA"}], "registrationDate": "2026-09-27"}}
 {"acn": "702739099", "d": {"name": "LOFTEN AUSTRALIA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702739106", "d": null}
-{"acn": "702739115", "d": null}
-{"acn": "702739124", "d": null}
+{"acn": "702739106", "d": null, "r": 1}
+{"acn": "702739115", "d": null, "r": 1}
+{"acn": "702739124", "d": null, "r": 1}
 {"acn": "702739133", "d": {"name": "DAISY DOES DIY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702739142", "d": {"name": "LIGHT UP EVENTS TRADING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702739151", "d": {"name": "BUNGALOW MANTRA BY AJAY SUD", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702739160", "d": {"name": "MY PROPERTY ADVISER", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702739179", "d": {"name": "DYNAMIC SOUND ACADEMY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702739188", "d": {"name": "CONTRATHINK", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702739197", "d": null}
+{"acn": "702739197", "d": null, "r": 1}
 {"acn": "702739204", "d": {"name": "PAN DE MARCY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702739213", "d": null}
-{"acn": "702739222", "d": null}
-{"acn": "702739231", "d": null}
+{"acn": "702739213", "d": null, "r": 1}
+{"acn": "702739222", "d": null, "r": 1}
+{"acn": "702739231", "d": null, "r": 1}
 {"acn": "702739240", "d": {"name": "PROJECT ARC STUDIO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702739259", "d": {"name": "DEVIS HEALTHCARE IT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702739268", "d": null}
-{"acn": "702739277", "d": null}
+{"acn": "702739268", "d": null, "r": 1}
+{"acn": "702739277", "d": null, "r": 1}
 {"acn": "702739286", "d": {"name": "BARKA FENCING & GATE AUTOMATION", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702739295", "d": {"name": "SOUL FULL DELI", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702739302", "d": {"name": "ZOOTA SOFTWARE PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "CREMORNE 3121 VIC", "suburb": "CREMORNE", "postcode": "3121", "state": "VIC"}, {"type": "Principal Place of business", "address": "CREMORNE 3121 VIC", "suburb": "CREMORNE", "postcode": "3121", "state": "VIC"}], "registrationDate": "2026-09-27"}}
@@ -24573,36 +24573,36 @@
 {"acn": "702739320", "d": {"name": "ALAM DESIGN & FABRICATION", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702739339", "d": {"name": "MEAL MAGIC", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702739348", "d": {"name": "SITESCOPE PROPERTY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702739357", "d": null}
-{"acn": "702739366", "d": null}
-{"acn": "702739375", "d": null}
-{"acn": "702739384", "d": null}
-{"acn": "702739393", "d": null}
+{"acn": "702739357", "d": null, "r": 1}
+{"acn": "702739366", "d": null, "r": 1}
+{"acn": "702739375", "d": null, "r": 1}
+{"acn": "702739384", "d": null, "r": 1}
+{"acn": "702739393", "d": null, "r": 1}
 {"acn": "702739400", "d": {"name": "REBEL FREIGHT PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "ACT", "addresses": [{"type": "Registered Office", "address": "MACGREGOR 2615 ACT", "suburb": "MACGREGOR", "postcode": "2615", "state": "ACT"}, {"type": "Principal Place of business", "address": "MACGREGOR 2615 ACT", "suburb": "MACGREGOR", "postcode": "2615", "state": "ACT"}], "registrationDate": "2026-09-27"}}
 {"acn": "702739419", "d": {"name": "KINGSCOVE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702739428", "d": {"name": "MOUSEWORKS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702739437", "d": null}
-{"acn": "702739446", "d": null}
-{"acn": "702739455", "d": null}
-{"acn": "702739464", "d": null}
-{"acn": "702739473", "d": null}
-{"acn": "702739482", "d": null}
+{"acn": "702739437", "d": null, "r": 1}
+{"acn": "702739446", "d": null, "r": 1}
+{"acn": "702739455", "d": {"name": "ROJOMBAWA SMSF PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "WA", "addresses": [{"type": "Registered Office", "address": "EAST FREMANTLE 6158 WA", "suburb": "EAST FREMANTLE", "postcode": "6158", "state": "WA"}, {"type": "Principal Place of business", "address": "EAST FREMANTLE 6158 WA", "suburb": "EAST FREMANTLE", "postcode": "6158", "state": "WA"}], "registrationDate": "2026-09-28"}, "r": 1}
+{"acn": "702739464", "d": null, "r": 1}
+{"acn": "702739473", "d": null, "r": 1}
+{"acn": "702739482", "d": null, "r": 1}
 {"acn": "702739491", "d": {"name": "SEA WORKS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702739508", "d": null}
+{"acn": "702739508", "d": null, "r": 1}
 {"acn": "702739517", "d": {"name": "THE PUREST PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "ULTIMO 2007 NSW", "suburb": "ULTIMO", "postcode": "2007", "state": "NSW"}, {"type": "Principal Place of business", "address": "ULTIMO 2007 NSW", "suburb": "ULTIMO", "postcode": "2007", "state": "NSW"}], "registrationDate": "2026-09-27"}}
 {"acn": "702739526", "d": {"name": "AURING COMMUNITY CARE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702739535", "d": {"name": "INDIAN OCEAN INK", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702739544", "d": null}
-{"acn": "702739553", "d": null}
+{"acn": "702739544", "d": null, "r": 1}
+{"acn": "702739553", "d": null, "r": 1}
 {"acn": "702739562", "d": {"name": "PACIFIC GATEWAY PTY LTD.", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "WALLAN 3756 VIC", "suburb": "WALLAN", "postcode": "3756", "state": "VIC"}, {"type": "Principal Place of business", "address": "WALLAN 3756 VIC", "suburb": "WALLAN", "postcode": "3756", "state": "VIC"}], "registrationDate": "2026-09-27"}}
 {"acn": "702739571", "d": {"name": "RIDHI TEXTILES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
-{"acn": "702739580", "d": null}
-{"acn": "702739599", "d": null}
+{"acn": "702739580", "d": null, "r": 1}
+{"acn": "702739599", "d": null, "r": 1}
 {"acn": "702739606", "d": {"name": "C&C CARE SUPPORT PTY LIMITED", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "TAS", "addresses": [{"type": "Registered Office", "address": "CLARENDON VALE 7019 TAS", "suburb": "CLARENDON VALE", "postcode": "7019", "state": "TAS"}, {"type": "Principal Place of business", "address": "CLARENDON VALE 7019 TAS", "suburb": "CLARENDON VALE", "postcode": "7019", "state": "TAS"}], "registrationDate": "2026-09-27"}}
 {"acn": "702739615", "d": {"name": "C&C CARE SUPPORT SERVICES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-27"}}
 {"acn": "702739624", "d": {"name": "PROVENDA GROUP PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "WA", "addresses": [{"type": "Registered Office", "address": "PIARA WATERS 6112 WA", "suburb": "PIARA WATERS", "postcode": "6112", "state": "WA"}, {"type": "Principal Place of business", "address": "PIARA WATERS 6112 WA", "suburb": "PIARA WATERS", "postcode": "6112", "state": "WA"}], "registrationDate": "2026-09-28"}}
-{"acn": "702739633", "d": null}
-{"acn": "702739642", "d": null}
+{"acn": "702739633", "d": null, "r": 1}
+{"acn": "702739642", "d": null, "r": 1}
 {"acn": "702739651", "d": {"name": "ACTRIVO PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "DEER PARK 3023 VIC", "suburb": "DEER PARK", "postcode": "3023", "state": "VIC"}, {"type": "Principal Place of business", "address": "DEER PARK 3023 VIC", "suburb": "DEER PARK", "postcode": "3023", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702739660", "d": {"name": "OPTIVALUE GROUP PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "SOUTHBANK 3006 VIC", "suburb": "SOUTHBANK", "postcode": "3006", "state": "VIC"}, {"type": "Principal Place of business", "address": "SOUTHBANK 3006 VIC", "suburb": "SOUTHBANK", "postcode": "3006", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702739679", "d": {"name": "AFFORDABLE BOOKKEEPER", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
@@ -24610,13 +24610,13 @@
 {"acn": "702739697", "d": {"name": "BOOM PROJECT MANAGEMENT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702739704", "d": {"name": "OVERTAKE AI", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702739713", "d": {"name": "REFINE PLASTERING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
-{"acn": "702739722", "d": null}
+{"acn": "702739722", "d": null, "r": 1}
 {"acn": "702739731", "d": {"name": "THE CEO COACH", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
-{"acn": "702739740", "d": null}
+{"acn": "702739740", "d": null, "r": 1}
 {"acn": "702739759", "d": {"name": "PANTRY HUB APP PTY. LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "WOLLERT 3750 VIC", "suburb": "WOLLERT", "postcode": "3750", "state": "VIC"}, {"type": "Principal Place of business", "address": "WOLLERT 3750 VIC", "suburb": "WOLLERT", "postcode": "3750", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702739768", "d": {"name": "APEX SURFACE COATINGS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
-{"acn": "702739777", "d": null}
-{"acn": "702739786", "d": null}
+{"acn": "702739777", "d": null, "r": 1}
+{"acn": "702739786", "d": null, "r": 1}
 {"acn": "702739795", "d": {"name": "BEAUMONT HOLDINGS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "BLACKTOWN 2148 NSW", "suburb": "BLACKTOWN", "postcode": "2148", "state": "NSW"}, {"type": "Principal Place of business", "address": "BLACKTOWN 2148 NSW", "suburb": "BLACKTOWN", "postcode": "2148", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702739802", "d": {"name": "DYONI", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702739811", "d": {"name": "JAVRELL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
@@ -24632,15 +24632,15 @@
 {"acn": "702739919", "d": {"name": "BOW TO STERN BOATING EDUCATION", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702739928", "d": {"name": "JJAC CARE & COORDINATION", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702739937", "d": {"name": "ALLOCATRA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702739946", "d": null}
-{"acn": "702739955", "d": null}
+{"acn": "702739946", "d": null, "r": 1}
+{"acn": "702739955", "d": null, "r": 1}
 {"acn": "702739964", "d": {"name": "LEDGIX PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "WA", "addresses": [{"type": "Registered Office", "address": "LANDSDALE 6065 WA", "suburb": "LANDSDALE", "postcode": "6065", "state": "WA"}, {"type": "Principal Place of business", "address": "LANDSDALE 6065 WA", "suburb": "LANDSDALE", "postcode": "6065", "state": "WA"}], "registrationDate": "2026-09-28"}}
 {"acn": "702739973", "d": {"name": "SDS PERSPECTIVE PHOTOGRAPHY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702739982", "d": {"name": "OVERTAKE AI", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702739991", "d": {"name": "WICKHAM'S MECHANICAL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
-{"acn": "702740001", "d": null}
+{"acn": "702740001", "d": null, "r": 1}
 {"acn": "702740010", "d": {"name": "EPIC FURY PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "WA", "addresses": [{"type": "Registered Office", "address": "WEST PERTH 6005 WA", "suburb": "WEST PERTH", "postcode": "6005", "state": "WA"}, {"type": "Principal Place of business", "address": "WEST PERTH 6005 WA", "suburb": "WEST PERTH", "postcode": "6005", "state": "WA"}], "registrationDate": "2026-09-28"}}
-{"acn": "702740029", "d": null}
+{"acn": "702740029", "d": null, "r": 1}
 {"acn": "702740038", "d": {"name": "CREDO CARE PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "CRAIGIEBURN 3064 VIC", "suburb": "CRAIGIEBURN", "postcode": "3064", "state": "VIC"}, {"type": "Principal Place of business", "address": "CRAIGIEBURN 3064 VIC", "suburb": "CRAIGIEBURN", "postcode": "3064", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702740047", "d": {"name": "CONTENT CHAMBERS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "MITCHELTON 4053 QLD", "suburb": "MITCHELTON", "postcode": "4053", "state": "QLD"}, {"type": "Principal Place of business", "address": "MITCHELTON 4053 QLD", "suburb": "MITCHELTON", "postcode": "4053", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702740056", "d": {"name": "CAMEL ADVISORY PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "BERWICK 3806 VIC", "suburb": "BERWICK", "postcode": "3806", "state": "VIC"}, {"type": "Principal Place of business", "address": "BERWICK 3806 VIC", "suburb": "BERWICK", "postcode": "3806", "state": "VIC"}], "registrationDate": "2026-09-28"}}
@@ -24649,31 +24649,31 @@
 {"acn": "702740083", "d": {"name": "KURDISH CONSTRUCTION", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702740092", "d": {"name": "LESS ON THE LIST", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702740109", "d": {"name": "ROYLE AUTOMOTIVE HOLDINGS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "MOOROOKA 4105 QLD", "suburb": "MOOROOKA", "postcode": "4105", "state": "QLD"}, {"type": "Principal Place of business", "address": "MOOROOKA 4105 QLD", "suburb": "MOOROOKA", "postcode": "4105", "state": "QLD"}], "registrationDate": "2026-09-28"}}
-{"acn": "702740118", "d": null}
+{"acn": "702740118", "d": null, "r": 1}
 {"acn": "702740127", "d": {"name": "TILE PRO CLEAN&SEAL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702740136", "d": null}
+{"acn": "702740136", "d": null, "r": 1}
 {"acn": "702740145", "d": {"name": "XLR8 TRAILERS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "SA", "addresses": [{"type": "Registered Office", "address": "ALDINGA BEACH 5173 SA", "suburb": "ALDINGA BEACH", "postcode": "5173", "state": "SA"}, {"type": "Principal Place of business", "address": "ALDINGA BEACH 5173 SA", "suburb": "ALDINGA BEACH", "postcode": "5173", "state": "SA"}], "registrationDate": "2026-09-28"}}
 {"acn": "702740154", "d": {"name": "GLOBELLE SYSTEMS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702740163", "d": {"name": "THE COUNSELOR", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702740172", "d": {"name": "PORTALIS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702740181", "d": {"name": "NAFIZ CAFE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702740190", "d": {"name": "OXBREL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702740207", "d": null}
-{"acn": "702740216", "d": null}
+{"acn": "702740207", "d": null, "r": 1}
+{"acn": "702740216", "d": null, "r": 1}
 {"acn": "702740225", "d": {"name": "HSH GLOBAL SERVICES PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "SCHOFIELDS 2762 NSW", "suburb": "SCHOFIELDS", "postcode": "2762", "state": "NSW"}, {"type": "Principal Place of business", "address": "SCHOFIELDS 2762 NSW", "suburb": "SCHOFIELDS", "postcode": "2762", "state": "NSW"}], "registrationDate": "2026-09-28"}}
-{"acn": "702740234", "d": null}
-{"acn": "702740243", "d": null}
+{"acn": "702740234", "d": null, "r": 1}
+{"acn": "702740243", "d": null, "r": 1}
 {"acn": "702740252", "d": {"name": "SHINEROO STM PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "GLENMORE PARK 2745 NSW", "suburb": "GLENMORE PARK", "postcode": "2745", "state": "NSW"}, {"type": "Principal Place of business", "address": "ST MARYS 2760 NSW", "suburb": "ST MARYS", "postcode": "2760", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702740261", "d": {"name": "LEAHS PONY PARTIES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
-{"acn": "702740270", "d": null}
-{"acn": "702740289", "d": null}
+{"acn": "702740270", "d": null, "r": 1}
+{"acn": "702740289", "d": null, "r": 1}
 {"acn": "702740298", "d": {"name": "ROVINS TYRE & AUTO PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "SPRINGFIELD 4300 QLD", "suburb": "SPRINGFIELD", "postcode": "4300", "state": "QLD"}, {"type": "Principal Place of business", "address": "SPRINGFIELD 4300 QLD", "suburb": "SPRINGFIELD", "postcode": "4300", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702740305", "d": {"name": "BESPOKE AI METHOD", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702740314", "d": {"name": "CAIRNS DIGITAL BUSINESS HELPER", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702740323", "d": {"name": "THE SOCIAL INN AGENCY PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "HOPE ISLAND 4212 QLD", "suburb": "HOPE ISLAND", "postcode": "4212", "state": "QLD"}, {"type": "Principal Place of business", "address": "HOPE ISLAND 4212 QLD", "suburb": "HOPE ISLAND", "postcode": "4212", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702740332", "d": {"name": "RUSSELL SERVICING SOLUTIONS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702740341", "d": null}
-{"acn": "702740350", "d": null}
+{"acn": "702740341", "d": null, "r": 1}
+{"acn": "702740350", "d": null, "r": 1}
 {"acn": "702740369", "d": {"name": "AT HEART SUPPORT PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "SUTHERLAND 2232 NSW", "suburb": "SUTHERLAND", "postcode": "2232", "state": "NSW"}, {"type": "Principal Place of business", "address": "SUTHERLAND 2232 NSW", "suburb": "SUTHERLAND", "postcode": "2232", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702740378", "d": {"name": "ISA DESIGN & CONSTRUCT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702740387", "d": {"name": "WORLD EXPLORER", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
@@ -24681,14 +24681,14 @@
 {"acn": "702740403", "d": {"name": "METRIC DIGITAL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702740412", "d": {"name": "FORRESTERS HR", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702740421", "d": {"name": "MARSA SIGNATURE KITCHEN", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
-{"acn": "702740430", "d": null}
+{"acn": "702740430", "d": null, "r": 1}
 {"acn": "702740449", "d": {"name": "FLOWS CREATIONS CO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
-{"acn": "702740458", "d": null}
-{"acn": "702740467", "d": null}
+{"acn": "702740458", "d": null, "r": 1}
+{"acn": "702740467", "d": null, "r": 1}
 {"acn": "702740476", "d": {"name": "WATTLE WELLBEING & COUNSELLING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702740485", "d": {"name": "GURNADAR FOODS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "RICHLANDS 4077 QLD", "suburb": "RICHLANDS", "postcode": "4077", "state": "QLD"}, {"type": "Principal Place of business", "address": "RICHLANDS 4077 QLD", "suburb": "RICHLANDS", "postcode": "4077", "state": "QLD"}], "registrationDate": "2026-09-28"}}
-{"acn": "702740494", "d": null}
-{"acn": "702740501", "d": null}
+{"acn": "702740494", "d": null, "r": 1}
+{"acn": "702740501", "d": null, "r": 1}
 {"acn": "702740510", "d": {"name": "LOGOS HUB LTD", "type": "Australian Public Company", "class": "Limited By Guarantee", "subClass": "Unlisted Public Company - Non-Profit Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "WAVELL HEIGHTS 4012 QLD", "suburb": "WAVELL HEIGHTS", "postcode": "4012", "state": "QLD"}, {"type": "Principal Place of business", "address": "WAVELL HEIGHTS 4012 QLD", "suburb": "WAVELL HEIGHTS", "postcode": "4012", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702740529", "d": {"name": "STONEWORKS BY PAT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702740538", "d": {"name": "COMPAS WEALTH FUND PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "ACT", "addresses": [{"type": "Registered Office", "address": "WESTON 2611 ACT", "suburb": "WESTON", "postcode": "2611", "state": "ACT"}, {"type": "Principal Place of business", "address": "WESTON 2611 ACT", "suburb": "WESTON", "postcode": "2611", "state": "ACT"}], "registrationDate": "2026-09-28"}}
@@ -24697,30 +24697,30 @@
 {"acn": "702740565", "d": {"name": "FERRETTI PUBLISHING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702740574", "d": {"name": "WITH LOVE, MANDI", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702740583", "d": {"name": "GRACE ANNE PHOTOGRAPHY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702740592", "d": null}
-{"acn": "702740609", "d": null}
+{"acn": "702740592", "d": null, "r": 1}
+{"acn": "702740609", "d": null, "r": 1}
 {"acn": "702740618", "d": {"name": "BTT DESIGN AND ENGINEERING PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "UNDERWOOD 4119 QLD", "suburb": "UNDERWOOD", "postcode": "4119", "state": "QLD"}, {"type": "Principal Place of business", "address": "UNDERWOOD 4119 QLD", "suburb": "UNDERWOOD", "postcode": "4119", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702740627", "d": {"name": "BTT ENGINEERING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702740636", "d": {"name": "INFORM CRICKET PERFORMANCE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702740645", "d": null}
-{"acn": "702740654", "d": null}
-{"acn": "702740663", "d": null}
-{"acn": "702740672", "d": null}
-{"acn": "702740681", "d": null}
-{"acn": "702740690", "d": null}
-{"acn": "702740707", "d": null}
+{"acn": "702740645", "d": null, "r": 1}
+{"acn": "702740654", "d": null, "r": 1}
+{"acn": "702740663", "d": null, "r": 1}
+{"acn": "702740672", "d": null, "r": 1}
+{"acn": "702740681", "d": null, "r": 1}
+{"acn": "702740690", "d": null, "r": 1}
+{"acn": "702740707", "d": null, "r": 1}
 {"acn": "702740716", "d": {"name": "BEAM CIRCUIT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702740725", "d": null}
+{"acn": "702740725", "d": null, "r": 1}
 {"acn": "702740734", "d": {"name": "TIPPING ENTERPRISES PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "SANDSTONE POINT 4511 QLD", "suburb": "SANDSTONE POINT", "postcode": "4511", "state": "QLD"}, {"type": "Principal Place of business", "address": "SANDSTONE POINT 4511 QLD", "suburb": "SANDSTONE POINT", "postcode": "4511", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702740743", "d": {"name": "GSDBHIVE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702740752", "d": {"name": "BARBARA MAGEE CONSULTING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702740761", "d": {"name": "HANDY CHEF UNIFORMS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702740770", "d": {"name": "CAM'S DRIVING ACADEMY POINT COOK", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702740789", "d": {"name": "RN TECHNICAL SERVICES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
-{"acn": "702740798", "d": null}
+{"acn": "702740798", "d": null, "r": 1}
 {"acn": "702740805", "d": {"name": "BARBARA MAGEE CONSULTING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702740814", "d": null}
-{"acn": "702740823", "d": null}
+{"acn": "702740814", "d": null, "r": 1}
+{"acn": "702740823", "d": null, "r": 1}
 {"acn": "702740832", "d": {"name": "CQ CARPENTRY AND MAINTENANCE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702740841", "d": {"name": "METRUM ENGINEERING PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "GLENDALE 2285 NSW", "suburb": "GLENDALE", "postcode": "2285", "state": "NSW"}, {"type": "Principal Place of business", "address": "GLENDALE 2285 NSW", "suburb": "GLENDALE", "postcode": "2285", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702740850", "d": {"name": "REIASTRA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
@@ -24730,8 +24730,8 @@
 {"acn": "702740896", "d": {"name": "LUMORA TRAINING PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "MURARRIE 4172 QLD", "suburb": "MURARRIE", "postcode": "4172", "state": "QLD"}, {"type": "Principal Place of business", "address": "PRESTON 3072 VIC", "suburb": "PRESTON", "postcode": "3072", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702740903", "d": {"name": "MORGAN CORPORATE ADVISORY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702740912", "d": {"name": "MAROX PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "SOUTHBANK 3006 VIC", "suburb": "SOUTHBANK", "postcode": "3006", "state": "VIC"}, {"type": "Principal Place of business", "address": "PENNANT HILLS 2120 NSW", "suburb": "PENNANT HILLS", "postcode": "2120", "state": "NSW"}], "registrationDate": "2026-09-28"}}
-{"acn": "702740921", "d": null}
-{"acn": "702740930", "d": null}
+{"acn": "702740921", "d": null, "r": 1}
+{"acn": "702740930", "d": null, "r": 1}
 {"acn": "702740949", "d": {"name": "TRADE SKILLS READINESS AUSTRALIA PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "SA", "addresses": [{"type": "Registered Office", "address": "MYRTLE BANK 5064 SA", "suburb": "MYRTLE BANK", "postcode": "5064", "state": "SA"}, {"type": "Principal Place of business", "address": "ADELAIDE 5000 SA", "suburb": "ADELAIDE", "postcode": "5000", "state": "SA"}], "registrationDate": "2026-09-28"}}
 {"acn": "702740958", "d": {"name": "TIGERSTONE HOLDINGS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "WA", "addresses": [{"type": "Registered Office", "address": "ATTADALE 6156 WA", "suburb": "ATTADALE", "postcode": "6156", "state": "WA"}, {"type": "Principal Place of business", "address": "TREEBY 6164 WA", "suburb": "TREEBY", "postcode": "6164", "state": "WA"}], "registrationDate": "2026-09-28"}}
 {"acn": "702740967", "d": {"name": "GUP2 SPV PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "SOUTHBANK 3006 VIC", "suburb": "SOUTHBANK", "postcode": "3006", "state": "VIC"}, {"type": "Principal Place of business", "address": "SOUTHBANK 3006 VIC", "suburb": "SOUTHBANK", "postcode": "3006", "state": "VIC"}], "registrationDate": "2026-09-28"}}
@@ -24750,8 +24750,8 @@
 {"acn": "702741099", "d": {"name": "KIDZO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702741106", "d": {"name": "HILLSIDE EVENTS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702741115", "d": {"name": "XTREAM PRESSURE CLEAN", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702741124", "d": null}
-{"acn": "702741133", "d": null}
+{"acn": "702741124", "d": null, "r": 1}
+{"acn": "702741133", "d": null, "r": 1}
 {"acn": "702741142", "d": {"name": "AILIS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "SA", "addresses": [{"type": "Registered Office", "address": "NORTH ADELAIDE 5006 SA", "suburb": "NORTH ADELAIDE", "postcode": "5006", "state": "SA"}, {"type": "Principal Place of business", "address": "NORTH ADELAIDE 5006 SA", "suburb": "NORTH ADELAIDE", "postcode": "5006", "state": "SA"}], "registrationDate": "2026-09-28"}}
 {"acn": "702741151", "d": {"name": "THRIVE KIDS WELLNESS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702741160", "d": {"name": "ELITE SUPPORT SUPER PTY. LTD.", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "KENNEDY 4849 QLD", "suburb": "KENNEDY", "postcode": "4849", "state": "QLD"}, {"type": "Principal Place of business", "address": "KENNEDY 4849 QLD", "suburb": "KENNEDY", "postcode": "4849", "state": "QLD"}], "registrationDate": "2026-09-28"}}
@@ -24763,7 +24763,7 @@
 {"acn": "702741222", "d": {"name": "GRACELINE CHAUFFEURS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702741231", "d": {"name": "SENTRY OPERATIONS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "BRISBANE CITY 4000 QLD", "suburb": "BRISBANE CITY", "postcode": "4000", "state": "QLD"}, {"type": "Principal Place of business", "address": "BRISBANE CITY 4000 QLD", "suburb": "BRISBANE CITY", "postcode": "4000", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702741240", "d": {"name": "BOZTECH SECURITY SOLUTIONS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
-{"acn": "702741259", "d": null}
+{"acn": "702741259", "d": null, "r": 1}
 {"acn": "702741268", "d": {"name": "TITANIUM BUILDING GROUP QLD", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702741277", "d": {"name": "JENMARK PAINTING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702741286", "d": {"name": "CAPTURED BY TRACY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
@@ -24786,11 +24786,11 @@
 {"acn": "702741455", "d": {"name": "CLOUDDX FINANCE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702741464", "d": {"name": "GIPPSLAND ELECTRICAL AND ASSET MANAGEMENT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702741473", "d": {"name": "AUSTRALIA MEDIA GROUP", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702741482", "d": null}
-{"acn": "702741491", "d": null}
-{"acn": "702741508", "d": null}
-{"acn": "702741517", "d": null}
-{"acn": "702741526", "d": null}
+{"acn": "702741482", "d": null, "r": 1}
+{"acn": "702741491", "d": null, "r": 1}
+{"acn": "702741508", "d": null, "r": 1}
+{"acn": "702741517", "d": null, "r": 1}
+{"acn": "702741526", "d": null, "r": 1}
 {"acn": "702741535", "d": {"name": "TOOLBOX MEALS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "ENGADINE 2233 NSW", "suburb": "ENGADINE", "postcode": "2233", "state": "NSW"}, {"type": "Principal Place of business", "address": "ENGADINE 2233 NSW", "suburb": "ENGADINE", "postcode": "2233", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702741544", "d": {"name": "KERB MANUFACTURING PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "PELICAN WATERS 4551 QLD", "suburb": "PELICAN WATERS", "postcode": "4551", "state": "QLD"}, {"type": "Principal Place of business", "address": "NIRIMBA 4551 QLD", "suburb": "NIRIMBA", "postcode": "4551", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702741553", "d": {"name": "PRECISION LAWN AND LANDSCAPING SERVICES (BNE) PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "HILLCREST 4118 QLD", "suburb": "HILLCREST", "postcode": "4118", "state": "QLD"}, {"type": "Principal Place of business", "address": "HILLCREST 4118 QLD", "suburb": "HILLCREST", "postcode": "4118", "state": "QLD"}], "registrationDate": "2026-09-28"}}
@@ -24799,7 +24799,7 @@
 {"acn": "702741580", "d": {"name": "AUSTRALIAN OUTBACK RODEO INC", "type": "Associations", "class": "-", "subClass": "-", "status": "Pending", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702741599", "d": {"name": "LAFM HOLDINGS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "BRISBANE CITY 4000 QLD", "suburb": "BRISBANE CITY", "postcode": "4000", "state": "QLD"}, {"type": "Principal Place of business", "address": "BRISBANE CITY 4000 QLD", "suburb": "BRISBANE CITY", "postcode": "4000", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702741606", "d": {"name": "BUBI BY MICHELE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702741615", "d": null}
+{"acn": "702741615", "d": null, "r": 1}
 {"acn": "702741624", "d": {"name": "KOORI CREATIVE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702741633", "d": {"name": "ARCHE CARE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702741642", "d": {"name": "THE WILD STEM SHED", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
@@ -24807,11 +24807,11 @@
 {"acn": "702741660", "d": {"name": "CAL EDGEWATER PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "WOODRIDGE 4114 QLD", "suburb": "WOODRIDGE", "postcode": "4114", "state": "QLD"}, {"type": "Principal Place of business", "address": "ROSEWOOD 4340 QLD", "suburb": "ROSEWOOD", "postcode": "4340", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702741679", "d": {"name": "CAPELLAPPS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702741688", "d": {"name": "GROW AND CO KIDS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
-{"acn": "702741697", "d": null}
+{"acn": "702741697", "d": null, "r": 1}
 {"acn": "702741704", "d": {"name": "KRITHIKA EDUCATION PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "GIRRAWEEN 2145 NSW", "suburb": "GIRRAWEEN", "postcode": "2145", "state": "NSW"}, {"type": "Principal Place of business", "address": "GIRRAWEEN 2145 NSW", "suburb": "GIRRAWEEN", "postcode": "2145", "state": "NSW"}], "registrationDate": "2026-09-28"}}
-{"acn": "702741713", "d": null}
+{"acn": "702741713", "d": null, "r": 1}
 {"acn": "702741722", "d": {"name": "FLUID MOTION TECHNOLOGIES PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "STONES CORNER 4120 QLD", "suburb": "STONES CORNER", "postcode": "4120", "state": "QLD"}, {"type": "Principal Place of business", "address": "THE CAVES 4702 QLD", "suburb": "THE CAVES", "postcode": "4702", "state": "QLD"}], "registrationDate": "2026-09-28"}}
-{"acn": "702741731", "d": null}
+{"acn": "702741731", "d": null, "r": 1}
 {"acn": "702741740", "d": {"name": "PRISM DIGITAL MEDIA PTY LIMITED", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "MAIDEN GULLY 3551 VIC", "suburb": "MAIDEN GULLY", "postcode": "3551", "state": "VIC"}, {"type": "Principal Place of business", "address": "MAIDEN GULLY 3551 VIC", "suburb": "MAIDEN GULLY", "postcode": "3551", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702741759", "d": {"name": "PRISM DIGITAL MEDIA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702741768", "d": {"name": "MKDTMD INVESTMENTS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "NEWPORT 4020 QLD", "suburb": "NEWPORT", "postcode": "4020", "state": "QLD"}, {"type": "Principal Place of business", "address": "NEWPORT 4020 QLD", "suburb": "NEWPORT", "postcode": "4020", "state": "QLD"}], "registrationDate": "2026-09-28"}}
@@ -24845,11 +24845,11 @@
 {"acn": "702742041", "d": {"name": "LIA ASSET HOLDINGS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "NORTH MELBOURNE 3051 VIC", "suburb": "NORTH MELBOURNE", "postcode": "3051", "state": "VIC"}, {"type": "Principal Place of business", "address": "TRUGANINA 3029 VIC", "suburb": "TRUGANINA", "postcode": "3029", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702742050", "d": {"name": "ONCKO PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "SA", "addresses": [{"type": "Registered Office", "address": "ADELAIDE 5000 SA", "suburb": "ADELAIDE", "postcode": "5000", "state": "SA"}, {"type": "Principal Place of business", "address": "ADELAIDE 5000 SA", "suburb": "ADELAIDE", "postcode": "5000", "state": "SA"}], "registrationDate": "2026-09-28"}}
 {"acn": "702742069", "d": {"name": "SIMPLESTEPS PLAN MANAGEMENT PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "EPPING 2121 NSW", "suburb": "EPPING", "postcode": "2121", "state": "NSW"}, {"type": "Principal Place of business", "address": "EPPING 2121 NSW", "suburb": "EPPING", "postcode": "2121", "state": "NSW"}], "registrationDate": "2026-09-28"}}
-{"acn": "702742078", "d": null}
-{"acn": "702742087", "d": null}
+{"acn": "702742078", "d": null, "r": 1}
+{"acn": "702742087", "d": null, "r": 1}
 {"acn": "702742096", "d": {"name": "SEAHORSE HOLDINGS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "TAS", "addresses": [{"type": "Registered Office", "address": "MOONAH 7009 TAS", "suburb": "MOONAH", "postcode": "7009", "state": "TAS"}, {"type": "Principal Place of business", "address": "MOONAH 7009 TAS", "suburb": "MOONAH", "postcode": "7009", "state": "TAS"}], "registrationDate": "2026-09-28"}}
 {"acn": "702742103", "d": {"name": "ELLISQP SUPER PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "CASINO 2470 NSW", "suburb": "CASINO", "postcode": "2470", "state": "NSW"}, {"type": "Principal Place of business", "address": "EVANS HEAD 2473 NSW", "suburb": "EVANS HEAD", "postcode": "2473", "state": "NSW"}], "registrationDate": "2026-09-28"}}
-{"acn": "702742112", "d": null}
+{"acn": "702742112", "d": null, "r": 1}
 {"acn": "702742121", "d": {"name": "NSHMOTORS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702742130", "d": {"name": "LEATHERS VENTURES PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "MORNINGSIDE 4170 QLD", "suburb": "MORNINGSIDE", "postcode": "4170", "state": "QLD"}, {"type": "Principal Place of business", "address": "MORNINGSIDE 4170 QLD", "suburb": "MORNINGSIDE", "postcode": "4170", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702742149", "d": {"name": "ALSULTANA TRADING PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "LEOPOLD 3224 VIC", "suburb": "LEOPOLD", "postcode": "3224", "state": "VIC"}, {"type": "Principal Place of business", "address": "CLIFTON SPRINGS 3222 VIC", "suburb": "CLIFTON SPRINGS", "postcode": "3222", "state": "VIC"}], "registrationDate": "2026-09-28"}}
@@ -24871,8 +24871,8 @@
 {"acn": "702742309", "d": {"name": "TIMEBOX PRO LLC", "type": "Nonc", "class": "-", "subClass": "-", "status": "Not Registered-Organisations Of Type 'Nonc','Nret'", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702742318", "d": {"name": "BEAR CREEK LEATHER & GIFTS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702742327", "d": {"name": "O'BRIEN SMSF PROPERTY PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "BOMADERRY 2541 NSW", "suburb": "BOMADERRY", "postcode": "2541", "state": "NSW"}, {"type": "Principal Place of business", "address": "FERN BAY 2295 NSW", "suburb": "FERN BAY", "postcode": "2295", "state": "NSW"}], "registrationDate": "2026-09-28"}}
-{"acn": "702742336", "d": null}
-{"acn": "702742345", "d": null}
+{"acn": "702742336", "d": null, "r": 1}
+{"acn": "702742345", "d": null, "r": 1}
 {"acn": "702742354", "d": {"name": "FORTE VITA PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "BARGO 2574 NSW", "suburb": "BARGO", "postcode": "2574", "state": "NSW"}, {"type": "Principal Place of business", "address": "BARGO 2574 NSW", "suburb": "BARGO", "postcode": "2574", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702742363", "d": {"name": "BREAKING PAR GOLF APPAREL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702742372", "d": {"name": "WODEN VALLEY ELECTRICAL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
@@ -24883,8 +24883,8 @@
 {"acn": "702742425", "d": {"name": "MAUREEN O'BRIEN-STONE BUSINESS SERVICES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702742434", "d": {"name": "MEGSON HECK SUPERANNUATION PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "SA", "addresses": [{"type": "Registered Office", "address": "PAYNEHAM 5070 SA", "suburb": "PAYNEHAM", "postcode": "5070", "state": "SA"}, {"type": "Principal Place of business", "address": "ALDGATE 5154 SA", "suburb": "ALDGATE", "postcode": "5154", "state": "SA"}], "registrationDate": "2026-09-28"}}
 {"acn": "702742443", "d": {"name": "NIGHT FUEL EVENTS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "UNDERWOOD 4119 QLD", "suburb": "UNDERWOOD", "postcode": "4119", "state": "QLD"}, {"type": "Principal Place of business", "address": "UNDERWOOD 4119 QLD", "suburb": "UNDERWOOD", "postcode": "4119", "state": "QLD"}], "registrationDate": "2026-09-28"}}
-{"acn": "702742452", "d": null}
-{"acn": "702742461", "d": null}
+{"acn": "702742452", "d": null, "r": 1}
+{"acn": "702742461", "d": null, "r": 1}
 {"acn": "702742470", "d": {"name": "KK SWIFT PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "ACT", "addresses": [{"type": "Registered Office", "address": "HARRISON 2914 ACT", "suburb": "HARRISON", "postcode": "2914", "state": "ACT"}, {"type": "Principal Place of business", "address": "FYSHWICK 2609 ACT", "suburb": "FYSHWICK", "postcode": "2609", "state": "ACT"}], "registrationDate": "2026-09-28"}}
 {"acn": "702742489", "d": {"name": "SOUNDPROOFING PRODUCTS AUSTRALIA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702742498", "d": {"name": "TALIC CAPITAL INVESTMENTS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
@@ -24908,20 +24908,20 @@
 {"acn": "702742676", "d": {"name": "ALTERNATE ENDINGS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "ALBION 4010 QLD", "suburb": "ALBION", "postcode": "4010", "state": "QLD"}, {"type": "Principal Place of business", "address": "CARINDALE 4152 QLD", "suburb": "CARINDALE", "postcode": "4152", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702742685", "d": {"name": "MV CONCRETING PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NT", "addresses": [{"type": "Registered Office", "address": "ALAWA 0810 NT", "suburb": "ALAWA", "postcode": "0810", "state": "NT"}, {"type": "Principal Place of business", "address": "BELLAMACK 0832 NT", "suburb": "BELLAMACK", "postcode": "0832", "state": "NT"}], "registrationDate": "2026-09-28"}}
 {"acn": "702742694", "d": {"name": "GOLF OFFICE AUSTRALIA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
-{"acn": "702742701", "d": null}
-{"acn": "702742710", "d": null}
-{"acn": "702742729", "d": null}
+{"acn": "702742701", "d": null, "r": 1}
+{"acn": "702742710", "d": null, "r": 1}
+{"acn": "702742729", "d": null, "r": 1}
 {"acn": "702742738", "d": {"name": "ONELINKPRO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702742747", "d": {"name": "STUDIOKEEPER", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702742756", "d": {"name": "SCAXEN PROJECT MANAGEMENT PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "MELBOURNE 3000 VIC", "suburb": "MELBOURNE", "postcode": "3000", "state": "VIC"}, {"type": "Principal Place of business", "address": "MELBOURNE 3000 VIC", "suburb": "MELBOURNE", "postcode": "3000", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702742765", "d": {"name": "SCAXEN CAPITAL PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "MELBOURNE 3000 VIC", "suburb": "MELBOURNE", "postcode": "3000", "state": "VIC"}, {"type": "Principal Place of business", "address": "MELBOURNE 3000 VIC", "suburb": "MELBOURNE", "postcode": "3000", "state": "VIC"}], "registrationDate": "2026-09-28"}}
-{"acn": "702742774", "d": null}
+{"acn": "702742774", "d": null, "r": 1}
 {"acn": "702742783", "d": {"name": "SERA & CO GROUP", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
-{"acn": "702742792", "d": null}
+{"acn": "702742792", "d": null, "r": 1}
 {"acn": "702742809", "d": {"name": "CUNLIFFE & WREN PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "INVERELL 2360 NSW", "suburb": "INVERELL", "postcode": "2360", "state": "NSW"}, {"type": "Principal Place of business", "address": "INVERELL 2360 NSW", "suburb": "INVERELL", "postcode": "2360", "state": "NSW"}], "registrationDate": "2026-09-28"}}
-{"acn": "702742818", "d": null}
+{"acn": "702742818", "d": null, "r": 1}
 {"acn": "702742827", "d": {"name": "BRIAN YUE PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "CLAYTON 3168 VIC", "suburb": "CLAYTON", "postcode": "3168", "state": "VIC"}, {"type": "Principal Place of business", "address": "MARIBYRNONG 3032 VIC", "suburb": "MARIBYRNONG", "postcode": "3032", "state": "VIC"}], "registrationDate": "2026-09-28"}}
-{"acn": "702742836", "d": null}
+{"acn": "702742836", "d": null, "r": 1}
 {"acn": "702742845", "d": {"name": "GUR CAPITAL HOLDINGS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "QUAKERS HILL 2763 NSW", "suburb": "QUAKERS HILL", "postcode": "2763", "state": "NSW"}, {"type": "Principal Place of business", "address": "QUAKERS HILL 2763 NSW", "suburb": "QUAKERS HILL", "postcode": "2763", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702742854", "d": {"name": "NPW INVESTMENTS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "DUBBO 2830 NSW", "suburb": "DUBBO", "postcode": "2830", "state": "NSW"}, {"type": "Principal Place of business", "address": "NYMAGEE 2831 NSW", "suburb": "NYMAGEE", "postcode": "2831", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702742863", "d": {"name": "CALOUNDRA KARATE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
@@ -24938,15 +24938,15 @@
 {"acn": "702742970", "d": {"name": "HAMTON ARDEN SERVICES PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "PRAHRAN 3181 VIC", "suburb": "PRAHRAN", "postcode": "3181", "state": "VIC"}, {"type": "Principal Place of business", "address": "PRAHRAN 3181 VIC", "suburb": "PRAHRAN", "postcode": "3181", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702742989", "d": {"name": "HAMTON JV (ARDEN) PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "PRAHRAN 3181 VIC", "suburb": "PRAHRAN", "postcode": "3181", "state": "VIC"}, {"type": "Principal Place of business", "address": "PRAHRAN 3181 VIC", "suburb": "PRAHRAN", "postcode": "3181", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702742998", "d": {"name": "PARKER & PARKER", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702743002", "d": null}
+{"acn": "702743002", "d": null, "r": 1}
 {"acn": "702743011", "d": {"name": "ES APPLIED WORKS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
-{"acn": "702743020", "d": null}
-{"acn": "702743039", "d": null}
+{"acn": "702743020", "d": null, "r": 1}
+{"acn": "702743039", "d": null, "r": 1}
 {"acn": "702743048", "d": {"name": "OTHER. HAIR PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "LIDCOMBE 2141 NSW", "suburb": "LIDCOMBE", "postcode": "2141", "state": "NSW"}, {"type": "Principal Place of business", "address": "LIDCOMBE 2141 NSW", "suburb": "LIDCOMBE", "postcode": "2141", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702743057", "d": {"name": "KURA BOARDWORKS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702743066", "d": {"name": "FINELINE WARDROBES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702743075", "d": {"name": "KHAO SOI STATION", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
-{"acn": "702743084", "d": null}
+{"acn": "702743084", "d": null, "r": 1}
 {"acn": "702743093", "d": {"name": "WAXED SURF CO PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "ELWOOD 3184 VIC", "suburb": "ELWOOD", "postcode": "3184", "state": "VIC"}, {"type": "Principal Place of business", "address": "ELWOOD 3184 VIC", "suburb": "ELWOOD", "postcode": "3184", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702743100", "d": {"name": "VALIDSKILLS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702743119", "d": {"name": "SCRIMZ CUSTOMS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
@@ -24958,12 +24958,12 @@
 {"acn": "702743173", "d": {"name": "SOTERIA UNION PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "SOUTH RIPLEY 4306 QLD", "suburb": "SOUTH RIPLEY", "postcode": "4306", "state": "QLD"}, {"type": "Principal Place of business", "address": "SOUTH RIPLEY 4306 QLD", "suburb": "SOUTH RIPLEY", "postcode": "4306", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702743182", "d": {"name": "CHAI VEGETARIAN CUISINE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702743191", "d": {"name": "TRAIN FLOWSTATE PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "NARRE WARREN NORTH 3804 VIC", "suburb": "NARRE WARREN NORTH", "postcode": "3804", "state": "VIC"}, {"type": "Principal Place of business", "address": "NARRE WARREN NORTH 3804 VIC", "suburb": "NARRE WARREN NORTH", "postcode": "3804", "state": "VIC"}], "registrationDate": "2026-09-28"}}
-{"acn": "702743208", "d": null}
+{"acn": "702743208", "d": null, "r": 1}
 {"acn": "702743217", "d": {"name": "FLEXINITY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702743226", "d": {"name": "INDULGE TRAVEL SOLUTIONS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702743235", "d": {"name": "ISLE MARKET BICHENO PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "TAS", "addresses": [{"type": "Registered Office", "address": "SWANSEA 7190 TAS", "suburb": "SWANSEA", "postcode": "7190", "state": "TAS"}, {"type": "Principal Place of business", "address": "SWANSEA 7190 TAS", "suburb": "SWANSEA", "postcode": "7190", "state": "TAS"}], "registrationDate": "2026-09-28"}}
 {"acn": "702743244", "d": {"name": "SFSPECIALISTS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702743253", "d": null}
+{"acn": "702743253", "d": null, "r": 1}
 {"acn": "702743262", "d": {"name": "TURFTENDERS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702743271", "d": {"name": "COOL COOK RECYCLING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702743280", "d": {"name": "ALAYATECH", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
@@ -24973,35 +24973,35 @@
 {"acn": "702743324", "d": {"name": "SADDLE & CORK", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702743333", "d": {"name": "THE INK ARCHIVE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702743342", "d": {"name": "ISLE MARKET SWANSEA PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "TAS", "addresses": [{"type": "Registered Office", "address": "SWANSEA 7190 TAS", "suburb": "SWANSEA", "postcode": "7190", "state": "TAS"}, {"type": "Principal Place of business", "address": "SWANSEA 7190 TAS", "suburb": "SWANSEA", "postcode": "7190", "state": "TAS"}], "registrationDate": "2026-09-28"}}
-{"acn": "702743351", "d": null}
+{"acn": "702743351", "d": null, "r": 1}
 {"acn": "702743360", "d": {"name": "GATORATION", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702743379", "d": null}
+{"acn": "702743379", "d": null, "r": 1}
 {"acn": "702743388", "d": {"name": "SQUARE BERRY PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "WA", "addresses": [{"type": "Registered Office", "address": "SUCCESS 6164 WA", "suburb": "SUCCESS", "postcode": "6164", "state": "WA"}, {"type": "Principal Place of business", "address": "SUCCESS 6164 WA", "suburb": "SUCCESS", "postcode": "6164", "state": "WA"}], "registrationDate": "2026-09-28"}}
 {"acn": "702743397", "d": {"name": "SQUARE BERRY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702743404", "d": {"name": "FUNBRELLA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702743413", "d": {"name": "VERTCAP", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702743422", "d": null}
+{"acn": "702743422", "d": null, "r": 1}
 {"acn": "702743431", "d": {"name": "MRT SERVICES PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "SA", "addresses": [{"type": "Registered Office", "address": "VALLEY VIEW 5093 SA", "suburb": "VALLEY VIEW", "postcode": "5093", "state": "SA"}, {"type": "Principal Place of business", "address": "VALLEY VIEW 5093 SA", "suburb": "VALLEY VIEW", "postcode": "5093", "state": "SA"}], "registrationDate": "2026-09-28"}}
 {"acn": "702743440", "d": {"name": "TAPIM SERVICES PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "GYMPIE 4570 QLD", "suburb": "GYMPIE", "postcode": "4570", "state": "QLD"}, {"type": "Principal Place of business", "address": "GYMPIE 4570 QLD", "suburb": "GYMPIE", "postcode": "4570", "state": "QLD"}], "registrationDate": "2026-09-28"}}
-{"acn": "702743459", "d": null}
-{"acn": "702743468", "d": null}
+{"acn": "702743459", "d": null, "r": 1}
+{"acn": "702743468", "d": null, "r": 1}
 {"acn": "702743477", "d": {"name": "TAMSA HAULAGE CONTRACTORS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "JAMISONTOWN 2750 NSW", "suburb": "JAMISONTOWN", "postcode": "2750", "state": "NSW"}, {"type": "Principal Place of business", "address": "JAMISONTOWN 2750 NSW", "suburb": "JAMISONTOWN", "postcode": "2750", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702743486", "d": {"name": "COMPASSION MINISTRY INC", "type": "Associations", "class": "-", "subClass": "-", "status": "Pending", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702743495", "d": {"name": "BOONAH NURSING AT HOME", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702743502", "d": {"name": "WINK FINANCE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702743511", "d": {"name": "METALS TECHNOLOGY INVESTMENTS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702743520", "d": {"name": "CONDAMINE HOTEL PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "TOOWOOMBA CITY 4350 QLD", "suburb": "TOOWOOMBA CITY", "postcode": "4350", "state": "QLD"}, {"type": "Principal Place of business", "address": "NEWTOWN 4350 QLD", "suburb": "NEWTOWN", "postcode": "4350", "state": "QLD"}], "registrationDate": "2026-09-28"}}
-{"acn": "702743539", "d": null}
-{"acn": "702743548", "d": null}
-{"acn": "702743557", "d": null}
-{"acn": "702743566", "d": null}
-{"acn": "702743575", "d": null}
+{"acn": "702743539", "d": null, "r": 1}
+{"acn": "702743548", "d": null, "r": 1}
+{"acn": "702743557", "d": null, "r": 1}
+{"acn": "702743566", "d": null, "r": 1}
+{"acn": "702743575", "d": null, "r": 1}
 {"acn": "702743584", "d": {"name": "CANVAS AND CONCRETE PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "WERRIBEE 3030 VIC", "suburb": "WERRIBEE", "postcode": "3030", "state": "VIC"}, {"type": "Principal Place of business", "address": "WERRIBEE 3030 VIC", "suburb": "WERRIBEE", "postcode": "3030", "state": "VIC"}], "registrationDate": "2026-09-28"}}
-{"acn": "702743593", "d": null}
+{"acn": "702743593", "d": null, "r": 1}
 {"acn": "702743600", "d": {"name": "REWARDING RESOURCES PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "WA", "addresses": [{"type": "Registered Office", "address": "JANDAKOT 6164 WA", "suburb": "JANDAKOT", "postcode": "6164", "state": "WA"}, {"type": "Principal Place of business", "address": "JANDAKOT 6164 WA", "suburb": "JANDAKOT", "postcode": "6164", "state": "WA"}], "registrationDate": "2026-09-28"}}
-{"acn": "702743619", "d": null}
+{"acn": "702743619", "d": null, "r": 1}
 {"acn": "702743628", "d": {"name": "AUSTRALIAN CAMBODIAN TRADE AND INVESTMENT CHAMBER LIMITED", "type": "Australian Public Company", "class": "Limited By Guarantee", "subClass": "Unlisted Public Company - Non-Profit Company", "status": "Registered", "incorporationState": "SA", "addresses": [{"type": "Registered Office", "address": "NORTH ADELAIDE 5006 SA", "suburb": "NORTH ADELAIDE", "postcode": "5006", "state": "SA"}, {"type": "Principal Place of business", "address": "NORTH ADELAIDE 5006 SA", "suburb": "NORTH ADELAIDE", "postcode": "5006", "state": "SA"}], "registrationDate": "2026-09-28"}}
-{"acn": "702743637", "d": null}
+{"acn": "702743637", "d": null, "r": 1}
 {"acn": "702743646", "d": {"name": "TRIGOOD PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "SUNBURY 3429 VIC", "suburb": "SUNBURY", "postcode": "3429", "state": "VIC"}, {"type": "Principal Place of business", "address": "MALMSBURY 3446 VIC", "suburb": "MALMSBURY", "postcode": "3446", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702743655", "d": {"name": "J & K BURNETT ENTERPRISES PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "BIRTINYA 4575 QLD", "suburb": "BIRTINYA", "postcode": "4575", "state": "QLD"}, {"type": "Principal Place of business", "address": "WAMURAN 4512 QLD", "suburb": "WAMURAN", "postcode": "4512", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702743664", "d": {"name": "SHAREFORCE TOTAL EQUITY SOLUTIONS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "ST LEONARDS 2065 NSW", "suburb": "ST LEONARDS", "postcode": "2065", "state": "NSW"}, {"type": "Principal Place of business", "address": "ST LEONARDS 2065 NSW", "suburb": "ST LEONARDS", "postcode": "2065", "state": "NSW"}], "registrationDate": "2026-09-28"}}
@@ -25013,28 +25013,28 @@
 {"acn": "702743726", "d": {"name": "LJM SMSF PTY. LTD.", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "NORTH BONDI 2026 NSW", "suburb": "NORTH BONDI", "postcode": "2026", "state": "NSW"}, {"type": "Principal Place of business", "address": "NORTH BONDI 2026 NSW", "suburb": "NORTH BONDI", "postcode": "2026", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702743735", "d": {"name": "ARCHIVE MANAGEMENT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702743744", "d": {"name": "SUPER MASSIVE LIMITED", "type": "Nonc", "class": "-", "subClass": "-", "status": "Not Registered-Organisations Of Type 'Nonc','Nret'", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702743753", "d": null}
+{"acn": "702743753", "d": null, "r": 1}
 {"acn": "702743762", "d": {"name": "ME AND YOU PSYCHOLOGY PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "SOUTH TOOWOOMBA 4350 QLD", "suburb": "SOUTH TOOWOOMBA", "postcode": "4350", "state": "QLD"}, {"type": "Principal Place of business", "address": "PRESTON 4352 QLD", "suburb": "PRESTON", "postcode": "4352", "state": "QLD"}], "registrationDate": "2026-09-28"}}
-{"acn": "702743771", "d": null}
-{"acn": "702743780", "d": null}
+{"acn": "702743771", "d": null, "r": 1}
+{"acn": "702743780", "d": null, "r": 1}
 {"acn": "702743799", "d": {"name": "GROW EARLY EDUCATION COBURG", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702743806", "d": {"name": "NEPEAN CORP PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "MOUNT GRAVATT EAST 4122 QLD", "suburb": "MOUNT GRAVATT EAST", "postcode": "4122", "state": "QLD"}, {"type": "Principal Place of business", "address": "PARK RIDGE SOUTH 4125 QLD", "suburb": "PARK RIDGE SOUTH", "postcode": "4125", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702743815", "d": {"name": "SPLIET MILLER INVESTMENTS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "MAITLAND 2320 NSW", "suburb": "MAITLAND", "postcode": "2320", "state": "NSW"}, {"type": "Principal Place of business", "address": "GRETA 2334 NSW", "suburb": "GRETA", "postcode": "2334", "state": "NSW"}], "registrationDate": "2026-09-28"}}
-{"acn": "702743824", "d": null}
-{"acn": "702743833", "d": null}
-{"acn": "702743842", "d": null}
+{"acn": "702743824", "d": null, "r": 1}
+{"acn": "702743833", "d": null, "r": 1}
+{"acn": "702743842", "d": null, "r": 1}
 {"acn": "702743851", "d": {"name": "MELBOURNE BALCONY LIFT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702743860", "d": {"name": "ARDEN MUSIC HALL PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "COLLINGWOOD 3066 VIC", "suburb": "COLLINGWOOD", "postcode": "3066", "state": "VIC"}, {"type": "Principal Place of business", "address": "COLLINGWOOD 3066 VIC", "suburb": "COLLINGWOOD", "postcode": "3066", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702743879", "d": {"name": "LIVE NATION ENTERTAINMENT, INC.", "type": "Nonc", "class": "-", "subClass": "-", "status": "Not Registered-Organisations Of Type 'Nonc','Nret'", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702743888", "d": {"name": "KALI INDUSTRIES PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "PICTON 2571 NSW", "suburb": "PICTON", "postcode": "2571", "state": "NSW"}, {"type": "Principal Place of business", "address": "PICTON 2571 NSW", "suburb": "PICTON", "postcode": "2571", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702743897", "d": {"name": "SHADOW PUCK MEDIA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702743904", "d": {"name": "MARZINI FUTURE SUPER PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "UPPER COOMERA 4209 QLD", "suburb": "UPPER COOMERA", "postcode": "4209", "state": "QLD"}, {"type": "Principal Place of business", "address": "UPPER COOMERA 4209 QLD", "suburb": "UPPER COOMERA", "postcode": "4209", "state": "QLD"}], "registrationDate": "2026-09-28"}}
-{"acn": "702743913", "d": null}
-{"acn": "702743922", "d": null}
-{"acn": "702743931", "d": null}
-{"acn": "702743940", "d": null}
-{"acn": "702743959", "d": null}
-{"acn": "702743968", "d": null}
+{"acn": "702743913", "d": null, "r": 1}
+{"acn": "702743922", "d": null, "r": 1}
+{"acn": "702743931", "d": null, "r": 1}
+{"acn": "702743940", "d": null, "r": 1}
+{"acn": "702743959", "d": null, "r": 1}
+{"acn": "702743968", "d": null, "r": 1}
 {"acn": "702743977", "d": {"name": "BLITZ BODY STUDIO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702743986", "d": {"name": "INDIGEPAY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702743995", "d": {"name": "MOVEX TRANSPORT AND LOGISTICS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
@@ -25056,28 +25056,28 @@
 {"acn": "702744152", "d": {"name": "SHOWERSPACE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702744161", "d": {"name": "JOG MOBILE MECHANICAL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702744170", "d": {"name": "AMPLIFY IMPACT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
-{"acn": "702744189", "d": null}
+{"acn": "702744189", "d": null, "r": 1}
 {"acn": "702744198", "d": {"name": "AUSOLEIL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702744205", "d": null}
-{"acn": "702744214", "d": null}
+{"acn": "702744205", "d": null, "r": 1}
+{"acn": "702744214", "d": null, "r": 1}
 {"acn": "702744223", "d": {"name": "DRUMMANDUFF CONSTRUCTION PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "COOGEE 2034 NSW", "suburb": "COOGEE", "postcode": "2034", "state": "NSW"}, {"type": "Principal Place of business", "address": "COOGEE 2034 NSW", "suburb": "COOGEE", "postcode": "2034", "state": "NSW"}], "registrationDate": "2026-09-28"}}
-{"acn": "702744232", "d": null}
+{"acn": "702744232", "d": null, "r": 1}
 {"acn": "702744241", "d": {"name": "D2 BUSINESS SERVICES PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "MARRICKVILLE 2204 NSW", "suburb": "MARRICKVILLE", "postcode": "2204", "state": "NSW"}, {"type": "Principal Place of business", "address": "MARRICKVILLE 2204 NSW", "suburb": "MARRICKVILLE", "postcode": "2204", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744250", "d": {"name": "MELESAT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702744269", "d": null}
+{"acn": "702744269", "d": null, "r": 1}
 {"acn": "702744278", "d": {"name": "SUNSHINE INVESTMENT FUND PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "THE PONDS 2769 NSW", "suburb": "THE PONDS", "postcode": "2769", "state": "NSW"}, {"type": "Principal Place of business", "address": "THE PONDS 2769 NSW", "suburb": "THE PONDS", "postcode": "2769", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744287", "d": {"name": "LAZZA GROUP PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "CAIRNS 4870 QLD", "suburb": "CAIRNS", "postcode": "4870", "state": "QLD"}, {"type": "Principal Place of business", "address": "GORDONVALE 4865 QLD", "suburb": "GORDONVALE", "postcode": "4865", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744296", "d": {"name": "OPTIX GLOBAL TRADING PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "MELBOURNE 3000 VIC", "suburb": "MELBOURNE", "postcode": "3000", "state": "VIC"}, {"type": "Principal Place of business", "address": "MELBOURNE 3000 VIC", "suburb": "MELBOURNE", "postcode": "3000", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744303", "d": {"name": "FOZ GROUP HOLDINGS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "SOUTH YARRA 3141 VIC", "suburb": "SOUTH YARRA", "postcode": "3141", "state": "VIC"}, {"type": "Principal Place of business", "address": "SOUTH YARRA 3141 VIC", "suburb": "SOUTH YARRA", "postcode": "3141", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744312", "d": {"name": "CLOUD DOC PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "SOUTHPORT 4215 QLD", "suburb": "SOUTHPORT", "postcode": "4215", "state": "QLD"}, {"type": "Principal Place of business", "address": "SOUTHPORT 4215 QLD", "suburb": "SOUTHPORT", "postcode": "4215", "state": "QLD"}], "registrationDate": "2026-09-28"}}
-{"acn": "702744321", "d": null}
+{"acn": "702744321", "d": null, "r": 1}
 {"acn": "702744330", "d": {"name": "FRANK MOLLUSO'S TYRE & AUTO REPAIRS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702744349", "d": {"name": "HOMESAFE STRATA INSPECTIONS PENRITH PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "BOREE 2800 NSW", "suburb": "BOREE", "postcode": "2800", "state": "NSW"}, {"type": "Principal Place of business", "address": "BOREE 2800 NSW", "suburb": "BOREE", "postcode": "2800", "state": "NSW"}], "registrationDate": "2026-09-28"}}
-{"acn": "702744358", "d": null}
+{"acn": "702744358", "d": null, "r": 1}
 {"acn": "702744367", "d": {"name": "THANK A TANK", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702744376", "d": {"name": "FAR NORTH SCRUBS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702744385", "d": null}
-{"acn": "702744394", "d": null}
+{"acn": "702744385", "d": null, "r": 1}
+{"acn": "702744394", "d": null, "r": 1}
 {"acn": "702744401", "d": {"name": "ELLAY SUPER PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "THORNDALE 4380 QLD", "suburb": "THORNDALE", "postcode": "4380", "state": "QLD"}, {"type": "Principal Place of business", "address": "THORNDALE 4380 QLD", "suburb": "THORNDALE", "postcode": "4380", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744410", "d": {"name": "ONCKO, INC. (FOREIGN CO)", "type": "Nonc", "class": "-", "subClass": "-", "status": "Not Registered-Organisations Of Type 'Nonc','Nret'", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702744429", "d": {"name": "A GRADE DRIVEWAY CLEANING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
@@ -25085,25 +25085,25 @@
 {"acn": "702744447", "d": {"name": "OPTIX GLOBAL IP PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "MELBOURNE 3000 VIC", "suburb": "MELBOURNE", "postcode": "3000", "state": "VIC"}, {"type": "Principal Place of business", "address": "MELBOURNE 3000 VIC", "suburb": "MELBOURNE", "postcode": "3000", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744456", "d": {"name": "CON PAPPAS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702744465", "d": {"name": "INFLATABLES AU", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702744474", "d": null}
+{"acn": "702744474", "d": null, "r": 1}
 {"acn": "702744483", "d": {"name": "FORTIS SUPPLEMENTS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "ACT", "addresses": [{"type": "Registered Office", "address": "MAWSON 2607 ACT", "suburb": "MAWSON", "postcode": "2607", "state": "ACT"}, {"type": "Principal Place of business", "address": "MAWSON 2607 ACT", "suburb": "MAWSON", "postcode": "2607", "state": "ACT"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744492", "d": {"name": "BRIDGE INN INVESTMENTS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "DOREEN 3754 VIC", "suburb": "DOREEN", "postcode": "3754", "state": "VIC"}, {"type": "Principal Place of business", "address": "DOREEN 3754 VIC", "suburb": "DOREEN", "postcode": "3754", "state": "VIC"}], "registrationDate": "2026-09-28"}}
-{"acn": "702744509", "d": null}
+{"acn": "702744509", "d": null, "r": 1}
 {"acn": "702744518", "d": {"name": "SNACK DROP VENDING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702744527", "d": {"name": "BERRO HOLDINGS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "PUNCHBOWL 2196 NSW", "suburb": "PUNCHBOWL", "postcode": "2196", "state": "NSW"}, {"type": "Principal Place of business", "address": "PUNCHBOWL 2196 NSW", "suburb": "PUNCHBOWL", "postcode": "2196", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744536", "d": {"name": "GLEN SHIAN DEVELOPMENTS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "SPOTSWOOD 3015 VIC", "suburb": "SPOTSWOOD", "postcode": "3015", "state": "VIC"}, {"type": "Principal Place of business", "address": "WILLIAMSTOWN NORTH 3016 VIC", "suburb": "WILLIAMSTOWN NORTH", "postcode": "3016", "state": "VIC"}], "registrationDate": "2026-09-28"}}
-{"acn": "702744545", "d": null}
+{"acn": "702744545", "d": null, "r": 1}
 {"acn": "702744554", "d": {"name": "WAYPOINT AGRIBUSINESS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "MIDDLE PARK 3206 VIC", "suburb": "MIDDLE PARK", "postcode": "3206", "state": "VIC"}, {"type": "Principal Place of business", "address": "MIDDLE PARK 3206 VIC", "suburb": "MIDDLE PARK", "postcode": "3206", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744563", "d": {"name": "THREEFOLD SUPPORT PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "MOUNT WARRIGAL 2528 NSW", "suburb": "MOUNT WARRIGAL", "postcode": "2528", "state": "NSW"}, {"type": "Principal Place of business", "address": "MOUNT WARRIGAL 2528 NSW", "suburb": "MOUNT WARRIGAL", "postcode": "2528", "state": "NSW"}], "registrationDate": "2026-09-28"}}
-{"acn": "702744572", "d": null}
+{"acn": "702744572", "d": null, "r": 1}
 {"acn": "702744581", "d": {"name": "ORIGIN TO MARKET PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "BLI BLI 4560 QLD", "suburb": "BLI BLI", "postcode": "4560", "state": "QLD"}, {"type": "Principal Place of business", "address": "BLI BLI 4560 QLD", "suburb": "BLI BLI", "postcode": "4560", "state": "QLD"}], "registrationDate": "2026-09-28"}}
-{"acn": "702744590", "d": null}
+{"acn": "702744590", "d": null, "r": 1}
 {"acn": "702744607", "d": {"name": "SHADEHUNTER UMBRELLAS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702744616", "d": {"name": "PANDA PHONE PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "EDGEWORTH 2285 NSW", "suburb": "EDGEWORTH", "postcode": "2285", "state": "NSW"}, {"type": "Principal Place of business", "address": "EDGEWORTH 2285 NSW", "suburb": "EDGEWORTH", "postcode": "2285", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744625", "d": {"name": "SNOWDAVS SUPER PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "WAGGA WAGGA 2650 NSW", "suburb": "WAGGA WAGGA", "postcode": "2650", "state": "NSW"}, {"type": "Principal Place of business", "address": "WAGGA WAGGA 2650 NSW", "suburb": "WAGGA WAGGA", "postcode": "2650", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744634", "d": {"name": "AL ALEXANDRIA PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "MELBOURNE 3000 VIC", "suburb": "MELBOURNE", "postcode": "3000", "state": "VIC"}, {"type": "Principal Place of business", "address": "WEST PERTH 6005 WA", "suburb": "WEST PERTH", "postcode": "6005", "state": "WA"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744643", "d": {"name": "AQUA FABULA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
-{"acn": "702744652", "d": null}
+{"acn": "702744652", "d": null, "r": 1}
 {"acn": "702744661", "d": {"name": "POCKETBOOK PUBLISHING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702744670", "d": {"name": "BELLEVUE RECEPTIONS GEELONG", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702744689", "d": {"name": "CLUB DELU", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
@@ -25121,10 +25121,10 @@
 {"acn": "702744803", "d": {"name": "TVP PROPERTIES PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "WILLIAMSTOWN 3016 VIC", "suburb": "WILLIAMSTOWN", "postcode": "3016", "state": "VIC"}, {"type": "Principal Place of business", "address": "WILLIAMSTOWN 3016 VIC", "suburb": "WILLIAMSTOWN", "postcode": "3016", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744812", "d": {"name": "LANGUAGE FABRIC HOLDINGS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "TWEED HEADS WEST 2485 NSW", "suburb": "TWEED HEADS WEST", "postcode": "2485", "state": "NSW"}, {"type": "Principal Place of business", "address": "TWEED HEADS WEST 2485 NSW", "suburb": "TWEED HEADS WEST", "postcode": "2485", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744821", "d": {"name": "AGELESS OLIVE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
-{"acn": "702744830", "d": null}
+{"acn": "702744830", "d": null, "r": 1}
 {"acn": "702744849", "d": {"name": "CHERIE ELLIOTT PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "SA", "addresses": [{"type": "Registered Office", "address": "PEREGIAN BEACH 4573 QLD", "suburb": "PEREGIAN BEACH", "postcode": "4573", "state": "QLD"}, {"type": "Principal Place of business", "address": "PEREGIAN BEACH 4573 QLD", "suburb": "PEREGIAN BEACH", "postcode": "4573", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744858", "d": {"name": "ENDORPHIN HEALTH PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "SURRY HILLS 2010 NSW", "suburb": "SURRY HILLS", "postcode": "2010", "state": "NSW"}, {"type": "Principal Place of business", "address": "CAMMERAY 2062 NSW", "suburb": "CAMMERAY", "postcode": "2062", "state": "NSW"}], "registrationDate": "2026-09-28"}}
-{"acn": "702744867", "d": null}
+{"acn": "702744867", "d": null, "r": 1}
 {"acn": "702744876", "d": {"name": "NEW CASTLE RADIOLOGY PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "SPEERS POINT 2284 NSW", "suburb": "SPEERS POINT", "postcode": "2284", "state": "NSW"}, {"type": "Principal Place of business", "address": "SPEERS POINT 2284 NSW", "suburb": "SPEERS POINT", "postcode": "2284", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744885", "d": {"name": "STARPATH CLARITY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702744894", "d": {"name": "ONE8 TRANSPORT PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "WA", "addresses": [{"type": "Registered Office", "address": "QUEENS PARK 6107 WA", "suburb": "QUEENS PARK", "postcode": "6107", "state": "WA"}, {"type": "Principal Place of business", "address": "QUEENS PARK 6107 WA", "suburb": "QUEENS PARK", "postcode": "6107", "state": "WA"}], "registrationDate": "2026-09-28"}}
@@ -25133,8 +25133,8 @@
 {"acn": "702744929", "d": {"name": "MILESTONE PROTECTION PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "CHATSWOOD 2067 NSW", "suburb": "CHATSWOOD", "postcode": "2067", "state": "NSW"}, {"type": "Principal Place of business", "address": "BEXLEY 2207 NSW", "suburb": "BEXLEY", "postcode": "2207", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744938", "d": {"name": "GOOD PRACTICE CO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702744947", "d": {"name": "THE A FIRM WILLS & ESTATE LAWYERS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "VARSITY LAKES 4227 QLD", "suburb": "VARSITY LAKES", "postcode": "4227", "state": "QLD"}, {"type": "Principal Place of business", "address": "COOMERA 4209 QLD", "suburb": "COOMERA", "postcode": "4209", "state": "QLD"}], "registrationDate": "2026-09-28"}}
-{"acn": "702744956", "d": null}
-{"acn": "702744965", "d": null}
+{"acn": "702744956", "d": null, "r": 1}
+{"acn": "702744965", "d": null, "r": 1}
 {"acn": "702744974", "d": {"name": "MELCHIOR MINERALS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "BANKSIA BEACH 4507 QLD", "suburb": "BANKSIA BEACH", "postcode": "4507", "state": "QLD"}, {"type": "Principal Place of business", "address": "BANKSIA BEACH 4507 QLD", "suburb": "BANKSIA BEACH", "postcode": "4507", "state": "QLD"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744983", "d": {"name": "YIN PROPERTIES PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "SPRINGVALE 3171 VIC", "suburb": "SPRINGVALE", "postcode": "3171", "state": "VIC"}, {"type": "Principal Place of business", "address": "WATERWAYS 3195 VIC", "suburb": "WATERWAYS", "postcode": "3195", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702744992", "d": {"name": "CORIVAAU", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
@@ -25152,11 +25152,11 @@
 {"acn": "702745113", "d": {"name": "VOLKS HAUS MECHANICAL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702745122", "d": {"name": "EXCRETE CONCRETE & EXCAVATION", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702745131", "d": {"name": "JORIS HOME PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "NEW LAMBTON 2305 NSW", "suburb": "NEW LAMBTON", "postcode": "2305", "state": "NSW"}, {"type": "Principal Place of business", "address": "NEW LAMBTON 2305 NSW", "suburb": "NEW LAMBTON", "postcode": "2305", "state": "NSW"}], "registrationDate": "2026-09-28"}}
-{"acn": "702745140", "d": null}
-{"acn": "702745159", "d": null}
+{"acn": "702745140", "d": null, "r": 1}
+{"acn": "702745159", "d": null, "r": 1}
 {"acn": "702745168", "d": {"name": "MERINO SOLAR FARM HOLDING PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "CANBERRA 2601 ACT", "suburb": "CANBERRA", "postcode": "2601", "state": "ACT"}, {"type": "Principal Place of business", "address": "CANBERRA 2601 ACT", "suburb": "CANBERRA", "postcode": "2601", "state": "ACT"}], "registrationDate": "2026-09-28"}}
 {"acn": "702745177", "d": {"name": "EDP, S.A.", "type": "Nonc", "class": "-", "subClass": "-", "status": "Not Registered-Organisations Of Type 'Nonc','Nret'", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702745186", "d": null}
+{"acn": "702745186", "d": null, "r": 1}
 {"acn": "702745195", "d": {"name": "TEQNOW", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702745202", "d": {"name": "FLYSHTEC PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "MEREWETHER 2291 NSW", "suburb": "MEREWETHER", "postcode": "2291", "state": "NSW"}, {"type": "Principal Place of business", "address": "MEREWETHER 2291 NSW", "suburb": "MEREWETHER", "postcode": "2291", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702745211", "d": {"name": "FLYSHTEC", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
@@ -25165,14 +25165,14 @@
 {"acn": "702745248", "d": {"name": "CRAFTED BY KAY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702745257", "d": {"name": "ETESIAN LABS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "BERMAGUI 2546 NSW", "suburb": "BERMAGUI", "postcode": "2546", "state": "NSW"}, {"type": "Principal Place of business", "address": "BERMAGUI 2546 NSW", "suburb": "BERMAGUI", "postcode": "2546", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702745266", "d": {"name": "AUSTRALIAN ASETHETICS GROUP", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
-{"acn": "702745275", "d": null}
-{"acn": "702745284", "d": null}
+{"acn": "702745275", "d": null, "r": 1}
+{"acn": "702745284", "d": null, "r": 1}
 {"acn": "702745293", "d": {"name": "ASHRAF TRADERS (VIC) PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "CRAIGIEBURN 3064 VIC", "suburb": "CRAIGIEBURN", "postcode": "3064", "state": "VIC"}, {"type": "Principal Place of business", "address": "CRAIGIEBURN 3064 VIC", "suburb": "CRAIGIEBURN", "postcode": "3064", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702745300", "d": {"name": "COELIA BAKERY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702745319", "d": {"name": "MISSTA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-09-28"}}
 {"acn": "702745328", "d": {"name": "LRE SMSF PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "CANTERBURY 3126 VIC", "suburb": "CANTERBURY", "postcode": "3126", "state": "VIC"}, {"type": "Principal Place of business", "address": "CANTERBURY 3126 VIC", "suburb": "CANTERBURY", "postcode": "3126", "state": "VIC"}], "registrationDate": "2026-09-28"}}
 {"acn": "702745337", "d": {"name": "YELLOW RECRUITMENT PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "EARLWOOD 2206 NSW", "suburb": "EARLWOOD", "postcode": "2206", "state": "NSW"}, {"type": "Principal Place of business", "address": "ALEXANDRA HILLS 4161 QLD", "suburb": "ALEXANDRA HILLS", "postcode": "4161", "state": "QLD"}], "registrationDate": "2026-09-28"}}
-{"acn": "702745346", "d": null}
+{"acn": "702745346", "d": null, "r": 1}
 {"acn": "702745355", "d": {"name": "TRANS-TECH PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "SILVERWATER 2128 NSW", "suburb": "SILVERWATER", "postcode": "2128", "state": "NSW"}, {"type": "Principal Place of business", "address": "NARRAWEENA 2099 NSW", "suburb": "NARRAWEENA", "postcode": "2099", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702745364", "d": {"name": "2J PAINTERS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "KOGARAH 2217 NSW", "suburb": "KOGARAH", "postcode": "2217", "state": "NSW"}, {"type": "Principal Place of business", "address": "KOGARAH 2217 NSW", "suburb": "KOGARAH", "postcode": "2217", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702745373", "d": {"name": "STANLEY BLOSSOM PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "FITZROY NORTH 3068 VIC", "suburb": "FITZROY NORTH", "postcode": "3068", "state": "VIC"}, {"type": "Principal Place of business", "address": "FITZROY NORTH 3068 VIC", "suburb": "FITZROY NORTH", "postcode": "3068", "state": "VIC"}], "registrationDate": "2026-09-28"}}
@@ -25189,7 +25189,7 @@
 {"acn": "702745480", "d": {"name": "DOH PIES AND CAKES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702745499", "d": {"name": "ROD SHEPPARD PROFESSIONAL PAINTER", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702745506", "d": {"name": "CHOICE WINDSCREEN REPAIRS & TINTING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "702745515", "d": null}
+{"acn": "702745515", "d": null, "r": 1}
 {"acn": "702745524", "d": {"name": "SJ TIPENE VAEILA NOMINEES PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "CLAREMONT MEADOWS 2747 NSW", "suburb": "CLAREMONT MEADOWS", "postcode": "2747", "state": "NSW"}, {"type": "Principal Place of business", "address": "CLAREMONT MEADOWS 2747 NSW", "suburb": "CLAREMONT MEADOWS", "postcode": "2747", "state": "NSW"}], "registrationDate": "2026-09-28"}}
 {"acn": "702745533", "d": null}
 {"acn": "702745542", "d": null}
@@ -45094,49 +45094,96 @@
 {"acn": "702944563", "d": {"name": "LINEN LEGENDS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
 {"acn": "702944572", "d": {"name": "AUSTRALIAN ELECTRIC KARTING LEAGUE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
 {"acn": "702944581", "d": {"name": "VI 3D PRINT MEDIA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
+{"acn": "702944590", "d": {"name": "KDM PERFORMANCE FABRICATION", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702944607", "d": {"name": "LODGEWELL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
+{"acn": "702944616", "d": {"name": "DRIFTER ENERGY DRINK", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702944625", "d": {"name": "BIBI USAGI", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
+{"acn": "702944634", "d": {"name": "SHAKEDOWN ENTERTAINMENT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702944643", "d": {"name": "THE WORLD OF ANIME", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
+{"acn": "702944652", "d": {"name": "THE RENDER AND PLASTER CO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702944661", "d": {"name": "AUSTRAL SOVEREIGN EDGE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
+{"acn": "702944670", "d": {"name": "OSEAAN", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702944689", "d": {"name": "O'BRIEN ENTERPRISE, QUEENSLAND PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "NORTH LAKES 4509 QLD", "suburb": "NORTH LAKES", "postcode": "4509", "state": "QLD"}, {"type": "Principal Place of business", "address": "NORTH LAKES 4509 QLD", "suburb": "NORTH LAKES", "postcode": "4509", "state": "QLD"}], "registrationDate": "2026-10-04"}}
+{"acn": "702944698", "d": null}
 {"acn": "702944705", "d": null}
+{"acn": "702944714", "d": {"name": "PROPERTY CEO PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "RICHMOND 3121 VIC", "suburb": "RICHMOND", "postcode": "3121", "state": "VIC"}, {"type": "Principal Place of business", "address": "RICHMOND 3121 VIC", "suburb": "RICHMOND", "postcode": "3121", "state": "VIC"}], "registrationDate": "2026-10-04"}}
 {"acn": "702944723", "d": {"name": "AI THE INDUSTRY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
+{"acn": "702944732", "d": {"name": "BSR AUSTRALIA NZ", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
 {"acn": "702944741", "d": null}
+{"acn": "702944750", "d": null}
 {"acn": "702944769", "d": null}
+{"acn": "702944778", "d": {"name": "ATIERRA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702944787", "d": {"name": "SUNDUS NIQOLA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
+{"acn": "702944796", "d": {"name": "TEE J KHADI CLOTHING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
 {"acn": "702944803", "d": {"name": "THE SLOW LANE CO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
+{"acn": "702944812", "d": null}
 {"acn": "702944821", "d": null}
+{"acn": "702944830", "d": {"name": "SHAHIDI FAMILY INVESTMENTS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "MOUNT COTTRELL 3024 VIC", "suburb": "MOUNT COTTRELL", "postcode": "3024", "state": "VIC"}, {"type": "Principal Place of business", "address": "MOUNT COTTRELL 3024 VIC", "suburb": "MOUNT COTTRELL", "postcode": "3024", "state": "VIC"}], "registrationDate": "2026-10-04"}}
 {"acn": "702944849", "d": {"name": "MORETON INDEPENDENT CARE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
+{"acn": "702944858", "d": {"name": "ADVICETRAVEL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702944867", "d": {"name": "HAZEL EVENTS & DECOR", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
+{"acn": "702944876", "d": {"name": "WOLF FIX", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
 {"acn": "702944885", "d": {"name": "ME,THE SEASON", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
+{"acn": "702944894", "d": {"name": "ONPOINT BLASTING & COATINGS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
 {"acn": "702944901", "d": {"name": "RYAN CLEANING CO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
+{"acn": "702944910", "d": {"name": "BENNY'S FRUIT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
 {"acn": "702944929", "d": {"name": "NAVAH CARE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
+{"acn": "702944938", "d": {"name": "APAATO LIVING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702944947", "d": {"name": "SYSTELNEX", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
+{"acn": "702944956", "d": {"name": "MASTERVAULT.TCG", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702944965", "d": {"name": "AJU CHILDCARE CLEANING SERVICE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
+{"acn": "702944974", "d": {"name": "SUBBIECHASE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702944983", "d": {"name": "BOLT HIRE PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "SA", "addresses": [{"type": "Registered Office", "address": "ROSE PARK 5067 SA", "suburb": "ROSE PARK", "postcode": "5067", "state": "SA"}, {"type": "Principal Place of business", "address": "ROSE PARK 5067 SA", "suburb": "ROSE PARK", "postcode": "5067", "state": "SA"}], "registrationDate": "2026-10-04"}}
+{"acn": "702944992", "d": {"name": "FERROUS HOMES PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "WA", "addresses": [{"type": "Registered Office", "address": "MIDVALE 6056 WA", "suburb": "MIDVALE", "postcode": "6056", "state": "WA"}, {"type": "Principal Place of business", "address": "MIDVALE 6056 WA", "suburb": "MIDVALE", "postcode": "6056", "state": "WA"}], "registrationDate": "2026-10-04"}}
 {"acn": "702945006", "d": {"name": "JEP CORPORATE SERVICES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
+{"acn": "702945015", "d": {"name": "CELEBRATE ONLINE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702945024", "d": {"name": "HOUSE IN ORDER DIGITAL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
+{"acn": "702945033", "d": {"name": "LORENA MARROQUIN SUPPORT SERVICES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
 {"acn": "702945042", "d": null}
+{"acn": "702945051", "d": null}
 {"acn": "702945060", "d": {"name": "ATHI LOGISTIC PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "HAMPTON PARK 3976 VIC", "suburb": "HAMPTON PARK", "postcode": "3976", "state": "VIC"}, {"type": "Principal Place of business", "address": "HAMPTON PARK 3976 VIC", "suburb": "HAMPTON PARK", "postcode": "3976", "state": "VIC"}], "registrationDate": "2026-10-04"}}
+{"acn": "702945079", "d": {"name": "THE HOME PHONE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
 {"acn": "702945088", "d": {"name": "WATERTAXI.COM.AU", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
+{"acn": "702945097", "d": {"name": "WONDER FOX", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702945104", "d": {"name": "BDE GENERAL TRADING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
+{"acn": "702945113", "d": null}
 {"acn": "702945122", "d": null}
+{"acn": "702945131", "d": {"name": "AQUA CO PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "CROYDON SOUTH 3136 VIC", "suburb": "CROYDON SOUTH", "postcode": "3136", "state": "VIC"}, {"type": "Principal Place of business", "address": "GLEN WAVERLEY 3150 VIC", "suburb": "GLEN WAVERLEY", "postcode": "3150", "state": "VIC"}], "registrationDate": "2026-10-04"}}
 {"acn": "702945140", "d": null}
+{"acn": "702945159", "d": null}
 {"acn": "702945168", "d": null}
+{"acn": "702945177", "d": {"name": "TJ PLUS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702945186", "d": {"name": "MYMAINTENANCEMATE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
+{"acn": "702945195", "d": {"name": "TERMITE KING QLD", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702945202", "d": null}
+{"acn": "702945211", "d": null}
 {"acn": "702945220", "d": {"name": "TANAH & TRADE PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "FORESTVILLE 2087 NSW", "suburb": "FORESTVILLE", "postcode": "2087", "state": "NSW"}, {"type": "Principal Place of business", "address": "FORESTVILLE 2087 NSW", "suburb": "FORESTVILLE", "postcode": "2087", "state": "NSW"}], "registrationDate": "2026-10-04"}}
+{"acn": "702945239", "d": {"name": "IN GOOD TASTE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
 {"acn": "702945248", "d": null}
+{"acn": "702945257", "d": {"name": "DEAL ME DIRTY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
 {"acn": "702945266", "d": {"name": "FOUNDATION CLEANING SERVICE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
+{"acn": "702945275", "d": {"name": "SEQ MOTORBIKE ROADWORTHY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
 {"acn": "702945284", "d": {"name": "TJ PLUS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "TARNEIT 3029 VIC", "suburb": "TARNEIT", "postcode": "3029", "state": "VIC"}, {"type": "Principal Place of business", "address": "TARNEIT 3029 VIC", "suburb": "TARNEIT", "postcode": "3029", "state": "VIC"}], "registrationDate": "2026-10-04"}}
+{"acn": "702945293", "d": {"name": "TJ PLUS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
 {"acn": "702945300", "d": {"name": "ACOUSTIWEAR", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
+{"acn": "702945319", "d": {"name": "BEAUTYKLEAN NAILS & BEAUTY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
 {"acn": "702945328", "d": {"name": "STAGE & MIND PSYCHOLOGY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
+{"acn": "702945337", "d": {"name": "CH MEATS TRADING CO.", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702945346", "d": {"name": "ETOUTLAWS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
+{"acn": "702945355", "d": {"name": "MISSION FOR THE KIDS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
 {"acn": "702945364", "d": {"name": "ROYAL ESTATE PAINTING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
+{"acn": "702945373", "d": {"name": "IMPACT OCCUPATIONAL MEDICINE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
 {"acn": "702945382", "d": null}
+{"acn": "702945391", "d": null}
 {"acn": "702945408", "d": null}
+{"acn": "702945417", "d": {"name": "SHEEFAN MEDIA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702945426", "d": {"name": "GAINGROUND", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
+{"acn": "702945435", "d": {"name": "THE LOCAL DAUGHTER", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
 {"acn": "702945444", "d": {"name": "J & F INDUSTRIAL CLEANING SERVICES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
+{"acn": "702945453", "d": {"name": "LITTLE LEAFLINGS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "702945462", "d": {"name": "FIX & FLOURISH PROPERTY SOLUTIONS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
+{"acn": "702945471", "d": {"name": "LITTLE FORM STUDIO", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
 {"acn": "702945480", "d": null}
+{"acn": "702945499", "d": null}
 {"acn": "702945506", "d": {"name": "LAMASSU EXPRESS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "MICKLEHAM 3064 VIC", "suburb": "MICKLEHAM", "postcode": "3064", "state": "VIC"}, {"type": "Principal Place of business", "address": "MICKLEHAM 3064 VIC", "suburb": "MICKLEHAM", "postcode": "3064", "state": "VIC"}], "registrationDate": "2026-10-04"}}
+{"acn": "702945515", "d": {"name": "CAPTAIN STIRLING SEAGRASSES GROWING PLATES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-10-04"}}
