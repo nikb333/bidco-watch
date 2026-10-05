@@ -1,10 +1,257 @@
 {
- "generated_utc": "2026-09-28T18:16:13+00:00",
- "dataset": "company_202609.zip",
- "source_modified": "2026-09-28T14:51:38.654129",
+ "generated_utc": "2026-10-05T15:15:38+00:00",
+ "dataset": "company_202610.zip",
+ "source_modified": "2026-10-05T13:50:30.904485",
  "window_days": 180,
- "max_acn": "702740109",
+ "max_acn": "702946898",
  "entities": [
+  {
+   "acn": "702899134",
+   "name": "SHONI HOLDCO PTY LTD",
+   "date": "02/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SHONI",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702863394",
+   "name": "ACP MACQUARIE STREET MIDCO 2 PTY LIMITED",
+   "date": "01/10/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ACP MACQUARIE STREET 2",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702853530",
+   "name": "BUCKLER BIDCO PTY LTD",
+   "date": "30/09/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BUCKLER",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "702853281",
+   "name": "BUCKLER MIDCO PTY LTD",
+   "date": "30/09/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BUCKLER",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "702853101",
+   "name": "BUCKLER HOLDCO PTY LTD",
+   "date": "30/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BUCKLER",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "702843525",
+   "name": "ACP MACQUARIE STREET MIDCO 1 PTY LIMITED",
+   "date": "30/09/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ACP MACQUARIE STREET 1",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702824548",
+   "name": "HAMMER BIDCO PTY LTD",
+   "date": "30/09/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "HAMMER",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
+  },
+  {
+   "acn": "702802113",
+   "name": "NILA SENIOR FINCO PTY LTD",
+   "date": "29/09/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "NILA SENIOR",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702798481",
+   "name": "NILA HOLDCO FINCO PTY LTD",
+   "date": "29/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "NILA",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702793128",
+   "name": "BCPE HANCOCK BIDCO PTY LTD",
+   "date": "29/09/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BCPE HANCOCK",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "702791688",
+   "name": "BCPE HANCOCK MIDCO PTY LTD",
+   "date": "29/09/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BCPE HANCOCK",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "702790636",
+   "name": "BCPE HANCOCK MEZZCO PTY LTD",
+   "date": "29/09/2026",
+   "role": "MEZZCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BCPE HANCOCK",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "702788305",
+   "name": "BCPE HANCOCK TOPCO PTY LTD",
+   "date": "29/09/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BCPE HANCOCK",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "702761537",
+   "name": "KYANITE NTH TCE HOLDCO PTY LTD",
+   "date": "28/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "KYANITE NTH TCE",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702761528",
+   "name": "KYANITE MARGARET HOLDCO PTY LTD",
+   "date": "28/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "KYANITE MARGARET",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702759706",
+   "name": "KYANITE ROSEHILL HOLDCO PTY LTD",
+   "date": "28/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "KYANITE ROSEHILL",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702748356",
+   "name": "ALPINE BIDCO PTY LTD",
+   "date": "28/09/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ALPINE",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "702747966",
+   "name": "ALPINE MIDCO PTY LTD",
+   "date": "28/09/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ALPINE",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "702747724",
+   "name": "ALPINE HOLDCO PTY LTD",
+   "date": "28/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ALPINE",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
   {
    "acn": "702694399",
    "name": "CONCESIONES GOSW NO HOLDCO 2 PTY LIMITED",
@@ -1351,7 +1598,7 @@
    "role": "BIDCO",
    "state": "",
    "abn": true,
-   "status": "REGD",
+   "status": "SOFF",
    "stem": "PULSE",
    "in_stack": true,
    "stack_has_bidco": true,
@@ -1364,7 +1611,7 @@
    "role": "MIDCO",
    "state": "",
    "abn": true,
-   "status": "REGD",
+   "status": "SOFF",
    "stem": "PULSE",
    "in_stack": true,
    "stack_has_bidco": true,
@@ -1377,7 +1624,7 @@
    "role": "HOLDCO",
    "state": "",
    "abn": true,
-   "status": "REGD",
+   "status": "SOFF",
    "stem": "PULSE",
    "in_stack": true,
    "stack_has_bidco": true,
@@ -2378,7 +2625,7 @@
    "role": "BIDCO",
    "state": "",
    "abn": true,
-   "status": "SOFF",
+   "status": "DRGD",
    "stem": "CAPRA",
    "in_stack": true,
    "stack_has_bidco": true,
@@ -2404,7 +2651,7 @@
    "role": "FINCO",
    "state": "",
    "abn": true,
-   "status": "SOFF",
+   "status": "DRGD",
    "stem": "CAPRA",
    "in_stack": true,
    "stack_has_bidco": true,
@@ -2430,7 +2677,7 @@
    "role": "HOLDCO",
    "state": "",
    "abn": true,
-   "status": "SOFF",
+   "status": "DRGD",
    "stem": "CAPRA",
    "in_stack": true,
    "stack_has_bidco": true,
@@ -3860,7 +4107,7 @@
    "role": "FINCO",
    "state": "",
    "abn": true,
-   "status": "REGD",
+   "status": "SOFF",
    "stem": "MA 2026",
    "in_stack": false,
    "stack_has_bidco": false,
@@ -4985,6 +5232,19 @@
    "is_bidco": false
   },
   {
+   "acn": "697888547",
+   "name": "MIRUS AUS HOLDCO PTY LTD",
+   "date": "08/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "MIRUS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "697842854",
    "name": "TRE HOLDCO PTY LTD",
    "date": "07/05/2026",
@@ -5724,135 +5984,12 @@
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
-  },
-  {
-   "acn": "696957132",
-   "name": "HTFS HOLDCO PTY LTD",
-   "date": "08/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "HTFS",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "696935770",
-   "name": "PROJECT EVE HOLDCO PTY LTD",
-   "date": "08/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "PROJECT EVE",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "696933347",
-   "name": "BROADMEADOWS FINCO PTY LTD",
-   "date": "08/04/2026",
-   "role": "FINCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "BROADMEADOWS",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "696123850",
-   "name": "GP ENERGY (KLG) FINCO PTY LTD",
-   "date": "08/04/2026",
-   "role": "FINCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "GP ENERGY KLG",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "696888730",
-   "name": "WISDOM BIDCO PTY LTD",
-   "date": "07/04/2026",
-   "role": "BIDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "WISDOM",
-   "in_stack": true,
-   "stack_has_bidco": true,
-   "is_bidco": true
-  },
-  {
-   "acn": "696888712",
-   "name": "WISDOM MIDCO PTY LTD",
-   "date": "07/04/2026",
-   "role": "MIDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "WISDOM",
-   "in_stack": true,
-   "stack_has_bidco": true,
-   "is_bidco": false
-  },
-  {
-   "acn": "696888678",
-   "name": "WISDOM HOLDCO PTY LTD",
-   "date": "07/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "WISDOM",
-   "in_stack": true,
-   "stack_has_bidco": true,
-   "is_bidco": false
-  },
-  {
-   "acn": "696888552",
-   "name": "WISDOM TOPCO PTY LTD",
-   "date": "07/04/2026",
-   "role": "TOPCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "WISDOM",
-   "in_stack": true,
-   "stack_has_bidco": true,
-   "is_bidco": false
-  },
-  {
-   "acn": "696812192",
-   "name": "ANVIL AU HOLDCO PTY LTD",
-   "date": "02/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "ANVIL",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
   }
  ],
- "bidcos": 60,
- "stacks": 64,
+ "bidcos": 63,
+ "stacks": 66,
  "stacks_without_bidco": 27,
  "renamed": [
-  {
-   "acn": "696123850",
-   "was": "EQUIS ENERGY AUSTRALIA (KOOLUNGA FINCO) PTY LTD",
-   "now": "GP ENERGY (KLG) FINCO PTY LTD",
-   "since": "12/06/2026"
-  },
   {
    "acn": "697464118",
    "was": "VITA HOLDCO PTY LTD",
@@ -5882,6 +6019,12 @@
    "was": "MCM COPPER PTY LTD",
    "now": "MCM HOLDCO PTY LTD",
    "since": "13/05/2026"
+  },
+  {
+   "acn": "697888547",
+   "was": "A.C.N. 697 888 547 PTY LTD",
+   "now": "MIRUS AUS HOLDCO PTY LTD",
+   "since": "30/09/2026"
   },
   {
    "acn": "697953487",
@@ -5976,9 +6119,104 @@
  ],
  "reconciliation": {
   "covered_from_acn": "700000004",
-  "judged": 259,
+  "judged": 278,
   "found_by_daily": 19,
   "missed_by_daily": [
+   {
+    "acn": "702694399",
+    "name": "CONCESIONES GOSW NO HOLDCO 2 PTY LIMITED",
+    "date": "25/09/2026"
+   },
+   {
+    "acn": "702694353",
+    "name": "CONCESIONES GOSW NO HOLDCO 1 PTY LIMITED",
+    "date": "25/09/2026"
+   },
+   {
+    "acn": "702686646",
+    "name": "CONCESIONES GOSW HOLDCO 2 PTY LIMITED",
+    "date": "25/09/2026"
+   },
+   {
+    "acn": "702686468",
+    "name": "CONCESIONES GOSW HOLDCO 1 PTY LIMITED",
+    "date": "25/09/2026"
+   },
+   {
+    "acn": "702685121",
+    "name": "SH & TM TOPCO PTY LTD",
+    "date": "25/09/2026"
+   },
+   {
+    "acn": "702658151",
+    "name": "DYLAN MODINO HOLDCO PTY LTD",
+    "date": "24/09/2026"
+   },
+   {
+    "acn": "702650557",
+    "name": "CTSAS HOLDCO PTY LTD",
+    "date": "24/09/2026"
+   },
+   {
+    "acn": "702648673",
+    "name": "MOORABOOL HOLDCO 3 PTY LTD",
+    "date": "24/09/2026"
+   },
+   {
+    "acn": "702648664",
+    "name": "MOORABOOL HOLDCO 2 PTY LTD",
+    "date": "24/09/2026"
+   },
+   {
+    "acn": "702630466",
+    "name": "JEREMY LE HOLDCO PTY LTD",
+    "date": "23/09/2026"
+   },
+   {
+    "acn": "702592523",
+    "name": "AMBERLIGHT TOPCO PTY LTD",
+    "date": "22/09/2026"
+   },
+   {
+    "acn": "702581815",
+    "name": "ROCKSTARS BIDCO 1 PTY LTD",
+    "date": "22/09/2026"
+   },
+   {
+    "acn": "702580014",
+    "name": "ROCKSTARS MIDCO B PTY LTD",
+    "date": "22/09/2026"
+   },
+   {
+    "acn": "702578194",
+    "name": "ROCKSTARS MIDCO A PTY LTD",
+    "date": "22/09/2026"
+   },
+   {
+    "acn": "702576832",
+    "name": "ROCKSTARS HOLDCO B PTY LTD",
+    "date": "22/09/2026"
+   },
+   {
+    "acn": "702575148",
+    "name": "ROCKSTARS HOLDCO A PTY LTD",
+    "date": "22/09/2026"
+   },
+   {
+    "acn": "702553491",
+    "name": "TRIDENT BIDCO PTY LTD",
+    "date": "21/09/2026"
+   },
+   {
+    "acn": "702551559",
+    "name": "TRIDENT MIDCO PTY LTD",
+    "date": "21/09/2026"
+   },
+   {
+    "acn": "702550650",
+    "name": "TRIDENT HOLDCO PTY LTD",
+    "date": "21/09/2026"
+   },
    {
     "acn": "702505235",
     "name": "WEST MOKOAN HOLDCO PTY LTD",
@@ -7180,28 +7418,28 @@
     "date": "07/07/2026"
    }
   ],
-  "recall_pct": 7.3
+  "recall_pct": 6.8
  },
  "ledger_crossed": [
-  "TRIDENT HOLDCO PTY LTD",
-  "TRIDENT MIDCO PTY LTD",
-  "TRIDENT BIDCO PTY LTD",
-  "ROCKSTARS HOLDCO A PTY LTD",
-  "ROCKSTARS HOLDCO B PTY LTD",
-  "ROCKSTARS MIDCO A PTY LTD",
-  "ROCKSTARS MIDCO B PTY LTD",
-  "ROCKSTARS BIDCO 1 PTY LTD",
-  "AMBERLIGHT TOPCO PTY LTD",
-  "JEREMY LE HOLDCO PTY LTD",
-  "MOORABOOL HOLDCO 2 PTY LTD",
-  "MOORABOOL HOLDCO 3 PTY LTD",
-  "CTSAS HOLDCO PTY LTD",
-  "DYLAN MODINO HOLDCO PTY LTD",
-  "SH & TM TOPCO PTY LTD",
-  "CONCESIONES GOSW HOLDCO 1 PTY LIMITED",
-  "CONCESIONES GOSW HOLDCO 2 PTY LIMITED",
-  "CONCESIONES GOSW NO HOLDCO 1 PTY LIMITED",
-  "CONCESIONES GOSW NO HOLDCO 2 PTY LIMITED"
+  "ALPINE HOLDCO PTY LTD",
+  "ALPINE MIDCO PTY LTD",
+  "ALPINE BIDCO PTY LTD",
+  "KYANITE ROSEHILL HOLDCO PTY LTD",
+  "KYANITE MARGARET HOLDCO PTY LTD",
+  "KYANITE NTH TCE HOLDCO PTY LTD",
+  "BCPE HANCOCK TOPCO PTY LTD",
+  "BCPE HANCOCK MEZZCO PTY LTD",
+  "BCPE HANCOCK MIDCO PTY LTD",
+  "BCPE HANCOCK BIDCO PTY LTD",
+  "NILA HOLDCO FINCO PTY LTD",
+  "NILA SENIOR FINCO PTY LTD",
+  "HAMMER BIDCO PTY LTD",
+  "ACP MACQUARIE STREET MIDCO 1 PTY LIMITED",
+  "BUCKLER HOLDCO PTY LTD",
+  "BUCKLER MIDCO PTY LTD",
+  "BUCKLER BIDCO PTY LTD",
+  "ACP MACQUARIE STREET MIDCO 2 PTY LIMITED",
+  "SHONI HOLDCO PTY LTD"
  ],
  "ledger_waiting": 0
 }
