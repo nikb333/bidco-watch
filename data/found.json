@@ -998,5 +998,17 @@
   "stem": "HAMMER",
   "suburb": "CARLTON SOUTH",
   "via": "API"
+ },
+ "702986169": {
+  "acn": "702986169",
+  "date": "2026-10-06",
+  "first_seen": "2026-10-06T17:16:19+00:00",
+  "in_register": false,
+  "name": "SALUS FINCO PTY LTD",
+  "role": "FINCO",
+  "state": "NSW",
+  "stem": "SALUS",
+  "suburb": "SYDNEY",
+  "via": "API"
  }
 }
