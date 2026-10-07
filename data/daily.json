@@ -1,35 +1,35 @@
 {
  "run": {
-  "finished_utc": "2026-10-06T17:16:19+00:00",
-  "elapsed_min": 151.2,
+  "finished_utc": "2026-10-07T16:37:51+00:00",
+  "elapsed_min": 161.4,
   "status": "ok",
   "error": "",
-  "frontier_base": 70300751,
+  "frontier_base": 70304551,
   "window": [
-   "702971524",
-   "703007514"
+   "703007523",
+   "703045514"
   ],
-  "slots_swept": 4481,
-  "slots_queued": 4484,
+  "slots_swept": 4785,
+  "slots_queued": 4789,
   "slots_left": 0,
   "gaps_queued": 3,
-  "recheck_queued": 811,
-  "companies": 13606,
+  "recheck_queued": 912,
+  "companies": 14755,
   "trailing_slots": 20000,
-  "slots_errored": 3,
-  "ledger_new": 1,
-  "ledger_waiting": 2,
+  "slots_errored": 4,
+  "ledger_new": 3,
+  "ledger_waiting": 5,
   "ledger_in_register": 76,
   "coverage": {
-   "from_acn": "702771524",
-   "to_acn": "703007514",
-   "slots": 23600,
-   "checked": 23597,
-   "remaining": 3,
-   "companies": 6110,
+   "from_acn": "702807529",
+   "to_acn": "703045514",
+   "slots": 23800,
+   "checked": 23796,
+   "remaining": 4,
+   "companies": 6150,
    "register_known": true,
    "register_to_acn": "702946898",
-   "slots_per_day": 2824,
+   "slots_per_day": 2849,
    "rate_per_min": 48,
    "run_minutes": 335,
    "zones": [
@@ -37,27 +37,27 @@
      "key": "new",
      "label": "New registrations",
      "why": "Everything registered since the last finished sweep. These go to the front of the queue on every run, so this should sit at or near 100%. Note what 'checked' means: the slot has been looked at once. A company that registers into a slot an earlier run already found empty is caught by the re-check in the next pass, not here.",
-     "from_acn": "702971524",
-     "to_acn": "703007514",
-     "slots": 3600,
-     "checked": 3600,
-     "remaining": 0,
+     "from_acn": "703007523",
+     "to_acn": "703045514",
+     "slots": 3800,
+     "checked": 3799,
+     "remaining": 1,
      "days": 1.3,
      "covered_by_register": 0,
-     "companies": 996
+     "companies": 1091
     },
     {
      "key": "catchup",
      "label": "Back-fill of older slots",
      "why": "Slots an earlier run ran out of clock before reaching, plus a second look at slots that came back empty - ACNs are handed out ahead of use, so an empty slot can fill in later. Deliberately queued behind the new slots: if a run runs short, this is the right thing to lose.",
-     "from_acn": "702771524",
-     "to_acn": "702971515",
+     "from_acn": "702807529",
+     "to_acn": "703007514",
      "slots": 20000,
      "checked": 19997,
      "remaining": 3,
-     "days": 7.1,
-     "covered_by_register": 17538,
-     "companies": 5114
+     "days": 7.0,
+     "covered_by_register": 13938,
+     "companies": 5059
     }
    ],
    "passes": [
@@ -65,18 +65,18 @@
      "key": "new",
      "n": 1,
      "label": "New registrations",
-     "from_acn": "702971524",
-     "to_acn": "703007514",
-     "total": 3600,
-     "outstanding": 0,
+     "from_acn": "703007523",
+     "to_acn": "703045514",
+     "total": 3800,
+     "outstanding": 1,
      "why": "Everything issued since the last finished sweep. First in the queue on every run. This is the number that says whether you are current."
     },
     {
      "key": "gaps",
      "n": 2,
      "label": "Never looked at",
-     "from_acn": "702771524",
-     "to_acn": "702971515",
+     "from_acn": "702807529",
+     "to_acn": "703007514",
      "total": 20000,
      "outstanding": 3,
      "why": "Slots inside the trailing window that no run has ever queried - what a run that ran out of clock leaves behind. Nothing has seen these, so they outrank re-checks."
@@ -85,22 +85,22 @@
      "key": "recheck",
      "n": 3,
      "label": "Second look at empty slots",
-     "from_acn": "702157515",
-     "to_acn": "702807510",
+     "from_acn": "702195515",
+     "to_acn": "702845510",
      "total": 0,
      "outstanding": 0,
      "bands": [
       {
        "band": "20k-27k back",
        "outstanding": 0,
-       "from_acn": "702737513",
-       "to_acn": "702807510"
+       "from_acn": "702775513",
+       "to_acn": "702845510"
       },
       {
        "band": "72k-85k back",
        "outstanding": 0,
-       "from_acn": "702157515",
-       "to_acn": "702287518"
+       "from_acn": "702195515",
+       "to_acn": "702325513"
       }
      ],
      "why": "Slots already queried that came back empty. ACNs are issued ahead of use, so a company can appear in a slot an earlier run found bare. Each gets exactly two more looks, timed to the two observed lag clusters."
@@ -111,95 +111,95 @@
      "label": "Shelf companies, re-queried",
      "from_acn": "",
      "to_acn": "",
-     "total": 74,
-     "outstanding": 74,
+     "total": 80,
+     "outstanding": 80,
      "rolling": true,
      "why": "Companies registered under a numeric placeholder name and renamed later - re-asked for 120 days. This never reaches zero by design; it is a rolling window, not a backlog."
     }
    ],
    "buckets": [
     {
-     "from": "702771524",
-     "to": "702791179",
-     "checked": 1966,
-     "slots": 1966,
+     "from": "702807529",
+     "to": "702827343",
+     "checked": 1982,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702791188",
-     "to": "702810839",
-     "checked": 1965,
-     "slots": 1966,
+     "from": "702827352",
+     "to": "702847176",
+     "checked": 1982,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702810848",
-     "to": "702830493",
-     "checked": 1966,
-     "slots": 1966,
+     "from": "702847185",
+     "to": "702867007",
+     "checked": 1982,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702830500",
-     "to": "702850155",
-     "checked": 1964,
-     "slots": 1966,
+     "from": "702867016",
+     "to": "702886833",
+     "checked": 1983,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702850164",
-     "to": "702869814",
-     "checked": 1966,
-     "slots": 1966,
+     "from": "702886842",
+     "to": "702906661",
+     "checked": 1983,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702869823",
-     "to": "702889478",
-     "checked": 1966,
-     "slots": 1966,
+     "from": "702906670",
+     "to": "702926494",
+     "checked": 1983,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702889487",
-     "to": "702909135",
-     "checked": 1966,
-     "slots": 1966,
+     "from": "702926501",
+     "to": "702946325",
+     "checked": 1983,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702909144",
-     "to": "702928792",
-     "checked": 1966,
-     "slots": 1966,
+     "from": "702946334",
+     "to": "702966158",
+     "checked": 1983,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702928809",
-     "to": "702948454",
-     "checked": 1966,
-     "slots": 1966,
+     "from": "702966167",
+     "to": "702985984",
+     "checked": 1983,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702948463",
-     "to": "702968116",
-     "checked": 1966,
-     "slots": 1966,
+     "from": "702985993",
+     "to": "703005814",
+     "checked": 1983,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702968125",
-     "to": "702987773",
-     "checked": 1966,
-     "slots": 1966,
+     "from": "703005823",
+     "to": "703025647",
+     "checked": 1982,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "702987782",
-     "to": "703007514",
-     "checked": 1974,
-     "slots": 1974,
+     "from": "703025656",
+     "to": "703045514",
+     "checked": 1987,
+     "slots": 1987,
      "zone": "new"
     }
    ]
@@ -208,6 +208,36 @@
  "stacks": [],
  "singles": [],
  "role_only": [
+  {
+   "acn": "703014395",
+   "name": "AIRTRUNK SYD1 HOLDCO PTY LTD",
+   "date": "2026-10-07",
+   "role": "HOLDCO",
+   "suburb": "NORTH SYDNEY",
+   "state": "NSW",
+   "via": "API",
+   "first_seen": "2026-10-07T16:37:51+00:00"
+  },
+  {
+   "acn": "703030862",
+   "name": "SALTER BROTHERS FUNDS MANAGEMENT HOLDCO PTY LTD",
+   "date": "2026-10-07",
+   "role": "HOLDCO",
+   "suburb": "MELBOURNE",
+   "state": "VIC",
+   "via": "API",
+   "first_seen": "2026-10-07T16:37:51+00:00"
+  },
+  {
+   "acn": "703031850",
+   "name": "SALTER BROTHERS IMMIGRATION INVESTMENT HOLDCO PTY LTD",
+   "date": "2026-10-07",
+   "role": "HOLDCO",
+   "suburb": "MELBOURNE",
+   "state": "VIC",
+   "via": "API",
+   "first_seen": "2026-10-07T16:37:51+00:00"
+  },
   {
    "acn": "702986169",
    "name": "SALUS FINCO PTY LTD",

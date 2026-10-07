@@ -1010,5 +1010,41 @@
   "stem": "SALUS",
   "suburb": "SYDNEY",
   "via": "API"
+ },
+ "703014395": {
+  "acn": "703014395",
+  "date": "2026-10-07",
+  "first_seen": "2026-10-07T16:37:51+00:00",
+  "in_register": false,
+  "name": "AIRTRUNK SYD1 HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "AIRTRUNK SYD1",
+  "suburb": "NORTH SYDNEY",
+  "via": "API"
+ },
+ "703030862": {
+  "acn": "703030862",
+  "date": "2026-10-07",
+  "first_seen": "2026-10-07T16:37:51+00:00",
+  "in_register": false,
+  "name": "SALTER BROTHERS FUNDS MANAGEMENT HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "SALTER BROTHERS FUNDS MANAGEMENT",
+  "suburb": "MELBOURNE",
+  "via": "API"
+ },
+ "703031850": {
+  "acn": "703031850",
+  "date": "2026-10-07",
+  "first_seen": "2026-10-07T16:37:51+00:00",
+  "in_register": false,
+  "name": "SALTER BROTHERS IMMIGRATION INVESTMENT HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "SALTER BROTHERS IMMIGRATION INVESTMENT",
+  "suburb": "MELBOURNE",
+  "via": "API"
  }
 }
