@@ -1046,5 +1046,29 @@
   "stem": "SALTER BROTHERS IMMIGRATION INVESTMENT",
   "suburb": "MELBOURNE",
   "via": "API"
+ },
+ "703050739": {
+  "acn": "703050739",
+  "date": "2026-10-08",
+  "first_seen": "2026-10-08T16:36:29+00:00",
+  "in_register": false,
+  "name": "PARTNERSHIP CAPITAL CONTRAFLOW HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "PARTNERSHIP CAPITAL CONTRAFLOW",
+  "suburb": "SOUTH YARRA",
+  "via": "API"
+ },
+ "703060333": {
+  "acn": "703060333",
+  "date": "2026-10-08",
+  "first_seen": "2026-10-08T16:36:29+00:00",
+  "in_register": false,
+  "name": "PARTNERSHIP CAPITAL CONTRAFLOW BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "VIC",
+  "stem": "PARTNERSHIP CAPITAL CONTRAFLOW",
+  "suburb": "SOUTH YARRA",
+  "via": "API"
  }
 }
