@@ -1070,5 +1070,41 @@
   "stem": "PARTNERSHIP CAPITAL CONTRAFLOW",
   "suburb": "SOUTH YARRA",
   "via": "API"
+ },
+ "703089409": {
+  "acn": "703089409",
+  "date": "2026-10-09",
+  "first_seen": "2026-10-09T16:19:13+00:00",
+  "in_register": false,
+  "name": "OSSA HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "OSSA",
+  "suburb": "CAMPBELLTOWN",
+  "via": "API"
+ },
+ "703093609": {
+  "acn": "703093609",
+  "date": "2026-10-09",
+  "first_seen": "2026-10-09T16:19:13+00:00",
+  "in_register": false,
+  "name": "PACIFIC HEALTH GROUP HOLDCO LIMITED",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "PACIFIC HEALTH",
+  "suburb": "SOUTH MELBOURNE",
+  "via": "API"
+ },
+ "703095916": {
+  "acn": "703095916",
+  "date": "2026-10-09",
+  "first_seen": "2026-10-09T16:19:13+00:00",
+  "in_register": false,
+  "name": "SCHREIBER AUSTRALIA HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "QLD",
+  "stem": "SCHREIBER",
+  "suburb": "ELANORA",
+  "via": "API"
  }
 }
