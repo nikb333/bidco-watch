@@ -1,10 +1,166 @@
 {
- "generated_utc": "2026-10-05T15:15:38+00:00",
+ "generated_utc": "2026-10-12T16:05:45+00:00",
  "dataset": "company_202610.zip",
- "source_modified": "2026-10-05T13:50:30.904485",
+ "source_modified": "2026-10-12T13:53:37.307606",
  "window_days": 180,
- "max_acn": "702946898",
+ "max_acn": "703143113",
  "entities": [
+  {
+   "acn": "703106503",
+   "name": "EVG HOLDCO PTY LTD",
+   "date": "09/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "EVG",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703095916",
+   "name": "SCHREIBER AUSTRALIA HOLDCO PTY LTD",
+   "date": "09/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SCHREIBER",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703093609",
+   "name": "PACIFIC HEALTH GROUP HOLDCO LIMITED",
+   "date": "09/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PACIFIC HEALTH",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703089409",
+   "name": "OSSA HOLDCO PTY LTD",
+   "date": "09/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "OSSA",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703060333",
+   "name": "PARTNERSHIP CAPITAL CONTRAFLOW BIDCO PTY LTD",
+   "date": "08/10/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PARTNERSHIP CAPITAL CONTRAFLOW",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "703050739",
+   "name": "PARTNERSHIP CAPITAL CONTRAFLOW HOLDCO PTY LTD",
+   "date": "08/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PARTNERSHIP CAPITAL CONTRAFLOW",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "703031850",
+   "name": "SALTER BROTHERS IMMIGRATION INVESTMENT HOLDCO PTY LTD",
+   "date": "07/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SALTER BROTHERS IMMIGRATION INVESTMENT",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703030862",
+   "name": "SALTER BROTHERS FUNDS MANAGEMENT HOLDCO PTY LTD",
+   "date": "07/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SALTER BROTHERS FUNDS MANAGEMENT",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703014395",
+   "name": "AIRTRUNK SYD1 HOLDCO PTY LTD",
+   "date": "07/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "AIRTRUNK SYD1",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702327571",
+   "name": "AIRTRUNK SYD1 FINCO PTY LTD",
+   "date": "07/10/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "AIRTRUNK SYD1",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702986169",
+   "name": "SALUS FINCO PTY LTD",
+   "date": "06/10/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SALUS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702951675",
+   "name": "HAMMER TOPCO PTY LTD",
+   "date": "05/10/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "HAMMER",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
   {
    "acn": "702899134",
    "name": "SHONI HOLDCO PTY LTD",
@@ -92,8 +248,8 @@
    "abn": true,
    "status": "REGD",
    "stem": "HAMMER",
-   "in_stack": false,
-   "stack_has_bidco": false,
+   "in_stack": true,
+   "stack_has_bidco": true,
    "is_bidco": true
   },
   {
@@ -3418,7 +3574,7 @@
    "role": "INTERMEDIATECO",
    "state": "",
    "abn": true,
-   "status": "REGD",
+   "status": "SOFF",
    "stem": "COMMODORE",
    "in_stack": true,
    "stack_has_bidco": true,
@@ -3548,7 +3704,7 @@
    "role": "TOPCO",
    "state": "",
    "abn": true,
-   "status": "REGD",
+   "status": "SOFF",
    "stem": "COMMODORE",
    "in_stack": true,
    "stack_has_bidco": true,
@@ -5854,141 +6010,11 @@
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
-  },
-  {
-   "acn": "697171725",
-   "name": "1 GOODFELLOWS ROAD KALLANGUR HOLDCO PTY LTD",
-   "date": "15/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "1 GOODFELLOWS ROAD KALLANGUR",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697171636",
-   "name": "15 ARMSTRONG STREET PETRIE HOLDCO PTY LTD",
-   "date": "15/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "15 ARMSTRONG STREET PETRIE",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697170755",
-   "name": "CDC SPV HOLDCO NO 4 PTY LTD",
-   "date": "15/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "CDC SPV",
-   "in_stack": true,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697170657",
-   "name": "CDC SPV HOLDCO NO 3 PTY LTD",
-   "date": "15/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "CDC SPV",
-   "in_stack": true,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697131249",
-   "name": "PRAHRAN HOLDCO PTY LTD",
-   "date": "14/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "PRAHRAN",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697118951",
-   "name": "MILTONISE INVESTMENTS HOLDCO PTY LTD",
-   "date": "14/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "MILTONISE INVESTMENTS",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697103772",
-   "name": "KEYSTONE EDUCATION BIDCO PTY LTD",
-   "date": "14/04/2026",
-   "role": "BIDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "KEYSTONE EDUCATION",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": true
-  },
-  {
-   "acn": "697086543",
-   "name": "AIRTRUNK SYD2 EXP HOLDCO PTY LIMITED",
-   "date": "13/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "AIRTRUNK SYD2 EXP",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697074445",
-   "name": "PAPILLON FINCO PTY LTD",
-   "date": "13/04/2026",
-   "role": "FINCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "PAPILLON",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697070358",
-   "name": "QUARTERDECK HOLDCO PTY LTD",
-   "date": "13/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "QUARTERDECK",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
   }
  ],
  "bidcos": 63,
- "stacks": 66,
- "stacks_without_bidco": 27,
+ "stacks": 69,
+ "stacks_without_bidco": 28,
  "renamed": [
   {
    "acn": "697464118",
@@ -6119,9 +6145,114 @@
  ],
  "reconciliation": {
   "covered_from_acn": "700000004",
-  "judged": 278,
-  "found_by_daily": 19,
+  "judged": 290,
+  "found_by_daily": 10,
   "missed_by_daily": [
+   {
+    "acn": "703106503",
+    "name": "EVG HOLDCO PTY LTD",
+    "date": "09/10/2026"
+   },
+   {
+    "acn": "702327571",
+    "name": "AIRTRUNK SYD1 FINCO PTY LTD",
+    "date": "07/10/2026"
+   },
+   {
+    "acn": "702899134",
+    "name": "SHONI HOLDCO PTY LTD",
+    "date": "02/10/2026"
+   },
+   {
+    "acn": "702863394",
+    "name": "ACP MACQUARIE STREET MIDCO 2 PTY LIMITED",
+    "date": "01/10/2026"
+   },
+   {
+    "acn": "702853530",
+    "name": "BUCKLER BIDCO PTY LTD",
+    "date": "30/09/2026"
+   },
+   {
+    "acn": "702853281",
+    "name": "BUCKLER MIDCO PTY LTD",
+    "date": "30/09/2026"
+   },
+   {
+    "acn": "702853101",
+    "name": "BUCKLER HOLDCO PTY LTD",
+    "date": "30/09/2026"
+   },
+   {
+    "acn": "702843525",
+    "name": "ACP MACQUARIE STREET MIDCO 1 PTY LIMITED",
+    "date": "30/09/2026"
+   },
+   {
+    "acn": "702824548",
+    "name": "HAMMER BIDCO PTY LTD",
+    "date": "30/09/2026"
+   },
+   {
+    "acn": "702802113",
+    "name": "NILA SENIOR FINCO PTY LTD",
+    "date": "29/09/2026"
+   },
+   {
+    "acn": "702798481",
+    "name": "NILA HOLDCO FINCO PTY LTD",
+    "date": "29/09/2026"
+   },
+   {
+    "acn": "702793128",
+    "name": "BCPE HANCOCK BIDCO PTY LTD",
+    "date": "29/09/2026"
+   },
+   {
+    "acn": "702791688",
+    "name": "BCPE HANCOCK MIDCO PTY LTD",
+    "date": "29/09/2026"
+   },
+   {
+    "acn": "702790636",
+    "name": "BCPE HANCOCK MEZZCO PTY LTD",
+    "date": "29/09/2026"
+   },
+   {
+    "acn": "702788305",
+    "name": "BCPE HANCOCK TOPCO PTY LTD",
+    "date": "29/09/2026"
+   },
+   {
+    "acn": "702761537",
+    "name": "KYANITE NTH TCE HOLDCO PTY LTD",
+    "date": "28/09/2026"
+   },
+   {
+    "acn": "702761528",
+    "name": "KYANITE MARGARET HOLDCO PTY LTD",
+    "date": "28/09/2026"
+   },
+   {
+    "acn": "702759706",
+    "name": "KYANITE ROSEHILL HOLDCO PTY LTD",
+    "date": "28/09/2026"
+   },
+   {
+    "acn": "702748356",
+    "name": "ALPINE BIDCO PTY LTD",
+    "date": "28/09/2026"
+   },
+   {
+    "acn": "702747966",
+    "name": "ALPINE MIDCO PTY LTD",
+    "date": "28/09/2026"
+   },
+   {
+    "acn": "702747724",
+    "name": "ALPINE HOLDCO PTY LTD",
+    "date": "28/09/2026"
+   },
    {
     "acn": "702694399",
     "name": "CONCESIONES GOSW NO HOLDCO 2 PTY LIMITED",
@@ -7418,28 +7549,19 @@
     "date": "07/07/2026"
    }
   ],
-  "recall_pct": 6.8
+  "recall_pct": 3.4
  },
  "ledger_crossed": [
-  "ALPINE HOLDCO PTY LTD",
-  "ALPINE MIDCO PTY LTD",
-  "ALPINE BIDCO PTY LTD",
-  "KYANITE ROSEHILL HOLDCO PTY LTD",
-  "KYANITE MARGARET HOLDCO PTY LTD",
-  "KYANITE NTH TCE HOLDCO PTY LTD",
-  "BCPE HANCOCK TOPCO PTY LTD",
-  "BCPE HANCOCK MEZZCO PTY LTD",
-  "BCPE HANCOCK MIDCO PTY LTD",
-  "BCPE HANCOCK BIDCO PTY LTD",
-  "NILA HOLDCO FINCO PTY LTD",
-  "NILA SENIOR FINCO PTY LTD",
-  "HAMMER BIDCO PTY LTD",
-  "ACP MACQUARIE STREET MIDCO 1 PTY LIMITED",
-  "BUCKLER HOLDCO PTY LTD",
-  "BUCKLER MIDCO PTY LTD",
-  "BUCKLER BIDCO PTY LTD",
-  "ACP MACQUARIE STREET MIDCO 2 PTY LIMITED",
-  "SHONI HOLDCO PTY LTD"
+  "HAMMER TOPCO PTY LTD",
+  "SALUS FINCO PTY LTD",
+  "AIRTRUNK SYD1 HOLDCO PTY LTD",
+  "SALTER BROTHERS FUNDS MANAGEMENT HOLDCO PTY LTD",
+  "SALTER BROTHERS IMMIGRATION INVESTMENT HOLDCO PTY LTD",
+  "PARTNERSHIP CAPITAL CONTRAFLOW HOLDCO PTY LTD",
+  "PARTNERSHIP CAPITAL CONTRAFLOW BIDCO PTY LTD",
+  "OSSA HOLDCO PTY LTD",
+  "PACIFIC HEALTH GROUP HOLDCO LIMITED",
+  "SCHREIBER AUSTRALIA HOLDCO PTY LTD"
  ],
  "ledger_waiting": 0
 }
