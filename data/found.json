@@ -1116,5 +1116,89 @@
   "stem": "SCHREIBER",
   "suburb": "ELANORA",
   "via": "API"
+ },
+ "703187697": {
+  "acn": "703187697",
+  "date": "2026-10-13",
+  "first_seen": "2026-10-13T11:54:17+00:00",
+  "in_register": false,
+  "name": "SUDS BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "VIC",
+  "stem": "SUDS",
+  "suburb": "MELBOURNE",
+  "via": "API"
+ },
+ "703187802": {
+  "acn": "703187802",
+  "date": "2026-10-13",
+  "first_seen": "2026-10-13T11:54:17+00:00",
+  "in_register": false,
+  "name": "BIRDIE BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "VIC",
+  "stem": "BIRDIE",
+  "suburb": "HAWTHORN",
+  "via": "API"
+ },
+ "703197906": {
+  "acn": "703197906",
+  "date": "2026-10-13",
+  "first_seen": "2026-10-13T11:54:17+00:00",
+  "in_register": false,
+  "name": "CAMPBELL TOPCO PTY LTD",
+  "role": "TOPCO",
+  "state": "QLD",
+  "stem": "CAMPBELL",
+  "suburb": "ROBINA",
+  "via": "API"
+ },
+ "703199866": {
+  "acn": "703199866",
+  "date": "2026-10-13",
+  "first_seen": "2026-10-13T11:54:17+00:00",
+  "in_register": false,
+  "name": "HAMMER HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "HAMMER",
+  "suburb": "CARLTON SOUTH",
+  "via": "API"
+ },
+ "703202377": {
+  "acn": "703202377",
+  "date": "2026-10-13",
+  "first_seen": "2026-10-13T11:54:17+00:00",
+  "in_register": false,
+  "name": "HAMMER MEZZCO PTY LTD",
+  "role": "MEZZCO",
+  "state": "VIC",
+  "stem": "HAMMER",
+  "suburb": "CARLTON SOUTH",
+  "via": "API"
+ },
+ "703203776": {
+  "acn": "703203776",
+  "date": "2026-10-13",
+  "first_seen": "2026-10-13T11:54:17+00:00",
+  "in_register": false,
+  "name": "HAMMER MIDCO 1 PTY LTD",
+  "role": "MIDCO",
+  "state": "VIC",
+  "stem": "HAMMER 1",
+  "suburb": "CARLTON SOUTH",
+  "via": "API"
+ },
+ "703204586": {
+  "acn": "703204586",
+  "date": "2026-10-13",
+  "first_seen": "2026-10-13T11:54:17+00:00",
+  "in_register": false,
+  "name": "HAMMER MIDCO 2 PTY LTD",
+  "role": "MIDCO",
+  "state": "VIC",
+  "stem": "HAMMER 2",
+  "suburb": "CARLTON SOUTH",
+  "via": "API"
  }
 }
