@@ -1200,5 +1200,53 @@
   "stem": "HAMMER 2",
   "suburb": "CARLTON SOUTH",
   "via": "API"
+ },
+ "703274319": {
+  "acn": "703274319",
+  "date": "2026-10-15",
+  "first_seen": "2026-10-15T11:41:39+00:00",
+  "in_register": false,
+  "name": "SINGER TOPCO PTY LTD",
+  "role": "TOPCO",
+  "state": "NSW",
+  "stem": "SINGER",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703275156": {
+  "acn": "703275156",
+  "date": "2026-10-15",
+  "first_seen": "2026-10-15T11:41:39+00:00",
+  "in_register": false,
+  "name": "SINGER HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "SINGER",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703275432": {
+  "acn": "703275432",
+  "date": "2026-10-15",
+  "first_seen": "2026-10-15T11:41:39+00:00",
+  "in_register": false,
+  "name": "SINGER MIDCO PTY LTD",
+  "role": "MIDCO",
+  "state": "NSW",
+  "stem": "SINGER",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703275638": {
+  "acn": "703275638",
+  "date": "2026-10-15",
+  "first_seen": "2026-10-15T11:41:39+00:00",
+  "in_register": false,
+  "name": "SINGER BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "NSW",
+  "stem": "SINGER",
+  "suburb": "SYDNEY",
+  "via": "API"
  }
 }
