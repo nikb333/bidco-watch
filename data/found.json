@@ -1248,5 +1248,53 @@
   "stem": "SINGER",
   "suburb": "SYDNEY",
   "via": "API"
+ },
+ "703294428": {
+  "acn": "703294428",
+  "date": "2026-10-16",
+  "first_seen": "2026-10-16T09:55:06+00:00",
+  "in_register": false,
+  "name": "LT HENDO HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "QLD",
+  "stem": "LT HENDO",
+  "suburb": "EIGHT MILE PLAINS",
+  "via": "API"
+ },
+ "703303182": {
+  "acn": "703303182",
+  "date": "2026-10-16",
+  "first_seen": "2026-10-16T09:55:06+00:00",
+  "in_register": false,
+  "name": "ROCKS TOPCO PTY LTD",
+  "role": "TOPCO",
+  "state": "QLD",
+  "stem": "ROCKS",
+  "suburb": "BURLEIGH HEADS",
+  "via": "API"
+ },
+ "703304205": {
+  "acn": "703304205",
+  "date": "2026-10-16",
+  "first_seen": "2026-10-16T09:55:06+00:00",
+  "in_register": false,
+  "name": "ROCKS FINCO PTY LTD",
+  "role": "FINCO",
+  "state": "QLD",
+  "stem": "ROCKS",
+  "suburb": "BURLEIGH HEADS",
+  "via": "API"
+ },
+ "703304518": {
+  "acn": "703304518",
+  "date": "2026-10-16",
+  "first_seen": "2026-10-16T09:55:06+00:00",
+  "in_register": false,
+  "name": "CORA AUS PREMIER HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "QLD",
+  "stem": "CORA PREMIER",
+  "suburb": "BRISBANE CITY",
+  "via": "API"
  }
 }
