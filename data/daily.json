@@ -1,35 +1,35 @@
 {
  "run": {
-  "finished_utc": "2026-10-18T11:20:57+00:00",
-  "elapsed_min": 74.3,
+  "finished_utc": "2026-10-18T18:11:21+00:00",
+  "elapsed_min": 23.4,
   "status": "ok",
   "error": "",
-  "frontier_base": 70334351,
+  "frontier_base": 70334751,
   "window": [
-   "703329524",
-   "703343515"
+   "703343524",
+   "703347513"
   ],
-  "slots_swept": 2194,
-  "slots_queued": 2196,
+  "slots_swept": 671,
+  "slots_queued": 673,
   "slots_left": 0,
   "gaps_queued": 2,
-  "recheck_queued": 686,
-  "companies": 22774,
+  "recheck_queued": 159,
+  "companies": 22814,
   "trailing_slots": 20000,
   "slots_errored": 2,
   "ledger_new": 0,
   "ledger_waiting": 15,
   "ledger_in_register": 86,
   "coverage": {
-   "from_acn": "703129524",
-   "to_acn": "703343515",
-   "slots": 21400,
-   "checked": 21398,
+   "from_acn": "703143113",
+   "to_acn": "703347513",
+   "slots": 20441,
+   "checked": 20439,
    "remaining": 2,
-   "companies": 5522,
+   "companies": 5402,
    "register_known": true,
    "register_to_acn": "703143113",
-   "slots_per_day": 2872,
+   "slots_per_day": 2852,
    "rate_per_min": 48,
    "run_minutes": 335,
    "zones": [
@@ -37,27 +37,40 @@
      "key": "new",
      "label": "New registrations",
      "why": "Everything registered since the last finished sweep. These go to the front of the queue on every run, so this should sit at or near 100%. Note what 'checked' means: the slot has been looked at once. A company that registers into a slot an earlier run already found empty is caught by the re-check in the next pass, not here.",
-     "from_acn": "703329524",
-     "to_acn": "703343515",
-     "slots": 1400,
-     "checked": 1400,
+     "from_acn": "703343524",
+     "to_acn": "703347513",
+     "slots": 400,
+     "checked": 400,
      "remaining": 0,
-     "days": 0.5,
+     "days": 0.1,
      "covered_by_register": 0,
-     "companies": 141
+     "companies": 40
     },
     {
      "key": "catchup",
      "label": "Back-fill of older slots",
      "why": "Slots an earlier run ran out of clock before reaching, plus a second look at slots that came back empty - ACNs are handed out ahead of use, so an empty slot can fill in later. Deliberately queued behind the new slots: if a run runs short, this is the right thing to lose.",
-     "from_acn": "703129524",
-     "to_acn": "703329515",
+     "from_acn": "703143524",
+     "to_acn": "703343515",
      "slots": 20000,
      "checked": 19998,
      "remaining": 2,
      "days": 7.0,
-     "covered_by_register": 1360,
-     "companies": 5381
+     "covered_by_register": 0,
+     "companies": 5356
+    },
+    {
+     "key": "settled",
+     "label": "Handed over to the weekly register",
+     "why": "Older than the rolling back-fill window, so the daily sweep no longer queues them - and it does not need to: the weekly ASIC register already lists this stretch in full. Unchecked slots here are not a gap in coverage.",
+     "from_acn": "703143113",
+     "to_acn": "703143515",
+     "slots": 41,
+     "checked": 41,
+     "remaining": 0,
+     "days": 0.0,
+     "covered_by_register": 1,
+     "companies": 6
     }
    ],
    "passes": [
@@ -65,9 +78,9 @@
      "key": "new",
      "n": 1,
      "label": "New registrations",
-     "from_acn": "703329524",
-     "to_acn": "703343515",
-     "total": 1400,
+     "from_acn": "703343524",
+     "to_acn": "703347513",
+     "total": 400,
      "outstanding": 0,
      "why": "Everything issued since the last finished sweep. First in the queue on every run. This is the number that says whether you are current."
     },
@@ -75,8 +88,8 @@
      "key": "gaps",
      "n": 2,
      "label": "Never looked at",
-     "from_acn": "703129524",
-     "to_acn": "703329515",
+     "from_acn": "703143524",
+     "to_acn": "703343515",
      "total": 20000,
      "outstanding": 2,
      "why": "Slots inside the trailing window that no run has ever queried - what a run that ran out of clock leaves behind. Nothing has seen these, so they outrank re-checks."
@@ -85,22 +98,22 @@
      "key": "recheck",
      "n": 3,
      "label": "Second look at empty slots",
-     "from_acn": "702493516",
-     "to_acn": "703143515",
+     "from_acn": "702497514",
+     "to_acn": "703147513",
      "total": 0,
      "outstanding": 0,
      "bands": [
       {
        "band": "20k-27k back",
        "outstanding": 0,
-       "from_acn": "703073518",
-       "to_acn": "703143515"
+       "from_acn": "703077516",
+       "to_acn": "703147513"
       },
       {
        "band": "72k-85k back",
        "outstanding": 0,
-       "from_acn": "702493516",
-       "to_acn": "702623514"
+       "from_acn": "702497514",
+       "to_acn": "702627512"
       }
      ],
      "why": "Slots already queried that came back empty. ACNs are issued ahead of use, so a company can appear in a slot an earlier run found bare. Each gets exactly two more looks, timed to the two observed lag clusters."
@@ -119,87 +132,87 @@
    ],
    "buckets": [
     {
-     "from": "703129524",
-     "to": "703147344",
-     "checked": 1783,
-     "slots": 1783,
+     "from": "703143113",
+     "to": "703160132",
+     "checked": 1703,
+     "slots": 1703,
+     "zone": "settled"
+    },
+    {
+     "from": "703160141",
+     "to": "703177164",
+     "checked": 1702,
+     "slots": 1703,
      "zone": "catchup"
     },
     {
-     "from": "703147353",
-     "to": "703165173",
-     "checked": 1783,
-     "slots": 1783,
+     "from": "703177173",
+     "to": "703194192",
+     "checked": 1703,
+     "slots": 1703,
      "zone": "catchup"
     },
     {
-     "from": "703165182",
-     "to": "703183000",
-     "checked": 1782,
-     "slots": 1783,
+     "from": "703194209",
+     "to": "703211223",
+     "checked": 1703,
+     "slots": 1703,
      "zone": "catchup"
     },
     {
-     "from": "703183019",
-     "to": "703200837",
-     "checked": 1783,
-     "slots": 1783,
+     "from": "703211232",
+     "to": "703228255",
+     "checked": 1703,
+     "slots": 1703,
      "zone": "catchup"
     },
     {
-     "from": "703200846",
-     "to": "703218660",
-     "checked": 1783,
-     "slots": 1783,
+     "from": "703228264",
+     "to": "703245283",
+     "checked": 1703,
+     "slots": 1703,
      "zone": "catchup"
     },
     {
-     "from": "703218679",
-     "to": "703236499",
-     "checked": 1783,
-     "slots": 1783,
+     "from": "703245292",
+     "to": "703262319",
+     "checked": 1703,
+     "slots": 1703,
      "zone": "catchup"
     },
     {
-     "from": "703236506",
-     "to": "703254326",
-     "checked": 1783,
-     "slots": 1783,
+     "from": "703262328",
+     "to": "703279341",
+     "checked": 1703,
+     "slots": 1703,
      "zone": "catchup"
     },
     {
-     "from": "703254335",
-     "to": "703272155",
-     "checked": 1783,
-     "slots": 1783,
+     "from": "703279350",
+     "to": "703296379",
+     "checked": 1702,
+     "slots": 1703,
      "zone": "catchup"
     },
     {
-     "from": "703272164",
-     "to": "703289981",
-     "checked": 1783,
-     "slots": 1783,
+     "from": "703296388",
+     "to": "703313400",
+     "checked": 1703,
+     "slots": 1703,
      "zone": "catchup"
     },
     {
-     "from": "703289990",
-     "to": "703307813",
-     "checked": 1782,
-     "slots": 1783,
+     "from": "703313419",
+     "to": "703330438",
+     "checked": 1703,
+     "slots": 1703,
      "zone": "catchup"
     },
     {
-     "from": "703307822",
-     "to": "703325642",
-     "checked": 1783,
-     "slots": 1783,
-     "zone": "catchup"
-    },
-    {
-     "from": "703325651",
-     "to": "703343515",
-     "checked": 1787,
-     "slots": 1787,
+     "from": "703330447",
+     "to": "703347513",
+     "checked": 1708,
+     "slots": 1708,
      "zone": "catchup"
     }
    ]
