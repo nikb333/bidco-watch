@@ -1,35 +1,35 @@
 {
  "run": {
-  "finished_utc": "2026-10-18T18:11:21+00:00",
-  "elapsed_min": 23.4,
+  "finished_utc": "2026-10-19T15:42:50+00:00",
+  "elapsed_min": 200.6,
   "status": "ok",
   "error": "",
-  "frontier_base": 70334751,
+  "frontier_base": 70338751,
   "window": [
-   "703343524",
-   "703347513"
+   "703347522",
+   "703387517"
   ],
-  "slots_swept": 671,
-  "slots_queued": 673,
+  "slots_swept": 5963,
+  "slots_queued": 5965,
   "slots_left": 0,
   "gaps_queued": 2,
-  "recheck_queued": 159,
-  "companies": 22814,
+  "recheck_queued": 1851,
+  "companies": 24065,
   "trailing_slots": 20000,
   "slots_errored": 2,
-  "ledger_new": 0,
-  "ledger_waiting": 15,
-  "ledger_in_register": 86,
+  "ledger_new": 1,
+  "ledger_waiting": 1,
+  "ledger_in_register": 101,
   "coverage": {
-   "from_acn": "703143113",
-   "to_acn": "703347513",
-   "slots": 20441,
-   "checked": 20439,
+   "from_acn": "703147522",
+   "to_acn": "703387517",
+   "slots": 24000,
+   "checked": 23998,
    "remaining": 2,
-   "companies": 5402,
+   "companies": 6499,
    "register_known": true,
-   "register_to_acn": "703143113",
-   "slots_per_day": 2852,
+   "register_to_acn": "703347380",
+   "slots_per_day": 2841,
    "rate_per_min": 48,
    "run_minutes": 335,
    "zones": [
@@ -37,40 +37,27 @@
      "key": "new",
      "label": "New registrations",
      "why": "Everything registered since the last finished sweep. These go to the front of the queue on every run, so this should sit at or near 100%. Note what 'checked' means: the slot has been looked at once. A company that registers into a slot an earlier run already found empty is caught by the re-check in the next pass, not here.",
-     "from_acn": "703343524",
-     "to_acn": "703347513",
-     "slots": 400,
-     "checked": 400,
+     "from_acn": "703347522",
+     "to_acn": "703387517",
+     "slots": 4000,
+     "checked": 4000,
      "remaining": 0,
-     "days": 0.1,
+     "days": 1.4,
      "covered_by_register": 0,
-     "companies": 40
+     "companies": 1162
     },
     {
      "key": "catchup",
      "label": "Back-fill of older slots",
      "why": "Slots an earlier run ran out of clock before reaching, plus a second look at slots that came back empty - ACNs are handed out ahead of use, so an empty slot can fill in later. Deliberately queued behind the new slots: if a run runs short, this is the right thing to lose.",
-     "from_acn": "703143524",
-     "to_acn": "703343515",
+     "from_acn": "703147522",
+     "to_acn": "703347513",
      "slots": 20000,
      "checked": 19998,
      "remaining": 2,
      "days": 7.0,
-     "covered_by_register": 0,
-     "companies": 5356
-    },
-    {
-     "key": "settled",
-     "label": "Handed over to the weekly register",
-     "why": "Older than the rolling back-fill window, so the daily sweep no longer queues them - and it does not need to: the weekly ASIC register already lists this stretch in full. Unchecked slots here are not a gap in coverage.",
-     "from_acn": "703143113",
-     "to_acn": "703143515",
-     "slots": 41,
-     "checked": 41,
-     "remaining": 0,
-     "days": 0.0,
-     "covered_by_register": 1,
-     "companies": 6
+     "covered_by_register": 19987,
+     "companies": 5337
     }
    ],
    "passes": [
@@ -78,9 +65,9 @@
      "key": "new",
      "n": 1,
      "label": "New registrations",
-     "from_acn": "703343524",
-     "to_acn": "703347513",
-     "total": 400,
+     "from_acn": "703347522",
+     "to_acn": "703387517",
+     "total": 4000,
      "outstanding": 0,
      "why": "Everything issued since the last finished sweep. First in the queue on every run. This is the number that says whether you are current."
     },
@@ -88,8 +75,8 @@
      "key": "gaps",
      "n": 2,
      "label": "Never looked at",
-     "from_acn": "703143524",
-     "to_acn": "703343515",
+     "from_acn": "703147522",
+     "to_acn": "703347513",
      "total": 20000,
      "outstanding": 2,
      "why": "Slots inside the trailing window that no run has ever queried - what a run that ran out of clock leaves behind. Nothing has seen these, so they outrank re-checks."
@@ -98,22 +85,22 @@
      "key": "recheck",
      "n": 3,
      "label": "Second look at empty slots",
-     "from_acn": "702497514",
-     "to_acn": "703147513",
+     "from_acn": "702537513",
+     "to_acn": "703187517",
      "total": 0,
      "outstanding": 0,
      "bands": [
       {
        "band": "20k-27k back",
        "outstanding": 0,
-       "from_acn": "703077516",
-       "to_acn": "703147513"
+       "from_acn": "703117515",
+       "to_acn": "703187517"
       },
       {
        "band": "72k-85k back",
        "outstanding": 0,
-       "from_acn": "702497514",
-       "to_acn": "702627512"
+       "from_acn": "702537513",
+       "to_acn": "702667516"
       }
      ],
      "why": "Slots already queried that came back empty. ACNs are issued ahead of use, so a company can appear in a slot an earlier run found bare. Each gets exactly two more looks, timed to the two observed lag clusters."
@@ -124,281 +111,112 @@
      "label": "Shelf companies, re-queried",
      "from_acn": "",
      "to_acn": "",
-     "total": 112,
-     "outstanding": 112,
+     "total": 121,
+     "outstanding": 121,
      "rolling": true,
      "why": "Companies registered under a numeric placeholder name and renamed later - re-asked for 120 days. This never reaches zero by design; it is a rolling window, not a backlog."
     }
    ],
    "buckets": [
     {
-     "from": "703143113",
-     "to": "703160132",
-     "checked": 1703,
-     "slots": 1703,
-     "zone": "settled"
-    },
-    {
-     "from": "703160141",
-     "to": "703177164",
-     "checked": 1702,
-     "slots": 1703,
+     "from": "703147522",
+     "to": "703167515",
+     "checked": 2000,
+     "slots": 2000,
      "zone": "catchup"
     },
     {
-     "from": "703177173",
-     "to": "703194192",
-     "checked": 1703,
-     "slots": 1703,
+     "from": "703167524",
+     "to": "703187517",
+     "checked": 1999,
+     "slots": 2000,
      "zone": "catchup"
     },
     {
-     "from": "703194209",
-     "to": "703211223",
-     "checked": 1703,
-     "slots": 1703,
+     "from": "703187526",
+     "to": "703207514",
+     "checked": 2000,
+     "slots": 2000,
      "zone": "catchup"
     },
     {
-     "from": "703211232",
-     "to": "703228255",
-     "checked": 1703,
-     "slots": 1703,
+     "from": "703207523",
+     "to": "703227516",
+     "checked": 2000,
+     "slots": 2000,
      "zone": "catchup"
     },
     {
-     "from": "703228264",
-     "to": "703245283",
-     "checked": 1703,
-     "slots": 1703,
+     "from": "703227525",
+     "to": "703247518",
+     "checked": 2000,
+     "slots": 2000,
      "zone": "catchup"
     },
     {
-     "from": "703245292",
-     "to": "703262319",
-     "checked": 1703,
-     "slots": 1703,
+     "from": "703247527",
+     "to": "703267510",
+     "checked": 2000,
+     "slots": 2000,
      "zone": "catchup"
     },
     {
-     "from": "703262328",
-     "to": "703279341",
-     "checked": 1703,
-     "slots": 1703,
+     "from": "703267529",
+     "to": "703287512",
+     "checked": 2000,
+     "slots": 2000,
      "zone": "catchup"
     },
     {
-     "from": "703279350",
-     "to": "703296379",
-     "checked": 1702,
-     "slots": 1703,
+     "from": "703287521",
+     "to": "703307519",
+     "checked": 1999,
+     "slots": 2000,
      "zone": "catchup"
     },
     {
-     "from": "703296388",
-     "to": "703313400",
-     "checked": 1703,
-     "slots": 1703,
+     "from": "703307528",
+     "to": "703327511",
+     "checked": 2000,
+     "slots": 2000,
      "zone": "catchup"
     },
     {
-     "from": "703313419",
-     "to": "703330438",
-     "checked": 1703,
-     "slots": 1703,
-     "zone": "catchup"
-    },
-    {
-     "from": "703330447",
+     "from": "703327520",
      "to": "703347513",
-     "checked": 1708,
-     "slots": 1708,
+     "checked": 2000,
+     "slots": 2000,
      "zone": "catchup"
+    },
+    {
+     "from": "703347522",
+     "to": "703367515",
+     "checked": 2000,
+     "slots": 2000,
+     "zone": "new"
+    },
+    {
+     "from": "703367524",
+     "to": "703387517",
+     "checked": 2000,
+     "slots": 2000,
+     "zone": "new"
     }
    ]
   }
  },
- "stacks": [
-  {
-   "stem": "SINGER",
-   "first": "2026-10-15",
-   "has_bidco": true,
-   "finco": false,
-   "phased": false,
-   "members": [
-    {
-     "acn": "703274319",
-     "name": "SINGER TOPCO PTY LTD",
-     "date": "2026-10-15",
-     "role": "TOPCO",
-     "suburb": "SYDNEY",
-     "state": "NSW",
-     "via": "API",
-     "first_seen": "2026-10-15T11:41:39+00:00"
-    },
-    {
-     "acn": "703275156",
-     "name": "SINGER HOLDCO PTY LTD",
-     "date": "2026-10-15",
-     "role": "HOLDCO",
-     "suburb": "SYDNEY",
-     "state": "NSW",
-     "via": "API",
-     "first_seen": "2026-10-15T11:41:39+00:00"
-    },
-    {
-     "acn": "703275432",
-     "name": "SINGER MIDCO PTY LTD",
-     "date": "2026-10-15",
-     "role": "MIDCO",
-     "suburb": "SYDNEY",
-     "state": "NSW",
-     "via": "API",
-     "first_seen": "2026-10-15T11:41:39+00:00"
-    },
-    {
-     "acn": "703275638",
-     "name": "SINGER BIDCO PTY LTD",
-     "date": "2026-10-15",
-     "role": "BIDCO",
-     "suburb": "SYDNEY",
-     "state": "NSW",
-     "via": "API",
-     "first_seen": "2026-10-15T11:41:39+00:00"
-    }
-   ]
-  },
-  {
-   "stem": "ROCKS",
-   "first": "2026-10-16",
-   "has_bidco": false,
-   "finco": true,
-   "phased": false,
-   "members": [
-    {
-     "acn": "703303182",
-     "name": "ROCKS TOPCO PTY LTD",
-     "date": "2026-10-16",
-     "role": "TOPCO",
-     "suburb": "BURLEIGH HEADS",
-     "state": "QLD",
-     "via": "API",
-     "first_seen": "2026-10-16T09:55:06+00:00"
-    },
-    {
-     "acn": "703304205",
-     "name": "ROCKS FINCO PTY LTD",
-     "date": "2026-10-16",
-     "role": "FINCO",
-     "suburb": "BURLEIGH HEADS",
-     "state": "QLD",
-     "via": "API",
-     "first_seen": "2026-10-16T09:55:06+00:00"
-    }
-   ]
-  },
-  {
-   "stem": "HAMMER",
-   "first": "2026-10-13",
-   "has_bidco": false,
-   "finco": true,
-   "phased": false,
-   "members": [
-    {
-     "acn": "703199866",
-     "name": "HAMMER HOLDCO PTY LTD",
-     "date": "2026-10-13",
-     "role": "HOLDCO",
-     "suburb": "CARLTON SOUTH",
-     "state": "VIC",
-     "via": "API",
-     "first_seen": "2026-10-13T11:54:17+00:00"
-    },
-    {
-     "acn": "703202377",
-     "name": "HAMMER MEZZCO PTY LTD",
-     "date": "2026-10-13",
-     "role": "MEZZCO",
-     "suburb": "CARLTON SOUTH",
-     "state": "VIC",
-     "via": "API",
-     "first_seen": "2026-10-13T11:54:17+00:00"
-    }
-   ]
-  }
- ],
- "singles": [
-  {
-   "acn": "703187697",
-   "name": "SUDS BIDCO PTY LTD",
-   "date": "2026-10-13",
-   "role": "BIDCO",
-   "suburb": "MELBOURNE",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-10-13T11:54:17+00:00"
-  },
-  {
-   "acn": "703187802",
-   "name": "BIRDIE BIDCO PTY LTD",
-   "date": "2026-10-13",
-   "role": "BIDCO",
-   "suburb": "HAWTHORN",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-10-13T11:54:17+00:00"
-  }
- ],
+ "stacks": [],
+ "singles": [],
  "role_only": [
   {
-   "acn": "703294428",
-   "name": "LT HENDO HOLDCO PTY LTD",
-   "date": "2026-10-16",
+   "acn": "703373399",
+   "name": "HAGAN HOLDCO PTY LTD",
+   "date": "2026-10-19",
    "role": "HOLDCO",
-   "suburb": "EIGHT MILE PLAINS",
-   "state": "QLD",
+   "suburb": "WEST GOSFORD",
+   "state": "NSW",
    "via": "API",
-   "first_seen": "2026-10-16T09:55:06+00:00"
-  },
-  {
-   "acn": "703304518",
-   "name": "CORA AUS PREMIER HOLDCO PTY LTD",
-   "date": "2026-10-16",
-   "role": "HOLDCO",
-   "suburb": "BRISBANE CITY",
-   "state": "QLD",
-   "via": "API",
-   "first_seen": "2026-10-16T09:55:06+00:00"
-  },
-  {
-   "acn": "703197906",
-   "name": "CAMPBELL TOPCO PTY LTD",
-   "date": "2026-10-13",
-   "role": "TOPCO",
-   "suburb": "ROBINA",
-   "state": "QLD",
-   "via": "API",
-   "first_seen": "2026-10-13T11:54:17+00:00"
-  },
-  {
-   "acn": "703203776",
-   "name": "HAMMER MIDCO 1 PTY LTD",
-   "date": "2026-10-13",
-   "role": "MIDCO",
-   "suburb": "CARLTON SOUTH",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-10-13T11:54:17+00:00"
-  },
-  {
-   "acn": "703204586",
-   "name": "HAMMER MIDCO 2 PTY LTD",
-   "date": "2026-10-13",
-   "role": "MIDCO",
-   "suburb": "CARLTON SOUTH",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-10-13T11:54:17+00:00"
+   "first_seen": "2026-10-19T15:42:50+00:00"
   }
  ]
 }
