@@ -1,10 +1,231 @@
 {
- "generated_utc": "2026-10-12T16:05:45+00:00",
+ "generated_utc": "2026-10-19T13:56:31+00:00",
  "dataset": "company_202610.zip",
- "source_modified": "2026-10-12T13:53:37.307606",
+ "source_modified": "2026-10-19T13:52:26.307013",
  "window_days": 180,
- "max_acn": "703143113",
+ "max_acn": "703347380",
  "entities": [
+  {
+   "acn": "703304518",
+   "name": "CORA AUS PREMIER HOLDCO PTY LTD",
+   "date": "16/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CORA PREMIER",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703304205",
+   "name": "ROCKS FINCO PTY LTD",
+   "date": "16/10/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ROCKS",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703303182",
+   "name": "ROCKS TOPCO PTY LTD",
+   "date": "16/10/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ROCKS",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703294428",
+   "name": "LT HENDO HOLDCO PTY LTD",
+   "date": "16/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "LT HENDO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703275638",
+   "name": "SINGER BIDCO PTY LTD",
+   "date": "15/10/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SINGER",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "703275432",
+   "name": "SINGER MIDCO PTY LTD",
+   "date": "15/10/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SINGER",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "703275156",
+   "name": "SINGER HOLDCO PTY LTD",
+   "date": "15/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SINGER",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "703274319",
+   "name": "SINGER TOPCO PTY LTD",
+   "date": "15/10/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SINGER",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "703209303",
+   "name": "MORNINGTON BESS FINCO PTY LTD",
+   "date": "14/10/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "MORNINGTON BESS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703204586",
+   "name": "HAMMER MIDCO 2 PTY LTD",
+   "date": "13/10/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "HAMMER 2",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703203776",
+   "name": "HAMMER MIDCO 1 PTY LTD",
+   "date": "13/10/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "HAMMER 1",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703202377",
+   "name": "HAMMER MEZZCO PTY LTD",
+   "date": "13/10/2026",
+   "role": "MEZZCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "HAMMER",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "703199866",
+   "name": "HAMMER HOLDCO PTY LTD",
+   "date": "13/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "HAMMER",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "703197906",
+   "name": "CAMPBELL TOPCO PTY LTD",
+   "date": "13/10/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CAMPBELL",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703187802",
+   "name": "BIRDIE BIDCO PTY LTD",
+   "date": "13/10/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BIRDIE",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
+  },
+  {
+   "acn": "703187697",
+   "name": "SUDS BIDCO PTY LTD",
+   "date": "13/10/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SUDS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
+  },
+  {
+   "acn": "703149133",
+   "name": "SGA HOLDCO PTY LTD",
+   "date": "12/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SGA",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
   {
    "acn": "703106503",
    "name": "EVG HOLDCO PTY LTD",
@@ -5854,167 +6075,11 @@
    "in_stack": true,
    "stack_has_bidco": true,
    "is_bidco": false
-  },
-  {
-   "acn": "697328340",
-   "name": "STOCKEDGE KEMPS CREEK PROPCO FINCO PTY LTD",
-   "date": "21/04/2026",
-   "role": "FINCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "STOCKEDGE KEMPS CREEK PROPCO",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697307369",
-   "name": "PITT FINCO PTY LTD",
-   "date": "20/04/2026",
-   "role": "FINCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "PITT",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697303576",
-   "name": "CDC SPV HOLDCO NO 7 PTY LTD",
-   "date": "20/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "CDC SPV",
-   "in_stack": true,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697303567",
-   "name": "CDC SPV HOLDCO NO 6 PTY LTD",
-   "date": "20/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "CDC SPV",
-   "in_stack": true,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697303558",
-   "name": "CDC SPV HOLDCO NO 5 PTY LTD",
-   "date": "20/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "CDC SPV",
-   "in_stack": true,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697245668",
-   "name": "STRATUS HOLDCO PTY LTD",
-   "date": "17/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "STRATUS",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697235617",
-   "name": "FLATROCK BESS HOLDCO PTY LTD",
-   "date": "17/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "FLATROCK BESS",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697234307",
-   "name": "AUS BESS HOLDCO PTY LTD",
-   "date": "17/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "BESS",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697233891",
-   "name": "AUS GEN HOLDCO PTY LTD",
-   "date": "17/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "GEN",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697230096",
-   "name": "APOLLO AUSTRALIA BIDCO PTY LTD",
-   "date": "17/04/2026",
-   "role": "BIDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "APOLLO",
-   "in_stack": true,
-   "stack_has_bidco": true,
-   "is_bidco": true
-  },
-  {
-   "acn": "697223484",
-   "name": "APOLLO AUSTRALIA HOLDCO PTY LTD",
-   "date": "17/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "APOLLO",
-   "in_stack": true,
-   "stack_has_bidco": true,
-   "is_bidco": false
-  },
-  {
-   "acn": "697211224",
-   "name": "PROSPER FINCO SPV 1 PTY LTD",
-   "date": "17/04/2026",
-   "role": "FINCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "PROSPER SPV 1",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
   }
  ],
- "bidcos": 63,
- "stacks": 69,
- "stacks_without_bidco": 28,
+ "bidcos": 65,
+ "stacks": 70,
+ "stacks_without_bidco": 29,
  "renamed": [
   {
    "acn": "697464118",
@@ -6145,18 +6210,78 @@
  ],
  "reconciliation": {
   "covered_from_acn": "700000004",
-  "judged": 290,
-  "found_by_daily": 10,
+  "judged": 307,
+  "found_by_daily": 15,
   "missed_by_daily": [
+   {
+    "acn": "703209303",
+    "name": "MORNINGTON BESS FINCO PTY LTD",
+    "date": "14/10/2026"
+   },
+   {
+    "acn": "703149133",
+    "name": "SGA HOLDCO PTY LTD",
+    "date": "12/10/2026"
+   },
    {
     "acn": "703106503",
     "name": "EVG HOLDCO PTY LTD",
     "date": "09/10/2026"
    },
    {
+    "acn": "703095916",
+    "name": "SCHREIBER AUSTRALIA HOLDCO PTY LTD",
+    "date": "09/10/2026"
+   },
+   {
+    "acn": "703093609",
+    "name": "PACIFIC HEALTH GROUP HOLDCO LIMITED",
+    "date": "09/10/2026"
+   },
+   {
+    "acn": "703089409",
+    "name": "OSSA HOLDCO PTY LTD",
+    "date": "09/10/2026"
+   },
+   {
+    "acn": "703060333",
+    "name": "PARTNERSHIP CAPITAL CONTRAFLOW BIDCO PTY LTD",
+    "date": "08/10/2026"
+   },
+   {
+    "acn": "703050739",
+    "name": "PARTNERSHIP CAPITAL CONTRAFLOW HOLDCO PTY LTD",
+    "date": "08/10/2026"
+   },
+   {
+    "acn": "703031850",
+    "name": "SALTER BROTHERS IMMIGRATION INVESTMENT HOLDCO PTY LTD",
+    "date": "07/10/2026"
+   },
+   {
+    "acn": "703030862",
+    "name": "SALTER BROTHERS FUNDS MANAGEMENT HOLDCO PTY LTD",
+    "date": "07/10/2026"
+   },
+   {
+    "acn": "703014395",
+    "name": "AIRTRUNK SYD1 HOLDCO PTY LTD",
+    "date": "07/10/2026"
+   },
+   {
     "acn": "702327571",
     "name": "AIRTRUNK SYD1 FINCO PTY LTD",
     "date": "07/10/2026"
+   },
+   {
+    "acn": "702986169",
+    "name": "SALUS FINCO PTY LTD",
+    "date": "06/10/2026"
+   },
+   {
+    "acn": "702951675",
+    "name": "HAMMER TOPCO PTY LTD",
+    "date": "05/10/2026"
    },
    {
     "acn": "702899134",
@@ -7549,19 +7674,24 @@
     "date": "07/07/2026"
    }
   ],
-  "recall_pct": 3.4
+  "recall_pct": 4.9
  },
  "ledger_crossed": [
-  "HAMMER TOPCO PTY LTD",
-  "SALUS FINCO PTY LTD",
-  "AIRTRUNK SYD1 HOLDCO PTY LTD",
-  "SALTER BROTHERS FUNDS MANAGEMENT HOLDCO PTY LTD",
-  "SALTER BROTHERS IMMIGRATION INVESTMENT HOLDCO PTY LTD",
-  "PARTNERSHIP CAPITAL CONTRAFLOW HOLDCO PTY LTD",
-  "PARTNERSHIP CAPITAL CONTRAFLOW BIDCO PTY LTD",
-  "OSSA HOLDCO PTY LTD",
-  "PACIFIC HEALTH GROUP HOLDCO LIMITED",
-  "SCHREIBER AUSTRALIA HOLDCO PTY LTD"
+  "SUDS BIDCO PTY LTD",
+  "BIRDIE BIDCO PTY LTD",
+  "CAMPBELL TOPCO PTY LTD",
+  "HAMMER HOLDCO PTY LTD",
+  "HAMMER MEZZCO PTY LTD",
+  "HAMMER MIDCO 1 PTY LTD",
+  "HAMMER MIDCO 2 PTY LTD",
+  "SINGER TOPCO PTY LTD",
+  "SINGER HOLDCO PTY LTD",
+  "SINGER MIDCO PTY LTD",
+  "SINGER BIDCO PTY LTD",
+  "LT HENDO HOLDCO PTY LTD",
+  "ROCKS TOPCO PTY LTD",
+  "ROCKS FINCO PTY LTD",
+  "CORA AUS PREMIER HOLDCO PTY LTD"
  ],
  "ledger_waiting": 0
 }
