@@ -1208,6 +1208,18 @@
   "suburb": "CARLTON SOUTH",
   "via": "API"
  },
+ "703209303": {
+  "acn": "703209303",
+  "date": "2026-10-14",
+  "first_seen": "2026-10-20T11:49:34+00:00",
+  "in_register": false,
+  "name": "MORNINGTON BESS FINCO PTY LTD",
+  "role": "FINCO",
+  "state": "NSW",
+  "stem": "MORNINGTON BESS",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
  "703274319": {
   "acn": "703274319",
   "date": "2026-10-15",
@@ -1322,6 +1334,18 @@
   "state": "NSW",
   "stem": "HAGAN",
   "suburb": "WEST GOSFORD",
+  "via": "API"
+ },
+ "703409410": {
+  "acn": "703409410",
+  "date": "2026-10-20",
+  "first_seen": "2026-10-20T11:49:34+00:00",
+  "in_register": false,
+  "name": "PROGRESSIVE BUSINESS TECHNOLOGIES HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "PROGRESSIVE BUSINESS TECHNOLOGIES",
+  "suburb": "SYDNEY",
   "via": "API"
  }
 }
