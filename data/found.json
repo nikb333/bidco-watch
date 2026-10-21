@@ -1347,5 +1347,65 @@
   "stem": "PROGRESSIVE BUSINESS TECHNOLOGIES",
   "suburb": "SYDNEY",
   "via": "API"
+ },
+ "703436800": {
+  "acn": "703436800",
+  "date": "2026-10-21",
+  "first_seen": "2026-10-21T10:17:19+00:00",
+  "in_register": false,
+  "name": "IPC BOND AUS HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "QLD",
+  "stem": "IPC BOND",
+  "suburb": "MOLENDINAR",
+  "via": "API"
+ },
+ "703450515": {
+  "acn": "703450515",
+  "date": "2026-10-21",
+  "first_seen": "2026-10-21T10:17:19+00:00",
+  "in_register": false,
+  "name": "SDCP MBP HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "SDCP MBP",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703450702": {
+  "acn": "703450702",
+  "date": "2026-10-21",
+  "first_seen": "2026-10-21T10:17:19+00:00",
+  "in_register": false,
+  "name": "SDCP CL PROPCO FINCO PTY LTD",
+  "role": "FINCO",
+  "state": "NSW",
+  "stem": "SDCP CL PROPCO",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703451129": {
+  "acn": "703451129",
+  "date": "2026-10-21",
+  "first_seen": "2026-10-21T10:17:19+00:00",
+  "in_register": false,
+  "name": "SDCP MBP PROPCO FINCO PTY LTD",
+  "role": "FINCO",
+  "state": "NSW",
+  "stem": "SDCP MBP PROPCO",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703451361": {
+  "acn": "703451361",
+  "date": "2026-10-21",
+  "first_seen": "2026-10-21T10:17:19+00:00",
+  "in_register": false,
+  "name": "SDCP CL HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "SDCP CL",
+  "suburb": "SYDNEY",
+  "via": "API"
  }
 }
