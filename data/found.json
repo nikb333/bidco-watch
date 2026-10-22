@@ -1407,5 +1407,29 @@
   "stem": "SDCP CL",
   "suburb": "SYDNEY",
   "via": "API"
+ },
+ "703474891": {
+  "acn": "703474891",
+  "date": "2026-10-22",
+  "first_seen": "2026-10-22T13:53:54+00:00",
+  "in_register": false,
+  "name": "SDCP MBP OPCO FINCO PTY LTD",
+  "role": "FINCO",
+  "state": "NSW",
+  "stem": "SDCP MBP OPCO",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703475030": {
+  "acn": "703475030",
+  "date": "2026-10-22",
+  "first_seen": "2026-10-22T13:53:54+00:00",
+  "in_register": false,
+  "name": "SDCP CL OPCO FINCO PTY LTD",
+  "role": "FINCO",
+  "state": "NSW",
+  "stem": "SDCP CL OPCO",
+  "suburb": "SYDNEY",
+  "via": "API"
  }
 }
