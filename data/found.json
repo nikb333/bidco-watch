@@ -1324,6 +1324,18 @@
   "suburb": "BRISBANE CITY",
   "via": "API"
  },
+ "703333411": {
+  "acn": "703333411",
+  "date": "2026-10-19",
+  "first_seen": "2026-10-23T18:28:07+00:00",
+  "in_register": false,
+  "name": "PRPK HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "PRPK",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
  "703373399": {
   "acn": "703373399",
   "date": "2026-10-19",
@@ -1430,6 +1442,42 @@
   "state": "NSW",
   "stem": "SDCP CL OPCO",
   "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703507564": {
+  "acn": "703507564",
+  "date": "2026-10-23",
+  "first_seen": "2026-10-23T18:28:07+00:00",
+  "in_register": false,
+  "name": "LIVERPOOL RANGE WIND FARM FINCO 1 PTY LTD",
+  "role": "FINCO",
+  "state": "VIC",
+  "stem": "LIVERPOOL RANGE WIND FARM 1",
+  "suburb": "MELBOURNE",
+  "via": "API"
+ },
+ "703524681": {
+  "acn": "703524681",
+  "date": "2026-10-23",
+  "first_seen": "2026-10-23T18:28:07+00:00",
+  "in_register": false,
+  "name": "YATHROO WIND FARM FINCO PTY LTD",
+  "role": "FINCO",
+  "state": "NSW",
+  "stem": "YATHROO WIND FARM",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703528572": {
+  "acn": "703528572",
+  "date": "2026-10-23",
+  "first_seen": "2026-10-23T18:28:07+00:00",
+  "in_register": false,
+  "name": "AIRTRUNK HTR1C HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "AIRTRUNK HTR1C",
+  "suburb": "NORTH SYDNEY",
   "via": "API"
  }
 }
