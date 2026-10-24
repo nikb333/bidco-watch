@@ -1,7 +1,7 @@
 {
  "run": {
-  "finished_utc": "2026-10-24T11:14:53+00:00",
-  "elapsed_min": 5.3,
+  "finished_utc": "2026-10-24T18:13:49+00:00",
+  "elapsed_min": 3.6,
   "status": "ok",
   "error": "",
   "frontier_base": 70353751,
@@ -9,11 +9,11 @@
    "703337517",
    "703537517"
   ],
-  "slots_swept": 143,
-  "slots_queued": 143,
+  "slots_swept": 75,
+  "slots_queued": 75,
   "slots_left": 0,
   "gaps_queued": 0,
-  "recheck_queued": 0,
+  "recheck_queued": 9,
   "companies": 28478,
   "trailing_slots": 20000,
   "slots_errored": 0,
@@ -29,7 +29,7 @@
    "companies": 5558,
    "register_known": true,
    "register_to_acn": "703347380",
-   "slots_per_day": 2951,
+   "slots_per_day": 2904,
    "rate_per_min": 48,
    "run_minutes": 335,
    "zones": [
@@ -42,7 +42,7 @@
      "slots": 20001,
      "checked": 20001,
      "remaining": 0,
-     "days": 6.8,
+     "days": 6.9,
      "covered_by_register": 988,
      "companies": 5558
     }
@@ -74,12 +74,12 @@
      "label": "Second look at empty slots",
      "from_acn": "702687518",
      "to_acn": "703337517",
-     "total": 9,
-     "outstanding": 9,
+     "total": 0,
+     "outstanding": 0,
      "bands": [
       {
        "band": "20k-27k back",
-       "outstanding": 9,
+       "outstanding": 0,
        "from_acn": "703267510",
        "to_acn": "703337517"
       },
