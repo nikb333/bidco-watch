@@ -1,10 +1,205 @@
 {
- "generated_utc": "2026-10-19T13:56:31+00:00",
+ "generated_utc": "2026-10-26T15:27:55+00:00",
  "dataset": "company_202610.zip",
- "source_modified": "2026-10-19T13:52:26.307013",
+ "source_modified": "2026-10-26T13:52:41.514789",
  "window_days": 180,
- "max_acn": "703347380",
+ "max_acn": "703560543",
  "entities": [
+  {
+   "acn": "703528572",
+   "name": "AIRTRUNK HTR1C HOLDCO PTY LTD",
+   "date": "23/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "AIRTRUNK HTR1C",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703524681",
+   "name": "YATHROO WIND FARM FINCO PTY LTD",
+   "date": "23/10/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "YATHROO WIND FARM",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703507564",
+   "name": "LIVERPOOL RANGE WIND FARM FINCO 1 PTY LTD",
+   "date": "23/10/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "LIVERPOOL RANGE WIND FARM 1",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703475030",
+   "name": "SDCP CL OPCO FINCO PTY LTD",
+   "date": "22/10/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SDCP CL OPCO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703474891",
+   "name": "SDCP MBP OPCO FINCO PTY LTD",
+   "date": "22/10/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SDCP MBP OPCO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703451361",
+   "name": "SDCP CL HOLDCO PTY LTD",
+   "date": "21/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SDCP CL",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703451129",
+   "name": "SDCP MBP PROPCO FINCO PTY LTD",
+   "date": "21/10/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SDCP MBP PROPCO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703450702",
+   "name": "SDCP CL PROPCO FINCO PTY LTD",
+   "date": "21/10/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SDCP CL PROPCO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703450515",
+   "name": "SDCP MBP HOLDCO PTY LTD",
+   "date": "21/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SDCP MBP",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703436800",
+   "name": "IPC BOND AUS HOLDCO PTY LTD",
+   "date": "21/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "IPC BOND",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703409410",
+   "name": "PROGRESSIVE BUSINESS TECHNOLOGIES HOLDCO PTY LTD",
+   "date": "20/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PROGRESSIVE BUSINESS TECHNOLOGIES",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703373399",
+   "name": "HAGAN HOLDCO PTY LTD",
+   "date": "19/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "HAGAN",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703368129",
+   "name": "KG HOLDCO PTY LTD",
+   "date": "19/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "KG",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703361657",
+   "name": "SCM AUSTRALIA HOLDCO PTY LTD",
+   "date": "19/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SCM",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703333411",
+   "name": "PRPK HOLDCO PTY LTD",
+   "date": "19/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PRPK",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
   {
    "acn": "703304518",
    "name": "CORA AUS PREMIER HOLDCO PTY LTD",
@@ -5721,8 +5916,8 @@
    "abn": true,
    "status": "REGD",
    "stem": "CURRAWONG",
-   "in_stack": true,
-   "stack_has_bidco": true,
+   "in_stack": false,
+   "stack_has_bidco": false,
    "is_bidco": false
   },
   {
@@ -5880,219 +6075,12 @@
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
-  },
-  {
-   "acn": "697525554",
-   "name": "FKA HOLDCO PTY LTD",
-   "date": "27/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "FKA",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697523578",
-   "name": "CURRAWONG BIDCO PTY LTD",
-   "date": "27/04/2026",
-   "role": "BIDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "CURRAWONG",
-   "in_stack": true,
-   "stack_has_bidco": true,
-   "is_bidco": true
-  },
-  {
-   "acn": "697519896",
-   "name": "VINOMOFO BIDCO PTY LTD",
-   "date": "27/04/2026",
-   "role": "BIDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "VINOMOFO",
-   "in_stack": true,
-   "stack_has_bidco": true,
-   "is_bidco": true
-  },
-  {
-   "acn": "697509050",
-   "name": "PACIFIC GREEN QUARTZ FINCO PTY LTD",
-   "date": "27/04/2026",
-   "role": "FINCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "PACIFIC GREEN QUARTZ",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697468901",
-   "name": "LONGENICS MIDCO PTY LTD",
-   "date": "24/04/2026",
-   "role": "MIDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "LONGENICS",
-   "in_stack": true,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697467100",
-   "name": "FANTASTIC GROUP BIDCO PTY LTD",
-   "date": "24/04/2026",
-   "role": "BIDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "FANTASTIC",
-   "in_stack": true,
-   "stack_has_bidco": true,
-   "is_bidco": true
-  },
-  {
-   "acn": "697466032",
-   "name": "FANTASTIC GROUP MIDCO PTY LTD",
-   "date": "24/04/2026",
-   "role": "MIDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "FANTASTIC",
-   "in_stack": true,
-   "stack_has_bidco": true,
-   "is_bidco": false
-  },
-  {
-   "acn": "697465544",
-   "name": "FANTASTIC GROUP HOLDCO PTY LTD",
-   "date": "24/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "FANTASTIC",
-   "in_stack": true,
-   "stack_has_bidco": true,
-   "is_bidco": false
-  },
-  {
-   "acn": "697464118",
-   "name": "LONGENICS HOLDCO PTY LTD",
-   "date": "24/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "LONGENICS",
-   "in_stack": true,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697459626",
-   "name": "EPTEC INFRA HOLDCO PTY LTD",
-   "date": "24/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "EPTEC INFRA",
-   "in_stack": true,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697459117",
-   "name": "EPTEC INFRA TOPCO PTY LTD",
-   "date": "24/04/2026",
-   "role": "TOPCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "EPTEC INFRA",
-   "in_stack": true,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697455566",
-   "name": "VINOMOFO HOLDCO PTY LTD",
-   "date": "24/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "VINOMOFO",
-   "in_stack": true,
-   "stack_has_bidco": true,
-   "is_bidco": false
-  },
-  {
-   "acn": "697447840",
-   "name": "ELLICH HOLDCO PTY LTD",
-   "date": "24/04/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "ELLICH",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "697422236",
-   "name": "COSTGRID TECHNOLOGY BIDCO PTY LTD",
-   "date": "23/04/2026",
-   "role": "BIDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "COSTGRID TECHNOLOGY",
-   "in_stack": true,
-   "stack_has_bidco": true,
-   "is_bidco": true
-  },
-  {
-   "acn": "697421211",
-   "name": "COSTGRID TECHNOLOGY MIDCO PTY LTD",
-   "date": "23/04/2026",
-   "role": "MIDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "COSTGRID TECHNOLOGY",
-   "in_stack": true,
-   "stack_has_bidco": true,
-   "is_bidco": false
   }
  ],
- "bidcos": 65,
- "stacks": 70,
- "stacks_without_bidco": 29,
+ "bidcos": 61,
+ "stacks": 64,
+ "stacks_without_bidco": 27,
  "renamed": [
-  {
-   "acn": "697464118",
-   "was": "VITA HOLDCO PTY LTD",
-   "now": "LONGENICS HOLDCO PTY LTD",
-   "since": "02/06/2026"
-  },
-  {
-   "acn": "697468901",
-   "was": "VITA MIDCO PTY LTD",
-   "now": "LONGENICS MIDCO PTY LTD",
-   "since": "02/06/2026"
-  },
   {
    "acn": "697616943",
    "was": "GREEK ST MID HOLDCO PTY LTD",
@@ -6210,13 +6198,93 @@
  ],
  "reconciliation": {
   "covered_from_acn": "700000004",
-  "judged": 307,
-  "found_by_daily": 15,
+  "judged": 322,
+  "found_by_daily": 14,
   "missed_by_daily": [
    {
-    "acn": "703209303",
-    "name": "MORNINGTON BESS FINCO PTY LTD",
-    "date": "14/10/2026"
+    "acn": "703368129",
+    "name": "KG HOLDCO PTY LTD",
+    "date": "19/10/2026"
+   },
+   {
+    "acn": "703361657",
+    "name": "SCM AUSTRALIA HOLDCO PTY LTD",
+    "date": "19/10/2026"
+   },
+   {
+    "acn": "703304518",
+    "name": "CORA AUS PREMIER HOLDCO PTY LTD",
+    "date": "16/10/2026"
+   },
+   {
+    "acn": "703304205",
+    "name": "ROCKS FINCO PTY LTD",
+    "date": "16/10/2026"
+   },
+   {
+    "acn": "703303182",
+    "name": "ROCKS TOPCO PTY LTD",
+    "date": "16/10/2026"
+   },
+   {
+    "acn": "703294428",
+    "name": "LT HENDO HOLDCO PTY LTD",
+    "date": "16/10/2026"
+   },
+   {
+    "acn": "703275638",
+    "name": "SINGER BIDCO PTY LTD",
+    "date": "15/10/2026"
+   },
+   {
+    "acn": "703275432",
+    "name": "SINGER MIDCO PTY LTD",
+    "date": "15/10/2026"
+   },
+   {
+    "acn": "703275156",
+    "name": "SINGER HOLDCO PTY LTD",
+    "date": "15/10/2026"
+   },
+   {
+    "acn": "703274319",
+    "name": "SINGER TOPCO PTY LTD",
+    "date": "15/10/2026"
+   },
+   {
+    "acn": "703204586",
+    "name": "HAMMER MIDCO 2 PTY LTD",
+    "date": "13/10/2026"
+   },
+   {
+    "acn": "703203776",
+    "name": "HAMMER MIDCO 1 PTY LTD",
+    "date": "13/10/2026"
+   },
+   {
+    "acn": "703202377",
+    "name": "HAMMER MEZZCO PTY LTD",
+    "date": "13/10/2026"
+   },
+   {
+    "acn": "703199866",
+    "name": "HAMMER HOLDCO PTY LTD",
+    "date": "13/10/2026"
+   },
+   {
+    "acn": "703197906",
+    "name": "CAMPBELL TOPCO PTY LTD",
+    "date": "13/10/2026"
+   },
+   {
+    "acn": "703187802",
+    "name": "BIRDIE BIDCO PTY LTD",
+    "date": "13/10/2026"
+   },
+   {
+    "acn": "703187697",
+    "name": "SUDS BIDCO PTY LTD",
+    "date": "13/10/2026"
    },
    {
     "acn": "703149133",
@@ -7674,24 +7742,23 @@
     "date": "07/07/2026"
    }
   ],
-  "recall_pct": 4.9
+  "recall_pct": 4.3
  },
  "ledger_crossed": [
-  "SUDS BIDCO PTY LTD",
-  "BIRDIE BIDCO PTY LTD",
-  "CAMPBELL TOPCO PTY LTD",
-  "HAMMER HOLDCO PTY LTD",
-  "HAMMER MEZZCO PTY LTD",
-  "HAMMER MIDCO 1 PTY LTD",
-  "HAMMER MIDCO 2 PTY LTD",
-  "SINGER TOPCO PTY LTD",
-  "SINGER HOLDCO PTY LTD",
-  "SINGER MIDCO PTY LTD",
-  "SINGER BIDCO PTY LTD",
-  "LT HENDO HOLDCO PTY LTD",
-  "ROCKS TOPCO PTY LTD",
-  "ROCKS FINCO PTY LTD",
-  "CORA AUS PREMIER HOLDCO PTY LTD"
+  "MORNINGTON BESS FINCO PTY LTD",
+  "PRPK HOLDCO PTY LTD",
+  "HAGAN HOLDCO PTY LTD",
+  "PROGRESSIVE BUSINESS TECHNOLOGIES HOLDCO PTY LTD",
+  "IPC BOND AUS HOLDCO PTY LTD",
+  "SDCP MBP HOLDCO PTY LTD",
+  "SDCP CL PROPCO FINCO PTY LTD",
+  "SDCP MBP PROPCO FINCO PTY LTD",
+  "SDCP CL HOLDCO PTY LTD",
+  "SDCP MBP OPCO FINCO PTY LTD",
+  "SDCP CL OPCO FINCO PTY LTD",
+  "LIVERPOOL RANGE WIND FARM FINCO 1 PTY LTD",
+  "YATHROO WIND FARM FINCO PTY LTD",
+  "AIRTRUNK HTR1C HOLDCO PTY LTD"
  ],
  "ledger_waiting": 0
 }
