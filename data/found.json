@@ -1493,5 +1493,17 @@
   "stem": "AIRTRUNK HTR1C",
   "suburb": "NORTH SYDNEY",
   "via": "API"
+ },
+ "703577646": {
+  "acn": "703577646",
+  "date": "2026-10-26",
+  "first_seen": "2026-10-26T14:22:41+00:00",
+  "in_register": false,
+  "name": "MURRAY BRIDGE HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "QLD",
+  "stem": "MURRAY BRIDGE",
+  "suburb": "BRISBANE CITY",
+  "via": "API"
  }
 }
