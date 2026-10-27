@@ -1505,5 +1505,53 @@
   "stem": "MURRAY BRIDGE",
   "suburb": "BRISBANE CITY",
   "via": "API"
+ },
+ "703622182": {
+  "acn": "703622182",
+  "date": "2026-10-27",
+  "first_seen": "2026-10-27T10:40:50+00:00",
+  "in_register": false,
+  "name": "WCEH TOP HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "WCEH TOP",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703626340": {
+  "acn": "703626340",
+  "date": "2026-10-27",
+  "first_seen": "2026-10-27T10:40:50+00:00",
+  "in_register": false,
+  "name": "WCEH 1 HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "WCEH 1",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703626573": {
+  "acn": "703626573",
+  "date": "2026-10-27",
+  "first_seen": "2026-10-27T10:40:50+00:00",
+  "in_register": false,
+  "name": "WCEH 2 HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "WCEH 2",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703636319": {
+  "acn": "703636319",
+  "date": "2026-10-27",
+  "first_seen": "2026-10-27T10:40:50+00:00",
+  "in_register": false,
+  "name": "ENTITI TOPCO PTY LTD",
+  "role": "TOPCO",
+  "state": "NSW",
+  "stem": "ENTITI",
+  "suburb": "EUNGELLA",
+  "via": "API"
  }
 }
