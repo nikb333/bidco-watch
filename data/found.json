@@ -1506,6 +1506,18 @@
   "suburb": "BRISBANE CITY",
   "via": "API"
  },
+ "703610280": {
+  "acn": "703610280",
+  "date": "2026-10-27",
+  "first_seen": "2026-10-28T06:54:15+00:00",
+  "in_register": false,
+  "name": "EXTRA SPACE AUSTRALIA FINCO PTY LTD",
+  "role": "FINCO",
+  "state": "NSW",
+  "stem": "EXTRA SPACE",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
  "703622182": {
   "acn": "703622182",
   "date": "2026-10-27",
