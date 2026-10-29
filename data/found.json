@@ -1565,5 +1565,41 @@
   "stem": "ENTITI",
   "suburb": "EUNGELLA",
   "via": "API"
+ },
+ "703672502": {
+  "acn": "703672502",
+  "date": "2026-10-28",
+  "first_seen": "2026-10-29T05:58:29+00:00",
+  "in_register": false,
+  "name": "99 MELBOURNE STREET SOUTH BRISBANE HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "99 MELBOURNE STREET SOUTH BRISBANE",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703702238": {
+  "acn": "703702238",
+  "date": "2026-10-29",
+  "first_seen": "2026-10-29T05:58:29+00:00",
+  "in_register": false,
+  "name": "SEC ENERGY DOME HAZELWOOD HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "SEC ENERGY DOME HAZELWOOD",
+  "suburb": "MELBOURNE",
+  "via": "API"
+ },
+ "703702890": {
+  "acn": "703702890",
+  "date": "2026-10-29",
+  "first_seen": "2026-10-29T05:58:29+00:00",
+  "in_register": false,
+  "name": "SOFIIA HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "SOFIIA",
+  "suburb": "CREMORNE",
+  "via": "API"
  }
 }
