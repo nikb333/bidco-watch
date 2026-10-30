@@ -1601,5 +1601,41 @@
   "stem": "SOFIIA",
   "suburb": "CREMORNE",
   "via": "API"
+ },
+ "703729864": {
+  "acn": "703729864",
+  "date": "2026-10-30",
+  "first_seen": "2026-10-30T16:43:24+00:00",
+  "in_register": false,
+  "name": "CURIS HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "CURIS",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703730670": {
+  "acn": "703730670",
+  "date": "2026-10-30",
+  "first_seen": "2026-10-30T16:43:24+00:00",
+  "in_register": false,
+  "name": "CURIS MIDCO PTY LTD",
+  "role": "MIDCO",
+  "state": "NSW",
+  "stem": "CURIS",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703731140": {
+  "acn": "703731140",
+  "date": "2026-10-30",
+  "first_seen": "2026-10-30T16:43:24+00:00",
+  "in_register": false,
+  "name": "CURIS BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "NSW",
+  "stem": "CURIS",
+  "suburb": "SYDNEY",
+  "via": "API"
  }
 }
