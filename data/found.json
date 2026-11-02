@@ -1637,5 +1637,41 @@
   "stem": "CURIS",
   "suburb": "SYDNEY",
   "via": "API"
+ },
+ "703776925": {
+  "acn": "703776925",
+  "date": "2026-11-02",
+  "first_seen": "2026-11-02T11:25:03+00:00",
+  "in_register": false,
+  "name": "ODYSSEY HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "ODYSSEY",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703790336": {
+  "acn": "703790336",
+  "date": "2026-11-02",
+  "first_seen": "2026-11-02T11:25:03+00:00",
+  "in_register": false,
+  "name": "ODYSSEY MIDCO PTY LTD",
+  "role": "MIDCO",
+  "state": "NSW",
+  "stem": "ODYSSEY",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703797004": {
+  "acn": "703797004",
+  "date": "2026-11-02",
+  "first_seen": "2026-11-02T11:25:03+00:00",
+  "in_register": false,
+  "name": "ODYSSEY BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "NSW",
+  "stem": "ODYSSEY",
+  "suburb": "SYDNEY",
+  "via": "API"
  }
 }
