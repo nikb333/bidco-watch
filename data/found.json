@@ -1685,5 +1685,29 @@
   "stem": "ODYSSEY",
   "suburb": "SYDNEY",
   "via": "API"
+ },
+ "703809876": {
+  "acn": "703809876",
+  "date": "2026-11-03",
+  "first_seen": "2026-11-03T12:01:59+00:00",
+  "in_register": false,
+  "name": "PHOSONE HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "QLD",
+  "stem": "PHOSONE",
+  "suburb": "BRISBANE CITY",
+  "via": "API"
+ },
+ "703810995": {
+  "acn": "703810995",
+  "date": "2026-11-03",
+  "first_seen": "2026-11-03T12:01:59+00:00",
+  "in_register": false,
+  "name": "QFF BIDCO II PTY LTD",
+  "role": "BIDCO",
+  "state": "NSW",
+  "stem": "QFF II",
+  "suburb": "SYDNEY",
+  "via": "API"
  }
 }
