@@ -1709,5 +1709,101 @@
   "stem": "QFF II",
   "suburb": "SYDNEY",
   "via": "API"
+ },
+ "703842406": {
+  "acn": "703842406",
+  "date": "2026-11-04",
+  "first_seen": "2026-11-04T16:24:22+00:00",
+  "in_register": false,
+  "name": "ZEBRA HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "ZEBRA",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703842684": {
+  "acn": "703842684",
+  "date": "2026-11-04",
+  "first_seen": "2026-11-04T16:24:22+00:00",
+  "in_register": false,
+  "name": "ZEBRA MIDCO 1 PTY LTD",
+  "role": "MIDCO",
+  "state": "NSW",
+  "stem": "ZEBRA 1",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703842808": {
+  "acn": "703842808",
+  "date": "2026-11-04",
+  "first_seen": "2026-11-04T16:24:22+00:00",
+  "in_register": false,
+  "name": "ZEBRA MIDCO 2 PTY LTD",
+  "role": "MIDCO",
+  "state": "NSW",
+  "stem": "ZEBRA 2",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703843127": {
+  "acn": "703843127",
+  "date": "2026-11-04",
+  "first_seen": "2026-11-04T16:24:22+00:00",
+  "in_register": false,
+  "name": "ZEBRA MIDCO 3 PTY LTD",
+  "role": "MIDCO",
+  "state": "NSW",
+  "stem": "ZEBRA 3",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703843154": {
+  "acn": "703843154",
+  "date": "2026-11-04",
+  "first_seen": "2026-11-04T16:24:22+00:00",
+  "in_register": false,
+  "name": "SALAS O'BRIEN AUSTRALIA HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "SALAS O BRIEN",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703843476": {
+  "acn": "703843476",
+  "date": "2026-11-04",
+  "first_seen": "2026-11-04T16:24:22+00:00",
+  "in_register": false,
+  "name": "ZEBRA BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "NSW",
+  "stem": "ZEBRA",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703843583": {
+  "acn": "703843583",
+  "date": "2026-11-04",
+  "first_seen": "2026-11-04T16:24:22+00:00",
+  "in_register": false,
+  "name": "PAGAC ZEBRA INTERNATIONAL HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "PAGAC ZEBRA INTERNATIONAL",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703844179": {
+  "acn": "703844179",
+  "date": "2026-11-04",
+  "first_seen": "2026-11-04T16:24:22+00:00",
+  "in_register": false,
+  "name": "SALAS O'BRIEN AUSTRALIA BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "NSW",
+  "stem": "SALAS O BRIEN",
+  "suburb": "SYDNEY",
+  "via": "API"
  }
 }
