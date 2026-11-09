@@ -1889,5 +1889,53 @@
   "stem": "PACIFIC GALAXY SYSTEMS SOLUTIONS",
   "suburb": "SYDNEY",
   "via": "API"
+ },
+ "703978036": {
+  "acn": "703978036",
+  "date": "2026-11-09",
+  "first_seen": "2026-11-09T17:38:10+00:00",
+  "in_register": false,
+  "name": "IDENTITYCO MIDCO PTY LTD",
+  "role": "MIDCO",
+  "state": "VIC",
+  "stem": "IDENTITYCO",
+  "suburb": "MELBOURNE",
+  "via": "API"
+ },
+ "703978134": {
+  "acn": "703978134",
+  "date": "2026-11-09",
+  "first_seen": "2026-11-09T17:38:10+00:00",
+  "in_register": false,
+  "name": "LAURENS FINCO 1 PTY LTD",
+  "role": "FINCO",
+  "state": "NSW",
+  "stem": "LAURENS 1",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703999240": {
+  "acn": "703999240",
+  "date": "2026-11-09",
+  "first_seen": "2026-11-09T17:38:10+00:00",
+  "in_register": false,
+  "name": "WILDCAT (BCC) HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "WA",
+  "stem": "WILDCAT BCC",
+  "suburb": "WEST PERTH",
+  "via": "API"
+ },
+ "703999526": {
+  "acn": "703999526",
+  "date": "2026-11-09",
+  "first_seen": "2026-11-09T17:38:10+00:00",
+  "in_register": false,
+  "name": "WILDCAT (TABBA) HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "WA",
+  "stem": "WILDCAT TABBA",
+  "suburb": "WEST PERTH",
+  "via": "API"
  }
 }
