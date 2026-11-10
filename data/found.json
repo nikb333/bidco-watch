@@ -1957,5 +1957,101 @@
   "stem": "WILDCAT TABBA",
   "suburb": "WEST PERTH",
   "via": "API"
+ },
+ "704016615": {
+  "acn": "704016615",
+  "date": "2026-11-10",
+  "first_seen": "2026-11-10T17:56:53+00:00",
+  "in_register": false,
+  "name": "GSMT ENERZINX AUS MIDCO PTY LTD",
+  "role": "MIDCO",
+  "state": "VIC",
+  "stem": "GSMT ENERZINX",
+  "suburb": "MELBOURNE",
+  "via": "API"
+ },
+ "704019107": {
+  "acn": "704019107",
+  "date": "2026-11-10",
+  "first_seen": "2026-11-10T17:56:53+00:00",
+  "in_register": false,
+  "name": "ATRIUM TOPCO PTY LTD",
+  "role": "TOPCO",
+  "state": "NSW",
+  "stem": "ATRIUM",
+  "suburb": "DARLINGHURST",
+  "via": "API"
+ },
+ "704024108": {
+  "acn": "704024108",
+  "date": "2026-11-10",
+  "first_seen": "2026-11-10T17:56:53+00:00",
+  "in_register": false,
+  "name": "ATRIUM MIDCO PTY LTD",
+  "role": "MIDCO",
+  "state": "NSW",
+  "stem": "ATRIUM",
+  "suburb": "DARLINGHURST",
+  "via": "API"
+ },
+ "704025089": {
+  "acn": "704025089",
+  "date": "2026-11-10",
+  "first_seen": "2026-11-10T17:56:53+00:00",
+  "in_register": false,
+  "name": "ATRIUM HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "ATRIUM",
+  "suburb": "DARLINGHURST",
+  "via": "API"
+ },
+ "704025801": {
+  "acn": "704025801",
+  "date": "2026-11-10",
+  "first_seen": "2026-11-10T17:56:53+00:00",
+  "in_register": false,
+  "name": "ATRIUM BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "NSW",
+  "stem": "ATRIUM",
+  "suburb": "DARLINGHURST",
+  "via": "API"
+ },
+ "704026228": {
+  "acn": "704026228",
+  "date": "2026-11-10",
+  "first_seen": "2026-11-10T17:56:53+00:00",
+  "in_register": false,
+  "name": "NATIS HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "NATIS",
+  "suburb": "COOKS HILL",
+  "via": "API"
+ },
+ "704026586": {
+  "acn": "704026586",
+  "date": "2026-11-10",
+  "first_seen": "2026-11-10T17:56:53+00:00",
+  "in_register": false,
+  "name": "AMITY HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "QLD",
+  "stem": "AMITY",
+  "suburb": "WOOLLOONGABBA",
+  "via": "API"
+ },
+ "704035432": {
+  "acn": "704035432",
+  "date": "2026-11-10",
+  "first_seen": "2026-11-10T17:56:53+00:00",
+  "in_register": false,
+  "name": "YATHROO WIND FARM STAGE 1 FINCO PTY LTD",
+  "role": "FINCO",
+  "state": "NSW",
+  "stem": "YATHROO WIND FARM STAGE 1",
+  "suburb": "SYDNEY",
+  "via": "API"
  }
 }
