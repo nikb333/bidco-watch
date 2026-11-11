@@ -2053,5 +2053,17 @@
   "stem": "YATHROO WIND FARM STAGE 1",
   "suburb": "SYDNEY",
   "via": "API"
+ },
+ "704048395": {
+  "acn": "704048395",
+  "date": "2026-11-11",
+  "first_seen": "2026-11-11T15:23:52+00:00",
+  "in_register": false,
+  "name": "MILTON FINCO PTY LTD",
+  "role": "FINCO",
+  "state": "NSW",
+  "stem": "MILTON",
+  "suburb": "SYDNEY",
+  "via": "API"
  }
 }
