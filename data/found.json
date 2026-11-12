@@ -2065,5 +2065,29 @@
   "stem": "MILTON",
   "suburb": "SYDNEY",
   "via": "API"
+ },
+ "704090684": {
+  "acn": "704090684",
+  "date": "2026-11-12",
+  "first_seen": "2026-11-12T12:54:18+00:00",
+  "in_register": false,
+  "name": "HOMETOWN FINCO 7 PTY LTD",
+  "role": "FINCO",
+  "state": "NSW",
+  "stem": "HOMETOWN 7",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "704102750": {
+  "acn": "704102750",
+  "date": "2026-11-12",
+  "first_seen": "2026-11-12T12:54:18+00:00",
+  "in_register": false,
+  "name": "PROFIN HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "SA",
+  "stem": "PROFIN",
+  "suburb": "KENT TOWN",
+  "via": "API"
  }
 }
