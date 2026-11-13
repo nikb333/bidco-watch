@@ -2089,5 +2089,29 @@
   "stem": "PROFIN",
   "suburb": "KENT TOWN",
   "via": "API"
+ },
+ "704128343": {
+  "acn": "704128343",
+  "date": "2026-11-13",
+  "first_seen": "2026-11-13T09:42:12+00:00",
+  "in_register": false,
+  "name": "IDENTITYCO BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "VIC",
+  "stem": "IDENTITYCO",
+  "suburb": "MELBOURNE",
+  "via": "API"
+ },
+ "704132696": {
+  "acn": "704132696",
+  "date": "2026-11-13",
+  "first_seen": "2026-11-13T09:42:12+00:00",
+  "in_register": false,
+  "name": "THE PILLARS HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "THE PILLARS",
+  "suburb": "SYDNEY",
+  "via": "API"
  }
 }
