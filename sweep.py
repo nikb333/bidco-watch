@@ -62,6 +62,11 @@ DEBT = {"FINCO", "MEZZCO", "PIKCO", "BONDCO", "DEBTCO"}
 # two different stems and never group into a stack.
 SUF = re.compile(r"\b(PTY|LTD|LIMITED|PROPRIETARY|CO|AUSTRALIA|AU|AUS|HOLDINGS?|"
                  r"HOLDING|GROUP|ACQUISITIONS?|NO\.?\s*\d+)\b\.?", re.I)
+# The corporate-suffix-only form. SUF above also strips geography (AUSTRALIA, AU,
+# AUS) and generic words, which is right for GROUPING - it is what makes
+# "DANONE AU HOLDCO" and "DANONE AUSTRALIA BIDCO" one structure - but it must
+# never be what decides whether a company is kept at all. See stem_key().
+SUF_CORP = re.compile(r"\b(PTY|LTD|LIMITED|PROPRIETARY|NO\.?\s*\d+)\b\.?", re.I)
 NOISE = re.compile(r"\b(SMSF|SUPER|SUPERFUND|SUPERANNUATION|FAMILY|CUSTODIAN|BARE)\b", re.I)
 ORDER = ["TOPCO", "PARENTCO", "HOLDCO", "INTERMEDIATECO", "MIDCO", "MEZZCO", "PIKCO",
          "FINCO", "BONDCO", "DEBTCO", "NEWCO", "BUYCO", "ACQUISITIONCO", "BIDCO"]
@@ -473,9 +478,30 @@ def find_frontier(anchor: int = 0, max_advance: int = 0) -> int:
               f"the advance guard may be too tight")
     return result
 
-def stem_of(name: str) -> str:
-    s = SUF.sub(" ", ROLE.sub(" ", (name or "").upper()))
+def _clean(s: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"[^A-Z0-9 ]", " ", s)).strip()
+
+
+def stem_of(name: str) -> str:
+    return _clean(SUF.sub(" ", ROLE.sub(" ", (name or "").upper())))
+
+
+def stem_key(name: str) -> str:
+    """A grouping key that cannot collapse to nothing.
+
+    stem_of() strips AUSTRALIA/AU/AUS and GROUP/HOLDINGS so a sponsor's vehicles
+    land on one stem whatever geography they carry. That is right for grouping
+    and wrong as a filter: applied to a short acronym it eats the entire name.
+    "RBC AUSTRALIA BIDCO PTY LIMITED" reduces to "RBC" and "GR AUSTRALIA BIDCO
+    PTY LTD" to "GR", and the len<=3 guard then deleted both outright - two
+    Bidcos the sweep had already looked at and resolved, which turned up on the
+    weekly register run instead. Fall back to the geography-preserving form
+    before giving up.
+    """
+    s = stem_of(name)
+    if len(s) > 3:
+        return s
+    return _clean(SUF_CORP.sub(" ", ROLE.sub(" ", (name or "").upper()))) or s
 
 
 def role_of(name: str) -> str:
@@ -511,8 +537,11 @@ def merge_ledger(ledger: dict, rows: list[dict], now_iso: str) -> int:
         role = role_of(r["name"])
         if not role:
             continue
-        st = stem_of(r["name"])
-        if not st or len(st) <= 3 or NOISE.search(st):
+        st = stem_key(r["name"])
+        # No length guard here. A company carrying an explicit role word has
+        # already passed the only filter that matters. Stem length decides how a
+        # vehicle GROUPS, never whether it is kept.
+        if not st or NOISE.search(st):
             continue
         if r["acn"] in ledger:
             ledger[r["acn"]].update({"name": r["name"], "role": role, "stem": st,
@@ -565,8 +594,8 @@ def group(rows: list[dict]) -> tuple[list, list, list]:
     """
     g = defaultdict(list)
     for r in rows:
-        s = r.get("stem") or stem_of(r["name"])
-        if s and len(s) > 3 and not NOISE.search(s):
+        s = r.get("stem") or stem_key(r["name"])
+        if s and not NOISE.search(s):
             g[s].append(r)
 
     stacks, bidcos, other = [], [], []
@@ -1057,7 +1086,8 @@ def coverage(seen: dict, frontier: int, fwd_lo: int, trail_lo: int,
 
 def write_run(state, now, started, **kw):
     run = {
-        "finished_utc": now.isoformat(timespec="seconds"),
+        "started_utc": now.isoformat(timespec="seconds"),
+        "finished_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "elapsed_min": round((time.time() - started) / 60, 1),
         "status": kw.get("status", "ok"),
         "error": kw.get("error", ""),
