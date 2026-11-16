@@ -48,9 +48,19 @@ RATE_PER_MIN = 48
 GAP = 60.0 / RATE_PER_MIN
 
 W = [8, 7, 6, 5, 4, 3, 2, 1]
+# Two shapes, because the register carries both. "AEG MIDCO2" needs the trailing
+# digits inside the match or \b fails between "O" and "2" and the whole company is
+# invisible. The spaced form is the same word with a space in it - ASIA DIGITAL
+# BID CO / HOLD CO is a real bid structure that matched nothing at all - and it is
+# only accepted when a corporate suffix follows, which is what stops ordinary
+# trading names ending in "... CO PTY LTD" from flooding in. ACQUISITION and
+# INTERMEDIATE are deliberately NOT in the spaced list: "CUSTOMER ACQUISITION CO"
+# is a line of business, not a vehicle.
 ROLE = re.compile(
     r"\b(BIDCO|TOPCO|MIDCO|HOLDCO|FINCO|MEZZCO|PIKCO|BONDCO|DEBTCO|"
-    r"NEWCO|INTERMEDIATECO|BUYCO|PARENTCO|ACQUISITIONCO)\b", re.I)
+    r"NEWCO|INTERMEDIATECO|BUYCO|PARENTCO|ACQUISITIONCO)\d*\b"
+    r"|\b(BID|TOP|MID|HOLD|FIN|MEZZ|PIK|BOND|DEBT|NEW|BUY|PARENT)"
+    r"\s+CO\b\.?(?=\s*(?:PTY|LTD|LIMITED|PROPRIETARY))", re.I)
 BID = re.compile(r"\bBIDCO\b", re.I)
 # "A.C.N. 698 332 240 PTY LTD" - a shelf company registered without a name yet.
 # ZELORA TOPCO/MEZZCO/HOLDCO spent thirteen days looking exactly like this before
@@ -67,7 +77,9 @@ SUF = re.compile(r"\b(PTY|LTD|LIMITED|PROPRIETARY|CO|AUSTRALIA|AU|AUS|HOLDINGS?|
 # "DANONE AU HOLDCO" and "DANONE AUSTRALIA BIDCO" one structure - but it must
 # never be what decides whether a company is kept at all. See stem_key().
 SUF_CORP = re.compile(r"\b(PTY|LTD|LIMITED|PROPRIETARY|NO\.?\s*\d+)\b\.?", re.I)
-NOISE = re.compile(r"\b(SMSF|SUPER|SUPERFUND|SUPERANNUATION|FAMILY|CUSTODIAN|BARE)\b", re.I)
+# CUSTODIAN was removed: it vetoed ELEVATE HOLDCO CUSTODIAN PTY LTD, a real
+# Holdco, and a custodian entity inside a structure is part of the structure.
+NOISE = re.compile(r"\b(SMSF|SUPER|SUPERFUND|SUPERANNUATION|FAMILY|BARE)\b", re.I)
 ORDER = ["TOPCO", "PARENTCO", "HOLDCO", "INTERMEDIATECO", "MIDCO", "MEZZCO", "PIKCO",
          "FINCO", "BONDCO", "DEBTCO", "NEWCO", "BUYCO", "ACQUISITIONCO", "BIDCO"]
 
@@ -506,7 +518,11 @@ def stem_key(name: str) -> str:
 
 def role_of(name: str) -> str:
     m = ROLE.search(name or "")
-    return m.group(1).upper() if m else ""
+    if not m:
+        return ""
+    # Group 2 is the spaced form; normalise "HOLD CO" to HOLDCO so a spaced and an
+    # unspaced sibling sort and group as the same role.
+    return (m.group(1) or (m.group(2) + "CO")).upper()
 
 
 LEDGER = DATA / "found.json"
