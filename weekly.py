@@ -31,7 +31,7 @@ UA = f"bidco-watch/1.0 (+{UA})" if UA else "bidco-watch/1.0"
 CKAN = "https://data.gov.au/data/api/3/action/package_search?q=ASIC+company+register&rows=5"
 
 sys.path.insert(0, str(ROOT))
-from sweep import ROLE, BID, NOISE, stem_of, role_of  # noqa: E402
+from sweep import ROLE, BID, NOISE, stem_key, role_of  # noqa: E402
 
 WINDOW_DAYS = int(__import__("os").environ.get("WEEKLY_WINDOW_DAYS", "180"))
 
@@ -127,12 +127,15 @@ def main() -> int:
     # register, 24 of 58 families carried no Bidco at all.
     counts = defaultdict(int)
     for e in by_acn.values():
-        st = stem_of(e["name"])
-        if st and len(st) > 3 and not NOISE.search(st):
+        st = stem_key(e["name"])
+        # Same rule as the sweep: stem length decides how a vehicle GROUPS, never
+        # whether it counts. "RBC AUSTRALIA BIDCO" reduces to "RBC" and used to be
+        # dropped here too, so a short-acronym family could never form a stack.
+        if st and not NOISE.search(st):
             counts[st] += 1
     stack_has_bidco = defaultdict(bool)
     for e in by_acn.values():
-        st = stem_of(e["name"])
+        st = stem_key(e["name"])
         if counts.get(st, 0) >= 2 and BID.search(e["name"]):
             stack_has_bidco[st] = True
 
@@ -140,14 +143,29 @@ def main() -> int:
     for e in sorted(by_acn.values(),
                     key=lambda x: (datetime.strptime(x["date"], "%d/%m/%Y"), x["acn"]),
                     reverse=True):
-        st = stem_of(e["name"])
+        st = stem_key(e["name"])
         in_stack = counts.get(st, 0) >= 2
         entities.append({**e, "stem": st, "in_stack": in_stack,
                          "stack_has_bidco": bool(stack_has_bidco.get(st)),
                          "is_bidco": bool(BID.search(e["name"]))})
 
     # ---- reconciliation: what did the daily sweep already have?
+    # The LEDGER is the comparison set, not daily.json.
+    #
+    # daily.json holds only what is still WAITING to appear in the register -
+    # group() is handed `waiting`, and this job itself marks an entry in_register
+    # once it turns up here. So the moment the sweep is proved right about a
+    # company, that company leaves daily.json, and judging against daily.json then
+    # counted it as a miss. Measured on 16 November: 90 of 99 reported misses were
+    # companies the sweep had found first, and true recall was 92% against a
+    # reported 14.7%. found.json only ever grows and is the honest record.
     seen_acns: set[str] = set()
+    lp = DATA / "found.json"
+    if lp.exists():
+        try:
+            seen_acns |= set(json.loads(lp.read_text()).keys())
+        except Exception as ex:
+            print(f"[recon] found.json unreadable ({ex}) - falling back to daily.json")
     dp = DATA / "daily.json"
     if dp.exists():
         dj = json.loads(dp.read_text())
