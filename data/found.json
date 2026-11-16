@@ -2113,5 +2113,17 @@
   "stem": "THE PILLARS",
   "suburb": "SYDNEY",
   "via": "API"
+ },
+ "704165177": {
+  "acn": "704165177",
+  "date": "2026-11-16",
+  "first_seen": "2026-11-16T11:42:27+00:00",
+  "in_register": false,
+  "name": "NEWCO CAPITAL PTY LTD",
+  "role": "NEWCO",
+  "state": "NSW",
+  "stem": "CAPITAL",
+  "suburb": "ORANGE",
+  "via": "API"
  }
 }
