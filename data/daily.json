@@ -1,35 +1,36 @@
 {
  "run": {
-  "finished_utc": "2026-11-16T11:42:27+00:00",
-  "elapsed_min": 195.0,
+  "started_utc": "2026-11-17T14:37:28+00:00",
+  "finished_utc": "2026-11-17T17:55:37+00:00",
+  "elapsed_min": 198.2,
   "status": "ok",
   "error": "",
-  "frontier_base": 70419951,
+  "frontier_base": 70423951,
   "window": [
-   "704159526",
-   "704199511"
+   "704199520",
+   "704239510"
   ],
-  "slots_swept": 5804,
-  "slots_queued": 5805,
+  "slots_swept": 5896,
+  "slots_queued": 5897,
   "slots_left": 0,
   "gaps_queued": 1,
-  "recheck_queued": 1671,
-  "companies": 29549,
+  "recheck_queued": 1753,
+  "companies": 30061,
   "trailing_slots": 20000,
   "slots_errored": 1,
-  "ledger_new": 1,
-  "ledger_waiting": 18,
-  "ledger_in_register": 147,
+  "ledger_new": 20,
+  "ledger_waiting": 21,
+  "ledger_in_register": 164,
   "coverage": {
-   "from_acn": "703959522",
-   "to_acn": "704199511",
+   "from_acn": "703999526",
+   "to_acn": "704239510",
    "slots": 24000,
    "checked": 23999,
    "remaining": 1,
-   "companies": 6327,
+   "companies": 6491,
    "register_known": true,
-   "register_to_acn": "703972258",
-   "slots_per_day": 2846,
+   "register_to_acn": "704162416",
+   "slots_per_day": 2879,
    "rate_per_min": 48,
    "run_minutes": 335,
    "zones": [
@@ -37,27 +38,27 @@
      "key": "new",
      "label": "New registrations",
      "why": "Everything registered since the last finished sweep. These go to the front of the queue on every run, so this should sit at or near 100%. Note what 'checked' means: the slot has been looked at once. A company that registers into a slot an earlier run already found empty is caught by the re-check in the next pass, not here.",
-     "from_acn": "704159526",
-     "to_acn": "704199511",
+     "from_acn": "704199520",
+     "to_acn": "704239510",
      "slots": 4000,
      "checked": 4000,
      "remaining": 0,
      "days": 1.4,
      "covered_by_register": 0,
-     "companies": 1048
+     "companies": 1123
     },
     {
      "key": "catchup",
      "label": "Back-fill of older slots",
      "why": "Slots an earlier run ran out of clock before reaching, plus a second look at slots that came back empty - ACNs are handed out ahead of use, so an empty slot can fill in later. Deliberately queued behind the new slots: if a run runs short, this is the right thing to lose.",
-     "from_acn": "703959522",
-     "to_acn": "704159517",
+     "from_acn": "703999526",
+     "to_acn": "704199511",
      "slots": 20000,
      "checked": 19999,
      "remaining": 1,
-     "days": 7.0,
-     "covered_by_register": 1274,
-     "companies": 5279
+     "days": 6.9,
+     "covered_by_register": 16290,
+     "companies": 5368
     }
    ],
    "passes": [
@@ -65,8 +66,8 @@
      "key": "new",
      "n": 1,
      "label": "New registrations",
-     "from_acn": "704159526",
-     "to_acn": "704199511",
+     "from_acn": "704199520",
+     "to_acn": "704239510",
      "total": 4000,
      "outstanding": 0,
      "why": "Everything issued since the last finished sweep. First in the queue on every run. This is the number that says whether you are current."
@@ -75,8 +76,8 @@
      "key": "gaps",
      "n": 2,
      "label": "Never looked at",
-     "from_acn": "703959522",
-     "to_acn": "704159517",
+     "from_acn": "703999526",
+     "to_acn": "704199511",
      "total": 20000,
      "outstanding": 1,
      "why": "Slots inside the trailing window that no run has ever queried - what a run that ran out of clock leaves behind. Nothing has seen these, so they outrank re-checks."
@@ -85,22 +86,22 @@
      "key": "recheck",
      "n": 3,
      "label": "Second look at empty slots",
-     "from_acn": "703349517",
-     "to_acn": "703999517",
+     "from_acn": "703389511",
+     "to_acn": "704039510",
      "total": 0,
      "outstanding": 0,
      "bands": [
       {
        "band": "20k-27k back",
        "outstanding": 0,
-       "from_acn": "703929515",
-       "to_acn": "703999517"
+       "from_acn": "703969519",
+       "to_acn": "704039510"
       },
       {
        "band": "72k-85k back",
        "outstanding": 0,
-       "from_acn": "703349517",
-       "to_acn": "703479510"
+       "from_acn": "703389511",
+       "to_acn": "703519519"
       }
      ],
      "why": "Slots already queried that came back empty. ACNs are issued ahead of use, so a company can appear in a slot an earlier run found bare. Each gets exactly two more looks, timed to the two observed lag clusters."
@@ -111,27 +112,13 @@
      "label": "Shelf companies, re-queried",
      "from_acn": "",
      "to_acn": "",
-     "total": 143,
-     "outstanding": 143,
+     "total": 148,
+     "outstanding": 148,
      "rolling": true,
      "why": "Companies registered under a numeric placeholder name and renamed later - re-asked for 120 days. This never reaches zero by design; it is a rolling window, not a backlog."
     }
    ],
    "buckets": [
-    {
-     "from": "703959522",
-     "to": "703979515",
-     "checked": 2000,
-     "slots": 2000,
-     "zone": "catchup"
-    },
-    {
-     "from": "703979524",
-     "to": "703999517",
-     "checked": 2000,
-     "slots": 2000,
-     "zone": "catchup"
-    },
     {
      "from": "703999526",
      "to": "704019518",
@@ -193,11 +180,25 @@
      "to": "704179519",
      "checked": 2000,
      "slots": 2000,
-     "zone": "new"
+     "zone": "catchup"
     },
     {
      "from": "704179528",
      "to": "704199511",
+     "checked": 2000,
+     "slots": 2000,
+     "zone": "catchup"
+    },
+    {
+     "from": "704199520",
+     "to": "704219518",
+     "checked": 2000,
+     "slots": 2000,
+     "zone": "new"
+    },
+    {
+     "from": "704219527",
+     "to": "704239510",
      "checked": 2000,
      "slots": 2000,
      "zone": "new"
@@ -207,85 +208,67 @@
  },
  "stacks": [
   {
-   "stem": "ATRIUM",
-   "first": "2026-11-10",
-   "has_bidco": true,
-   "finco": false,
-   "phased": false,
-   "members": [
-    {
-     "acn": "704019107",
-     "name": "ATRIUM TOPCO PTY LTD",
-     "date": "2026-11-10",
-     "role": "TOPCO",
-     "suburb": "DARLINGHURST",
-     "state": "NSW",
-     "via": "API",
-     "first_seen": "2026-11-10T17:56:53+00:00"
-    },
-    {
-     "acn": "704025089",
-     "name": "ATRIUM HOLDCO PTY LTD",
-     "date": "2026-11-10",
-     "role": "HOLDCO",
-     "suburb": "DARLINGHURST",
-     "state": "NSW",
-     "via": "API",
-     "first_seen": "2026-11-10T17:56:53+00:00"
-    },
-    {
-     "acn": "704024108",
-     "name": "ATRIUM MIDCO PTY LTD",
-     "date": "2026-11-10",
-     "role": "MIDCO",
-     "suburb": "DARLINGHURST",
-     "state": "NSW",
-     "via": "API",
-     "first_seen": "2026-11-10T17:56:53+00:00"
-    },
-    {
-     "acn": "704025801",
-     "name": "ATRIUM BIDCO PTY LTD",
-     "date": "2026-11-10",
-     "role": "BIDCO",
-     "suburb": "DARLINGHURST",
-     "state": "NSW",
-     "via": "API",
-     "first_seen": "2026-11-10T17:56:53+00:00"
-    }
-   ]
-  },
-  {
-   "stem": "IDENTITYCO",
-   "first": "2026-11-09",
-   "has_bidco": true,
-   "finco": false,
+   "stem": "KG",
+   "first": "2026-10-19",
+   "has_bidco": false,
+   "finco": true,
    "phased": true,
    "members": [
     {
-     "acn": "703978036",
-     "name": "IDENTITYCO MIDCO PTY LTD",
-     "date": "2026-11-09",
-     "role": "MIDCO",
-     "suburb": "MELBOURNE",
-     "state": "VIC",
+     "acn": "703368129",
+     "name": "KG HOLDCO PTY LTD",
+     "date": "2026-10-19",
+     "role": "HOLDCO",
+     "suburb": "BRISBANE CITY",
+     "state": "QLD",
      "via": "API",
-     "first_seen": "2026-11-09T17:38:10+00:00"
+     "first_seen": "2026-11-17T14:37:28+00:00"
     },
     {
-     "acn": "704128343",
-     "name": "IDENTITYCO BIDCO PTY LTD",
-     "date": "2026-11-13",
-     "role": "BIDCO",
-     "suburb": "MELBOURNE",
-     "state": "VIC",
+     "acn": "703988327",
+     "name": "KG FINCO PTY LTD",
+     "date": "2026-11-09",
+     "role": "FINCO",
+     "suburb": "BRISBANE CITY",
+     "state": "QLD",
      "via": "API",
-     "first_seen": "2026-11-13T09:42:12+00:00"
+     "first_seen": "2026-11-17T14:37:28+00:00"
     }
    ]
   }
  ],
- "singles": [],
+ "singles": [
+  {
+   "acn": "704225454",
+   "name": "GEDEON RICHTER AUSTRALIA BIDCO PTY LTD",
+   "date": "2026-11-17",
+   "role": "BIDCO",
+   "suburb": "CREMORNE",
+   "state": "VIC",
+   "via": "API",
+   "first_seen": "2026-11-17T14:37:28+00:00"
+  },
+  {
+   "acn": "704128898",
+   "name": "GR AUSTRALIA BIDCO PTY LTD",
+   "date": "2026-11-13",
+   "role": "BIDCO",
+   "suburb": "ELANORA",
+   "state": "QLD",
+   "via": "API",
+   "first_seen": "2026-11-17T14:37:28+00:00"
+  },
+  {
+   "acn": "704015243",
+   "name": "RBC AUSTRALIA BIDCO PTY LIMITED",
+   "date": "2026-11-10",
+   "role": "BIDCO",
+   "suburb": "MELBOURNE",
+   "state": "VIC",
+   "via": "API",
+   "first_seen": "2026-11-17T14:37:28+00:00"
+  }
+ ],
  "role_only": [
   {
    "acn": "704165177",
@@ -298,114 +281,154 @@
    "first_seen": "2026-11-16T11:42:27+00:00"
   },
   {
-   "acn": "704132696",
-   "name": "THE PILLARS HOLDCO PTY LTD",
+   "acn": "704124792",
+   "name": "BRIDGES GROUP HOLD CO PTY LTD",
    "date": "2026-11-13",
    "role": "HOLDCO",
-   "suburb": "SYDNEY",
-   "state": "NSW",
+   "suburb": "ROBINA",
+   "state": "QLD",
    "via": "API",
-   "first_seen": "2026-11-13T09:42:12+00:00"
+   "first_seen": "2026-11-17T14:37:28+00:00"
   },
   {
-   "acn": "704090684",
-   "name": "HOMETOWN FINCO 7 PTY LTD",
+   "acn": "704110887",
+   "name": "AEG MIDCO2 PTY LTD",
    "date": "2026-11-12",
-   "role": "FINCO",
-   "suburb": "SYDNEY",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-11-12T12:54:18+00:00"
-  },
-  {
-   "acn": "704102750",
-   "name": "PROFIN HOLDCO PTY LTD",
-   "date": "2026-11-12",
-   "role": "HOLDCO",
-   "suburb": "KENT TOWN",
-   "state": "SA",
-   "via": "API",
-   "first_seen": "2026-11-12T12:54:18+00:00"
-  },
-  {
-   "acn": "704048395",
-   "name": "MILTON FINCO PTY LTD",
-   "date": "2026-11-11",
-   "role": "FINCO",
-   "suburb": "SYDNEY",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-11-11T15:23:52+00:00"
-  },
-  {
-   "acn": "704016615",
-   "name": "GSMT ENERZINX AUS MIDCO PTY LTD",
-   "date": "2026-11-10",
    "role": "MIDCO",
-   "suburb": "MELBOURNE",
+   "suburb": "SYDNEY",
+   "state": "NSW",
+   "via": "API",
+   "first_seen": "2026-11-17T14:37:28+00:00"
+  },
+  {
+   "acn": "703973086",
+   "name": "ETG HOLDCO PTY LTD",
+   "date": "2026-11-09",
+   "role": "HOLDCO",
+   "suburb": "SOUTH MELBOURNE",
    "state": "VIC",
    "via": "API",
-   "first_seen": "2026-11-10T17:56:53+00:00"
+   "first_seen": "2026-11-17T14:37:28+00:00"
   },
   {
-   "acn": "704026228",
-   "name": "NATIS HOLDCO PTY LTD",
-   "date": "2026-11-10",
+   "acn": "703899414",
+   "name": "KWM HOLDCO PTY LTD",
+   "date": "2026-11-05",
    "role": "HOLDCO",
    "suburb": "COOKS HILL",
    "state": "NSW",
    "via": "API",
-   "first_seen": "2026-11-10T17:56:53+00:00"
+   "first_seen": "2026-11-17T14:37:28+00:00"
   },
   {
-   "acn": "704026586",
-   "name": "AMITY HOLDCO PTY LTD",
-   "date": "2026-11-10",
+   "acn": "703732487",
+   "name": "4JC HOLD CO PTY LTD",
+   "date": "2026-10-30",
    "role": "HOLDCO",
-   "suburb": "WOOLLOONGABBA",
+   "suburb": "ROWVILLE",
+   "state": "VIC",
+   "via": "API",
+   "first_seen": "2026-11-17T14:37:28+00:00"
+  },
+  {
+   "acn": "703576998",
+   "name": "SOUTHERN STUMPING HOLD CO PTY LTD",
+   "date": "2026-10-26",
+   "role": "HOLDCO",
+   "suburb": "CRANBOURNE",
+   "state": "VIC",
+   "via": "API",
+   "first_seen": "2026-11-17T14:37:28+00:00"
+  },
+  {
+   "acn": "703577780",
+   "name": "SOUTHERN COMMERCIAL PROPERTY HOLD CO PTY LTD",
+   "date": "2026-10-26",
+   "role": "HOLDCO",
+   "suburb": "CRANBOURNE",
+   "state": "VIC",
+   "via": "API",
+   "first_seen": "2026-11-17T14:37:28+00:00"
+  },
+  {
+   "acn": "703495470",
+   "name": "EVERSON HOLD CO PTY LTD",
+   "date": "2026-10-22",
+   "role": "HOLDCO",
+   "suburb": "TUGGERAH",
+   "state": "NSW",
+   "via": "API",
+   "first_seen": "2026-11-17T14:37:28+00:00"
+  },
+  {
+   "acn": "703439070",
+   "name": "ROBSON HOLD CO PTY LTD",
+   "date": "2026-10-21",
+   "role": "HOLDCO",
+   "suburb": "ALLAMBIE HEIGHTS",
+   "state": "NSW",
+   "via": "API",
+   "first_seen": "2026-11-17T14:37:28+00:00"
+  },
+  {
+   "acn": "703400015",
+   "name": "QRSG HOLD CO PTY LTD",
+   "date": "2026-10-20",
+   "role": "HOLDCO",
+   "suburb": "ERINA",
+   "state": "NSW",
+   "via": "API",
+   "first_seen": "2026-11-17T14:37:28+00:00"
+  },
+  {
+   "acn": "703361657",
+   "name": "SCM AUSTRALIA HOLDCO PTY LTD",
+   "date": "2026-10-19",
+   "role": "HOLDCO",
+   "suburb": "BRISBANE CITY",
    "state": "QLD",
    "via": "API",
-   "first_seen": "2026-11-10T17:56:53+00:00"
+   "first_seen": "2026-11-17T14:37:28+00:00"
   },
   {
-   "acn": "704035432",
-   "name": "YATHROO WIND FARM STAGE 1 FINCO PTY LTD",
-   "date": "2026-11-10",
-   "role": "FINCO",
-   "suburb": "SYDNEY",
+   "acn": "703362547",
+   "name": "PFC HOLD CO PTY LTD",
+   "date": "2026-10-19",
+   "role": "HOLDCO",
+   "suburb": "ERINA",
    "state": "NSW",
    "via": "API",
-   "first_seen": "2026-11-10T17:56:53+00:00"
+   "first_seen": "2026-11-17T14:37:28+00:00"
   },
   {
-   "acn": "703978134",
-   "name": "LAURENS FINCO 1 PTY LTD",
-   "date": "2026-11-09",
-   "role": "FINCO",
-   "suburb": "SYDNEY",
+   "acn": "703362565",
+   "name": "MFC HOLD CO PTY LTD",
+   "date": "2026-10-19",
+   "role": "HOLDCO",
+   "suburb": "ERINA",
    "state": "NSW",
    "via": "API",
-   "first_seen": "2026-11-09T17:38:10+00:00"
+   "first_seen": "2026-11-17T14:37:28+00:00"
   },
   {
-   "acn": "703999240",
-   "name": "WILDCAT (BCC) HOLDCO PTY LTD",
-   "date": "2026-11-09",
+   "acn": "703297894",
+   "name": "POPPY HOLD CO PTY LTD",
+   "date": "2026-10-16",
    "role": "HOLDCO",
-   "suburb": "WEST PERTH",
-   "state": "WA",
+   "suburb": "MELBOURNE",
+   "state": "VIC",
    "via": "API",
-   "first_seen": "2026-11-09T17:38:10+00:00"
+   "first_seen": "2026-11-17T14:37:28+00:00"
   },
   {
-   "acn": "703999526",
-   "name": "WILDCAT (TABBA) HOLDCO PTY LTD",
-   "date": "2026-11-09",
+   "acn": "703239169",
+   "name": "HUMBER HOLD CO PTY LTD",
+   "date": "2026-10-14",
    "role": "HOLDCO",
-   "suburb": "WEST PERTH",
-   "state": "WA",
+   "suburb": "CARINGBAH",
+   "state": "NSW",
    "via": "API",
-   "first_seen": "2026-11-09T17:38:10+00:00"
+   "first_seen": "2026-11-17T14:37:28+00:00"
   }
  ]
 }

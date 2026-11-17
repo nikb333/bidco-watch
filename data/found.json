@@ -1221,6 +1221,18 @@
   "suburb": "SYDNEY",
   "via": "API"
  },
+ "703239169": {
+  "acn": "703239169",
+  "date": "2026-10-14",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "HUMBER HOLD CO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "HUMBER",
+  "suburb": "CARINGBAH",
+  "via": "API"
+ },
  "703274319": {
   "acn": "703274319",
   "date": "2026-10-15",
@@ -1286,6 +1298,18 @@
   "suburb": "EIGHT MILE PLAINS",
   "via": "API"
  },
+ "703297894": {
+  "acn": "703297894",
+  "date": "2026-10-16",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "POPPY HOLD CO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "POPPY",
+  "suburb": "MELBOURNE",
+  "via": "API"
+ },
  "703303182": {
   "acn": "703303182",
   "date": "2026-10-16",
@@ -1338,6 +1362,54 @@
   "suburb": "SYDNEY",
   "via": "API"
  },
+ "703361657": {
+  "acn": "703361657",
+  "date": "2026-10-19",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "SCM AUSTRALIA HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "QLD",
+  "stem": "SCM AUSTRALIA",
+  "suburb": "BRISBANE CITY",
+  "via": "API"
+ },
+ "703362547": {
+  "acn": "703362547",
+  "date": "2026-10-19",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "PFC HOLD CO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "PFC",
+  "suburb": "ERINA",
+  "via": "API"
+ },
+ "703362565": {
+  "acn": "703362565",
+  "date": "2026-10-19",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "MFC HOLD CO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "MFC",
+  "suburb": "ERINA",
+  "via": "API"
+ },
+ "703368129": {
+  "acn": "703368129",
+  "date": "2026-10-19",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "KG HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "QLD",
+  "stem": "KG",
+  "suburb": "BRISBANE CITY",
+  "via": "API"
+ },
  "703373399": {
   "acn": "703373399",
   "date": "2026-10-19",
@@ -1349,6 +1421,18 @@
   "state": "NSW",
   "stem": "HAGAN",
   "suburb": "WEST GOSFORD",
+  "via": "API"
+ },
+ "703400015": {
+  "acn": "703400015",
+  "date": "2026-10-20",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "QRSG HOLD CO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "QRSG",
+  "suburb": "ERINA",
   "via": "API"
  },
  "703409410": {
@@ -1375,6 +1459,18 @@
   "state": "QLD",
   "stem": "IPC BOND",
   "suburb": "MOLENDINAR",
+  "via": "API"
+ },
+ "703439070": {
+  "acn": "703439070",
+  "date": "2026-10-21",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "ROBSON HOLD CO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "ROBSON",
+  "suburb": "ALLAMBIE HEIGHTS",
   "via": "API"
  },
  "703450515": {
@@ -1455,6 +1551,18 @@
   "suburb": "SYDNEY",
   "via": "API"
  },
+ "703495470": {
+  "acn": "703495470",
+  "date": "2026-10-22",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "EVERSON HOLD CO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "EVERSON",
+  "suburb": "TUGGERAH",
+  "via": "API"
+ },
  "703507564": {
   "acn": "703507564",
   "date": "2026-10-23",
@@ -1494,6 +1602,18 @@
   "suburb": "NORTH SYDNEY",
   "via": "API"
  },
+ "703576998": {
+  "acn": "703576998",
+  "date": "2026-10-26",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "SOUTHERN STUMPING HOLD CO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "SOUTHERN STUMPING",
+  "suburb": "CRANBOURNE",
+  "via": "API"
+ },
  "703577646": {
   "acn": "703577646",
   "date": "2026-10-26",
@@ -1505,6 +1625,18 @@
   "state": "QLD",
   "stem": "MURRAY BRIDGE",
   "suburb": "BRISBANE CITY",
+  "via": "API"
+ },
+ "703577780": {
+  "acn": "703577780",
+  "date": "2026-10-26",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "SOUTHERN COMMERCIAL PROPERTY HOLD CO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "SOUTHERN COMMERCIAL PROPERTY",
+  "suburb": "CRANBOURNE",
   "via": "API"
  },
  "703610280": {
@@ -1648,6 +1780,18 @@
   "state": "NSW",
   "stem": "CURIS",
   "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "703732487": {
+  "acn": "703732487",
+  "date": "2026-10-30",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "4JC HOLD CO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "4JC",
+  "suburb": "ROWVILLE",
   "via": "API"
  },
  "703776925": {
@@ -1832,6 +1976,18 @@
   "suburb": "MELBOURNE",
   "via": "API"
  },
+ "703899414": {
+  "acn": "703899414",
+  "date": "2026-11-05",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "KWM HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "KWM",
+  "suburb": "COOKS HILL",
+  "via": "API"
+ },
  "703918790": {
   "acn": "703918790",
   "date": "2026-11-06",
@@ -1910,6 +2066,18 @@
   "suburb": "SYDNEY",
   "via": "API"
  },
+ "703973086": {
+  "acn": "703973086",
+  "date": "2026-11-09",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "ETG HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "ETG",
+  "suburb": "SOUTH MELBOURNE",
+  "via": "API"
+ },
  "703978036": {
   "acn": "703978036",
   "date": "2026-11-09",
@@ -1936,6 +2104,18 @@
   "suburb": "SYDNEY",
   "via": "API"
  },
+ "703988327": {
+  "acn": "703988327",
+  "date": "2026-11-09",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "KG FINCO PTY LTD",
+  "role": "FINCO",
+  "state": "QLD",
+  "stem": "KG",
+  "suburb": "BRISBANE CITY",
+  "via": "API"
+ },
  "703999240": {
   "acn": "703999240",
   "date": "2026-11-09",
@@ -1960,6 +2140,18 @@
   "state": "WA",
   "stem": "WILDCAT TABBA",
   "suburb": "WEST PERTH",
+  "via": "API"
+ },
+ "704015243": {
+  "acn": "704015243",
+  "date": "2026-11-10",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "RBC AUSTRALIA BIDCO PTY LIMITED",
+  "role": "BIDCO",
+  "state": "VIC",
+  "stem": "RBC AUSTRALIA",
+  "suburb": "MELBOURNE",
   "via": "API"
  },
  "704016615": {
@@ -2105,6 +2297,30 @@
   "suburb": "KENT TOWN",
   "via": "API"
  },
+ "704110887": {
+  "acn": "704110887",
+  "date": "2026-11-12",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "AEG MIDCO2 PTY LTD",
+  "role": "MIDCO",
+  "state": "NSW",
+  "stem": "AEG",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "704124792": {
+  "acn": "704124792",
+  "date": "2026-11-13",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "BRIDGES GROUP HOLD CO PTY LTD",
+  "role": "HOLDCO",
+  "state": "QLD",
+  "stem": "BRIDGES",
+  "suburb": "ROBINA",
+  "via": "API"
+ },
  "704128343": {
   "acn": "704128343",
   "date": "2026-11-13",
@@ -2116,6 +2332,18 @@
   "state": "VIC",
   "stem": "IDENTITYCO",
   "suburb": "MELBOURNE",
+  "via": "API"
+ },
+ "704128898": {
+  "acn": "704128898",
+  "date": "2026-11-13",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "GR AUSTRALIA BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "QLD",
+  "stem": "GR AUSTRALIA",
+  "suburb": "ELANORA",
   "via": "API"
  },
  "704132696": {
@@ -2141,6 +2369,18 @@
   "state": "NSW",
   "stem": "CAPITAL",
   "suburb": "ORANGE",
+  "via": "API"
+ },
+ "704225454": {
+  "acn": "704225454",
+  "date": "2026-11-17",
+  "first_seen": "2026-11-17T14:37:28+00:00",
+  "in_register": false,
+  "name": "GEDEON RICHTER AUSTRALIA BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "VIC",
+  "stem": "GEDEON RICHTER",
+  "suburb": "CREMORNE",
   "via": "API"
  }
 }
