@@ -2394,5 +2394,29 @@
   "stem": "BERNY",
   "suburb": "ABBOTSFORD",
   "via": "API"
+ },
+ "704302867": {
+  "acn": "704302867",
+  "date": "2026-11-19",
+  "first_seen": "2026-11-19T13:27:58+00:00",
+  "in_register": false,
+  "name": "ROC PRIME HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "ROC PRIME",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "704304487": {
+  "acn": "704304487",
+  "date": "2026-11-19",
+  "first_seen": "2026-11-19T13:27:58+00:00",
+  "in_register": false,
+  "name": "BUDDS BEACH FINCO PTY LTD",
+  "role": "FINCO",
+  "state": "VIC",
+  "stem": "BUDDS BEACH",
+  "suburb": "SOUTH YARRA",
+  "via": "API"
  }
 }
