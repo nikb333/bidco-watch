@@ -2418,5 +2418,53 @@
   "stem": "BUDDS BEACH",
   "suburb": "SOUTH YARRA",
   "via": "API"
+ },
+ "704316638": {
+  "acn": "704316638",
+  "date": "2026-11-20",
+  "first_seen": "2026-11-20T13:09:09+00:00",
+  "in_register": false,
+  "name": "LIVINGSTONE FINCO PTY LTD",
+  "role": "FINCO",
+  "state": "NSW",
+  "stem": "LIVINGSTONE",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "704320132": {
+  "acn": "704320132",
+  "date": "2026-11-20",
+  "first_seen": "2026-11-20T13:09:09+00:00",
+  "in_register": false,
+  "name": "ROC PRIME BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "NSW",
+  "stem": "ROC PRIME",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "704331617": {
+  "acn": "704331617",
+  "date": "2026-11-20",
+  "first_seen": "2026-11-20T13:09:09+00:00",
+  "in_register": false,
+  "name": "AMBESS06 FINCO PTY LTD",
+  "role": "FINCO",
+  "state": "NSW",
+  "stem": "AMBESS06",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "704334805": {
+  "acn": "704334805",
+  "date": "2026-11-20",
+  "first_seen": "2026-11-20T13:09:09+00:00",
+  "in_register": false,
+  "name": "AU RE HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "AU RE",
+  "suburb": "SYDNEY",
+  "via": "API"
  }
 }
