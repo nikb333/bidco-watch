@@ -78663,7 +78663,7 @@
 {"acn": "704080213", "d": {"name": "HERD TALLY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-11-11"}}
 {"acn": "704080222", "d": {"name": "BEAUTY BLOOM SYDNEY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-11-11"}}
 {"acn": "704080231", "d": {"name": "PRESTIGE TILING & WATERPROOFING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "704080240", "d": null}
+{"acn": "704080240", "d": null, "r": 1}
 {"acn": "704080259", "d": {"name": "THE SCHOOL OF COURAGE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-11-11"}}
 {"acn": "704080268", "d": {"name": "NQA BLAYED", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "704080277", "d": {"name": "1788 CLOTHING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-11-11"}}
@@ -78748,7 +78748,7 @@
 {"acn": "704081069", "d": {"name": "MAKEOLOGY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-11-11"}}
 {"acn": "704081078", "d": {"name": "WEBER VACUUM COOLING", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "704081087", "d": null, "r": 1}
-{"acn": "704081096", "d": null}
+{"acn": "704081096", "d": null, "r": 1}
 {"acn": "704081103", "d": {"name": "HUM@N", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "704081112", "d": {"name": "MARY BEAUTY MELBOURNE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-11-11"}}
 {"acn": "704081121", "d": {"name": "LAFAELE FAMILY PROPRIETARY LIMITED", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "SA", "addresses": [{"type": "Registered Office", "address": "ALDINGA BEACH 5173 SA", "suburb": "ALDINGA BEACH", "postcode": "5173", "state": "SA"}, {"type": "Principal Place of business", "address": "ALDINGA BEACH 5173 SA", "suburb": "ALDINGA BEACH", "postcode": "5173", "state": "SA"}], "registrationDate": "2026-11-11"}}
@@ -80794,7 +80794,7 @@
 {"acn": "704101539", "d": {"name": "REDS BINS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-11-12"}}
 {"acn": "704101548", "d": null, "r": 1}
 {"acn": "704101557", "d": {"name": "DADARAMSWER PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "PENDLE HILL 2145 NSW", "suburb": "PENDLE HILL", "postcode": "2145", "state": "NSW"}, {"type": "Principal Place of business", "address": "PENDLE HILL 2145 NSW", "suburb": "PENDLE HILL", "postcode": "2145", "state": "NSW"}], "registrationDate": "2026-11-12"}}
-{"acn": "704101566", "d": null}
+{"acn": "704101566", "d": null, "r": 1}
 {"acn": "704101575", "d": null, "r": 1}
 {"acn": "704101584", "d": {"name": "THE JADA EDIT", "type": "Business Names", "class": "-", "subClass": "-", "status": "Removed", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "704101593", "d": {"name": "VESERRA", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
@@ -81334,7 +81334,7 @@
 {"acn": "704106936", "d": {"name": "RENWISE PROJECTS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "GREENACRE 2190 NSW", "suburb": "GREENACRE", "postcode": "2190", "state": "NSW"}, {"type": "Principal Place of business", "address": "GREENACRE 2190 NSW", "suburb": "GREENACRE", "postcode": "2190", "state": "NSW"}], "registrationDate": "2026-11-12"}}
 {"acn": "704106945", "d": {"name": "FISHER TECHNOLOGY & MAINTENANCE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-11-12"}}
 {"acn": "704106954", "d": {"name": "FISHER T&M", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-11-12"}}
-{"acn": "704106963", "d": null}
+{"acn": "704106963", "d": null, "r": 1}
 {"acn": "704106972", "d": {"name": "LZQ PROJECT PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "BLACKTOWN 2148 NSW", "suburb": "BLACKTOWN", "postcode": "2148", "state": "NSW"}, {"type": "Principal Place of business", "address": "BLACKTOWN 2148 NSW", "suburb": "BLACKTOWN", "postcode": "2148", "state": "NSW"}], "registrationDate": "2026-11-12"}}
 {"acn": "704106981", "d": {"name": "BYTES N GIGS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-11-12"}}
 {"acn": "704106990", "d": {"name": "MAXXIMUS GROUP PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "WA", "addresses": [{"type": "Registered Office", "address": "NORTHAM 6401 WA", "suburb": "NORTHAM", "postcode": "6401", "state": "WA"}, {"type": "Principal Place of business", "address": "BUCKLAND 6401 WA", "suburb": "BUCKLAND", "postcode": "6401", "state": "WA"}], "registrationDate": "2026-11-12"}}
@@ -82865,7 +82865,7 @@
 {"acn": "704122243", "d": {"name": "THE HEART GROVE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-11-13"}}
 {"acn": "704122252", "d": null, "r": 1}
 {"acn": "704122261", "d": {"name": "JLD PLUMBING AND GAS FITTING PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "TAS", "addresses": [{"type": "Registered Office", "address": "NEW NORFOLK 7140 TAS", "suburb": "NEW NORFOLK", "postcode": "7140", "state": "TAS"}, {"type": "Principal Place of business", "address": "NEW NORFOLK 7140 TAS", "suburb": "NEW NORFOLK", "postcode": "7140", "state": "TAS"}], "registrationDate": "2026-11-13"}}
-{"acn": "704122270", "d": null}
+{"acn": "704122270", "d": null, "r": 1}
 {"acn": "704122289", "d": null, "r": 1}
 {"acn": "704122298", "d": null, "r": 1}
 {"acn": "704122305", "d": null, "r": 1}
@@ -83657,7 +83657,7 @@
 {"acn": "704130165", "d": {"name": "UNSTOPPABLES TRIBE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "704130174", "d": {"name": "HARDLINE FISHERIES PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "SA", "addresses": [{"type": "Registered Office", "address": "ADELAIDE 5000 SA", "suburb": "ADELAIDE", "postcode": "5000", "state": "SA"}, {"type": "Principal Place of business", "address": "MINLATON 5575 SA", "suburb": "MINLATON", "postcode": "5575", "state": "SA"}], "registrationDate": "2026-11-13"}}
 {"acn": "704130183", "d": null, "r": 1}
-{"acn": "704130192", "d": null}
+{"acn": "704130192", "d": null, "r": 1}
 {"acn": "704130209", "d": null, "r": 1}
 {"acn": "704130218", "d": {"name": "JIN JIN YO WEI PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "BALWYN NORTH 3104 VIC", "suburb": "BALWYN NORTH", "postcode": "3104", "state": "VIC"}, {"type": "Principal Place of business", "address": "BAYSWATER 3153 VIC", "suburb": "BAYSWATER", "postcode": "3153", "state": "VIC"}], "registrationDate": "2026-11-13"}}
 {"acn": "704130227", "d": {"name": "INDUS EVENTS & CATERING CENTRE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-11-13"}}
@@ -83938,7 +83938,7 @@
 {"acn": "704132972", "d": {"name": "BYAU HOLDINGS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "QLD", "addresses": [{"type": "Registered Office", "address": "BRISBANE CITY 4000 QLD", "suburb": "BRISBANE CITY", "postcode": "4000", "state": "QLD"}, {"type": "Principal Place of business", "address": "CARINA 4152 QLD", "suburb": "CARINA", "postcode": "4152", "state": "QLD"}], "registrationDate": "2026-11-13"}}
 {"acn": "704132981", "d": {"name": "GILL CLEANING AND HANDY MAN SERVICES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "704132990", "d": {"name": "RESTOFY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
-{"acn": "704133004", "d": null}
+{"acn": "704133004", "d": null, "r": 1}
 {"acn": "704133013", "d": {"name": "EVERWELL AGED CARE PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "CRAIGIEBURN 3064 VIC", "suburb": "CRAIGIEBURN", "postcode": "3064", "state": "VIC"}, {"type": "Principal Place of business", "address": "CRAIGIEBURN 3064 VIC", "suburb": "CRAIGIEBURN", "postcode": "3064", "state": "VIC"}], "registrationDate": "2026-11-13"}}
 {"acn": "704133022", "d": {"name": "RICHBAL INVESTMENTS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "VIC", "addresses": [{"type": "Registered Office", "address": "PASCOE VALE SOUTH 3044 VIC", "suburb": "PASCOE VALE SOUTH", "postcode": "3044", "state": "VIC"}, {"type": "Principal Place of business", "address": "PASCOE VALE SOUTH 3044 VIC", "suburb": "PASCOE VALE SOUTH", "postcode": "3044", "state": "VIC"}], "registrationDate": "2026-11-13"}}
 {"acn": "704133031", "d": {"name": "RUBEN JAMES", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
@@ -84245,7 +84245,7 @@
 {"acn": "704136041", "d": {"name": "GOODX AUS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "WA", "addresses": [{"type": "Registered Office", "address": "BURSWOOD 6100 WA", "suburb": "BURSWOOD", "postcode": "6100", "state": "WA"}, {"type": "Principal Place of business", "address": "BURSWOOD 6100 WA", "suburb": "BURSWOOD", "postcode": "6100", "state": "WA"}], "registrationDate": "2026-11-13"}}
 {"acn": "704136050", "d": {"name": "LAWSON ST INVESTMENTS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "MARRICKVILLE 2204 NSW", "suburb": "MARRICKVILLE", "postcode": "2204", "state": "NSW"}, {"type": "Principal Place of business", "address": "MARRICKVILLE 2204 NSW", "suburb": "MARRICKVILLE", "postcode": "2204", "state": "NSW"}], "registrationDate": "2026-11-13"}}
 {"acn": "704136069", "d": null, "r": 1}
-{"acn": "704136078", "d": null}
+{"acn": "704136078", "d": null, "r": 1}
 {"acn": "704136087", "d": {"name": "REVENUE ROAD", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "704136096", "d": null, "r": 1}
 {"acn": "704136103", "d": null, "r": 1}
@@ -84560,7 +84560,7 @@
 {"acn": "704139195", "d": {"name": "JOLA HOLDINGS PTY LTD", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Proprietary Company", "status": "Registered", "incorporationState": "ACT", "addresses": [{"type": "Registered Office", "address": "SYMONSTON 2609 ACT", "suburb": "SYMONSTON", "postcode": "2609", "state": "ACT"}, {"type": "Principal Place of business", "address": "SYMONSTON 2609 ACT", "suburb": "SYMONSTON", "postcode": "2609", "state": "ACT"}], "registrationDate": "2026-11-13"}}
 {"acn": "704139202", "d": {"name": "GOLD'S FABRICATIONS & INSTALLATIONS", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
 {"acn": "704139211", "d": {"name": "HEXA DIGITAL", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-11-13"}}
-{"acn": "704139220", "d": null}
+{"acn": "704139220", "d": null, "r": 1}
 {"acn": "704139239", "d": {"name": "VELVET MILE", "type": "Business Names", "class": "-", "subClass": "-", "status": "Registered", "incorporationState": null, "addresses": null, "registrationDate": "2026-11-13"}}
 {"acn": "704139248", "d": {"name": "VIGA INVEST PTY. LTD.", "type": "Australian Proprietary Company", "class": "Limited By Shares", "subClass": "Superannuation Trustee Proprietary Company", "status": "Registered", "incorporationState": "NSW", "addresses": [{"type": "Registered Office", "address": "GRANTHAM FARM 2765 NSW", "suburb": "GRANTHAM FARM", "postcode": "2765", "state": "NSW"}, {"type": "Principal Place of business", "address": "GRANTHAM FARM 2765 NSW", "suburb": "GRANTHAM FARM", "postcode": "2765", "state": "NSW"}], "registrationDate": "2026-11-13"}}
 {"acn": "704139257", "d": {"name": "DAYDREAM PSYCHOLOGY", "type": "Business Names", "class": "-", "subClass": "-", "status": "Pending Registration", "incorporationState": null, "addresses": null, "registrationDate": null}}
