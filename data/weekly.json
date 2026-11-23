@@ -1,10 +1,127 @@
 {
- "generated_utc": "2026-11-16T18:53:58+00:00",
+ "generated_utc": "2026-11-23T15:20:55+00:00",
  "dataset": "company_202611.zip",
- "source_modified": "2026-11-16T13:54:29.023693",
+ "source_modified": "2026-11-23T13:53:52.017496",
  "window_days": 180,
- "max_acn": "704162416",
+ "max_acn": "704360887",
  "entities": [
+  {
+   "acn": "704334805",
+   "name": "AU RE HOLDCO PTY LTD",
+   "date": "20/11/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "AU RE",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "704331617",
+   "name": "AMBESS06 FINCO PTY LTD",
+   "date": "20/11/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "AMBESS06",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "704320132",
+   "name": "ROC PRIME BIDCO PTY LTD",
+   "date": "20/11/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ROC PRIME",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": true
+  },
+  {
+   "acn": "704316638",
+   "name": "LIVINGSTONE FINCO PTY LTD",
+   "date": "20/11/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "LIVINGSTONE",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "704304487",
+   "name": "BUDDS BEACH FINCO PTY LTD",
+   "date": "19/11/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BUDDS BEACH",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "704302867",
+   "name": "ROC PRIME HOLDCO PTY LTD",
+   "date": "19/11/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ROC PRIME",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "704260113",
+   "name": "BERNY BIDCO PTY LTD",
+   "date": "18/11/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BERNY",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
+  },
+  {
+   "acn": "704225454",
+   "name": "GEDEON RICHTER AUSTRALIA BIDCO PTY LTD",
+   "date": "17/11/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "GEDEON RICHTER",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": true
+  },
+  {
+   "acn": "704165177",
+   "name": "NEWCO CAPITAL PTY LTD",
+   "date": "16/11/2026",
+   "role": "NEWCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CAPITAL",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
   {
    "acn": "704132696",
    "name": "THE PILLARS HOLDCO PTY LTD",
@@ -26,7 +143,7 @@
    "state": "",
    "abn": true,
    "status": "REGD",
-   "stem": "GR",
+   "stem": "GR AUSTRALIA",
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": true
@@ -43,6 +160,32 @@
    "in_stack": true,
    "stack_has_bidco": true,
    "is_bidco": true
+  },
+  {
+   "acn": "704124792",
+   "name": "BRIDGES GROUP HOLD CO PTY LTD",
+   "date": "13/11/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BRIDGES",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "704110887",
+   "name": "AEG MIDCO2 PTY LTD",
+   "date": "12/11/2026",
+   "role": "MIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "AEG",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "704102750",
@@ -195,7 +338,7 @@
    "state": "",
    "abn": true,
    "status": "REGD",
-   "stem": "RBC",
+   "stem": "RBC AUSTRALIA",
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": true
@@ -235,7 +378,7 @@
    "abn": true,
    "status": "REGD",
    "stem": "KG",
-   "in_stack": false,
+   "in_stack": true,
    "stack_has_bidco": false,
    "is_bidco": false
   },
@@ -552,6 +695,19 @@
    "is_bidco": false
   },
   {
+   "acn": "703732487",
+   "name": "4JC HOLD CO PTY LTD",
+   "date": "30/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "4JC",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "703731140",
    "name": "CURIS BIDCO PTY LTD",
    "date": "30/10/2026",
@@ -695,6 +851,19 @@
    "is_bidco": false
   },
   {
+   "acn": "703577780",
+   "name": "SOUTHERN COMMERCIAL PROPERTY HOLD CO PTY LTD",
+   "date": "26/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SOUTHERN COMMERCIAL PROPERTY",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "703577646",
    "name": "MURRAY BRIDGE HOLDCO PTY LTD",
    "date": "26/10/2026",
@@ -703,6 +872,19 @@
    "abn": true,
    "status": "REGD",
    "stem": "MURRAY BRIDGE",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703576998",
+   "name": "SOUTHERN STUMPING HOLD CO PTY LTD",
+   "date": "26/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SOUTHERN STUMPING",
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
@@ -742,6 +924,19 @@
    "abn": true,
    "status": "REGD",
    "stem": "LIVERPOOL RANGE WIND FARM 1",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703495470",
+   "name": "EVERSON HOLD CO PTY LTD",
+   "date": "22/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "EVERSON",
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
@@ -825,6 +1020,19 @@
    "is_bidco": false
   },
   {
+   "acn": "703439070",
+   "name": "ROBSON HOLD CO PTY LTD",
+   "date": "21/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ROBSON",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "703436800",
    "name": "IPC BOND AUS HOLDCO PTY LTD",
    "date": "21/10/2026",
@@ -851,6 +1059,19 @@
    "is_bidco": false
   },
   {
+   "acn": "703400015",
+   "name": "QRSG HOLD CO PTY LTD",
+   "date": "20/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "QRSG",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "703373399",
    "name": "HAGAN HOLDCO PTY LTD",
    "date": "19/10/2026",
@@ -872,6 +1093,32 @@
    "abn": true,
    "status": "REGD",
    "stem": "KG",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703362565",
+   "name": "MFC HOLD CO PTY LTD",
+   "date": "19/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "MFC",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703362547",
+   "name": "PFC HOLD CO PTY LTD",
+   "date": "19/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PFC",
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
@@ -884,7 +1131,7 @@
    "state": "",
    "abn": true,
    "status": "REGD",
-   "stem": "SCM",
+   "stem": "SCM AUSTRALIA",
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
@@ -938,6 +1185,19 @@
    "status": "REGD",
    "stem": "ROCKS",
    "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703297894",
+   "name": "POPPY HOLD CO PTY LTD",
+   "date": "16/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "POPPY",
+   "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
   },
@@ -1004,6 +1264,19 @@
    "stem": "SINGER",
    "in_stack": true,
    "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "703239169",
+   "name": "HUMBER HOLD CO PTY LTD",
+   "date": "14/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "HUMBER",
+   "in_stack": false,
+   "stack_has_bidco": false,
    "is_bidco": false
   },
   {
@@ -1176,6 +1449,32 @@
    "is_bidco": false
   },
   {
+   "acn": "703064224",
+   "name": "WONGALEA BESS FIN CO PTY LTD",
+   "date": "08/10/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "WONGALEA BESS",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "703060995",
+   "name": "WONGALEA BESS HOLD CO PTY LTD",
+   "date": "08/10/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "WONGALEA BESS",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "703060333",
    "name": "PARTNERSHIP CAPITAL CONTRAFLOW BIDCO PTY LTD",
    "date": "08/10/2026",
@@ -1280,6 +1579,19 @@
    "is_bidco": false
   },
   {
+   "acn": "702926350",
+   "name": "FC SQUEEZE FIN CO PTY LTD",
+   "date": "03/10/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "FC SQUEEZE",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "702899134",
    "name": "SHONI HOLDCO PTY LTD",
    "date": "02/10/2026",
@@ -1371,6 +1683,19 @@
    "is_bidco": true
   },
   {
+   "acn": "702805516",
+   "name": "ASIA DIGITAL BID CO PTY LTD",
+   "date": "30/09/2026",
+   "role": "BIDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ASIA DIGITAL",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "702802113",
    "name": "NILA SENIOR FINCO PTY LTD",
    "date": "29/09/2026",
@@ -1393,6 +1718,19 @@
    "status": "REGD",
    "stem": "NILA",
    "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702796950",
+   "name": "ASIA DIGITAL HOLD CO PTY LTD",
+   "date": "29/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ASIA DIGITAL",
+   "in_stack": true,
    "stack_has_bidco": false,
    "is_bidco": false
   },
@@ -1446,6 +1784,19 @@
    "stem": "BCPE HANCOCK",
    "in_stack": true,
    "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "702780621",
+   "name": "FOX TRANSPORT HOLD CO PTY LTD",
+   "date": "29/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "FOX TRANSPORT",
+   "in_stack": false,
+   "stack_has_bidco": false,
    "is_bidco": false
   },
   {
@@ -1592,6 +1943,19 @@
    "is_bidco": false
   },
   {
+   "acn": "702672053",
+   "name": "SUNRISE NO. 5 FIN CO PTY LTD",
+   "date": "24/09/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SUNRISE",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "702658151",
    "name": "DYLAN MODINO HOLDCO PTY LTD",
    "date": "24/09/2026",
@@ -1652,6 +2016,19 @@
    "abn": true,
    "status": "REGD",
    "stem": "JEREMY LE",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702609185",
+   "name": "CPC HOLD CO PTY LTD",
+   "date": "23/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CPC",
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
@@ -1771,6 +2148,32 @@
    "stem": "TRIDENT",
    "in_stack": true,
    "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "702543413",
+   "name": "SJS FIN CO PTY LTD",
+   "date": "21/09/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SJS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "702534432",
+   "name": "AKEA HOLD CO PTY LTD",
+   "date": "21/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "AKEA",
+   "in_stack": false,
+   "stack_has_bidco": false,
    "is_bidco": false
   },
   {
@@ -2320,6 +2723,19 @@
    "is_bidco": false
   },
   {
+   "acn": "702036566",
+   "name": "CASTELLANO HOLD CO PTY LTD",
+   "date": "03/09/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CASTELLANO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "702028331",
    "name": "PBSP - CARE FOR ALL HOLDCO PTY LTD",
    "date": "03/09/2026",
@@ -2536,6 +2952,32 @@
    "abn": true,
    "status": "REGD",
    "stem": "AIRTRUNK HTR1A",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "701855807",
+   "name": "EKU QLD BESS FIN CO PTY LTD",
+   "date": "28/08/2026",
+   "role": "FINCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "EKU QLD BESS",
+   "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "701851470",
+   "name": "EKU QLD BESS HOLD CO PTY LTD",
+   "date": "28/08/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "EKU QLD BESS",
    "in_stack": true,
    "stack_has_bidco": false,
    "is_bidco": false
@@ -3107,9 +3549,9 @@
    "state": "",
    "abn": true,
    "status": "REGD",
-   "stem": "RP",
-   "in_stack": false,
-   "stack_has_bidco": false,
+   "stem": "RP AUS",
+   "in_stack": true,
+   "stack_has_bidco": true,
    "is_bidco": true
   },
   {
@@ -3120,7 +3562,20 @@
    "state": "",
    "abn": true,
    "status": "REGD",
-   "stem": "RP",
+   "stem": "RP AUS",
+   "in_stack": true,
+   "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "701538687",
+   "name": "TERENTA HOLD CO PTY LTD",
+   "date": "19/08/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "TERENTA",
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
@@ -3150,6 +3605,19 @@
    "in_stack": true,
    "stack_has_bidco": true,
    "is_bidco": true
+  },
+  {
+   "acn": "701508858",
+   "name": "CA HOLD CO PTY LTD",
+   "date": "18/08/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CA",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
   },
   {
    "acn": "701506532",
@@ -3318,6 +3786,19 @@
    "stem": "DANONE",
    "in_stack": true,
    "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "701476691",
+   "name": "LBC HOLD CO PTY LTD",
+   "date": "17/08/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "LBC",
+   "in_stack": false,
+   "stack_has_bidco": false,
    "is_bidco": false
   },
   {
@@ -3516,6 +3997,19 @@
    "is_bidco": false
   },
   {
+   "acn": "701284264",
+   "name": "MIEX AUSTRALIA NEW CO PTY LTD",
+   "date": "11/08/2026",
+   "role": "NEWCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "MIEX",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "701081156",
    "name": "TRIDENT AU HOLDCO PTY LTD",
    "date": "11/08/2026",
@@ -3706,6 +4200,19 @@
    "abn": true,
    "status": "REGD",
    "stem": "ENVEST 3",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "701009252",
+   "name": "CHERRY ON TOP CO. PTY LTD.",
+   "date": "03/08/2026",
+   "role": "TOPCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CHERRY ON",
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
@@ -4459,7 +4966,7 @@
    "state": "",
    "abn": true,
    "status": "REGD",
-   "stem": "AR",
+   "stem": "AR GROUP",
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
@@ -4543,6 +5050,19 @@
    "is_bidco": false
   },
   {
+   "acn": "700503653",
+   "name": "AUSTRALIAN HIRE HOLD CO PTY LTD",
+   "date": "20/07/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "AUSTRALIAN HIRE",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "700498602",
    "name": "TARRONE BESS DEVELOPMENT FINCO PTY LTD",
    "date": "20/07/2026",
@@ -4604,6 +5124,19 @@
    "status": "REGD",
    "stem": "DRAGON BOND",
    "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "700425038",
+   "name": "INSIGHT PEST SOLUTIONS HOLD CO PTY LTD",
+   "date": "17/07/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "INSIGHT PEST SOLUTIONS",
+   "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
   },
@@ -4712,6 +5245,19 @@
    "is_bidco": false
   },
   {
+   "acn": "700395124",
+   "name": "LIN FAMILY HOLD CO PTY LTD",
+   "date": "16/07/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "LIN FAMILY",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "700380909",
    "name": "TRAILER HOLDCO PTY LTD",
    "date": "16/07/2026",
@@ -4735,6 +5281,19 @@
    "stem": "SUMMIT",
    "in_stack": true,
    "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "700354570",
+   "name": "LIFT HOLD CO PTY LTD",
+   "date": "16/07/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "LIFT",
+   "in_stack": false,
+   "stack_has_bidco": false,
    "is_bidco": false
   },
   {
@@ -4764,6 +5323,19 @@
    "is_bidco": false
   },
   {
+   "acn": "700236273",
+   "name": "REH HOLD CO PTY LTD",
+   "date": "13/07/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "REH",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "700234724",
    "name": "ULEXITE MIDCO PTY LIMITED",
    "date": "13/07/2026",
@@ -4772,6 +5344,19 @@
    "abn": true,
    "status": "REGD",
    "stem": "ULEXITE",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "700234493",
+   "name": "CE REH HOLD CO PTY LTD",
+   "date": "13/07/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "CE REH",
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
@@ -4881,6 +5466,32 @@
    "is_bidco": false
   },
   {
+   "acn": "700067447",
+   "name": "EASE SERVICES HOLD CO PTY. LTD.",
+   "date": "08/07/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "EASE SERVICES",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "700067125",
+   "name": "TARLETON BONNIE BROOK HOLD CO PTY LTD",
+   "date": "08/07/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "TARLETON BONNIE BROOK",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "700048497",
    "name": "ANZA FINCO PTY LTD",
    "date": "08/07/2026",
@@ -4928,6 +5539,19 @@
    "abn": true,
    "status": "REGD",
    "stem": "KIRRAWEE COMMERCIAL",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699963356",
+   "name": "LITTLE RIVER HOLD CO PTY LTD",
+   "date": "06/07/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "LITTLE RIVER",
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
@@ -5037,6 +5661,19 @@
    "is_bidco": false
   },
   {
+   "acn": "699741396",
+   "name": "LEJO HOLD CO PTY LTD",
+   "date": "01/07/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "LEJO",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "699735263",
    "name": "TG FINCO PTY LTD",
    "date": "01/07/2026",
@@ -5058,6 +5695,19 @@
    "abn": true,
    "status": "REGD",
    "stem": "CHANNEL",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699688223",
+   "name": "KING HOLD CO PTY LTD",
+   "date": "30/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "KING",
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
@@ -5097,6 +5747,19 @@
    "abn": true,
    "status": "REGD",
    "stem": "ACFS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699647919",
+   "name": "VILLA HOLD CO PTY LTD",
+   "date": "29/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "VILLA",
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
@@ -5154,6 +5817,19 @@
    "is_bidco": false
   },
   {
+   "acn": "699631055",
+   "name": "MOORE AUSTRALIA (QLD/NNSW) HOLD CO PTY LTD",
+   "date": "29/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "MOORE QLD NNSW",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "699629902",
    "name": "APA KPS (HOLDCO) PTY LTD",
    "date": "29/06/2026",
@@ -5162,6 +5838,19 @@
    "abn": true,
    "status": "REGD",
    "stem": "APA KPS",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699622270",
+   "name": "PRAETORIAN HOLD CO. PTY LTD",
+   "date": "29/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PRAETORIAN",
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
@@ -5201,6 +5890,32 @@
    "abn": true,
    "status": "REGD",
    "stem": "AWF",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699514433",
+   "name": "BRYANT HOLD CO PTY LTD",
+   "date": "26/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BRYANT",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "699509030",
+   "name": "ATKINSON HOLD CO PTY LTD",
+   "date": "26/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "ATKINSON",
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
@@ -5258,6 +5973,19 @@
    "is_bidco": true
   },
   {
+   "acn": "699475539",
+   "name": "BOGANDILLA WF HOLD CO PTY LTD",
+   "date": "25/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BOGANDILLA WF",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "699417859",
    "name": "GISI CG AUSTRALIA BIDCO PTY LTD",
    "date": "24/06/2026",
@@ -5292,7 +6020,7 @@
    "abn": true,
    "status": "REGD",
    "stem": "CAPITAL",
-   "in_stack": false,
+   "in_stack": true,
    "stack_has_bidco": false,
    "is_bidco": false
   },
@@ -5320,6 +6048,19 @@
    "stem": "BAHM",
    "in_stack": true,
    "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "699358364",
+   "name": "DELI BOND CO PTY LTD",
+   "date": "23/06/2026",
+   "role": "BONDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "DELI",
+   "in_stack": false,
+   "stack_has_bidco": false,
    "is_bidco": false
   },
   {
@@ -5440,6 +6181,19 @@
    "is_bidco": false
   },
   {
+   "acn": "699206785",
+   "name": "SKC HOLD CO PTY LTD",
+   "date": "18/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "SKC",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "699202689",
    "name": "APX EAST HOLDCO PTY LTD",
    "date": "18/06/2026",
@@ -5515,6 +6269,19 @@
    "stem": "ELEVATE",
    "in_stack": true,
    "stack_has_bidco": true,
+   "is_bidco": false
+  },
+  {
+   "acn": "699113721",
+   "name": "LS DEVELOPMENTS HOLD CO PTY LTD",
+   "date": "16/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "LS DEVELOPMENTS",
+   "in_stack": false,
+   "stack_has_bidco": false,
    "is_bidco": false
   },
   {
@@ -5596,6 +6363,19 @@
    "is_bidco": false
   },
   {
+   "acn": "699013306",
+   "name": "PST HOLD CO PTY LTD",
+   "date": "12/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "PST",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "699010832",
    "name": "ROCK HOLDCO PTY LTD",
    "date": "12/06/2026",
@@ -5629,9 +6409,9 @@
    "state": "",
    "abn": true,
    "status": "REGD",
-   "stem": "TL",
-   "in_stack": false,
-   "stack_has_bidco": false,
+   "stem": "TL AUS",
+   "in_stack": true,
+   "stack_has_bidco": true,
    "is_bidco": true
   },
   {
@@ -5642,9 +6422,9 @@
    "state": "",
    "abn": true,
    "status": "REGD",
-   "stem": "TL",
-   "in_stack": false,
-   "stack_has_bidco": false,
+   "stem": "TL AUS",
+   "in_stack": true,
+   "stack_has_bidco": true,
    "is_bidco": false
   },
   {
@@ -5696,6 +6476,19 @@
    "status": "REGD",
    "stem": "MYRTLE",
    "in_stack": true,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698842303",
+   "name": "MILLER HOLD CO PTY LTD",
+   "date": "08/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "MILLER",
+   "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
   },
@@ -5812,6 +6605,19 @@
    "abn": true,
    "status": "REGD",
    "stem": "CLIVE",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
+   "acn": "698670889",
+   "name": "FORREST HOLD CO PTY LTD",
+   "date": "02/06/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "FORREST",
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
@@ -5934,6 +6740,19 @@
    "is_bidco": false
   },
   {
+   "acn": "698549334",
+   "name": "BELAC HOLD CO PTY LTD",
+   "date": "29/05/2026",
+   "role": "HOLDCO",
+   "state": "",
+   "abn": true,
+   "status": "REGD",
+   "stem": "BELAC",
+   "in_stack": false,
+   "stack_has_bidco": false,
+   "is_bidco": false
+  },
+  {
    "acn": "698547796",
    "name": "HOPE TOPCO PTY LTD",
    "date": "29/05/2026",
@@ -5947,171 +6766,23 @@
    "is_bidco": false
   },
   {
-   "acn": "698491397",
-   "name": "DHYAN HOLDCO PTY LTD",
-   "date": "27/05/2026",
-   "role": "HOLDCO",
+   "acn": "698508771",
+   "name": "BIKKI BOND CO PTY LTD",
+   "date": "28/05/2026",
+   "role": "BONDCO",
    "state": "",
    "abn": true,
    "status": "REGD",
-   "stem": "DHYAN",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "698490667",
-   "name": "MAC FINCO PTY LTD",
-   "date": "27/05/2026",
-   "role": "FINCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "MAC",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "698485424",
-   "name": "MOORABBIN AIRPORT CORPORATION HOLDCO PTY LTD",
-   "date": "27/05/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "MOORABBIN AIRPORT CORPORATION",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "698333854",
-   "name": "ZELORA HOLDCO PTY LTD",
-   "date": "22/05/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "ZELORA",
-   "in_stack": true,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "698333229",
-   "name": "ZELORA MEZZCO PTY LTD",
-   "date": "22/05/2026",
-   "role": "MEZZCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "ZELORA",
-   "in_stack": true,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "698332240",
-   "name": "ZELORA TOPCO PTY LTD",
-   "date": "22/05/2026",
-   "role": "TOPCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "ZELORA",
-   "in_stack": true,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "698311750",
-   "name": "HAMPTON PARK FINCO PTY LTD",
-   "date": "21/05/2026",
-   "role": "FINCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "HAMPTON PARK",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "698307881",
-   "name": "UNITY HOLDCO PTY LTD",
-   "date": "21/05/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "UNITY",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "698298118",
-   "name": "RELAY BIDCO PTY LTD",
-   "date": "21/05/2026",
-   "role": "BIDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "RELAY",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": true
-  },
-  {
-   "acn": "698290112",
-   "name": "MARKAKIS HOLDCO PTY LTD",
-   "date": "21/05/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "MARKAKIS",
-   "in_stack": false,
-   "stack_has_bidco": false,
-   "is_bidco": false
-  },
-  {
-   "acn": "698289940",
-   "name": "CHAVIARAS HOLDCO PTY LTD",
-   "date": "21/05/2026",
-   "role": "HOLDCO",
-   "state": "",
-   "abn": true,
-   "status": "REGD",
-   "stem": "CHAVIARAS",
+   "stem": "BIKKI",
    "in_stack": false,
    "stack_has_bidco": false,
    "is_bidco": false
   }
  ],
- "bidcos": 64,
- "stacks": 69,
- "stacks_without_bidco": 27,
+ "bidcos": 66,
+ "stacks": 76,
+ "stacks_without_bidco": 31,
  "renamed": [
-  {
-   "acn": "698332240",
-   "was": "A.C.N. 698 332 240 PTY LTD",
-   "now": "ZELORA TOPCO PTY LTD",
-   "since": "04/06/2026"
-  },
-  {
-   "acn": "698333229",
-   "was": "A.C.N. 698 333 229 PTY LTD",
-   "now": "ZELORA MEZZCO PTY LTD",
-   "since": "04/06/2026"
-  },
-  {
-   "acn": "698333854",
-   "was": "A.C.N. 698 333 854 PTY LTD",
-   "now": "ZELORA HOLDCO PTY LTD",
-   "since": "04/06/2026"
-  },
   {
    "acn": "698724579",
    "was": "HUPCO TOPCO PTY LTD",
@@ -6168,350 +6839,10 @@
   }
  ],
  "reconciliation": {
-  "covered_from_acn": "702735519",
-  "judged": 116,
-  "found_by_daily": 17,
+  "covered_from_acn": "702927517",
+  "judged": 120,
+  "found_by_daily": 116,
   "missed_by_daily": [
-   {
-    "acn": "704128898",
-    "name": "GR AUSTRALIA BIDCO PTY LTD",
-    "date": "13/11/2026"
-   },
-   {
-    "acn": "704015243",
-    "name": "RBC AUSTRALIA BIDCO PTY LIMITED",
-    "date": "10/11/2026"
-   },
-   {
-    "acn": "703988327",
-    "name": "KG FINCO PTY LTD",
-    "date": "09/11/2026"
-   },
-   {
-    "acn": "703973086",
-    "name": "ETG HOLDCO PTY LTD",
-    "date": "09/11/2026"
-   },
-   {
-    "acn": "703929471",
-    "name": "PACIFIC GALAXY SYSTEMS SOLUTIONS BIDCO PTY LTD",
-    "date": "06/11/2026"
-   },
-   {
-    "acn": "703929346",
-    "name": "PACIFIC GALAXY SYSTEMS SOLUTIONS MIDCO II PTY LTD",
-    "date": "06/11/2026"
-   },
-   {
-    "acn": "703929220",
-    "name": "PACIFIC GALAXY SYSTEMS SOLUTIONS MIDCO PTY LTD",
-    "date": "06/11/2026"
-   },
-   {
-    "acn": "703928732",
-    "name": "PACIFIC GALAXY SYSTEMS SOLUTIONS HOLDCO PTY LTD",
-    "date": "06/11/2026"
-   },
-   {
-    "acn": "703928527",
-    "name": "PACIFIC GALAXY (SYSTEMS HOLDCO) PTY LTD",
-    "date": "06/11/2026"
-   },
-   {
-    "acn": "703918790",
-    "name": "IDENTITYCO TOPCO PTY LTD",
-    "date": "06/11/2026"
-   },
-   {
-    "acn": "703899414",
-    "name": "KWM HOLDCO PTY LTD",
-    "date": "05/11/2026"
-   },
-   {
-    "acn": "703891070",
-    "name": "FLEETWOOD AUS MEZZ PARENTCO PTY LTD",
-    "date": "05/11/2026"
-   },
-   {
-    "acn": "703844179",
-    "name": "SALAS O'BRIEN AUSTRALIA BIDCO PTY LTD",
-    "date": "04/11/2026"
-   },
-   {
-    "acn": "703843583",
-    "name": "PAGAC ZEBRA INTERNATIONAL HOLDCO PTY LTD",
-    "date": "04/11/2026"
-   },
-   {
-    "acn": "703843476",
-    "name": "ZEBRA BIDCO PTY LTD",
-    "date": "04/11/2026"
-   },
-   {
-    "acn": "703843154",
-    "name": "SALAS O'BRIEN AUSTRALIA HOLDCO PTY LTD",
-    "date": "04/11/2026"
-   },
-   {
-    "acn": "703843127",
-    "name": "ZEBRA MIDCO 3 PTY LTD",
-    "date": "04/11/2026"
-   },
-   {
-    "acn": "703842808",
-    "name": "ZEBRA MIDCO 2 PTY LTD",
-    "date": "04/11/2026"
-   },
-   {
-    "acn": "703842684",
-    "name": "ZEBRA MIDCO 1 PTY LTD",
-    "date": "04/11/2026"
-   },
-   {
-    "acn": "703842406",
-    "name": "ZEBRA HOLDCO PTY LTD",
-    "date": "04/11/2026"
-   },
-   {
-    "acn": "703810995",
-    "name": "QFF BIDCO II PTY LTD",
-    "date": "03/11/2026"
-   },
-   {
-    "acn": "703809876",
-    "name": "PHOSONE HOLDCO PTY LTD",
-    "date": "03/11/2026"
-   },
-   {
-    "acn": "703797004",
-    "name": "ODYSSEY BIDCO PTY LTD",
-    "date": "02/11/2026"
-   },
-   {
-    "acn": "703790336",
-    "name": "ODYSSEY MIDCO PTY LTD",
-    "date": "02/11/2026"
-   },
-   {
-    "acn": "703776925",
-    "name": "ODYSSEY HOLDCO PTY LTD",
-    "date": "02/11/2026"
-   },
-   {
-    "acn": "703731140",
-    "name": "CURIS BIDCO PTY LTD",
-    "date": "30/10/2026"
-   },
-   {
-    "acn": "703730670",
-    "name": "CURIS MIDCO PTY LTD",
-    "date": "30/10/2026"
-   },
-   {
-    "acn": "703729864",
-    "name": "CURIS HOLDCO PTY LTD",
-    "date": "30/10/2026"
-   },
-   {
-    "acn": "703702890",
-    "name": "SOFIIA HOLDCO PTY LTD",
-    "date": "29/10/2026"
-   },
-   {
-    "acn": "703702238",
-    "name": "SEC ENERGY DOME HAZELWOOD HOLDCO PTY LTD",
-    "date": "29/10/2026"
-   },
-   {
-    "acn": "703672502",
-    "name": "99 MELBOURNE STREET SOUTH BRISBANE HOLDCO PTY LTD",
-    "date": "28/10/2026"
-   },
-   {
-    "acn": "703636319",
-    "name": "ENTITI TOPCO PTY LTD",
-    "date": "27/10/2026"
-   },
-   {
-    "acn": "703626573",
-    "name": "WCEH 2 HOLDCO PTY LTD",
-    "date": "27/10/2026"
-   },
-   {
-    "acn": "703626340",
-    "name": "WCEH 1 HOLDCO PTY LTD",
-    "date": "27/10/2026"
-   },
-   {
-    "acn": "703622182",
-    "name": "WCEH TOP HOLDCO PTY LTD",
-    "date": "27/10/2026"
-   },
-   {
-    "acn": "703610280",
-    "name": "EXTRA SPACE AUSTRALIA FINCO PTY LTD",
-    "date": "27/10/2026"
-   },
-   {
-    "acn": "703577646",
-    "name": "MURRAY BRIDGE HOLDCO PTY LTD",
-    "date": "26/10/2026"
-   },
-   {
-    "acn": "703528572",
-    "name": "AIRTRUNK HTR1C HOLDCO PTY LTD",
-    "date": "23/10/2026"
-   },
-   {
-    "acn": "703524681",
-    "name": "YATHROO WIND FARM FINCO PTY LTD",
-    "date": "23/10/2026"
-   },
-   {
-    "acn": "703507564",
-    "name": "LIVERPOOL RANGE WIND FARM FINCO 1 PTY LTD",
-    "date": "23/10/2026"
-   },
-   {
-    "acn": "703475030",
-    "name": "SDCP CL OPCO FINCO PTY LTD",
-    "date": "22/10/2026"
-   },
-   {
-    "acn": "703474891",
-    "name": "SDCP MBP OPCO FINCO PTY LTD",
-    "date": "22/10/2026"
-   },
-   {
-    "acn": "703451361",
-    "name": "SDCP CL HOLDCO PTY LTD",
-    "date": "21/10/2026"
-   },
-   {
-    "acn": "703451129",
-    "name": "SDCP MBP PROPCO FINCO PTY LTD",
-    "date": "21/10/2026"
-   },
-   {
-    "acn": "703450702",
-    "name": "SDCP CL PROPCO FINCO PTY LTD",
-    "date": "21/10/2026"
-   },
-   {
-    "acn": "703450515",
-    "name": "SDCP MBP HOLDCO PTY LTD",
-    "date": "21/10/2026"
-   },
-   {
-    "acn": "703436800",
-    "name": "IPC BOND AUS HOLDCO PTY LTD",
-    "date": "21/10/2026"
-   },
-   {
-    "acn": "703409410",
-    "name": "PROGRESSIVE BUSINESS TECHNOLOGIES HOLDCO PTY LTD",
-    "date": "20/10/2026"
-   },
-   {
-    "acn": "703373399",
-    "name": "HAGAN HOLDCO PTY LTD",
-    "date": "19/10/2026"
-   },
-   {
-    "acn": "703368129",
-    "name": "KG HOLDCO PTY LTD",
-    "date": "19/10/2026"
-   },
-   {
-    "acn": "703361657",
-    "name": "SCM AUSTRALIA HOLDCO PTY LTD",
-    "date": "19/10/2026"
-   },
-   {
-    "acn": "703333411",
-    "name": "PRPK HOLDCO PTY LTD",
-    "date": "19/10/2026"
-   },
-   {
-    "acn": "703304518",
-    "name": "CORA AUS PREMIER HOLDCO PTY LTD",
-    "date": "16/10/2026"
-   },
-   {
-    "acn": "703304205",
-    "name": "ROCKS FINCO PTY LTD",
-    "date": "16/10/2026"
-   },
-   {
-    "acn": "703303182",
-    "name": "ROCKS TOPCO PTY LTD",
-    "date": "16/10/2026"
-   },
-   {
-    "acn": "703294428",
-    "name": "LT HENDO HOLDCO PTY LTD",
-    "date": "16/10/2026"
-   },
-   {
-    "acn": "703275638",
-    "name": "SINGER BIDCO PTY LTD",
-    "date": "15/10/2026"
-   },
-   {
-    "acn": "703275432",
-    "name": "SINGER MIDCO PTY LTD",
-    "date": "15/10/2026"
-   },
-   {
-    "acn": "703275156",
-    "name": "SINGER HOLDCO PTY LTD",
-    "date": "15/10/2026"
-   },
-   {
-    "acn": "703274319",
-    "name": "SINGER TOPCO PTY LTD",
-    "date": "15/10/2026"
-   },
-   {
-    "acn": "703209303",
-    "name": "MORNINGTON BESS FINCO PTY LTD",
-    "date": "14/10/2026"
-   },
-   {
-    "acn": "703204586",
-    "name": "HAMMER MIDCO 2 PTY LTD",
-    "date": "13/10/2026"
-   },
-   {
-    "acn": "703203776",
-    "name": "HAMMER MIDCO 1 PTY LTD",
-    "date": "13/10/2026"
-   },
-   {
-    "acn": "703202377",
-    "name": "HAMMER MEZZCO PTY LTD",
-    "date": "13/10/2026"
-   },
-   {
-    "acn": "703199866",
-    "name": "HAMMER HOLDCO PTY LTD",
-    "date": "13/10/2026"
-   },
-   {
-    "acn": "703197906",
-    "name": "CAMPBELL TOPCO PTY LTD",
-    "date": "13/10/2026"
-   },
-   {
-    "acn": "703187802",
-    "name": "BIRDIE BIDCO PTY LTD",
-    "date": "13/10/2026"
-   },
-   {
-    "acn": "703187697",
-    "name": "SUDS BIDCO PTY LTD",
-    "date": "13/10/2026"
-   },
    {
     "acn": "703149133",
     "name": "SGA HOLDCO PTY LTD",
@@ -6523,171 +6854,47 @@
     "date": "09/10/2026"
    },
    {
-    "acn": "703095916",
-    "name": "SCHREIBER AUSTRALIA HOLDCO PTY LTD",
-    "date": "09/10/2026"
-   },
-   {
-    "acn": "703093609",
-    "name": "PACIFIC HEALTH GROUP HOLDCO LIMITED",
-    "date": "09/10/2026"
-   },
-   {
-    "acn": "703089409",
-    "name": "OSSA HOLDCO PTY LTD",
-    "date": "09/10/2026"
-   },
-   {
-    "acn": "703060333",
-    "name": "PARTNERSHIP CAPITAL CONTRAFLOW BIDCO PTY LTD",
+    "acn": "703064224",
+    "name": "WONGALEA BESS FIN CO PTY LTD",
     "date": "08/10/2026"
    },
    {
-    "acn": "703050739",
-    "name": "PARTNERSHIP CAPITAL CONTRAFLOW HOLDCO PTY LTD",
+    "acn": "703060995",
+    "name": "WONGALEA BESS HOLD CO PTY LTD",
     "date": "08/10/2026"
-   },
-   {
-    "acn": "703031850",
-    "name": "SALTER BROTHERS IMMIGRATION INVESTMENT HOLDCO PTY LTD",
-    "date": "07/10/2026"
-   },
-   {
-    "acn": "703030862",
-    "name": "SALTER BROTHERS FUNDS MANAGEMENT HOLDCO PTY LTD",
-    "date": "07/10/2026"
-   },
-   {
-    "acn": "703014395",
-    "name": "AIRTRUNK SYD1 HOLDCO PTY LTD",
-    "date": "07/10/2026"
-   },
-   {
-    "acn": "702986169",
-    "name": "SALUS FINCO PTY LTD",
-    "date": "06/10/2026"
-   },
-   {
-    "acn": "702951675",
-    "name": "HAMMER TOPCO PTY LTD",
-    "date": "05/10/2026"
-   },
-   {
-    "acn": "702899134",
-    "name": "SHONI HOLDCO PTY LTD",
-    "date": "02/10/2026"
-   },
-   {
-    "acn": "702863394",
-    "name": "ACP MACQUARIE STREET MIDCO 2 PTY LIMITED",
-    "date": "01/10/2026"
-   },
-   {
-    "acn": "702853530",
-    "name": "BUCKLER BIDCO PTY LTD",
-    "date": "30/09/2026"
-   },
-   {
-    "acn": "702853281",
-    "name": "BUCKLER MIDCO PTY LTD",
-    "date": "30/09/2026"
-   },
-   {
-    "acn": "702853101",
-    "name": "BUCKLER HOLDCO PTY LTD",
-    "date": "30/09/2026"
-   },
-   {
-    "acn": "702843525",
-    "name": "ACP MACQUARIE STREET MIDCO 1 PTY LIMITED",
-    "date": "30/09/2026"
-   },
-   {
-    "acn": "702824548",
-    "name": "HAMMER BIDCO PTY LTD",
-    "date": "30/09/2026"
-   },
-   {
-    "acn": "702802113",
-    "name": "NILA SENIOR FINCO PTY LTD",
-    "date": "29/09/2026"
-   },
-   {
-    "acn": "702798481",
-    "name": "NILA HOLDCO FINCO PTY LTD",
-    "date": "29/09/2026"
-   },
-   {
-    "acn": "702793128",
-    "name": "BCPE HANCOCK BIDCO PTY LTD",
-    "date": "29/09/2026"
-   },
-   {
-    "acn": "702791688",
-    "name": "BCPE HANCOCK MIDCO PTY LTD",
-    "date": "29/09/2026"
-   },
-   {
-    "acn": "702790636",
-    "name": "BCPE HANCOCK MEZZCO PTY LTD",
-    "date": "29/09/2026"
-   },
-   {
-    "acn": "702788305",
-    "name": "BCPE HANCOCK TOPCO PTY LTD",
-    "date": "29/09/2026"
-   },
-   {
-    "acn": "702761537",
-    "name": "KYANITE NTH TCE HOLDCO PTY LTD",
-    "date": "28/09/2026"
-   },
-   {
-    "acn": "702761528",
-    "name": "KYANITE MARGARET HOLDCO PTY LTD",
-    "date": "28/09/2026"
-   },
-   {
-    "acn": "702759706",
-    "name": "KYANITE ROSEHILL HOLDCO PTY LTD",
-    "date": "28/09/2026"
-   },
-   {
-    "acn": "702748356",
-    "name": "ALPINE BIDCO PTY LTD",
-    "date": "28/09/2026"
-   },
-   {
-    "acn": "702747966",
-    "name": "ALPINE MIDCO PTY LTD",
-    "date": "28/09/2026"
-   },
-   {
-    "acn": "702747724",
-    "name": "ALPINE HOLDCO PTY LTD",
-    "date": "28/09/2026"
    }
   ],
-  "recall_pct": 14.7
+  "recall_pct": 96.7
  },
  "ledger_crossed": [
-  "IDENTITYCO MIDCO PTY LTD",
-  "LAURENS FINCO 1 PTY LTD",
-  "WILDCAT (BCC) HOLDCO PTY LTD",
-  "WILDCAT (TABBA) HOLDCO PTY LTD",
-  "GSMT ENERZINX AUS MIDCO PTY LTD",
-  "ATRIUM TOPCO PTY LTD",
-  "ATRIUM MIDCO PTY LTD",
-  "ATRIUM HOLDCO PTY LTD",
-  "ATRIUM BIDCO PTY LTD",
-  "NATIS HOLDCO PTY LTD",
-  "AMITY HOLDCO PTY LTD",
-  "YATHROO WIND FARM STAGE 1 FINCO PTY LTD",
-  "MILTON FINCO PTY LTD",
-  "HOMETOWN FINCO 7 PTY LTD",
-  "PROFIN HOLDCO PTY LTD",
-  "IDENTITYCO BIDCO PTY LTD",
-  "THE PILLARS HOLDCO PTY LTD"
+  "HUMBER HOLD CO PTY LTD",
+  "POPPY HOLD CO PTY LTD",
+  "SCM AUSTRALIA HOLDCO PTY LTD",
+  "PFC HOLD CO PTY LTD",
+  "MFC HOLD CO PTY LTD",
+  "KG HOLDCO PTY LTD",
+  "QRSG HOLD CO PTY LTD",
+  "ROBSON HOLD CO PTY LTD",
+  "EVERSON HOLD CO PTY LTD",
+  "SOUTHERN STUMPING HOLD CO PTY LTD",
+  "SOUTHERN COMMERCIAL PROPERTY HOLD CO PTY LTD",
+  "4JC HOLD CO PTY LTD",
+  "KWM HOLDCO PTY LTD",
+  "ETG HOLDCO PTY LTD",
+  "KG FINCO PTY LTD",
+  "RBC AUSTRALIA BIDCO PTY LIMITED",
+  "AEG MIDCO2 PTY LTD",
+  "BRIDGES GROUP HOLD CO PTY LTD",
+  "GR AUSTRALIA BIDCO PTY LTD",
+  "NEWCO CAPITAL PTY LTD",
+  "GEDEON RICHTER AUSTRALIA BIDCO PTY LTD",
+  "BERNY BIDCO PTY LTD",
+  "ROC PRIME HOLDCO PTY LTD",
+  "BUDDS BEACH FINCO PTY LTD",
+  "LIVINGSTONE FINCO PTY LTD",
+  "ROC PRIME BIDCO PTY LTD",
+  "AMBESS06 FINCO PTY LTD",
+  "AU RE HOLDCO PTY LTD"
  ],
- "ledger_waiting": 1
+ "ledger_waiting": 0
 }
