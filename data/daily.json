@@ -1,36 +1,36 @@
 {
  "run": {
-  "started_utc": "2026-11-22T15:27:28+00:00",
-  "finished_utc": "2026-11-22T16:53:14+00:00",
-  "elapsed_min": 85.8,
+  "started_utc": "2026-11-23T13:11:00+00:00",
+  "finished_utc": "2026-11-23T16:19:39+00:00",
+  "elapsed_min": 188.7,
   "status": "ok",
   "error": "",
-  "frontier_base": 70435951,
+  "frontier_base": 70439751,
   "window": [
-   "704343528",
-   "704359517"
+   "704359526",
+   "704397517"
   ],
-  "slots_swept": 2544,
-  "slots_queued": 2544,
+  "slots_swept": 5611,
+  "slots_queued": 5612,
   "slots_left": 0,
   "gaps_queued": 0,
-  "recheck_queued": 865,
-  "companies": 29238,
+  "recheck_queued": 1728,
+  "companies": 29816,
   "trailing_slots": 20000,
-  "slots_errored": 0,
-  "ledger_new": 0,
-  "ledger_waiting": 28,
-  "ledger_in_register": 164,
+  "slots_errored": 1,
+  "ledger_new": 2,
+  "ledger_waiting": 2,
+  "ledger_in_register": 192,
   "coverage": {
-   "from_acn": "704143528",
-   "to_acn": "704359517",
-   "slots": 21600,
-   "checked": 21600,
-   "remaining": 0,
-   "companies": 5694,
+   "from_acn": "704159526",
+   "to_acn": "704397517",
+   "slots": 23800,
+   "checked": 23799,
+   "remaining": 1,
+   "companies": 6523,
    "register_known": true,
-   "register_to_acn": "704162416",
-   "slots_per_day": 2914,
+   "register_to_acn": "704360887",
+   "slots_per_day": 2878,
    "rate_per_min": 48,
    "run_minutes": 335,
    "zones": [
@@ -38,27 +38,27 @@
      "key": "new",
      "label": "New registrations",
      "why": "Everything registered since the last finished sweep. These go to the front of the queue on every run, so this should sit at or near 100%. Note what 'checked' means: the slot has been looked at once. A company that registers into a slot an earlier run already found empty is caught by the re-check in the next pass, not here.",
-     "from_acn": "704343528",
-     "to_acn": "704359517",
-     "slots": 1600,
-     "checked": 1600,
-     "remaining": 0,
-     "days": 0.5,
-     "covered_by_register": 0,
-     "companies": 202
+     "from_acn": "704359526",
+     "to_acn": "704397517",
+     "slots": 3800,
+     "checked": 3799,
+     "remaining": 1,
+     "days": 1.3,
+     "covered_by_register": 137,
+     "companies": 1016
     },
     {
      "key": "catchup",
      "label": "Back-fill of older slots",
      "why": "Slots an earlier run ran out of clock before reaching, plus a second look at slots that came back empty - ACNs are handed out ahead of use, so an empty slot can fill in later. Deliberately queued behind the new slots: if a run runs short, this is the right thing to lose.",
-     "from_acn": "704143528",
-     "to_acn": "704343519",
+     "from_acn": "704159526",
+     "to_acn": "704359517",
      "slots": 20000,
      "checked": 20000,
      "remaining": 0,
-     "days": 6.9,
-     "covered_by_register": 1890,
-     "companies": 5492
+     "days": 7.0,
+     "covered_by_register": 20000,
+     "companies": 5507
     }
    ],
    "passes": [
@@ -66,18 +66,18 @@
      "key": "new",
      "n": 1,
      "label": "New registrations",
-     "from_acn": "704343528",
-     "to_acn": "704359517",
-     "total": 1600,
-     "outstanding": 0,
+     "from_acn": "704359526",
+     "to_acn": "704397517",
+     "total": 3800,
+     "outstanding": 1,
      "why": "Everything issued since the last finished sweep. First in the queue on every run. This is the number that says whether you are current."
     },
     {
      "key": "gaps",
      "n": 2,
      "label": "Never looked at",
-     "from_acn": "704143528",
-     "to_acn": "704343519",
+     "from_acn": "704159526",
+     "to_acn": "704359517",
      "total": 20000,
      "outstanding": 0,
      "why": "Slots inside the trailing window that no run has ever queried - what a run that ran out of clock leaves behind. Nothing has seen these, so they outrank re-checks."
@@ -86,22 +86,22 @@
      "key": "recheck",
      "n": 3,
      "label": "Second look at empty slots",
-     "from_acn": "703509513",
-     "to_acn": "704159517",
+     "from_acn": "703547513",
+     "to_acn": "704197517",
      "total": 0,
      "outstanding": 0,
      "bands": [
       {
        "band": "20k-27k back",
        "outstanding": 0,
-       "from_acn": "704089510",
-       "to_acn": "704159517"
+       "from_acn": "704127515",
+       "to_acn": "704197517"
       },
       {
        "band": "72k-85k back",
        "outstanding": 0,
-       "from_acn": "703509513",
-       "to_acn": "703639516"
+       "from_acn": "703547513",
+       "to_acn": "703677516"
       }
      ],
      "why": "Slots already queried that came back empty. ACNs are issued ahead of use, so a company can appear in a slot an earlier run found bare. Each gets exactly two more looks, timed to the two observed lag clusters."
@@ -112,402 +112,122 @@
      "label": "Shelf companies, re-queried",
      "from_acn": "",
      "to_acn": "",
-     "total": 85,
-     "outstanding": 85,
+     "total": 100,
+     "outstanding": 100,
      "rolling": true,
      "why": "Companies registered under a numeric placeholder name and renamed later - re-asked for 120 days. This never reaches zero by design; it is a rolling window, not a backlog."
     }
    ],
    "buckets": [
     {
-     "from": "704143528",
-     "to": "704161517",
-     "checked": 1800,
-     "slots": 1800,
+     "from": "704159526",
+     "to": "704179340",
+     "checked": 1983,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "704161526",
-     "to": "704179519",
-     "checked": 1800,
-     "slots": 1800,
+     "from": "704179359",
+     "to": "704199173",
+     "checked": 1983,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "704179528",
-     "to": "704197517",
-     "checked": 1800,
-     "slots": 1800,
+     "from": "704199182",
+     "to": "704219009",
+     "checked": 1983,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "704197526",
-     "to": "704215510",
-     "checked": 1800,
-     "slots": 1800,
+     "from": "704219018",
+     "to": "704238835",
+     "checked": 1983,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "704215529",
-     "to": "704233518",
-     "checked": 1800,
-     "slots": 1800,
+     "from": "704238844",
+     "to": "704258668",
+     "checked": 1983,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "704233527",
-     "to": "704251516",
-     "checked": 1800,
-     "slots": 1800,
+     "from": "704258677",
+     "to": "704278491",
+     "checked": 1983,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "704251525",
-     "to": "704269518",
-     "checked": 1800,
-     "slots": 1800,
+     "from": "704278508",
+     "to": "704298322",
+     "checked": 1983,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "704269527",
-     "to": "704287516",
-     "checked": 1800,
-     "slots": 1800,
+     "from": "704298331",
+     "to": "704318150",
+     "checked": 1983,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "704287525",
-     "to": "704305519",
-     "checked": 1800,
-     "slots": 1800,
+     "from": "704318169",
+     "to": "704337986",
+     "checked": 1983,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "704305528",
-     "to": "704323517",
-     "checked": 1800,
-     "slots": 1800,
+     "from": "704337995",
+     "to": "704357817",
+     "checked": 1983,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "704323526",
-     "to": "704341515",
-     "checked": 1800,
-     "slots": 1800,
+     "from": "704357826",
+     "to": "704377640",
+     "checked": 1982,
+     "slots": 1983,
      "zone": "catchup"
     },
     {
-     "from": "704341524",
-     "to": "704359517",
-     "checked": 1800,
-     "slots": 1800,
-     "zone": "catchup"
+     "from": "704377659",
+     "to": "704397517",
+     "checked": 1987,
+     "slots": 1987,
+     "zone": "new"
     }
    ]
   }
  },
- "stacks": [
-  {
-   "stem": "ROC PRIME",
-   "first": "2026-11-19",
-   "has_bidco": true,
-   "finco": false,
-   "phased": true,
-   "members": [
-    {
-     "acn": "704302867",
-     "name": "ROC PRIME HOLDCO PTY LTD",
-     "date": "2026-11-19",
-     "role": "HOLDCO",
-     "suburb": "SYDNEY",
-     "state": "NSW",
-     "via": "API",
-     "first_seen": "2026-11-19T13:27:58+00:00"
-    },
-    {
-     "acn": "704320132",
-     "name": "ROC PRIME BIDCO PTY LTD",
-     "date": "2026-11-20",
-     "role": "BIDCO",
-     "suburb": "SYDNEY",
-     "state": "NSW",
-     "via": "API",
-     "first_seen": "2026-11-20T13:09:09+00:00"
-    }
-   ]
-  },
-  {
-   "stem": "KG",
-   "first": "2026-10-19",
-   "has_bidco": false,
-   "finco": true,
-   "phased": true,
-   "members": [
-    {
-     "acn": "703368129",
-     "name": "KG HOLDCO PTY LTD",
-     "date": "2026-10-19",
-     "role": "HOLDCO",
-     "suburb": "BRISBANE CITY",
-     "state": "QLD",
-     "via": "API",
-     "first_seen": "2026-11-17T14:37:28+00:00"
-    },
-    {
-     "acn": "703988327",
-     "name": "KG FINCO PTY LTD",
-     "date": "2026-11-09",
-     "role": "FINCO",
-     "suburb": "BRISBANE CITY",
-     "state": "QLD",
-     "via": "API",
-     "first_seen": "2026-11-17T14:37:28+00:00"
-    }
-   ]
-  }
- ],
- "singles": [
-  {
-   "acn": "704260113",
-   "name": "BERNY BIDCO PTY LTD",
-   "date": "2026-11-18",
-   "role": "BIDCO",
-   "suburb": "ABBOTSFORD",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-11-18T14:14:06+00:00"
-  },
-  {
-   "acn": "704225454",
-   "name": "GEDEON RICHTER AUSTRALIA BIDCO PTY LTD",
-   "date": "2026-11-17",
-   "role": "BIDCO",
-   "suburb": "CREMORNE",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-11-17T14:37:28+00:00"
-  },
-  {
-   "acn": "704128898",
-   "name": "GR AUSTRALIA BIDCO PTY LTD",
-   "date": "2026-11-13",
-   "role": "BIDCO",
-   "suburb": "ELANORA",
-   "state": "QLD",
-   "via": "API",
-   "first_seen": "2026-11-17T14:37:28+00:00"
-  },
-  {
-   "acn": "704015243",
-   "name": "RBC AUSTRALIA BIDCO PTY LIMITED",
-   "date": "2026-11-10",
-   "role": "BIDCO",
-   "suburb": "MELBOURNE",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-11-17T14:37:28+00:00"
-  }
- ],
+ "stacks": [],
+ "singles": [],
  "role_only": [
   {
-   "acn": "704316638",
-   "name": "LIVINGSTONE FINCO PTY LTD",
-   "date": "2026-11-20",
-   "role": "FINCO",
-   "suburb": "SYDNEY",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-11-20T13:09:09+00:00"
-  },
-  {
-   "acn": "704331617",
-   "name": "AMBESS06 FINCO PTY LTD",
-   "date": "2026-11-20",
-   "role": "FINCO",
-   "suburb": "SYDNEY",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-11-20T13:09:09+00:00"
-  },
-  {
-   "acn": "704334805",
-   "name": "AU RE HOLDCO PTY LTD",
-   "date": "2026-11-20",
+   "acn": "704376723",
+   "name": "RESIDENTIAL HOME SERVICES HOLDCO PTY LTD",
+   "date": "2026-11-23",
    "role": "HOLDCO",
    "suburb": "SYDNEY",
    "state": "NSW",
    "via": "API",
-   "first_seen": "2026-11-20T13:09:09+00:00"
+   "first_seen": "2026-11-23T13:11:00+00:00"
   },
   {
-   "acn": "704304487",
-   "name": "BUDDS BEACH FINCO PTY LTD",
-   "date": "2026-11-19",
-   "role": "FINCO",
-   "suburb": "SOUTH YARRA",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-11-19T13:27:58+00:00"
-  },
-  {
-   "acn": "704165177",
-   "name": "NEWCO CAPITAL PTY LTD",
-   "date": "2026-11-16",
-   "role": "NEWCO",
-   "suburb": "ORANGE",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-11-16T11:42:27+00:00"
-  },
-  {
-   "acn": "704124792",
-   "name": "BRIDGES GROUP HOLD CO PTY LTD",
-   "date": "2026-11-13",
+   "acn": "704389711",
+   "name": "GLOBALGUARD HOLDCO PTY LTD",
+   "date": "2026-11-23",
    "role": "HOLDCO",
-   "suburb": "ROBINA",
-   "state": "QLD",
-   "via": "API",
-   "first_seen": "2026-11-17T14:37:28+00:00"
-  },
-  {
-   "acn": "704110887",
-   "name": "AEG MIDCO2 PTY LTD",
-   "date": "2026-11-12",
-   "role": "MIDCO",
    "suburb": "SYDNEY",
    "state": "NSW",
    "via": "API",
-   "first_seen": "2026-11-17T14:37:28+00:00"
-  },
-  {
-   "acn": "703973086",
-   "name": "ETG HOLDCO PTY LTD",
-   "date": "2026-11-09",
-   "role": "HOLDCO",
-   "suburb": "SOUTH MELBOURNE",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-11-17T14:37:28+00:00"
-  },
-  {
-   "acn": "703899414",
-   "name": "KWM HOLDCO PTY LTD",
-   "date": "2026-11-05",
-   "role": "HOLDCO",
-   "suburb": "COOKS HILL",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-11-17T14:37:28+00:00"
-  },
-  {
-   "acn": "703732487",
-   "name": "4JC HOLD CO PTY LTD",
-   "date": "2026-10-30",
-   "role": "HOLDCO",
-   "suburb": "ROWVILLE",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-11-17T14:37:28+00:00"
-  },
-  {
-   "acn": "703576998",
-   "name": "SOUTHERN STUMPING HOLD CO PTY LTD",
-   "date": "2026-10-26",
-   "role": "HOLDCO",
-   "suburb": "CRANBOURNE",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-11-17T14:37:28+00:00"
-  },
-  {
-   "acn": "703577780",
-   "name": "SOUTHERN COMMERCIAL PROPERTY HOLD CO PTY LTD",
-   "date": "2026-10-26",
-   "role": "HOLDCO",
-   "suburb": "CRANBOURNE",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-11-17T14:37:28+00:00"
-  },
-  {
-   "acn": "703495470",
-   "name": "EVERSON HOLD CO PTY LTD",
-   "date": "2026-10-22",
-   "role": "HOLDCO",
-   "suburb": "TUGGERAH",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-11-17T14:37:28+00:00"
-  },
-  {
-   "acn": "703439070",
-   "name": "ROBSON HOLD CO PTY LTD",
-   "date": "2026-10-21",
-   "role": "HOLDCO",
-   "suburb": "ALLAMBIE HEIGHTS",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-11-17T14:37:28+00:00"
-  },
-  {
-   "acn": "703400015",
-   "name": "QRSG HOLD CO PTY LTD",
-   "date": "2026-10-20",
-   "role": "HOLDCO",
-   "suburb": "ERINA",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-11-17T14:37:28+00:00"
-  },
-  {
-   "acn": "703361657",
-   "name": "SCM AUSTRALIA HOLDCO PTY LTD",
-   "date": "2026-10-19",
-   "role": "HOLDCO",
-   "suburb": "BRISBANE CITY",
-   "state": "QLD",
-   "via": "API",
-   "first_seen": "2026-11-17T14:37:28+00:00"
-  },
-  {
-   "acn": "703362547",
-   "name": "PFC HOLD CO PTY LTD",
-   "date": "2026-10-19",
-   "role": "HOLDCO",
-   "suburb": "ERINA",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-11-17T14:37:28+00:00"
-  },
-  {
-   "acn": "703362565",
-   "name": "MFC HOLD CO PTY LTD",
-   "date": "2026-10-19",
-   "role": "HOLDCO",
-   "suburb": "ERINA",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-11-17T14:37:28+00:00"
-  },
-  {
-   "acn": "703297894",
-   "name": "POPPY HOLD CO PTY LTD",
-   "date": "2026-10-16",
-   "role": "HOLDCO",
-   "suburb": "MELBOURNE",
-   "state": "VIC",
-   "via": "API",
-   "first_seen": "2026-11-17T14:37:28+00:00"
-  },
-  {
-   "acn": "703239169",
-   "name": "HUMBER HOLD CO PTY LTD",
-   "date": "2026-10-14",
-   "role": "HOLDCO",
-   "suburb": "CARINGBAH",
-   "state": "NSW",
-   "via": "API",
-   "first_seen": "2026-11-17T14:37:28+00:00"
+   "first_seen": "2026-11-23T13:11:00+00:00"
   }
  ]
 }

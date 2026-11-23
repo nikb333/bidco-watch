@@ -2494,5 +2494,29 @@
   "stem": "AU RE",
   "suburb": "SYDNEY",
   "via": "API"
+ },
+ "704376723": {
+  "acn": "704376723",
+  "date": "2026-11-23",
+  "first_seen": "2026-11-23T13:11:00+00:00",
+  "in_register": false,
+  "name": "RESIDENTIAL HOME SERVICES HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "RESIDENTIAL HOME SERVICES",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "704389711": {
+  "acn": "704389711",
+  "date": "2026-11-23",
+  "first_seen": "2026-11-23T13:11:00+00:00",
+  "in_register": false,
+  "name": "GLOBALGUARD HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "GLOBALGUARD",
+  "suburb": "SYDNEY",
+  "via": "API"
  }
 }
