@@ -2518,5 +2518,89 @@
   "stem": "GLOBALGUARD",
   "suburb": "SYDNEY",
   "via": "API"
+ },
+ "704401203": {
+  "acn": "704401203",
+  "date": "2026-11-24",
+  "first_seen": "2026-11-24T11:05:29+00:00",
+  "in_register": false,
+  "name": "RESIDENTIAL HOME SERVICES FINCO PTY LTD",
+  "role": "FINCO",
+  "state": "NSW",
+  "stem": "RESIDENTIAL HOME SERVICES",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "704409101": {
+  "acn": "704409101",
+  "date": "2026-11-24",
+  "first_seen": "2026-11-24T11:05:29+00:00",
+  "in_register": false,
+  "name": "1834 HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "SA",
+  "stem": "1834",
+  "suburb": "UNLEY",
+  "via": "API"
+ },
+ "704411405": {
+  "acn": "704411405",
+  "date": "2026-11-24",
+  "first_seen": "2026-11-24T11:05:29+00:00",
+  "in_register": false,
+  "name": "DERBY HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "DERBY",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "704416786": {
+  "acn": "704416786",
+  "date": "2026-11-24",
+  "first_seen": "2026-11-24T11:05:29+00:00",
+  "in_register": false,
+  "name": "RESIDENTIAL HOME SERVICES BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "NSW",
+  "stem": "RESIDENTIAL HOME SERVICES",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "704420057": {
+  "acn": "704420057",
+  "date": "2026-11-24",
+  "first_seen": "2026-11-24T11:05:29+00:00",
+  "in_register": false,
+  "name": "IFM CARNIVAL FINCO PTY LTD",
+  "role": "FINCO",
+  "state": "VIC",
+  "stem": "IFM CARNIVAL",
+  "suburb": "MELBOURNE",
+  "via": "API"
+ },
+ "704425810": {
+  "acn": "704425810",
+  "date": "2026-11-24",
+  "first_seen": "2026-11-24T11:05:29+00:00",
+  "in_register": false,
+  "name": "STACK INFRASTRUCTURE AUSTRALIA (MEL05) HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "STACK INFRASTRUCTURE MEL05",
+  "suburb": "CREMORNE",
+  "via": "API"
+ },
+ "704430839": {
+  "acn": "704430839",
+  "date": "2026-11-24",
+  "first_seen": "2026-11-24T11:05:29+00:00",
+  "in_register": false,
+  "name": "PREFAB HOLD CO PTY LTD",
+  "role": "HOLDCO",
+  "state": "WA",
+  "stem": "PREFAB",
+  "suburb": "BELMONT",
+  "via": "API"
  }
 }
