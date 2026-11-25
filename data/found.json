@@ -2602,5 +2602,101 @@
   "stem": "PREFAB",
   "suburb": "BELMONT",
   "via": "API"
+ },
+ "704457714": {
+  "acn": "704457714",
+  "date": "2026-11-25",
+  "first_seen": "2026-11-25T14:39:11+00:00",
+  "in_register": false,
+  "name": "ATKINSONS ROAD BLYTH HOLD CO PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "ATKINSONS ROAD BLYTH",
+  "suburb": "FERNY CREEK",
+  "via": "API"
+ },
+ "704463801": {
+  "acn": "704463801",
+  "date": "2026-11-25",
+  "first_seen": "2026-11-25T14:39:11+00:00",
+  "in_register": false,
+  "name": "AVID IC MIDCO PTY LTD",
+  "role": "MIDCO",
+  "state": "NSW",
+  "stem": "AVID IC",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "704468726": {
+  "acn": "704468726",
+  "date": "2026-11-25",
+  "first_seen": "2026-11-25T14:39:11+00:00",
+  "in_register": false,
+  "name": "AVID IC BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "NSW",
+  "stem": "AVID IC",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "704472542": {
+  "acn": "704472542",
+  "date": "2026-11-25",
+  "first_seen": "2026-11-25T14:39:11+00:00",
+  "in_register": false,
+  "name": "HORIZON TOPCO PTY LTD",
+  "role": "TOPCO",
+  "state": "QLD",
+  "stem": "HORIZON",
+  "suburb": "ELANORA",
+  "via": "API"
+ },
+ "704472926": {
+  "acn": "704472926",
+  "date": "2026-11-25",
+  "first_seen": "2026-11-25T14:39:11+00:00",
+  "in_register": false,
+  "name": "HORIZON HOLDCO PTY LTD",
+  "role": "HOLDCO",
+  "state": "QLD",
+  "stem": "HORIZON",
+  "suburb": "ELANORA",
+  "via": "API"
+ },
+ "704473281": {
+  "acn": "704473281",
+  "date": "2026-11-25",
+  "first_seen": "2026-11-25T14:39:11+00:00",
+  "in_register": false,
+  "name": "HORIZON MIDCO1 PTY LTD",
+  "role": "MIDCO",
+  "state": "QLD",
+  "stem": "HORIZON",
+  "suburb": "ELANORA",
+  "via": "API"
+ },
+ "704473441": {
+  "acn": "704473441",
+  "date": "2026-11-25",
+  "first_seen": "2026-11-25T14:39:11+00:00",
+  "in_register": false,
+  "name": "HORIZON MIDCO2 PTY LTD",
+  "role": "MIDCO",
+  "state": "QLD",
+  "stem": "HORIZON",
+  "suburb": "ELANORA",
+  "via": "API"
+ },
+ "704473745": {
+  "acn": "704473745",
+  "date": "2026-11-25",
+  "first_seen": "2026-11-25T14:39:11+00:00",
+  "in_register": false,
+  "name": "HORIZON BIDCO PTY LTD",
+  "role": "BIDCO",
+  "state": "QLD",
+  "stem": "HORIZON",
+  "suburb": "ELANORA",
+  "via": "API"
  }
 }
