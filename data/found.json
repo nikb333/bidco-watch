@@ -2698,5 +2698,29 @@
   "stem": "HORIZON",
   "suburb": "ELANORA",
   "via": "API"
+ },
+ "704492133": {
+  "acn": "704492133",
+  "date": "2026-11-26",
+  "first_seen": "2026-11-26T19:07:55+00:00",
+  "in_register": false,
+  "name": "HELIOS PORTFOLIO HOLDCO 2 PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "HELIOS PORTFOLIO 2",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "704501477": {
+  "acn": "704501477",
+  "date": "2026-11-26",
+  "first_seen": "2026-11-26T19:07:55+00:00",
+  "in_register": false,
+  "name": "MCGINTY HOLD CO PTY LTD",
+  "role": "HOLDCO",
+  "state": "QLD",
+  "stem": "MCGINTY",
+  "suburb": "MACKAY",
+  "via": "API"
  }
 }
