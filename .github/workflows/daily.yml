@@ -2,16 +2,19 @@ name: Daily ACN sweep
 
 on:
   schedule:
-    # Three starts a night, Sydney time: 10pm, 2am, 5am.
+    # One start a night inside a 10pm-8am Sydney window, and another only if the
+    # previous one ran out of clock.
     #
-    # The sweep is resumable by construction - it reads the checkpoint and
-    # queues whatever is still outstanding - so a second start simply continues
-    # the first. That is why there are three rather than one: GitHub caps a
-    # hosted job at six hours, and a job cannot lift that by dispatching itself,
-    # because events raised with the built-in GITHUB_TOKEN deliberately do not
-    # start new workflow runs. Extra scheduled starts are the mechanism that
-    # actually works. If the 10pm run finished everything, the later two find an
-    # almost-empty queue and exit in minutes.
+    # The sweep is resumable by construction - it reads the checkpoint and queues
+    # whatever is still outstanding - which matters because GitHub caps a hosted
+    # job at six hours and a job cannot lift that by dispatching itself: events
+    # raised with the built-in GITHUB_TOKEN deliberately do not start new workflow
+    # runs. Extra starts are the only mechanism that works. This used to be three
+    # fixed slots (10pm, 2am, 5am) on the theory that the later two would find an
+    # empty queue and exit in seconds. The guard below now asks the question those
+    # slots were a proxy for - is there work left? - so a truncated run resumes on
+    # the next firing instead of waiting for 2am, and a complete one is not
+    # followed by two no-ops.
     #
     # Fire EVERY hour at :23 and let the guard below decide. Twenty-one of the
     # twenty-four firings exit in about eight seconds, which costs nothing on a
@@ -56,20 +59,48 @@ jobs:
       - name: Should this firing actually sweep?
         id: guard
         run: |
-          H=$(TZ=Australia/Sydney date +%H)
-          case "$H" in 22|02|05) SLOT=yes ;; *) SLOT=no ;; esac
-
-          # How long since a run last finished successfully? A heredoc would be
-          # cleaner but an indented terminator does not close one, so this is a
-          # single expression on purpose.
-          AGE=$(python3 -c "import json,datetime as d;t=json.load(open('data/state.json'))['last_run']['finished_utc'];print(int((d.datetime.now(d.timezone.utc)-d.datetime.fromisoformat(t.replace('Z','+00:00'))).total_seconds()//3600))" 2>/dev/null || echo 999)
-          echo "sydney hour $H | scheduled slot: $SLOT | hours since last run: $AGE"
+          # Anchor on the CLOCK, not on elapsed time.
+          #
+          # The old guard matched the Sydney hour exactly - 22, 02 or 05 - and
+          # otherwise fell back to "last run finished more than 20 hours ago".
+          # GitHub's hourly cron is best effort and drops firings, so the
+          # exact-hour match kept missing, and the 20-hour rule became the real
+          # scheduler. It had only three hours of headroom over the longest
+          # legitimate gap between slots (05:00 -> 22:00 = 17h), so it almost
+          # always fired before a slot could come round, and the intended cadence
+          # never re-established itself.
+          #
+          # The start time then free-ran: next start = last finish + 20h + however
+          # long the run took, which walks about an hour earlier each day, while a
+          # short run reset the timer early and knocked it hours off and a late
+          # firing pushed it later with nothing to pull it back. Over the 26 runs
+          # to 27 November 2026 only 5 began in a slot hour, the median
+          # finish-to-start gap was 20.2 hours, and the sweep had wandered from
+          # about 1am to about 7am.
+          #
+          # So: sweep anywhere in the 22:00-07:59 Sydney window if no run has
+          # STARTED since the most recent 22:00 boundary. A late firing still
+          # counts instead of missing its slot, exactly one run happens per night,
+          # and the time self-corrects after a short run or a dropped firing.
+          # slots_left > 0 means the last run hit its budget with work still
+          # queued, so it resumes on the very next firing rather than waiting.
+          #
+          # The elapsed-time rule stays, raised to 26 hours, where it is what it
+          # was always meant to be: a backstop for GitHub dropping a whole night.
+          #
+          # One expression on purpose - a heredoc will not close on an indented
+          # terminator. The fallback is "no", not "yes": if state.json is
+          # unreadable the 999 lands on the backstop and sweeps once, rather than
+          # every firing sweeping and hammering the vendor API.
+          D=$(python3 -c "import json,datetime as d;from zoneinfo import ZoneInfo;S=ZoneInfo('Australia/Sydney');n=d.datetime.now(d.timezone.utc);L=n.astimezone(S);a=L.replace(hour=22,minute=0,second=0,microsecond=0)-d.timedelta(days=1 if L.hour<22 else 0);r=json.load(open('data/state.json'))['last_run'];p=lambda t:d.datetime.fromisoformat(t.replace('Z','+00:00'));s=p(r.get('started_utc') or r['finished_utc']);print(L.hour,int((n-p(r['finished_utc'])).total_seconds()//3600),'yes' if (L.hour>=22 or L.hour<8) and (s<a or int(r.get('slots_left') or 0)>0) else 'no',s.astimezone(S).strftime('%d-%b-%H:%M'),a.strftime('%d-%b-%H:%M'),int(r.get('slots_left') or 0))" 2>/dev/null || echo "99 999 no unknown unknown 0")
+          set -- $D; H=$1; AGE=$2; DUE=$3; LAST=$4; ANCHOR=$5; LEFT=$6
+          echo "sydney hour $H | last run started $LAST | tonight's window opened $ANCHOR | slots left over $LEFT | due tonight: $DUE | hours since last finish: $AGE"
 
           if [ "${{ github.event_name }}" != "schedule" ]; then
             echo "manual run"; echo "skip=false" >> "$GITHUB_OUTPUT"
-          elif [ "$SLOT" = "yes" ]; then
-            echo "scheduled start"; echo "skip=false" >> "$GITHUB_OUTPUT"
-          elif [ "$AGE" -ge 20 ]; then
+          elif [ "$DUE" = "yes" ]; then
+            echo "nightly start"; echo "skip=false" >> "$GITHUB_OUTPUT"
+          elif [ "$AGE" -ge 26 ]; then
             echo "::warning::Last successful run was $AGE hours ago - catching up."
             echo "skip=false" >> "$GITHUB_OUTPUT"
           else
