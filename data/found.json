@@ -2722,5 +2722,41 @@
   "stem": "MCGINTY",
   "suburb": "MACKAY",
   "via": "API"
+ },
+ "704514447": {
+  "acn": "704514447",
+  "date": "2026-11-27",
+  "first_seen": "2026-11-27T20:01:53+00:00",
+  "in_register": false,
+  "name": "HELIOS PORTFOLIO HOLDCO 1 PTY LTD",
+  "role": "HOLDCO",
+  "state": "NSW",
+  "stem": "HELIOS PORTFOLIO 1",
+  "suburb": "SYDNEY",
+  "via": "API"
+ },
+ "704522225": {
+  "acn": "704522225",
+  "date": "2026-11-27",
+  "first_seen": "2026-11-27T20:01:53+00:00",
+  "in_register": false,
+  "name": "OA PORTFOLIO HOLDCO1 PTY LTD",
+  "role": "HOLDCO",
+  "state": "VIC",
+  "stem": "OA PORTFOLIO",
+  "suburb": "SOUTH YARRA",
+  "via": "API"
+ },
+ "704531484": {
+  "acn": "704531484",
+  "date": "2026-11-27",
+  "first_seen": "2026-11-27T20:01:53+00:00",
+  "in_register": false,
+  "name": "OT HOLD CO PTY LTD",
+  "role": "HOLDCO",
+  "state": "QLD",
+  "stem": "OT",
+  "suburb": "BRISBANE CITY",
+  "via": "API"
  }
 }
